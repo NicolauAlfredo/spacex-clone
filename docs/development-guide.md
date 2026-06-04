@@ -1,109 +1,251 @@
+# Contributing Guidelines
 
-Ciao team 👋
+Thank you for contributing to the SpaceX Clone project.
 
-Prima di iniziare a scrivere CSS, dobbiamo seguire tutti la stessa convenzione di naming. Questo ci aiuterà ad evitare conflitti, codice duplicato e problemi durante i merge.
-
-Per questo progetto useremo la metodologia **BEM (Block Element Modifier)**.
-
-## Cos'è BEM?
-
-BEM è una convenzione per nominare le classi CSS in modo chiaro e prevedibile.
-
-Si divide in 3 parti:
-
-### 1. Block
-
-Il Block rappresenta un componente indipendente.
-
-Esempi:
-
-```css
-.header {}
-.footer {}
-.button {}
-.hero-section {}
-.collections {}
-```
-
-Pensate al Block come a un componente completo.
+This project is developed as a Team Project during the DEVELHOPE Web Development Course. To ensure consistency and maintainability, all contributors must follow the guidelines below.
 
 ---
 
-### 2. Element
+# Git Workflow
 
-Un Element è una parte del Block.
+The project uses the following branching strategy:
 
-Sintassi:
+```text
+main
+│
+└── dev
+     │
+     ├── feature/home-header
+     ├── feature/home-starship
+     ├── feature/home-launch-provider
+     └── ...
+```
+
+## Main Branches
+
+### main
+
+Production-ready code only.
+
+Never work directly on this branch.
+
+### dev
+
+Integration branch used to merge all completed features.
+
+All Pull Requests must target the `dev` branch.
+
+---
+
+## Creating a Feature Branch
+
+Before starting any task:
+
+```bash
+git checkout dev
+git pull origin dev
+```
+
+Create a new feature branch:
+
+```bash
+git checkout -b feature/feature-name
+```
+
+Examples:
+
+```bash
+git checkout -b feature/home-header
+
+git checkout -b feature/home-starship
+
+git checkout -b feature/home-footer
+```
+
+---
+
+## Committing Changes
+
+Use clear and descriptive commit messages.
+
+Examples:
+
+```bash
+feat: add homepage header
+
+feat: create starship hero section
+
+fix: correct mobile layout
+
+style: update button hover effect
+
+docs: update contributing guidelines
+
+chore: add project assets
+```
+
+---
+
+## Pushing Your Work
+
+After committing:
+
+```bash
+git push origin feature/feature-name
+```
+
+Example:
+
+```bash
+git push origin feature/home-header
+```
+
+---
+
+# Pull Requests
+
+When your task is completed:
+
+1. Push your feature branch
+2. Open GitHub
+3. Create a Pull Request
+4. Select:
+
+Base branch:
+
+```text
+dev
+```
+
+Compare branch:
+
+```text
+feature/your-feature
+```
+
+Example:
+
+```text
+dev ← feature/home-header
+```
+
+Never create Pull Requests directly to `main`.
+
+---
+
+# CSS Guidelines
+
+The project uses the BEM methodology.
+
+BEM stands for:
+
+* Block
+* Element
+* Modifier
+
+The goal is to keep class names predictable, reusable and easy to maintain.
+
+---
+
+## Block
+
+A Block represents an independent component.
+
+Examples:
+
+```css
+.header {}
+
+.footer {}
+
+.button {}
+
+.hero-section {}
+
+.collections {}
+```
+
+---
+
+## Element
+
+An Element is a part of a Block.
+
+Syntax:
 
 ```css
 .block__element
 ```
 
-Esempi:
+Examples:
 
 ```css
 .header__logo {}
+
 .header__nav {}
-.header__menu {}
 
 .footer__container {}
 
 .hero-section__content {}
+
 .hero-section__title {}
-.hero-section__subtitle {}
 ```
 
-L'elemento non dovrebbe esistere senza il Block.
+Elements should only exist inside their Block.
 
-Ad esempio:
+Correct:
 
 ```css
 .header__logo {}
 ```
 
-ha senso solo all'interno di:
+Incorrect:
 
 ```css
-.header {}
+.logo {}
 ```
 
 ---
 
-### 3. Modifier
+## Modifier
 
-Un Modifier serve per creare una variante.
+A Modifier changes the appearance or behavior of a Block or Element.
 
-Sintassi:
+Syntax:
 
 ```css
 .block--modifier
 ```
 
-oppure
-
-```css
-.block__element--modifier
-```
-
-Esempi:
+Examples:
 
 ```css
 .button--primary {}
+
 .button--secondary {}
 
 .hero-section--starship {}
+
 .hero-section--technology {}
 ```
 
 ---
 
-## Esempio reale del nostro progetto
+## Example
 
 HTML:
 
 ```html
 <section class="hero-section hero-section--starship">
-  
+  <div class="hero-section__content">
+    <h1 class="hero-section__title">
+      Starship's Twelfth Flight Test
+    </h1>
+
+    <button class="button button--primary">
+      Learn More
+    </button>
+  </div>
 </section>
 ```
 
@@ -125,78 +267,52 @@ CSS:
 
 ---
 
-## Cosa NON fare
+## Naming Rules
 
-Classi troppo generiche
+Use:
 
-```css
-.title {}
-.text {}
-.content {}
-.box {}
-.image {}
-```
+* English only
+* Lowercase
+* Hyphens (-)
+* BEM (__ and --)
 
-Quando il progetto cresce, questi nomi diventano impossibili da gestire.
-
----
-
-Nomi numerati
+Correct:
 
 ```css
-.section1 {}
-.section2 {}
-.section3 {}
-```
-
-I nomi devono descrivere lo scopo del componente.
-
----
-
-Mischiare lingue
-
-```css
-.titolo {}
-.navbar {}
-.bottoneGrande {}
-```
-
-Usiamo sempre l'inglese.
-
----
-
-## Convenzioni del team
-
-Tutte le classi devono essere:
-
-* in inglese
-* lowercase
-* con trattini (`-`)
-* con BEM (`__` e `--`)
-
-Esempi corretti:
-
-```css
-.header {}
-.header__logo {}
-
-.footer {}
-.footer__container {}
-
 .hero-section {}
+
 .hero-section__content {}
 
-.button {}
+.hero-section__title {}
+
 .button--primary {}
 ```
 
+Avoid:
+
+```css
+.section1 {}
+
+.title {}
+
+.box {}
+
+.myButton {}
+
+.bigText {}
+```
+
+Class names should describe purpose, not appearance.
+
 ---
 
-## Mobile First
+# Mobile First Approach
 
-Tutti gli stili devono partire da mobile.
+The project follows a Mobile First strategy.
 
-Esempio:
+Always write styles for mobile devices first.
+
+Example:
 
 ```css
 .hero-section {
@@ -204,33 +320,73 @@ Esempio:
 }
 ```
 
-Poi aggiungiamo i breakpoint:
+Then progressively enhance the layout for larger screens.
+
+---
+
+## Breakpoints
+
+Tablet:
 
 ```css
 @media (min-width: 768px) {
-}
 
+}
+```
+
+Desktop:
+
+```css
 @media (min-width: 1024px) {
-}
 
+}
+```
+
+Large Desktop:
+
+```css
 @media (min-width: 1440px) {
+
 }
 ```
 
 ---
 
-## Obiettivo
+## Example
 
-L'obiettivo non è solo far funzionare il sito, ma imparare a lavorare come un vero team di sviluppo.
+```css
+.hero-section {
+  min-height: 100vh;
+}
 
-Seguendo la stessa convenzione avremo:
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 3rem;
+  }
+}
 
-- codice più leggibile
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 5rem;
+  }
+}
+```
 
-- meno conflitti Git
+---
 
-- componenti riutilizzabili
+# Team Rules
 
-- struttura pronta per una futura migrazione a React
+* Never work directly on `main`
+* Always create a feature branch from `dev`
+* Keep commits small and meaningful
+* Follow BEM naming conventions
+* Use Mobile First styling
+* Write clean and readable code
+* Keep features isolated
+* Test your work before opening a Pull Request
 
-Grazie a tutti
+---
+
+# Project Goal
+
+The goal of this project is not only to recreate the SpaceX website but also to learn professional team collaboration, Git workflows, code organization and modern frontend development practices.
