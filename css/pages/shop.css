@@ -1,0 +1,134 @@
+/* 
+   SHOP LAYOUT (GLOBAL PAGE STRUCTURE) 
+*/
+
+.shop {
+  /* MOBILE FIRST */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .shop {
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .shop {
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .shop {
+  }
+}
+
+/* 
+   HEADER  
+   Owner:  
+   Branch: feature/shop-header
+*/
+
+.shop-header {
+  /* MOBILE FIRST */
+}
+
+@media (min-width: 768px) {
+  .shop-header {
+  }
+}
+
+@media (min-width: 1024px) {
+  .shop-header {
+  }
+}
+
+@media (min-width: 1440px) {
+  .shop-header {
+  }
+}
+
+/* 
+   COLLECTIONS SECTION
+   Owner: Ashawani Singh
+   Branch: feature/card-collections
+*/
+
+.collections {
+  /* MOBILE FIRST */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .collections {
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .collections {
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .collections {
+  }
+}
+
+/* 
+   PRODUCT CARDS (FUTURE EXTENSION)
+   Owner: Ashawani Singh
+   Branch: feature/card-collections
+*/
+
+.card-products {
+  /* MOBILE FIRST */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .card-products {
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .card-products {
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .card-products {
+  }
+}
+
+/* 
+   FOOTER
+   Owner: 
+   Branch: feature/shop-footer
+*/
+
+.shop-footer {
+  /* MOBILE FIRST */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .shop-footer {
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .shop-footer {
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .shop-footer {
+  }
+}

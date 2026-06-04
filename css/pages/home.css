@@ -1,0 +1,156 @@
+/*  
+   HOME PAGE - BASE (MOBILE FIRST)  
+*/
+
+/* 
+   SECTION 01 - STARSHIP'S TWELFTH FLIGHT TEST
+   Owner: Felice
+   Branch: feature/home-starship
+*/
+
+.hero-section--starship {
+  /* MOBILE FIRST */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hero-section--starship {
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero-section--starship {
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .hero-section--starship {
+  }
+}
+
+/* 
+   SECTION 02 - MAKING LIFE MULTIPLANETARY
+   Owner: Felice
+   Branch: feature/home-making-life
+*/
+
+.hero-section--multiplanetary {
+  /* MOBILE FIRST */
+}
+
+@media (min-width: 768px) {
+  .hero-section--multiplanetary {
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section--multiplanetary {
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section--multiplanetary {
+  }
+}
+
+/* 
+   SECTION 03 - REVOLUTIONIZING SPACE TECHNOLOGY
+   Owner: Federico
+   Branch: feature/home-space
+*/
+
+.hero-section--technology {
+  /* MOBILE FIRST */
+}
+
+@media (min-width: 768px) {
+  .hero-section--technology {
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section--technology {
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section--technology {
+  }
+}
+
+/* 
+   SECTION 04 - WORLD'S LEADING LAUNCH SERVICE PROVIDER
+   Owner: Federico
+   Branch: feature/home-launch
+*/
+
+.hero-section--launch-provider {
+  /* MOBILE FIRST */
+}
+
+@media (min-width: 768px) {
+  .hero-section--launch-provider {
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section--launch-provider {
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section--launch-provider {
+  }
+}
+
+/* 
+   SECTION 05 - ADVANCING HUMAN SPACEFLIGHT
+   Owner: Fidel
+   Branch: feature/home-advancing
+*/
+
+.hero-section--spaceflight {
+  /* MOBILE FIRST */
+}
+
+@media (min-width: 768px) {
+  .hero-section--spaceflight {
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section--spaceflight {
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section--spaceflight {
+  }
+}
+
+/* 
+   SECTION 06 - STARLINK
+   Owner: Rosario
+   Branch: feature/home-starlink-section
+*/
+
+.hero-section--starlink {
+  /* MOBILE FIRST */
+}
+
+@media (min-width: 768px) {
+  .hero-section--starlink {
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section--starlink {
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section--starlink {
+  }
+}
