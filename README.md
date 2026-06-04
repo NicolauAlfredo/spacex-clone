@@ -1,24 +1,27 @@
 # SpaceX Clone
 
-A collaborative project developed by the DEVELHOPE Web Development Students Team.
+A collaborative frontend project developed by the DEVELHOPE Web Development Team.
 
 ## Overview
 
-This project aims to recreate the user experience and visual design of the SpaceX ecosystem, including:
+The goal of this project is to recreate key parts of the SpaceX ecosystem while applying professional frontend development practices, team collaboration workflows, and modern project architecture.
 
-* SpaceX Home Page
+The project includes:
+
+* SpaceX Homepage
 * SpaceX Shop
-* Reusable UI Components
 * Responsive Design
-* Modern Frontend Architecture
+* Reusable UI Components
+* Mobile-First Development
+* Scalable Frontend Architecture
 
-The project starts with HTML, CSS, and JavaScript and is structured to support a future migration to React.
+The application is initially built with HTML, CSS and JavaScript and is designed to support a future migration to React.
 
-## Team Project
+## Team
 
-Developed as part of the Web Development Course at DEVELHOPE.
+Developed as part of the DEVELHOPE Web Development Course.
 
-### Team Member
+### Contributors
 
 * Ashawani Singh
 * Federico
@@ -29,75 +32,132 @@ Developed as part of the Web Development Course at DEVELHOPE.
 
 ## Tech Stack
 
-### Current
+### Current Stack
 
 * HTML5
 * CSS3
 * JavaScript (ES6+)
 
-### Planned
+### Future Stack
 
-* React 
-* Modern Build Tools
+* React
 
 ## Project Structure
 
 ```text
-assets/
-css/
-js/
-pages/
+spacex-clone/
+
+├── assets/
+│   ├── global/
+│   │   ├── fonts/
+│   │   ├── icons/
+│   │   ├── images/
+│   │   └── logo/
+│   │
+│   └── pages/
+│       ├── home/
+│       └── shopx/
+│
+├── docs/
+│
+├── css/
+│   ├── base/
+│   │   ├── reset.css
+│   │   ├── typography.css
+│   │   └── variables.css
+│   │
+│   ├── components/
+│   ├── layout/
+│   └── pages/
+│
+├── js/
+│   ├── data/
+│   ├── features/
+│   ├── models/
+│   └── utils/
+│
+├── pages/
+│   └── shop.html
+│
+├── index.html
+├── README.md
+└── .gitignore
 ```
 
-## Git Workflow
+---
+
+## Branch Strategy
 
 ### Main Branches
 
-* main → production-ready code
-* develop → integration branch
+* `main` → production-ready code
+* `dev` → integration and development branch
 
 ### Feature Branches
 
-Each task must be developed in its own feature branch:
+Each task must be developed in its own feature branch.
 
-```bash
-feature/task-name
-```
-
-Example:
+Examples:
 
 ```bash
 feature/home-header
+
 feature/home-footer
-feature/home-button
+
+feature/home-starship
+
+feature/card-collections
 ```
 
-## Development Guidelines
+## Development Standards
 
-* Do not commit directly to main.
-* Open Pull Requests to develop.
-* Follow semantic commit messages.
-* Keep components modular and reusable.
-* Write clean and maintainable code.
+This project follows:
 
-## Commit Convention
+* Mobile-First Development
+* BEM CSS Methodology
+* Feature-Based Git Workflow
+* Semantic Commit Messages
+* Reusable Component Design
 
-```bash
-feat: add homepage header
-fix: resolve mobile menu bug
-style: update button styles
-refactor: improve folder structure
-docs: update README
+For detailed development rules, please read:
+
+```text
+docs/development-guide.md
 ```
 
-## Future Goals
+## Learning Objectives
 
-* Full homepage recreation
-* SpaceX Shop implementation
-* React migration
-* Component-based architecture
-* Improved performance and accessibility
+This project focuses on developing practical experience with:
+
+* Team collaboration
+* Git and GitHub workflows
+* Pull Requests and Code Reviews
+* Responsive Web Design
+* Frontend Architecture
+* Clean and Maintainable Code
+
+## Roadmap
+
+### Phase 1
+
+* Homepage Recreation
+* Shop Layout
+* Responsive Design
+
+### Phase 2
+
+* Product Catalog
+* Shopping Cart Logic
+* Dynamic Components
+
+### Phase 3
+
+* React Migration
+* State Management
+* Advanced Component Architecture
 
 ## Disclaimer
 
-This project is created for educational purposes only and is not affiliated with SpaceX.
+This project is created for educational purposes only.
+
+SpaceX and all related trademarks, logos and assets belong to their respective owners. This project is not affiliated with or endorsed by SpaceX.
