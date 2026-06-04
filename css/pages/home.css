@@ -2,14 +2,47 @@
    HOME PAGE - BASE (MOBILE FIRST)  
 */
 
-/* 
-   SECTION 01 - STARSHIP'S TWELFTH FLIGHT TEST
-   Owner: Felice
-   Branch: feature/home-starship
-*/
+    .hero-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-section__text {
+  position: absolute;
+  bottom: 20%;   
+  left: 3%;  
+  color: white;
+  z-index: 1; 
+}
+.hero-section__date {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+.hero-section__title {
+  font-size: 60px;
+  font-family: 'D-DIN-Bold', sans-serif;
+  color: #F0F0FA;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  max-width: 800px;
+}
 
 .hero-section--starship {
-  /* MOBILE FIRST */
+  
+
 }
 
 /* Tablet */
@@ -27,6 +60,9 @@
 /* Large Desktop */
 @media (min-width: 1440px) {
   .hero-section--starship {
+
+
+
   }
 }
 
