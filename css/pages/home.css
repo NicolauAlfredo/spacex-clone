@@ -165,6 +165,40 @@
     max-width: 480px;
   }
 }
+.upcoming-launches--mobile {
+  display: none;
+}
+.upcoming-launches {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.upcoming-launches__title {
+  font-family: "D-DIN-Bold", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #f0f0fa;
+
+  position: absolute;
+  bottom: -280px;
+}
+.upcoming-launches__separator {
+  width: 90%;
+  height: 0.1px;
+  background-color: #f0f0fa;
+
+  position: absolute;
+  bottom: -290px;
+}
+
+@media (max-width: 767px) {
+  .upcoming-launches--mobile {
+    display: block;
+  }
+}
 
 @media (min-width: 1440px) {
   .hero-section--multiplanetary {
