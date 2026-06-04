@@ -31,13 +31,23 @@
   margin-bottom: 8px;
 }
 .hero-section__title {
-  font-size: 60px;
+ 
   font-family: 'D-DIN-Bold', sans-serif;
   color: #F0F0FA;
   font-size: 3.2rem;
   text-transform: uppercase;
   line-height: 1.1;
   max-width: 800px;
+}
+.hero-section--starship::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, black);
+  z-index: 0;
 }
 
 .hero-section--starship {
@@ -71,6 +81,31 @@
    Owner: Felice
    Branch: feature/home-making-life
 */
+.hero-section__text-multiplanetary {
+  position: absolute;
+  bottom: 45%;   
+  left: 13%;  
+  color: white;
+  z-index: 1; 
+}
+.hero-section__title-multiplanetary {
+  
+  font-family: 'D-DIN-Bold', sans-serif;
+  color: #F0F0FA;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  max-width: 800px;
+}
+.hero-section__description {
+  
+  color: #F0F0FA;
+  font-size: 1rem;
+  max-width: 600px;
+  margin-top: 16px;
+}
+
+
 
 .hero-section--multiplanetary {
   /* MOBILE FIRST */
