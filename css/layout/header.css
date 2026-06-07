@@ -389,3 +389,25 @@
     font-size: 12px;
   }
 }
+
+/* 
+    LARGE DESKTOP 
+*/
+
+@media (min-width: 1440px) {
+  .header__container {
+    padding-inline: 3.5rem;
+  }
+
+  .header__list {
+    gap: 2.75rem;
+  }
+
+  .header__logo svg {
+    width: 150px;
+  }
+
+  .header__link {
+    font-size: 0.85rem;
+  }
+}
