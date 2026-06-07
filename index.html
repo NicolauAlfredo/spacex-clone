@@ -26,16 +26,40 @@
       <!-- Owner: Felice -->
       <!-- Branch: feature/home-starship -->
       <section class="hero-section hero-section--starship">
-    <video class="hero-section__video" autoplay muted loop playsinline>
-    <source src="assets/pages/home/videos/Starships-twelfth-flight-test.mp4" type="video/mp4">
-  </video>
-  <div class="hero-section__text">
-    <span class="hero-section__date">MAY 22, 2026</span>
-    <h1 class="hero-section__title">STARSHIP'S TWELFTH FLIGHT TEST</h1>
-    
-  </div>
-    
-  </div>
+        <video class="hero-section__video" autoplay muted loop playsinline>
+          <!-- MOBILE FIRST -->
+          <source
+            src="./assets/pages/home/videos/Starships-twelfth-flight-test-mobile.mp4"
+            media="(max-width: 767px)"
+          />
+          <!-- DESKTOP -->
+          <source
+            src="./assets/pages/home/videos/Starships-twelfth-flight-test.mp4"
+            media="(min-width: 768px)"
+          />
+        </video>
+
+        <div class="hero-section__content">
+          <span class="hero-section__date">MAY 22, 2026</span>
+
+          <h2 class="hero-section__title">STARSHIP'S TWELFTH FLIGHT TEST</h2>
+
+          <p class="hero-section__description"></p>
+
+          <!-- Button -->
+          <a class="spx-button" href="#">
+            <span class="spx-button__text">Reserve Your Ride</span>
+
+            <span class="spx-button__arrow">
+              <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
+                <path
+                  d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
+                />
+              </svg>
+            </span>
+          </a>
+          <!-- Button -->
+        </div>
       </section>
       <!-- FINE SECTION 01 -->
 
@@ -43,17 +67,7 @@
       <!-- Making Life Multiplanetary -->
       <!-- Owner: Felice -->
       <!-- Branch: feature/home-making-life -->
-      <section class="hero-section hero-section--multiplanetary">
-          <video class="hero-section__video" autoplay muted loop playsinline>
-    <source src="assets/pages/home/videos/mars-rotation.mp4" type="video/mp4">
-  </video>
-  <div class="hero-section__text">
-    <h2 class="hero-section__title">MAKING LIFE MULTIPLANETARY</h2>
-    <p class="hero-section__description">SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not.</p>
-  </div>
-      </section>
-      
-</section>
+      <section class="hero-section hero-section--multiplanetary"></section>
       <!-- FINE SECTION 02 -->
 
       <!-- SECTION 03 -->
@@ -99,6 +113,5 @@
       src="./js/features/upcomingLaunches.js"
       defer
     ></script>
-    
   </body>
 </html>
