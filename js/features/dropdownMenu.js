@@ -46,3 +46,22 @@ function openDropdown(item) {
   item.classList.add("is-open");
   item.querySelector(".header__link").setAttribute("aria-expanded", "true");
 }
+
+// Attach click and hover events to each dropdown item
+dropdownItems.forEach((item) => {
+  const trigger = item.querySelector(".header__link");
+
+  // Toggle dropdown on click
+  trigger.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (item.classList.contains("is-open")) {
+      closeAll();
+    } else {
+      openDropdown(item);
+    }
+  });
+
+  // Open on mouse enter, close on mouse leave
+  item.addEventListener("mouseenter", () => openDropdown(item));
+  item.addEventListener("mouseleave", () => closeAll());
+});
