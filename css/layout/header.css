@@ -3,7 +3,7 @@
 */
 
 body {
-  background: black;
+  background: green;
 }
 
 :root {
@@ -289,8 +289,9 @@ body {
 
   .header__nav {
     position: static;
-    display: block;
-    width: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
     background: transparent;
   }
 
@@ -299,6 +300,7 @@ body {
     align-items: center;
     gap: 2rem;
     padding: 0;
+    flex-shrink: 0;
   }
 
   .header__item {
@@ -389,14 +391,25 @@ body {
     position: relative;
     width: 100%;
     max-width: 270px;
-    margin-left: auto;
-    margin-right: 50px;
-    margin-top: 0;
-    padding: 10px;
+    margin: 0 50px 0 auto;
     border-radius: 4px;
-    border: 1px solid var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--color-white);
     cursor: pointer;
+  }
+
+  .header__nav .upcoming-launch__title {
+    border-bottom: none;
+    width: 100%;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    display: block;
+  }
+
+  .header__nav .upcoming-launch__toggle {
+    display: flex;
   }
 
   .header__nav .upcoming-launch__cards {
@@ -442,304 +455,6 @@ body {
 
 /* 
   LARGE DESKTOP 
-*/
-
-@media (min-width: 1440px) {
-  .header__container {
-    padding-inline: 3.5rem;
-  }
-
-  .header__list {
-    gap: 2.75rem;
-  }
-
-  .header__logo svg {
-    width: 150px;
-  }
-
-  .header__link {
-    font-size: 0.85rem;
-  }
-}
-
-/*
-  TABLET  
-*/
-
-@media (min-width: 768px) {
-  .header__container {
-    padding: 0 2rem;
-  }
-
-  .header__logo svg {
-    width: 140px;
-  }
-
-  .header__link {
-    padding-inline: 2rem;
-  }
-}
-
-/*
-  DESKTOP 
-*/
-
-@media (min-width: 1024px) {
-  /* Header base */
-
-  .header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: var(--header-overlay);
-
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .header__container {
-    position: relative;
-    justify-content: flex-start;
-    gap: 2.5rem;
-    z-index: 1;
-  }
-
-  .header__toggle {
-    display: none;
-  }
-
-  /*
-    NAV
-  */
-
-  .header__nav {
-    position: static;
-    display: block;
-    width: auto;
-    background: transparent;
-  }
-
-  .header__list {
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-    padding: 0;
-  }
-
-  .header__item {
-    border: none;
-    position: relative;
-    z-index: 4;
-  }
-
-  .header__link {
-    position: relative;
-    padding: 0;
-    font-size: 0.8rem;
-    letter-spacing: 0.03em;
-    z-index: 4;
-  }
-
-  /* Arrow */
-
-  .header__arrow {
-    opacity: 0;
-    padding-left: 4px;
-    display: inline-block;
-    transform: none !important;
-    transition: opacity 0.2s ease;
-  }
-
-  .header__item.is-open > .header__link .header__arrow {
-    opacity: 1;
-  }
-
-  /* Submenu */
-  .header__submenu {
-    position: fixed;
-    top: 0;
-    left: auto;
-    min-width: 130px;
-    display: block !important;
-    visibility: hidden;
-    background: transparent;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 3;
-  }
-
-  .header__submenu::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: -1.25rem;
-    right: 0;
-    background: var(--header-overlay);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  .header__item.is-open > .header__submenu {
-    visibility: visible;
-  }
-
-  .header__submenu li {
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-    transform: translateY(-6px);
-    transition:
-      opacity 0.15s ease,
-      transform 0.15s ease;
-  }
-
-  .header__item.is-open > .header__submenu li {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .header__submenu li a {
-    display: block;
-    padding: 0.35rem 0;
-  }
-
-  /* Upcoming Launch */
-
-  .upcoming-launch {
-    display: block;
-    position: relative;
-    width: 100%;
-    max-width: 270px;
-    margin-left: auto;
-    margin-right: 50px;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid var(--color-white);
-    color: var(--color-white);
-    cursor: pointer;
-  }
-
-  .upcoming-launch__header {
-    display: flex;
-    align-items: center;
-  }
-
-  .upcoming-launch__title {
-    width: 50%;
-    font-size: 10px;
-    text-transform: uppercase;
-  }
-
-  .upcoming-launch__toggle {
-    width: 50%;
-    display: flex;
-    align-items: center;
-  }
-
-  .upcoming-launch__toggle svg {
-    margin-left: auto;
-  }
-
-  .upcoming-launch__cards {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
-    width: 270px;
-    display: flex;
-    flex-direction: column;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border-radius: 12px;
-    padding: 12px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(20px);
-    transition:
-      opacity 0.6s ease,
-      transform 0.6s ease,
-      visibility 0.6s ease;
-  }
-
-  .upcoming-launch:hover .upcoming-launch__cards {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  .upcoming-launch__card {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-bottom: 1px solid var(--color-white);
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    z-index: 2;
-  }
-
-  .upcoming-launch__image {
-    width: 64px;
-    height: 64px;
-    flex: 0 0 64px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .upcoming-launch__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .upcoming-launch__content {
-    display: inline-flex;
-    flex-direction: column;
-    width: 150px;
-    gap: 0.5rem;
-  }
-
-  .upcoming-launch__countdown {
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 110%;
-    color: var(--color-white);
-  }
-
-  .upcoming-launch__arrow {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .upcoming-launch__arrow--right svg {
-    width: 18px;
-    height: auto;
-  }
-
-  .upcoming-launch__card:hover .upcoming-launch__arrow {
-    opacity: 1;
-  }
-
-  .upcoming-launch__link {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-  }
-
-  .upcoming-launch__link-text {
-    font-size: 12px;
-  }
-}
-
-/* 
-    LARGE DESKTOP 
 */
 
 @media (min-width: 1440px) {
