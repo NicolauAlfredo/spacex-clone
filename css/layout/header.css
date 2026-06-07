@@ -29,3 +29,17 @@
   width: 120px;
   height: auto;
 }
+
+.header__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__toggle svg {
+  width: 24px;
+  height: 24px;
+}
