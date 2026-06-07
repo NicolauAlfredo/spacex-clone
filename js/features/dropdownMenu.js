@@ -1,26 +1,91 @@
-// Select all nav items that have a dropdown submenu
+// ELEMENTS
+const menuToggle = document.querySelector(".header__toggle");
+const header = document.querySelector(".header");
 const dropdownItems = document.querySelectorAll(".header__item--dropdown");
 
-// Reset transition delays on all submenu items (used when closing)
+// HELPERS
+
+function isMobile() {
+  return window.innerWidth < 1024;
+}
+
 function resetItems(item) {
-  const items = item.querySelectorAll(".header__submenu li");
-  items.forEach((li) => {
+  item.querySelectorAll(".header__submenu li").forEach((li) => {
     li.style.transitionDelay = "0s";
   });
 }
 
-// Close all open dropdowns and reset their state
 function closeAll() {
   dropdownItems.forEach((d) => {
     d.classList.remove("is-open");
     d.querySelector(".header__link").setAttribute("aria-expanded", "false");
     resetItems(d);
+
+    // Reset mobile inline display
+    const sub = d.querySelector(".header__submenu");
+    if (sub) sub.style.display = "";
   });
 }
 
-// Open a specific dropdown and close any others that are open
+// MOBILE MENU TOGGLE
+
+menuToggle.addEventListener("click", () => {
+  header.classList.toggle("menu-open");
+  const isOpen = header.classList.contains("menu-open");
+  menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+  // Close all dropdowns when closing the menu
+  if (!isOpen) closeAll();
+});
+
+// DROPDOWN ITEMS
+
+dropdownItems.forEach((item) => {
+  const trigger = item.querySelector(".header__link");
+
+  trigger.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (isMobile()) {
+      // Mobile: toggle submenu inline
+      const submenu = item.querySelector(".header__submenu");
+      const isOpen = item.classList.contains("is-open");
+
+      // Close all others
+      dropdownItems.forEach((d) => {
+        if (d !== item) {
+          d.classList.remove("is-open");
+          const sub = d.querySelector(".header__submenu");
+          if (sub) sub.style.display = "";
+        }
+      });
+
+      // Toggle current
+      item.classList.toggle("is-open", !isOpen);
+      if (submenu) submenu.style.display = isOpen ? "" : "block";
+    } else {
+      // Desktop: toggle with animation
+      if (item.classList.contains("is-open")) {
+        closeAll();
+      } else {
+        openDropdown(item);
+      }
+    }
+  });
+
+  // Desktop only: hover
+  item.addEventListener("mouseenter", () => {
+    if (!isMobile()) openDropdown(item);
+  });
+
+  item.addEventListener("mouseleave", () => {
+    if (!isMobile()) closeAll();
+  });
+});
+
+// DESKTOP DROPDOWN
+
 function openDropdown(item) {
-  // Close all other dropdowns first
   dropdownItems.forEach((d) => {
     if (d !== item) {
       d.classList.remove("is-open");
@@ -31,47 +96,26 @@ function openDropdown(item) {
 
   const submenu = item.querySelector(".header__submenu");
   if (submenu) {
-    // Position the submenu below the trigger item
     const itemRect = item.getBoundingClientRect();
     submenu.style.paddingTop = itemRect.bottom + 4 + "px";
 
-    // Apply staggered transition delays to each list item for cascade animation
-    const items = submenu.querySelectorAll("li");
-    items.forEach((li, i) => {
+    submenu.querySelectorAll("li").forEach((li, i) => {
       li.style.transitionDelay = `${i * 0.05}s`;
     });
   }
 
-  // Mark item as open and update accessibility attribute
   item.classList.add("is-open");
   item.querySelector(".header__link").setAttribute("aria-expanded", "true");
 }
 
-// Attach click and hover events to each dropdown item
-dropdownItems.forEach((item) => {
-  const trigger = item.querySelector(".header__link");
+// GLOBAL EVENTS
 
-  // Toggle dropdown on click
-  trigger.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (item.classList.contains("is-open")) {
-      closeAll();
-    } else {
-      openDropdown(item);
-    }
-  });
-
-  // Open on mouse enter, close on mouse leave
-  item.addEventListener("mouseenter", () => openDropdown(item));
-  item.addEventListener("mouseleave", () => closeAll());
-});
-
-// Close all dropdowns when clicking outside the nav
+// Close on outside click (desktop only)
 document.addEventListener("click", (e) => {
-  if (!e.target.closest(".header__item--dropdown")) closeAll();
+  if (!isMobile() && !e.target.closest(".header__item--dropdown")) closeAll();
 });
 
-// Close all dropdowns when pressing Escape
+// Close on Escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeAll();
 });
