@@ -1,5 +1,5 @@
 /*  
-   HOME PAGE - BASE (MOBILE FIRST)  
+  HOME PAGE - BASE (MOBILE FIRST)  
 */
 
 .hero-section {
@@ -8,174 +8,49 @@
   position: relative;
   overflow: hidden;
 }
+
 .hero-section__video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
-.hero-section__text {
+
+.hero-section__content {
   position: absolute;
-  bottom: 20%;
-  left: 3%;
-  color: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0 4% 8% 4%;
   z-index: 1;
+  color: #f0f0fa;
+  text-align: left;
 }
+
 .hero-section__date {
+  font-family: "Roboto Mono";
   font-size: 1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   display: block;
   margin-bottom: 8px;
 }
+
 .hero-section__title {
   font-family: "D-DIN-Bold", sans-serif;
-  color: #f0f0fa;
   font-size: 3.2rem;
   text-transform: uppercase;
-
-  max-width: 800px;
-}
-.hero-section--starship::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(to bottom, transparent, black);
-  z-index: 0;
-}
-
-.hero-section--starship {
-}
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hero-section--starship .hero-section__title {
-    font-size: 3rem;
-    margin-left: -10px;
-  }
-  .hero-section--starship .hero-section__date {
-    margin-left: -10px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .hero-section--starship .hero-section__text {
-    margin-left: 30px;
-  }
-  .hero-section--starship .hero-section__title {
-    max-width: 500px;
-    margin-top: -10px;
-  }
-}
-
-/* Large Desktop */
-@media (min-width: 1440px) {
-  .hero-section--starship {
-  }
-}
-
-/* 
-   SECTION 02 - MAKING LIFE MULTIPLANETARY
-   Owner: Felice
-   Branch: feature/home-making-life
-*/
-.hero-section--multiplanetary .hero-section__text {
-  position: absolute;
-  bottom: 45%;
-  left: 13%;
-  color: white;
-  z-index: 1;
-}
-.hero-section--multiplanetary .hero-section__title {
-  font-family: "D-DIN-Bold", sans-serif;
-  color: #f0f0fa;
-  font-size: 4.5rem;
-  text-transform: uppercase;
   line-height: 1.1;
-  max-width: 800px;
 }
-.hero-section--multiplanetary .hero-section__description {
-  color: #f0f0fa;
-  font-size: 1rem;
-  max-width: 600px;
+
+.hero-section__description {
+  font-family: "D-DIN";
   margin-top: 16px;
-}
-
-@media (max-width: 767px) {
-  .hero-section--multiplanetary {
-  }
-  .hero-section--multiplanetary .hero-section__text {
-    position: absolute;
-    bottom: 0%;
-
-    left: 4%;
-    color: white;
-    z-index: 1;
-  }
-  .hero-section--multiplanetary .hero-section__title {
-    font-size: 2.3rem;
-  }
-  .hero-section--multiplanetary .hero-section__description {
-  }
-}
-@media (max-width: 376px) {
-  .hero-section--multiplanetary {
-    height: 65vh;
-    overflow: visible;
-  }
-  .hero-section--multiplanetary .hero-section__text {
-    top: 85%;
-  }
-  .hero-section--multiplanetary .hero-section__title {
-    font-size: 1.8rem;
-  }
-}
-@media (min-width: 376.1px) and (max-width: 767px) {
-  .hero-section--multiplanetary {
-    height: 65vh;
-    overflow: visible;
-  }
-  .hero-section--multiplanetary .hero-section__text {
-    top: 100%;
-  }
-  .hero-section--multiplanetary .hero-section__title {
-    font-size: 2.3rem;
-  }
-  .hero-section--multiplanetary .hero-section__description {
-    font-size: 1rem;
-    max-width: 350px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .hero-section--multiplanetary .hero-section__title {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .hero-section--multiplanetary .hero-section__text {
-    margin-left: -45px;
-  }
-  .hero-section--multiplanetary .hero-section__description {
-    font-size: 1.2;
-    max-width: 480px;
-  }
-}
-
-
-@media (max-width: 767px) {
-  .upcoming-launches--mobile {
-    display: block;
-  }
-}
-
-@media (min-width: 1440px) {
-  .hero-section--multiplanetary {
-  }
+  font-size: 1rem;
+  margin-bottom: 40px;
 }
 
 /* 
