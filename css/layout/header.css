@@ -105,3 +105,11 @@
 .header__submenu li a:hover {
   color: var(--color-white);
 }
+
+/* 
+  UPCOMING LAUNCH (hidden mobile) 
+*/
+
+.upcoming-launch {
+  display: none;
+}
