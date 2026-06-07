@@ -70,3 +70,8 @@ dropdownItems.forEach((item) => {
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".header__item--dropdown")) closeAll();
 });
+
+// Close all dropdowns when pressing Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeAll();
+});
