@@ -2,10 +2,6 @@
   HEADER MOBILE FIRTS 
 */
 
-body {
-  background: green;
-}
-
 :root {
   --header-overlay: linear-gradient(
     to bottom,
