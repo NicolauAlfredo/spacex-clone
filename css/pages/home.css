@@ -54,6 +54,81 @@
 }
 
 /* 
+  SECTION 01
+  Starship's Twelfth Flight Test 
+  Owner: Felice 
+  Branch: feature/home-starship 
+*/
+
+.hero-section--starship::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, black);
+  z-index: 0;
+}
+
+/*
+  TABLET
+*/
+
+@media (min-width: 768px) {
+  .hero-section__title {
+    font-size: 3rem;
+  }
+
+  .hero-section__description {
+    max-width: 500px;
+  }
+}
+
+/*
+  DESKTOP
+*/
+
+@media (min-width: 1024px) {
+  .hero-section--starship .hero-section__content {
+    top: 50%;
+    left: 0;
+    bottom: auto;
+
+    max-width: 60%;
+    padding-left: 5%;
+    padding-right: 0;
+  }
+
+  .hero-section--starship .hero-section__title {
+    font-size: 60px;
+    line-height: 1.05;
+  }
+
+  .hero-section__description {
+    font-size: 18px;
+    max-width: 480px;
+  }
+
+  .hero-section__date {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+/*
+  LARGE DESKTOP
+*/
+
+@media (min-width: 1440px) {
+  .hero-section__content {
+    padding: 0 7% 10% 7%;
+  }
+
+  .hero-section__title {
+    font-size: 3.6rem;
+  }
+}
+
+/* 
    SECTION 03 - REVOLUTIONIZING SPACE TECHNOLOGY
    Owner: Federico
    Branch: feature/home-space
