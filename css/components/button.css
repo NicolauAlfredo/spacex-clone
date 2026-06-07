@@ -1,5 +1,6 @@
-body {
-  background: black;
+.text {
+  font-family: "D-DIN";
+  font-size: 14px;
 }
 
 .spx-button {
@@ -13,7 +14,7 @@ body {
   border-radius: 4px;
 
   background: transparent;
-  color: white;
+  color: #f0f0fa;
 
   text-decoration: none;
   overflow: hidden;
@@ -28,9 +29,9 @@ body {
 }
 
 .spx-button:hover {
-  background: white;
+  background: f0f0fa;
   color: black;
-  border-color: white;
+  border-color: #f0f0fa;
 }
 
 .text {
