@@ -8,3 +8,12 @@ function resetItems(item) {
     li.style.transitionDelay = "0s";
   });
 }
+
+// Close all open dropdowns and reset their state
+function closeAll() {
+  dropdownItems.forEach((d) => {
+    d.classList.remove("is-open");
+    d.querySelector(".header__link").setAttribute("aria-expanded", "false");
+    resetItems(d);
+  });
+}
