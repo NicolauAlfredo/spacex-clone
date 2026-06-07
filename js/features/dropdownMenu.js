@@ -65,3 +65,8 @@ dropdownItems.forEach((item) => {
   item.addEventListener("mouseenter", () => openDropdown(item));
   item.addEventListener("mouseleave", () => closeAll());
 });
+
+// Close all dropdowns when clicking outside the nav
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".header__item--dropdown")) closeAll();
+});
