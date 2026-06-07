@@ -17,3 +17,32 @@ function closeAll() {
     resetItems(d);
   });
 }
+
+// Open a specific dropdown and close any others that are open
+function openDropdown(item) {
+  // Close all other dropdowns first
+  dropdownItems.forEach((d) => {
+    if (d !== item) {
+      d.classList.remove("is-open");
+      d.querySelector(".header__link").setAttribute("aria-expanded", "false");
+      resetItems(d);
+    }
+  });
+
+  const submenu = item.querySelector(".header__submenu");
+  if (submenu) {
+    // Position the submenu below the trigger item
+    const itemRect = item.getBoundingClientRect();
+    submenu.style.paddingTop = itemRect.bottom + 4 + "px";
+
+    // Apply staggered transition delays to each list item for cascade animation
+    const items = submenu.querySelectorAll("li");
+    items.forEach((li, i) => {
+      li.style.transitionDelay = `${i * 0.05}s`;
+    });
+  }
+
+  // Mark item as open and update accessibility attribute
+  item.classList.add("is-open");
+  item.querySelector(".header__link").setAttribute("aria-expanded", "true");
+}
