@@ -22,6 +22,17 @@
   right: 0;
   z-index: 100;
   background: transparent;
+  transition: opacity 0.4s ease;
+}
+
+/* 
+  HIDE HEADER ON SCROLL 
+*/
+
+.header--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
 .header__container {

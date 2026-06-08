@@ -119,3 +119,13 @@ document.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeAll();
 });
+
+// HIDE HEADER ON SCROLL
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    header.classList.add("header--hidden");
+  } else {
+    header.classList.remove("header--hidden");
+  }
+});
