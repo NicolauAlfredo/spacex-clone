@@ -136,6 +136,29 @@
    Branch: feature/home-making-life
 */
 
+.hero-section--multiplanetary .hero-section__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 0 4% 8%;
+}
+
+.hero-section--multiplanetary .hero-section__content {
+  position: static;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.hero-section--multiplanetary .upcoming-launch {
+  position: static;
+  width: 100%;
+}
+
 .hero-section--multiplanetary::after {
   content: "";
   position: absolute;
@@ -152,20 +175,8 @@
   UPCOMING LAUNCH 
 */
 
-.hero-section__content {
-  margin-bottom: 200px;
-}
-
 .hero-section--multiplanetary .upcoming-launch {
-  position: absolute;
-  bottom: 0;
-  left: 1%;
-  right: 0;
-  z-index: 1;
   color: var(--color-white);
-  width: 100%;
-  padding: 20px;
-  max-width: 98%;
 }
 
 .hero-section--multiplanetary .upcoming-launch__header {
