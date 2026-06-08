@@ -154,11 +154,13 @@
 
 @media (min-width: 768px) {
   .hero-section--multiplanetary .hero-section__title {
-    font-size: 2.8rem;
+    font-size: 29px;
+    max-width: 100%;
   }
 
   .hero-section--multiplanetary .hero-section__description {
-    max-width: 500px;
+     font-size: 14px;
+    max-width: 100%;
   }
 }
 
@@ -317,11 +319,13 @@
 
 @media (min-width: 768px) {
   .hero-section--starlink .hero-section__title {
-    font-size: 2.8rem;
+    font-size: 29px;
+    max-width: 100%;
   }
 
   .hero-section--starlink .hero-section__description {
-    max-width: 500px;
+    font-size: 14px;
+    max-width: 100%;
   }
 }
 
