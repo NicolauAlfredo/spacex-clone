@@ -2,7 +2,7 @@
     font-family: "D-DIN", sans-serif;
 }
 
-.footer_container{
+.footer__container{
     display: flex;
     flex-direction: column;
     color: white;
@@ -16,27 +16,27 @@
     padding: 10px;
 }
 
-.footer_X-link{
+.footer__X-link{
     order: 3;
 }
 
-.footer_X-link-btn{
+.footer__X-svg {
+  justify-self: center;
+}
+
+.footer__X-link-btn{
     height: 50px;
     width: 48px;
     background-color: rgba(248, 248, 250, 0.1);
     border-radius: 50px;
 }
 
-.footer_X-svg{
-    justify-self: center;
-}
-
-.footer_nav{
+.footer__nav{
     display: flex;
     gap: 12px;
 }
 
-.footer_nav-item{
+.footer__nav-item{
     cursor: pointer;
 }
 
@@ -46,21 +46,17 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .footer_container{
-    display: flex;
+  .footer__container{
     flex-direction: row;
-    color: white;
     align-items: center;
     justify-content: space-between;
-    font-size: 12px;
-    text-transform:uppercase;
     gap: 10px;
     width: 100%;
 }
-.footer_X-link{
+.footer__X-link{
     order: initial;
 }
-.footer_X-link-btn{
+.footer__X-link-btn{
     height: 50px;
     width: 48px;
     background-color: rgba(240, 240, 250, 0.1);

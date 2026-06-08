@@ -321,7 +321,7 @@
   background-color: black;
 }
 
-.starlink_video{
+.starlink__video{
   position: absolute;
   inset: 0;
   width: 100%;
@@ -330,7 +330,7 @@
   object-position: center center;
 }
 
-.starlink_content{
+.starlink__content{
   position: absolute;
   bottom: 0;
   left: 1;
@@ -340,14 +340,14 @@
   text-align: left;
 }
 
-.starlink_title{
+.starlink__title{
   font-family: "D-DIN-Bold", sans-serif;
   font-size: 2.25rem;
   text-transform: uppercase;
   max-width: none;
 }
 
-.starlink_text{
+.starlink__text{
   font-family: "D-DIN", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -367,24 +367,24 @@
 }
 
 @media (min-width: 1024px) {
-  .starlink_content{
+  .starlink__content{
     position: relative;
     max-width: 1700px;
     width: 100%;
     margin: 0 auto;
     top: 50%;
   }
-  .starlink_content_inner{
+  .starlink__content_inner{
     position: absolute;
     text-align: left;
     top: 50%;
     width: 40%;
     transform: translateY(-50%);
   }
-  .starlink_title{
+  .starlink__title{
     font-size: 3rem;
   }
-  .starlink_text{
+  .starlink__text{
     font-family: "D-DIN", sans-serif;
     font-size: 16px;
     font-stretch: 100%;
