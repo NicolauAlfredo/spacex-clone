@@ -159,7 +159,7 @@
   }
 
   .hero-section--multiplanetary .hero-section__description {
-     font-size: 14px;
+    font-size: 14px;
     max-width: 100%;
   }
 }
@@ -195,6 +195,7 @@
   .hero-section--multiplanetary .hero-section__description {
     font-size: 18px;
     max-width: 580px;
+    margin-bottom: 30px;
   }
 
   .hero-section--multiplanetary .hero-section__date {
@@ -208,7 +209,7 @@
 */
 
 @media (min-width: 1440px) {
-  .hero-section--technology {
+  .hero-section--multiplanetary {
   }
 }
 
@@ -354,6 +355,7 @@
   .hero-section--starlink .hero-section__description {
     font-size: 18px;
     max-width: 750px;
+    margin-bottom: 30px;
   }
 }
 
