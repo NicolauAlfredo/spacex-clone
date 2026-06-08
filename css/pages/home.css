@@ -272,7 +272,7 @@
   );
   display: block;
   width: 100vw;
-  height: 100%;
+  height: 67%;
   position: absolute;
   z-index: 1;
   top: 0;
@@ -297,17 +297,29 @@
 .hero-section--launch-provider--description {
   margin-top: 16px;
   margin-bottom: 10px;
-  /* text-align: left; */
   font-size: 1rem;
   line-height: 1.6;
 }
 @media (min-width: 768px) {
   .hero-section--launch-provider {
   }
+
+  .hero-section--launch-provider--inner-text {
+    right: 20px;
+    left: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
   .hero-section--launch-provider {
+  }
+
+  .hero-section--launch-provider--background {
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
 }
 
