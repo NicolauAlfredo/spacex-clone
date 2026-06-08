@@ -42,7 +42,7 @@
 
 .hero-section__title {
   font-family: "D-DIN-Bold", sans-serif;
-  font-size: 3.2rem;
+  font-size: 30px;
   text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: -10px;
@@ -146,30 +146,6 @@
     rgba(0, 0, 0, 0.6) 100%
   );
   height: 100%;
-}
-
-.hero-section--multiplanetary .hero-section__video {
-  object-fit: cover;
-  object-position: left center;
-}
-
-.hero-section--multiplanetary .hero-section__content {
-  position: absolute;
-  bottom: 8%;
-  z-index: 1;
-  color: #f0f0fa;
-}
-
-.hero-section--multiplanetary .hero-section__title {
-  font-family: "D-DIN-Bold", sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-.hero-section--multiplanetary .hero-section__description {
-  margin-top: 16px;
-  font-size: 1rem;
-  max-width: 600px;
 }
 
 /*
@@ -317,11 +293,6 @@
 
 /* MOBILE FIRST */
 
-.hero-section--starlink {
-  position: relative;
-  color: var(--color-white);
-}
-
 .hero-section--starlink::after {
   content: "";
   position: absolute;
@@ -330,31 +301,14 @@
   background: linear-gradient(to bottom, transparent, black);
   z-index: 0;
 }
-
+.hero-section--starlink .hero-section__title {
+  max-width: 300px;
+}
 .hero-section--starlink .hero-section__content {
   position: absolute;
   bottom: 0;
   padding: 0 5% 8% 5%;
   z-index: 1;
-}
-
-.hero-section--starlink .hero-section__video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-section--starlink .hero-section__title {
-  font-size: 2.25rem;
-  text-transform: uppercase;
-}
-
-.hero-section--starlink .hero-section__description {
-  font-size: 15px;
-  line-height: 1.6;
-  margin-top: 8px;
 }
 
 /*
