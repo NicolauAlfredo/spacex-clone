@@ -29,12 +29,22 @@ function closeAll() {
 
 // MOBILE MENU TOGGLE
 
+const hamburgerIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M24 19L0 19L1.74849e-07 18L24 18V19Z" fill="#D9D9D9"></path>
+  <path d="M24 12L0 12L1.74849e-07 11L24 11V12Z" fill="#D9D9D9"></path>
+  <path d="M24 5L0 5L1.74849e-07 4L24 4V5Z" fill="#D9D9D9"></path>
+</svg>`;
+
+const closeIcon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path></svg>`;
+
 menuToggle.addEventListener("click", () => {
   header.classList.toggle("menu-open");
   const isOpen = header.classList.contains("menu-open");
   menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
 
-  // Close all dropdowns when closing the menu
+  // Swap icon
+  menuToggle.innerHTML = isOpen ? closeIcon : hamburgerIcon;
+
   if (!isOpen) closeAll();
 });
 
@@ -118,4 +128,14 @@ document.addEventListener("click", (e) => {
 // Close on Escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeAll();
+});
+
+// HIDE HEADER ON SCROLL
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    header.classList.add("header--hidden");
+  } else {
+    header.classList.remove("header--hidden");
+  }
 });
