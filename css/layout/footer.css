@@ -20,6 +20,10 @@
     border-radius: 50px;
 }
 
+.footer_X-svg{
+    justify-self: center;
+}
+
 .footer_nav{
     display: flex;
     gap: 12px;
