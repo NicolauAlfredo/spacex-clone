@@ -20,7 +20,7 @@
 
 .hero-section__content {
   position: absolute;
-  bottom: 0;
+  bottom: 8%;
   left: 0;
   right: 0;
 
@@ -28,6 +28,7 @@
   z-index: 1;
   color: #f0f0fa;
   text-align: left;
+  line-height: 1.3;
 }
 
 .hero-section__date {
@@ -44,13 +45,14 @@
   font-size: 3.2rem;
   text-transform: uppercase;
   line-height: 1.1;
+  margin-bottom: -10px;
 }
 
 .hero-section__description {
   font-family: "D-DIN", sans-serif;
   margin-top: 16px;
   font-size: 1rem;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 /* 
@@ -156,21 +158,18 @@
   bottom: 8%;
   z-index: 1;
   color: #f0f0fa;
-  line-height: 1.3;
 }
 
 .hero-section--multiplanetary .hero-section__title {
   font-family: "D-DIN-Bold", sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
-  margin-bottom: -10px;
 }
 
 .hero-section--multiplanetary .hero-section__description {
   margin-top: 16px;
   font-size: 1rem;
   max-width: 600px;
-  margin-bottom: 10px;
 }
 
 /*
