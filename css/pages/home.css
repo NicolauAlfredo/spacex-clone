@@ -4,7 +4,8 @@
 
 .hero-section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -136,16 +137,129 @@
    Branch: feature/home-making-life
 */
 
-.hero-section--multiplanetary::after {
-  content: "";
+.hero-section--multiplanetary {
+  min-height: 130vh;
+}
+
+.hero-section--multiplanetary .hero-section__video {
+  height: 50%;
+}
+
+.hero-section--multiplanetary .hero-section__overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at center,
-    transparent 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 0 4% 4%;
+}
+
+.hero-section--multiplanetary .hero-section__content {
+  position: static;
+  padding: 0;
+}
+
+.hero-section--multiplanetary .upcoming-launch {
+  position: static;
+  width: 100%;
+}
+
+.hero-section--multiplanetary {
+  background-color: black;
+}
+
+/* 
+  UPCOMING LAUNCH 
+*/
+
+.hero-section--multiplanetary .upcoming-launch {
+  color: var(--color-white);
+}
+
+.hero-section--multiplanetary .upcoming-launch__header {
+  display: flex;
+  align-items: center;
+}
+
+.hero-section--multiplanetary .upcoming-launch__title {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-section--multiplanetary .upcoming-launch__toggle {
+  display: none;
+}
+
+.hero-section--multiplanetary .upcoming-launch__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section--multiplanetary .upcoming-launch__card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.hero-section--multiplanetary .upcoming-launch__image {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-section--multiplanetary .upcoming-launch__image img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-section--multiplanetary .upcoming-launch__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.hero-section--multiplanetary .upcoming-launch__mission-title {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero-section--multiplanetary .upcoming-launch__countdown {
+  font-size: 0.75rem;
+  line-height: 1.1;
+}
+
+.hero-section--multiplanetary .upcoming-launch__arrow {
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.hero-section--multiplanetary .upcoming-launch__link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.hero-section--multiplanetary .upcoming-launch__link-text {
+  font-size: 9px;
+  text-transform: uppercase;
 }
 
 /*
@@ -169,11 +283,22 @@
 */
 
 @media (min-width: 1024px) {
+  .hero-section--multiplanetary {
+    height: 100%;
+  }
+
+  .hero-section--multiplanetary .hero-section__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
   .hero-section--multiplanetary .hero-section__content {
-    top: 60%;
-    left: 2%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
     transform: translateY(-50%);
-    bottom: auto;
 
     max-width: 100%;
     padding-left: 5%;
@@ -201,6 +326,15 @@
   .hero-section--multiplanetary .hero-section__date {
     font-size: 0.85rem;
     letter-spacing: 0.12em;
+  }
+
+  /* 
+    UPCOMING LAUNCH
+    Visible on mobile and tablet only
+  */
+
+  .hero-section--multiplanetary .upcoming-launch {
+    display: none;
   }
 }
 

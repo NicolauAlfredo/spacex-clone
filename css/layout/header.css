@@ -23,6 +23,8 @@
   z-index: 100;
   background: transparent;
   transition: opacity 0.4s ease;
+  font-size: 18px;
+  font-family: "D-DIN", Arial, Verdana, sans-serif;
 }
 
 /* 
