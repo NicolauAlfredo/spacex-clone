@@ -458,16 +458,18 @@
       <!-- Delivering High-Speed Internet From Space -->
       <!-- Owner: Rosario -->
       <!-- Branch: feature/home-starlink-section -->
-      <section class="starlink">
-          <span class="starlink_video-container">
-            <video src="./assets/pages/home/videos/delivering-high-speed-mobile.mp4" class="starlink_video-mobile" autoplay muted loop></video>
-            <video src="./assets/pages/home/videos/delivering-high-speed.mp4" class="starlink_video" autoplay muted loop></video>
-          </span>
-          <div class="starlink_container">
-            <div class="starlink_container_inner">
-            <h2 class="starlink_title">Delivering high-speed internet from space</h2>
-            <p class="starlink_text">Starlink is the world’s most advanced satellite constellation in low-Earth orbit, delivering reliable broadband internet capable of supporting streaming, online gaming, video calls, and more.</p>
-          </div></div>
+      <section class="hero-section starlink">
+          <video class="starlink_video" autoplay muted loop>
+              <source src="./assets/pages/home/videos/delivering-high-speed-mobile.mp4" media="(max-width: 767px)"/>
+              <source src="./assets/pages/home/videos/delivering-high-speed.mp4" media="(min-width: 768px)"/>
+          </video>
+
+          <div class="starlink_content">
+            <div class="starlink_content_inner">
+              <h2 class="starlink_title">Delivering high-speed internet from space</h2>
+              <p class="starlink_text">Starlink is the world’s most advanced satellite constellation in low-Earth orbit, delivering reliable broadband internet capable of supporting streaming, online gaming, video calls, and more.</p>
+            </div>
+          </div>
       </section>
       <!-- FINE SECTION 06 -->
     </main>
