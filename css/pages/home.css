@@ -135,22 +135,37 @@
    Owner: Rosario
    Branch: feature/home-starlink-section
 */
+/* MOBILE FIRST */
+.starlink{
+  color: white;
+}
 
-.hero-section--starlink {
-  /* MOBILE FIRST */
+.starlink_video-mobile{
+}
+
+.starlink_video{
+  display: none;
+}
+
+.starlink_container{
+}
+
+.starlink_container_inner{
 }
 
 @media (min-width: 768px) {
-  .hero-section--starlink {
+  .starlink_video-mobile{
+  }
+  .starlink_video{
+    display: none;
   }
 }
 
 @media (min-width: 1024px) {
-  .hero-section--starlink {
+  .starlink_video{
+    display: initial;
   }
-}
-
-@media (min-width: 1440px) {
-  .hero-section--starlink {
+  .starlink_video-mobile{
+    display: none;
   }
 }
