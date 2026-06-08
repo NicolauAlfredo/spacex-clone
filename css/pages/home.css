@@ -4,7 +4,8 @@
 
 .hero-section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 110vh;
   position: relative;
   overflow: hidden;
 }
@@ -136,6 +137,14 @@
    Branch: feature/home-making-life
 */
 
+.hero-section--multiplanetary {
+  min-height: 130vh;
+}
+
+.hero-section--multiplanetary .hero-section__video {
+  height: 50%;
+}
+
 .hero-section--multiplanetary .hero-section__overlay {
   position: absolute;
   inset: 0;
@@ -144,14 +153,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
+  gap: 2rem;
   padding: 0 4% 8%;
 }
 
 .hero-section--multiplanetary .hero-section__content {
   position: static;
   padding: 0;
-  margin-bottom: 2rem;
 }
 
 .hero-section--multiplanetary .upcoming-launch {
@@ -159,16 +167,8 @@
   width: 100%;
 }
 
-.hero-section--multiplanetary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    transparent 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
-  height: 100%;
+.hero-section--multiplanetary {
+  background-color: black;
 }
 
 /* 
@@ -283,6 +283,16 @@
 */
 
 @media (min-width: 1024px) {
+  .hero-section--multiplanetary {
+    height: 100%;
+  }
+
+  .hero-section--multiplanetary .hero-section__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
   .hero-section--multiplanetary .hero-section__content {
     top: 60%;
     left: 2%;
