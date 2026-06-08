@@ -31,7 +31,7 @@
 }
 
 .hero-section__date {
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -47,7 +47,7 @@
 }
 
 .hero-section__description {
-  font-family: "D-DIN";
+  font-family: "D-DIN", sans-serif;
   margin-top: 16px;
   font-size: 1rem;
   margin-bottom: 40px;
@@ -315,87 +315,94 @@
    Owner: Rosario
    Branch: feature/home-starlink-section
 */
+
 /* MOBILE FIRST */
-.starlink{
-  color: white;
-  background-color: black;
+
+.hero-section--starlink {
+  position: relative;
+  color: var(--color-white);
 }
 
-.starlink__video{
+.hero-section--starlink::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, black);
+  z-index: 0;
+}
+
+.hero-section--starlink .hero-section__content {
+  position: absolute;
+  bottom: 0;
+  padding: 0 5% 8% 5%;
+  z-index: 1;
+}
+
+.hero-section--starlink .hero-section__video {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 99%;
+  height: 100%;
   object-fit: cover;
-  object-position: center center;
 }
 
-.starlink__content{
-  position: absolute;
-  bottom: 0;
-  left: 1;
-  right: 0;
-  padding: 0 5% 8% 5%;
-  z-index: 1;
-  text-align: left;
-}
-
-.starlink__title{
-  font-family: "D-DIN-Bold", sans-serif;
+.hero-section--starlink .hero-section__title {
   font-size: 2.25rem;
   text-transform: uppercase;
-  max-width: none;
 }
 
-.starlink__text{
-  font-family: "D-DIN", sans-serif;
-  font-size: 1rem;
+.hero-section--starlink .hero-section__description {
+  font-size: 15px;
   line-height: 1.6;
-  margin-top: 5px;
-  margin-bottom: 0px;
+  margin-top: 8px;
 }
-.starlink::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0;
-    height: 70%;
-    background: linear-gradient(to bottom, transparent, black);
-    z-index: 0;
-  }
+
+/*
+  TABLET
+*/
 
 @media (min-width: 768px) {
+  .hero-section--starlink .hero-section__title {
+    font-size: 2.8rem;
+  }
+
+  .hero-section--starlink .hero-section__description {
+    max-width: 500px;
+  }
 }
 
+/*
+  DESKTOP
+*/
+
 @media (min-width: 1024px) {
-  .starlink__content{
-    position: relative;
-    max-width: 1700px;
-    width: 100%;
-    margin: 0 auto;
-    top: 50%;
-  }
-  .starlink__content_inner{
-    position: absolute;
-    text-align: left;
-    top: 50%;
-    width: 40%;
+  .hero-section--starlink .hero-section__content {
+    top: 60%;
+    left: 2%;
     transform: translateY(-50%);
+
+    max-width: 100%;
+    max-height: 600px;
+    padding-left: 5%;
+    padding-right: 0;
   }
-  .starlink__title{
-    font-size: 3rem;
+
+  .hero-section--starlink .hero-section__title {
+    font-size: 48px;
+    line-height: 1.05;
+    max-width: 700px;
   }
-  .starlink__text{
-    font-family: "D-DIN", sans-serif;
-    font-size: 16px;
-    font-stretch: 100%;
-    margin: 16 auto;
+
+  .hero-section--starlink .hero-section__description {
+    font-size: 18px;
+    max-width: 750px;
   }
-  .starlink::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0;
-    height: 40%;
-    background: linear-gradient(to bottom, transparent, black);
-    z-index: 0;
-  }
+}
+
+/*
+  LARGE DESKTOP
+*/
+
+@media (min-width: 1440px) {
 }
