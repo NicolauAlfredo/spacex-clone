@@ -4,7 +4,8 @@
 
 .hero-section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -136,16 +137,129 @@
    Branch: feature/home-making-life
 */
 
-.hero-section--multiplanetary::after {
-  content: "";
+.hero-section--multiplanetary {
+  min-height: 130vh;
+}
+
+.hero-section--multiplanetary .hero-section__video {
+  height: 50%;
+}
+
+.hero-section--multiplanetary .hero-section__overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at center,
-    transparent 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 0 4% 4%;
+}
+
+.hero-section--multiplanetary .hero-section__content {
+  position: static;
+  padding: 0;
+}
+
+.hero-section--multiplanetary .upcoming-launch {
+  position: static;
+  width: 100%;
+}
+
+.hero-section--multiplanetary {
+  background-color: black;
+}
+
+/* 
+  UPCOMING LAUNCH 
+*/
+
+.hero-section--multiplanetary .upcoming-launch {
+  color: var(--color-white);
+}
+
+.hero-section--multiplanetary .upcoming-launch__header {
+  display: flex;
+  align-items: center;
+}
+
+.hero-section--multiplanetary .upcoming-launch__title {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-section--multiplanetary .upcoming-launch__toggle {
+  display: none;
+}
+
+.hero-section--multiplanetary .upcoming-launch__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section--multiplanetary .upcoming-launch__card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.hero-section--multiplanetary .upcoming-launch__image {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-section--multiplanetary .upcoming-launch__image img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-section--multiplanetary .upcoming-launch__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.hero-section--multiplanetary .upcoming-launch__mission-title {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero-section--multiplanetary .upcoming-launch__countdown {
+  font-size: 0.75rem;
+  line-height: 1.1;
+}
+
+.hero-section--multiplanetary .upcoming-launch__arrow {
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.hero-section--multiplanetary .upcoming-launch__link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.hero-section--multiplanetary .upcoming-launch__link-text {
+  font-size: 9px;
+  text-transform: uppercase;
 }
 
 /*
@@ -169,15 +283,30 @@
 */
 
 @media (min-width: 1024px) {
-  .hero-section--multiplanetary .hero-section__content {
-    top: 60%;
-    left: 2%;
-    transform: translateY(-50%);
-    bottom: auto;
+  .hero-section--multiplanetary {
+    height: 100%;
+  }
 
-    max-width: 100%;
+  .hero-section--multiplanetary .hero-section__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-section--multiplanetary .hero-section__content {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+
+    transform: translateY(-50%);
+
     padding-left: 5%;
     padding-right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .hero-section--multiplanetary .hero-section__video {
@@ -202,6 +331,15 @@
     font-size: 0.85rem;
     letter-spacing: 0.12em;
   }
+
+  /* 
+    UPCOMING LAUNCH
+    Visible on mobile and tablet only
+  */
+
+  .hero-section--multiplanetary .upcoming-launch {
+    display: none;
+  }
 }
 
 /*
@@ -219,18 +357,25 @@
    Branch: feature/home-space
 */
 
-.hero-section--technology {
-  /* MOBILE FIRST */
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  background-color: black;
-  font-family: "D-DIN-Bold", sans-serif;
+.hero-section--technology::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    0deg,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
 }
 
-.hero-section--technology--img {
+.hero-section--technology {
+  background-color: black;
+}
+
+.hero-section--technology .hero-section__image {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -238,90 +383,83 @@
   object-fit: cover;
   object-position: center center;
 }
-.hero-section--technology--background {
-  background: linear-gradient(
-    0deg,
-    black 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-  display: block;
-  width: 100vw;
-  height: 67%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
 
-.hero-section--technology--inner-text {
+.hero-section--technology .hero-section__content {
   position: absolute;
-  color: #f0f0fa;
   bottom: 5%;
   left: 5%;
   right: 5%;
+
+  padding: 0;
   z-index: 2;
+  color: #f0f0fa;
 }
 
-.hero-section--technology--header {
-  font-size: 2.25rem;
-  line-height: 2.25rem;
-  font-weight: 400;
-}
-
-.hero-section--technology--description {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  line-height: 1.6;
-}
+/*
+  DESKTOP
+*/
 
 @media (min-width: 768px) {
-  .hero-section--technology--inner-text {
-    right: 20px;
+  .hero-section--technology .hero-section__content {
     left: 20px;
+    right: 20px;
   }
 }
 
+/*
+  DESKTOP
+*/
+
 @media (min-width: 1024px) {
-  .hero-section--technology--img {
-    height: 100vh;
-  }
-  .hero-section--technology--background {
-    height: 100%;
+  .hero-section--technology::after {
     background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0) 50%,
       rgba(0, 0, 0, 0.8) 100%
     );
   }
-  .hero-section--technology--inner-text {
-    max-width: 650px;
-    right: 100px;
-    left: 49%;
-    width: 50%;
-    top: 13%;
-  }
-  .hero-section--technology--header {
-    font-size: 3rem;
-    text-transform: uppercase;
-    max-width: 90%;
-    margin-left: 0;
-    line-height: 48px;
+
+  .hero-section--launch-provider::after {
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
 
-  .hero-section--technology--description {
+  .hero-section--technology .hero-section__image {
+    height: 100%;
+  }
+
+  .hero-section--technology .hero-section__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--technology .hero-section__content {
+    top: 13%;
+    left: 55%;
+    right: 100px;
+    bottom: auto;
+
+    width: 50%;
+    max-width: 650px;
+  }
+
+  .hero-section--technology .hero-section__title {
+    max-width: 90%;
+    font-size: 3rem;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  .hero-section--technology .hero-section__description {
     margin-top: 15px;
     margin-bottom: 30px;
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .hero-section--technology--img {
-    content: url(../../assets/pages/home/images/revolutionizing-space-tech-desktop.jpg);
-  }
-  .hero-section--launch-provider--inner-text {
   }
 }
 
@@ -331,18 +469,25 @@
    Branch: feature/home-launch
 */
 
-.hero-section--launch-provider {
-  /* MOBILE FIRST */
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  background-color: black;
-  font-family: "D-DIN-Bold", sans-serif;
+.hero-section--launch-provider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    0deg,
+    black 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
 
-.hero-section--launch-provider--video {
+.hero-section--launch-provider {
+  background-color: black;
+}
+
+.hero-section--launch-provider .hero-section__video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -350,63 +495,41 @@
   object-fit: cover;
   object-position: center center;
 }
-.hero-section--launch-provider--background {
-  background: linear-gradient(
-    0deg,
-    black 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-  display: block;
-  width: 100vw;
-  height: 67%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
 
-.hero-section--launch-provider--inner-text {
+.hero-section--launch-provider .hero-section__content {
   position: absolute;
-  color: #f0f0fa;
   bottom: 5%;
   left: 5%;
   right: 5%;
+
+  padding: 0;
   z-index: 2;
 }
 
-.hero-section--launch-provider--header {
-  font-size: 2.25rem;
-  line-height: 2.25rem;
-  font-weight: 400;
-}
+/*
+  TABLET
+*/
 
-.hero-section--launch-provider--description {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  line-height: 1.6;
-}
 @media (min-width: 768px) {
-  .hero-section--launch-provider {
-  }
-
-  .hero-section--launch-provider--inner-text {
-    right: 20px;
+  .hero-section--launch-provider .hero-section__content {
     left: 20px;
+    right: 20px;
   }
 }
 
+/*
+  DESKTOP
+*/
 @media (min-width: 1024px) {
-  .hero-section--launch-provider {
+  .hero-section--technology::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
 
-  .hero-section--launch-provider--video {
-    height: 100vh;
-  }
-
-  .hero-section--launch-provider--background {
-    height: 100%;
+  .hero-section--launch-provider::after {
     background: linear-gradient(
       270deg,
       rgba(0, 0, 0, 0) 50%,
@@ -414,30 +537,31 @@
     );
   }
 
-  .hero-section--launch-provider--inner-text {
-    max-width: 650px;
-    left: 100px;
-    width: 50%;
+  .hero-section--launch-provider .hero-section__video {
+    height: 100%;
+  }
+
+  .hero-section--launch-provider .hero-section__content {
     top: 13%;
+    left: 100px;
+    right: auto;
+    bottom: auto;
+
+    width: 50%;
+    max-width: 650px;
   }
 
-  .hero-section--launch-provider--header {
-    font-size: 3rem;
-    text-transform: uppercase;
+  .hero-section--launch-provider .hero-section__title {
     max-width: 90%;
-    margin-left: 0;
+    font-size: 3rem;
     line-height: 48px;
+    text-transform: uppercase;
   }
 
-  .hero-section--launch-provider--description {
+  .hero-section--launch-provider .hero-section__description {
     margin-top: 15px;
     margin-bottom: 30px;
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .hero-section--launch-provider {
   }
 }
 
