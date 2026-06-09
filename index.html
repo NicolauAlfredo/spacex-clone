@@ -374,26 +374,28 @@
           />
         </video>
 
-        <div class="hero-section__content">
-          <span class="hero-section__date">MAY 22, 2026</span>
+        <div class="hero-section__overlay">
+          <div class="hero-section__content">
+            <span class="hero-section__date">MAY 22, 2026</span>
 
-          <h2 class="hero-section__title">STARSHIP'S TWELFTH FLIGHT TEST</h2>
+            <h2 class="hero-section__title">STARSHIP'S TWELFTH FLIGHT TEST</h2>
 
-          <p class="hero-section__description"></p>
+            <p class="hero-section__description"></p>
 
-          <!-- Button -->
-          <a class="button button--primary" href="#">
-            <span class="button__text">WATCH</span>
+            <!-- Button -->
+            <a class="button button--primary" href="#">
+              <span class="button__text">WATCH</span>
 
-            <span class="button__icon">
-              <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                <path
-                  d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
-                />
-              </svg>
-            </span>
-          </a>
-          <!-- Button -->
+              <span class="button__icon">
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
+                  <path
+                    d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <!-- Button -->
+          </div>
         </div>
       </section>
       <!-- FINE SECTION 01 -->
@@ -576,14 +578,105 @@
       <!-- Revolutionizing Space Technology -->
       <!-- Owner: Federico -->
       <!-- Branch: feature/home-space -->
-      <section class="hero-section hero-section--technology"></section>
+      <section class="hero-section hero-section--technology">
+        <picture>
+          <source
+            srcset="
+              ./assets/pages/home/images/revolutionizing-space-tech-desktop.jpg
+            "
+            media="(min-width: 1024px)"
+          />
+          <img
+            class="hero-section__image"
+            src="./assets/pages/home/images/revolutionizing-space-tech-mobile.jpg"
+            alt=""
+          />
+        </picture>
+
+        <div class="hero-section__overlay">
+          <div class="hero-section__content">
+            <h2 class="hero-section__title">
+              REVOLUTIONIZING SPACE TECHNOLOGY
+            </h2>
+
+            <p class="hero-section__description">
+              SpaceX’s Starship spacecraft and Super Heavy rocket is a fully
+              reusable transportation system designed to carry both crew and
+              cargo to Earth orbit, the Moon, Mars, and beyond.
+            </p>
+
+            <!-- Button -->
+            <a class="button button--primary" href="#">
+              <span class="button__text">LEARN MORE</span>
+
+              <span class="button__icon">
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
+                  <path
+                    d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <!-- Button -->
+          </div>
+        </div>
+      </section>
       <!-- FINE SECTION 03 -->
 
       <!-- SECTION 04 -->
       <!-- World's Leading Launch Service Provider -->
       <!-- Owner: Federico -->
       <!-- Branch: feature/home-launch -->
-      <section class="hero-section hero-section--launch-provider"></section>
+      <section class="hero-section hero-section--launch-provider">
+        <video
+          class="hero-section__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="./assets/pages/home/images/leading-launch-service-mobile.jpg"
+        >
+          <source
+            src="./assets/pages/home/videos/leading-launch-service-mobile.mp4"
+            media="(max-width: 767px)"
+            type="video/mp4"
+          />
+          <source
+            src="./assets/pages/home/videos/leading-launch-service.mp4"
+            media="(min-width: 768px)"
+            type="video/mp4"
+          />
+        </video>
+
+        <div class="hero-section__overlay">
+          <div class="hero-section__content">
+            <h2 class="hero-section__title">
+              WORLD'S LEADING LAUNCH SERVICE PROVIDER
+            </h2>
+
+            <p class="hero-section__description">
+              SpaceX leads the world in launches with its reliable, reusable
+              rockets and is developing the fully and rapidly reusable rockets
+              necessary to transform humanity’s ability to access space into
+              something as routine as air travel.
+            </p>
+
+            <!-- Button -->
+            <a class="button button--primary" href="#">
+              <span class="button__text">RESERVE YOUR RIDE</span>
+
+              <span class="button__icon">
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
+                  <path
+                    d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <!-- Button -->
+          </div>
+        </div>
+      </section>
       <!-- FINE SECTION 04 -->
 
       <!-- SECTION 05 -->
@@ -618,30 +711,32 @@
           />
         </video>
 
-        <div class="hero-section__content">
-          <h2 class="hero-section__title">
-            Delivering high-speed internet from space
-          </h2>
+        <div class="hero-section__overlay">
+          <div class="hero-section__content">
+            <h2 class="hero-section__title">
+              Delivering high-speed internet from space
+            </h2>
 
-          <p class="hero-section__description">
-            Starlink is the world’s most advanced satellite constellation in
-            low-Earth orbit, delivering reliable broadband internet capable of
-            supporting streaming, online gaming, video calls, and more.
-          </p>
+            <p class="hero-section__description">
+              Starlink is the world’s most advanced satellite constellation in
+              low-Earth orbit, delivering reliable broadband internet capable of
+              supporting streaming, online gaming, video calls, and more.
+            </p>
 
-          <!-- Button -->
-          <a class="button button--primary" href="#">
-            <span class="button__text">ORDER NOW</span>
+            <!-- Button -->
+            <a class="button button--primary" href="#">
+              <span class="button__text">ORDER NOW</span>
 
-            <span class="button__icon">
-              <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                <path
-                  d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
-                />
-              </svg>
-            </span>
-          </a>
-          <!-- Button -->
+              <span class="button__icon">
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
+                  <path
+                    d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
+                  />
+                </svg>
+              </span>
+            </a>
+            <!-- Button -->
+          </div>
         </div>
       </section>
       <!-- FINE SECTION 06 -->
