@@ -438,35 +438,39 @@
       <!-- Owner: Federico -->
       <!-- Branch: feature/home-space -->
       <section class="hero-section hero-section--technology">
-        <img
-          class="hero-section--technology--img"
-          src="assets/pages/home/images/revolutionizing-space-tech-mobile.jpg"
-          alt=""
-        />
-        <!-- Gradient background -->
-        <div class="hero-section--technology--background"></div>
-        <!-- Container per il testo -->
-        <div class="hero-section--technology--inner-text">
-          <h2 class="hero-section--technology--header">
-            REVOLUTIONIZING SPACE TECHNOLOGY
-          </h2>
-          <p class="hero-section--technology--description">
-            SpaceX’s Starship spacecraft and Super Heavy rocket is a fully
-            reusable transportation system designed to carry both crew and cargo
-            to Earth orbit, the Moon, Mars, and beyond.
-          </p>
-          <!-- Bottone -->
-          <a class="button button--primary" href="#">
-            <span class="button__text">LEARN MORE</span>
+        <picture>
+          <source
+            srcset="
+              ./assets/pages/home/images/revolutionizing-space-tech-desktop.jpg
+            "
+            media="(min-width: 1024px)"
+          />
+          <img
+            class="hero-section__image"
+            src="./assets/pages/home/images/revolutionizing-space-tech-mobile.jpg"
+            alt=""
+          />
+        </picture>
 
-            <span class="button__icon">
-              <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                <path
-                  d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
-                />
-              </svg>
-            </span>
-          </a>
+        <div class="hero-section__overlay">
+          <div class="hero-section__content">
+            <h2 class="hero-section__title">
+              REVOLUTIONIZING SPACE TECHNOLOGY
+            </h2>
+
+            <p class="hero-section__description">
+              SpaceX’s Starship spacecraft and Super Heavy rocket is a fully
+              reusable transportation system designed to carry both crew and
+              cargo to Earth orbit, the Moon, Mars, and beyond.
+            </p>
+
+            <a class="button button--primary" href="#">
+              <span class="button__text">LEARN MORE</span>
+              <span class="button__icon">
+                <!-- same svg -->
+              </span>
+            </a>
+          </div>
         </div>
       </section>
       <!-- FINE SECTION 03 -->
@@ -476,40 +480,46 @@
       <!-- Owner: Federico -->
       <!-- Branch: feature/home-launch -->
       <section class="hero-section hero-section--launch-provider">
-        <!-- Video  -->
         <video
-          class="hero-section--launch-provider--video"
+          class="hero-section__video"
           autoplay
           muted
           loop
           playsinline
-          src="/assets/pages/home/videos/leading-launch-service-mobile.mp4"
-        ></video>
-        <!-- Gradient background -->
-        <div class="hero-section--launch-provider--background"></div>
-        <!-- Container per il testo -->
-        <div class="hero-section--launch-provider--inner-text">
-          <h2 class="hero-section--launch-provider--header">
-            WORLD'S LEADING LAUNCH SERVICE PROVIDER
-          </h2>
-          <p class="hero-section--launch-provider--description">
-            SpaceX leads the world in launches with its reliable, reusable
-            rockets and is developing the fully and rapidly reusable rockets
-            necessary to transform humanity’s ability to access space into
-            something as routine as air travel.
-          </p>
-          <!-- Bottone -->
-          <a class="button button--primary" href="#">
-            <span class="button__text">RESERVE YOUR RIDE</span>
+          poster="./assets/pages/home/images/leading-launch-service-mobile.jpg"
+        >
+          <source
+            src="./assets/pages/home/videos/leading-launch-service-mobile.mp4"
+            media="(max-width: 767px)"
+            type="video/mp4"
+          />
+          <source
+            src="./assets/pages/home/videos/leading-launch-service-desktop.mp4"
+            media="(min-width: 768px)"
+            type="video/mp4"
+          />
+        </video>
 
-            <span class="button__icon">
-              <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                <path
-                  d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
-                />
-              </svg>
-            </span>
-          </a>
+        <div class="hero-section__overlay">
+          <div class="hero-section__content">
+            <h2 class="hero-section__title">
+              WORLD'S LEADING LAUNCH SERVICE PROVIDER
+            </h2>
+
+            <p class="hero-section__description">
+              SpaceX leads the world in launches with its reliable, reusable
+              rockets and is developing the fully and rapidly reusable rockets
+              necessary to transform humanity’s ability to access space into
+              something as routine as air travel.
+            </p>
+
+            <a class="button button--primary" href="#">
+              <span class="button__text">RESERVE YOUR RIDE</span>
+              <span class="button__icon">
+                <!-- same svg -->
+              </span>
+            </a>
+          </div>
         </div>
       </section>
       <!-- FINE SECTION 04 -->
