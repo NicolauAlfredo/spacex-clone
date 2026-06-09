@@ -314,12 +314,21 @@
   .hero-section--launch-provider {
   }
 
+  .hero-section--launch-provider--video {
+    height: 100vh;
+  }
+
   .hero-section--launch-provider--background {
+    height: 100%;
     background: linear-gradient(
       270deg,
-      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0) 50%,
       rgba(0, 0, 0, 0.8) 100%
     );
+  }
+
+  .hero-section--launch-provider--inner-text {
+    
   }
 }
 
