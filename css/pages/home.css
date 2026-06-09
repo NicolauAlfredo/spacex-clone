@@ -328,7 +328,24 @@
   }
 
   .hero-section--launch-provider--inner-text {
-    
+    max-width: 650px;
+    left: 100px;
+    width: 50%;
+    top: 13%;
+  }
+
+  .hero-section--launch-provider--header {
+    font-size: 3rem;
+    text-transform: uppercase;
+    max-width: 90%;
+    margin-left: 0;
+    line-height: 48px;
+  }
+
+  .hero-section--launch-provider--description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
   }
 }
 
