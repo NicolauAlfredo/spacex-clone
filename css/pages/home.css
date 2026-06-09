@@ -296,13 +296,17 @@
   .hero-section--multiplanetary .hero-section__content {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 4%;
 
     transform: translateY(-50%);
 
-    max-width: 100%;
     padding-left: 5%;
     padding-right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .hero-section--multiplanetary .hero-section__video {
@@ -353,22 +357,109 @@
    Branch: feature/home-space
 */
 
-.hero-section--technology {
-  /* MOBILE FIRST */
+.hero-section--technology::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    0deg,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
 }
+
+.hero-section--technology {
+  background-color: black;
+}
+
+.hero-section--technology .hero-section__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 67%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-section--technology .hero-section__content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+
+  padding: 0;
+  z-index: 2;
+  color: #f0f0fa;
+}
+
+/*
+  DESKTOP
+*/
 
 @media (min-width: 768px) {
-  .hero-section--technology {
+  .hero-section--technology .hero-section__content {
+    left: 20px;
+    right: 20px;
   }
 }
+
+/*
+  DESKTOP
+*/
 
 @media (min-width: 1024px) {
-  .hero-section--technology {
+  .hero-section--technology::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
-}
 
-@media (min-width: 1440px) {
-  .hero-section--technology {
+  .hero-section--launch-provider::after {
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--technology .hero-section__image {
+    height: 100%;
+  }
+
+  .hero-section--technology .hero-section__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--technology .hero-section__content {
+    top: 13%;
+    left: 55%;
+    right: 100px;
+    bottom: auto;
+
+    width: 50%;
+    max-width: 650px;
+  }
+
+  .hero-section--technology .hero-section__title {
+    max-width: 90%;
+    font-size: 3rem;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  .hero-section--technology .hero-section__description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
   }
 }
 
@@ -378,22 +469,99 @@
    Branch: feature/home-launch
 */
 
-.hero-section--launch-provider {
-  /* MOBILE FIRST */
+.hero-section--launch-provider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    0deg,
+    black 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
+
+.hero-section--launch-provider {
+  background-color: black;
+}
+
+.hero-section--launch-provider .hero-section__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 67%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-section--launch-provider .hero-section__content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+
+  padding: 0;
+  z-index: 2;
+}
+
+/*
+  TABLET
+*/
 
 @media (min-width: 768px) {
-  .hero-section--launch-provider {
+  .hero-section--launch-provider .hero-section__content {
+    left: 20px;
+    right: 20px;
   }
 }
 
+/*
+  DESKTOP
+*/
 @media (min-width: 1024px) {
-  .hero-section--launch-provider {
+  .hero-section--technology::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
   }
-}
 
-@media (min-width: 1440px) {
-  .hero-section--launch-provider {
+  .hero-section--launch-provider::after {
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--launch-provider .hero-section__video {
+    height: 100%;
+  }
+
+  .hero-section--launch-provider .hero-section__content {
+    top: 13%;
+    left: 100px;
+    right: auto;
+    bottom: auto;
+
+    width: 50%;
+    max-width: 650px;
+  }
+
+  .hero-section--launch-provider .hero-section__title {
+    max-width: 90%;
+    font-size: 3rem;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  .hero-section--launch-provider .hero-section__description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
   }
 }
 
