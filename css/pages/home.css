@@ -298,13 +298,30 @@
   .hero-section--technology--inner-text {
     max-width: 650px;
     right: 100px;
+    left: 49%;
     width: 50%;
     top: 13%;
+  }
+  .hero-section--technology--header {
+    font-size: 3rem;
+    text-transform: uppercase;
+    max-width: 90%;
+    margin-left: 0;
+    line-height: 48px;
+  }
+
+  .hero-section--technology--description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .hero-section--technology {
+  .hero-section--technology--img {
+    content: url(../../assets/pages/home/images/revolutionizing-space-tech-desktop.jpg);
+  }
+  .hero-section--launch-provider--inner-text {
   }
 }
 
