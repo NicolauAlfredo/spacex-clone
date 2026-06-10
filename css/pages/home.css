@@ -713,9 +713,11 @@
   background: linear-gradient(to bottom, transparent, black);
   z-index: 0;
 }
+
 .hero-section--starlink .hero-section__title {
   max-width: 300px;
 }
+
 .hero-section--starlink .hero-section__content {
   position: absolute;
   bottom: 0;
