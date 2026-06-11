@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SpaceX</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/pages/home.css" />
     <link rel="stylesheet" href="../css/pages/moon.css" />
     <link rel="icon" href="../favicon-spacex.ico" />
   </head>
-  <body>
+  <body class="moon">
     <!-- HEADER -->
     <!-- Owner: Nicolau -->
     <!-- Branch: feature/home-header -->
@@ -348,46 +347,23 @@
     <main>
       <!-- SECTION 1 -->
       <!-- The Moon -->
-      <section class="hero-section--moon">
-        <picture>
-          <source
-            srcset="
-              ./assets/pages/home/images/revolutionizing-space-tech-desktop.jpg
-            "
-            media="(min-width: 1024px)"
-          />
-          <img
-            class="hero-section__image"
-            src="./assets/pages/home/images/revolutionizing-space-tech-mobile.jpg"
-            alt=""
-          />
-        </picture>
+      <section class="hero-section hero-section-moon">
+        <video
+          class="hero-section-moon__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          src="../assets/pages/moon/videos/moon-video.mp4"
+        ></video>
 
-        <div class="hero-section__overlay">
-          <div class="hero-section__content">
-            <h2 class="hero-section__title">
-              REVOLUTIONIZING SPACE TECHNOLOGY
-            </h2>
+        <div class="hero-section-moon__overlay">
+          <div class="hero-section-moon__content">
+            <h2 class="hero-section-moon__title">THE MOON</h2>
 
-            <p class="hero-section__description">
-              SpaceX’s Starship spacecraft and Super Heavy rocket is a fully
-              reusable transportation system designed to carry both crew and
-              cargo to Earth orbit, the Moon, Mars, and beyond.
+            <p class="hero-section-moon__description">
+              RETURNING HUMANS TO LUNAR MISSIONS
             </p>
-
-            <!-- Button -->
-            <a class="button button--primary" href="#">
-              <span class="button__text">LEARN MORE</span>
-
-              <span class="button__icon">
-                <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                  <path
-                    d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
-                  />
-                </svg>
-              </span>
-            </a>
-            <!-- Button -->
           </div>
         </div>
       </section>
