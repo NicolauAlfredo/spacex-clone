@@ -4,29 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starlink</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/pages/starlink.css" />
-    <link rel="stylesheet" href="./css/layout/header.css" />
-    <link rel="stylesheet" href="./css/layout/footer.css" />
-    <link rel="stylesheet" href="./css/components/button.css" />
-    <link rel="icon" href="./favicon-spacex.ico" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/starlink.css" />
+    <link rel="stylesheet" href="../css/layout/header.css" />
+    <link rel="stylesheet" href="../css/layout/footer.css" />
+    <link rel="stylesheet" href="../css/components/button.css" />
+    <link rel="icon" href="../favicon-spacex.ico" />
   </head>
   <body>
     <!-- HEADER -->
     <!-- Owner: Felice -->
     <!-- Branch: integration/starlink-page -->
 
-    <header class="header"></header>
+     <header class = "header">
+            <div class = "header__container">
+                <a class="header__logo" href="#">STARLINK</a>
+              </div>
+        </header>
     <!-- FINE HEADER -->
 
     <!-- MAIN CONTENT -->
     <main class="starlink">
-
       <!-- SECTION 01 -->
       <!-- Best Value in Space Internet -->
       <!-- Owner: Felice -->
       <!-- Branch: integration/starlink-page -->
-      <section class="starlink-section starlink-section--best-value"></section>
+      <section class="starlink-section starlink-section--best-value">
+       
+        <picture>
+          <source
+            srcset="
+              ../assets/pages/starlink/backgrounds/v4_night_sky_desktop.webp
+            "
+            media="(min-width: 1024px)"
+          />
+          <img
+            class="starlink-section__img"
+            src="../assets/pages/starlink/backgrounds/v4_night_sky_mobile.webp"
+            alt=""
+          />
+        </picture>
+      </section>
+
       <!-- FINE SECTION 01 -->
 
       <!-- SECTION 02 -->
@@ -70,7 +89,6 @@
       <!-- Branch: feature/starlink-cta -->
       <section class="starlink-section starlink-section--cta"></section>
       <!-- FINE SECTION 07 -->
-
     </main>
     <!-- FINE MAIN CONTENT -->
 
@@ -81,6 +99,6 @@
     <!-- FINE FOOTER -->
 
     <!-- GLOBAL JS -->
-    <script type="module" src="./js/features/dropdownMenu.js" defer></script>
+    <script type="module" src="../js/features/dropdownMenu.js" defer></script>
   </body>
 </html>
