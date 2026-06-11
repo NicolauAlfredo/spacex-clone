@@ -3,6 +3,7 @@
    Owner: Felice (Section 01, 02, 03) / Rosario (Section 04–07)
 ============================================================ */
 
+
 /* ============================================================
    SECTION 01 — Best Value in Space Internet
    Owner: Felice
@@ -10,14 +11,24 @@
 ============================================================ */
 
 /* Mobile */
+.starlink-section--best-value {
+
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--best-value {
+
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .starlink-section--best-value {
+
+  }
 }
+
 
 /* ============================================================
    SECTION 02 — High Speed, Low Latency
@@ -26,14 +37,24 @@
 ============================================================ */
 
 /* Mobile */
+.starlink-section--high-speed {
+
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--high-speed {
+
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .starlink-section--high-speed {
+
+  }
 }
+
 
 /* ============================================================
    SECTION 03 — Reliable & Resilient
@@ -42,14 +63,24 @@
 ============================================================ */
 
 /* Mobile */
+.starlink-section--reliable {
+
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--reliable {
+
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .starlink-section--reliable {
+
+  }
 }
+
 
 /* ============================================================
    SECTION 04 — Coverage Map
@@ -58,14 +89,24 @@
 ============================================================ */
 
 /* Mobile */
+.starlink-section--coverage {
+
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--coverage {
+
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .starlink-section--coverage {
+
+  }
 }
+
 
 /* ============================================================
    SECTION 05 — Plans & Pricing
@@ -74,14 +115,24 @@
 ============================================================ */
 
 /* Mobile */
+.starlink-section--plans {
+
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--plans {
+
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .starlink-section--plans {
+
+  }
 }
+
 
 /* ============================================================
    SECTION 06 — Hardware / Kit
@@ -90,14 +141,24 @@
 ============================================================ */
 
 /* Mobile */
+.starlink-section--hardware {
+
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--hardware {
+
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .starlink-section--hardware {
+
+  }
 }
+
 
 /* ============================================================
    SECTION 07 — Get Started CTA
@@ -106,11 +167,20 @@
 ============================================================ */
 
 /* Mobile */
+.starlink-section--cta {
+
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--cta {
+
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .starlink-section--cta {
+
+  }
 }
