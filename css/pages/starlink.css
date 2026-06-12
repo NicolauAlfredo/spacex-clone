@@ -83,14 +83,81 @@
 
 
 /* ============================================================
-   SECTION 04 — Coverage Map
+   GLOBAL AND COMMON CLASSES
    Owner: Rosario
-   Branch: feature/starlink-coverage
 ============================================================ */
 
 /* Mobile */
-.starlink-section--coverage {
+.starlink-section {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-family: "D-DIN", sans-serif;
+}
+.starlink-section__gradient{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.548) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 
+
+
+.starlink-section__text--container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 7%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.starlink-section__inner--container{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-white);
+}
+
+.starlink-section__inner--title{
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 105%;
+  font-weight: 600;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+.starlink-section__inner--text{
+  color: rgba(250, 250, 250, 0.7);
+  line-height: 150%;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 500ms ease-out 300ms, transform 500ms ease-out 300ms;
+}
+
+.starlink-section__link--container{
+  margin-top: 8px;
+  background-color: white;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+}
+
+.starlink-section__link--button{
+  padding: 6px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 /* Tablet */
@@ -107,16 +174,95 @@
   }
 }
 
+/* ============================================================
+   SECTION 04
+   Owner: Rosario
+============================================================ */
+
+.starlink-section__image-car {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 85% center;
+}
 
 /* ============================================================
-   SECTION 05 — Plans & Pricing
+   SECTION 05
    Owner: Rosario
-   Branch: feature/starlink-plans
 ============================================================ */
 
 /* Mobile */
-.starlink-section--plans {
+.starlink-section--high-speed{
+  position: relative;
+  background-color: black;
+  height: 728px;
+}
 
+.starlink-section--high-speed--background {
+  position: absolute;
+  background-image: url(/assets/pages/starlink/backgrounds/illustration_10.webp);
+  background-position: center center;
+  background-size: cover;
+  inset: 0;
+  max-width: 1200px;
+  height: 100vh;
+  max-height: 100%;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.starlink-section--high-speed__title{
+  color: white;
+  text-align: center;
+  padding: 32px 0px;
+  font-size: 2.3rem;
+  margin: 0px 32px;
+}
+
+.starlink-section--high-speed__carousel--scroll {
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+  padding: 0 0px 24px;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  
+}
+
+
+.starlink-section--high-speed__carousel {
+  display: flex;
+  gap: 16px;
+}
+
+.starlink-section--high-speed__card{
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  height: 436px;
+  justify-content: center;
+  align-items: center;
+}
+
+.starlink-section--high-speed__card--image{
+  height: 300px;
+  width: 300px;
+  border-radius: 7%;
+  overflow: hidden;
+}
+
+.starlink-section--high-speed__card--container--text{
+  line-height: 150%;
+}
+
+.starlink-section--high-speed__card--text{
+  color: white;
 }
 
 /* Tablet */
@@ -135,14 +281,18 @@
 
 
 /* ============================================================
-   SECTION 06 — Hardware / Kit
+   SECTION 06 
    Owner: Rosario
-   Branch: feature/starlink-hardware
 ============================================================ */
 
 /* Mobile */
-.starlink-section--hardware {
-
+.starlink-section__image-green-roof {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 15% 50%;
 }
 
 /* Tablet */
@@ -161,14 +311,22 @@
 
 
 /* ============================================================
-   SECTION 07 — Get Started CTA
+   SECTION 07
    Owner: Rosario
-   Branch: feature/starlink-cta
 ============================================================ */
 
 /* Mobile */
-.starlink-section--cta {
+.starlink-section__image-sun-roof {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
 
+.starlink-section__image-yard-roof {
+  display: none;
 }
 
 /* Tablet */
