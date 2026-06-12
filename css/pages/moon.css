@@ -97,9 +97,6 @@
 /* SECTION 2 */
 /* Why The Moon */
 
-.hero-section-why {
-}
-
 .hero-section-why__img-wrapper {
   position: relative;
   width: 100%;
@@ -120,4 +117,52 @@
   transform: scale(1.2);
 }
 
+.hero-section-why__content {
+  color: white;
+  padding: 40px 20px;
+}
 
+.hero-section-why__title {
+  max-width: 80%;
+  line-height: 2.25rem;
+  margin: auto auto auto 0;
+  font-size: 2.25rem;
+}
+
+.hero-section-why__description {
+  margin: 15px 0;
+  font-size: 1rem;
+  line-height: 26px;
+}
+
+.hero-section-why__table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.hero-section-why__table-label {
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.hero-section-why__table-value {
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+  text-align: left;
+}
+
+/* @media (min-width: 1024px) {
+  .hero-section-why {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-section-why__content {
+    width: 37%;
+    padding-right: 50px;
+    transform: translateY(-50%);
+  }
+} */
