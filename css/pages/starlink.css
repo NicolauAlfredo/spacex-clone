@@ -214,6 +214,9 @@ body {
   min-height: unset;
   height: auto;
   padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .starlink-section--plans .starlink-section__content {
   position: static;
@@ -259,6 +262,11 @@ body {
   font-size: 1.1em;
   margin-right: 5em;
 }
+.starlink-section--plans
+  .starlink-section__content:nth-child(4)
+  .starlink-section__title {
+  align-self: flex-start;
+}
 .starlink-section--plans .starlink-section__label {
   font-size: 0.85em;
   font-weight: 700;
@@ -280,8 +288,7 @@ body {
   color: #a0a0a0;
   margin-right: 4.8em;
 }
-.starlink-section--plans .starlink-section__subtitle {
-}
+
 .starlink-section--plans .starlink-section__price-container {
   margin-right: 11em;
   display: flex;
@@ -292,6 +299,11 @@ body {
 .starlink-section--plans .starlink-section__price {
   margin-left: 0.5em;
   font-size: 2.2em;
+}
+.starlink-section--plans__footer {
+  color: #a0a0a0;
+  font-size: 0.85em;
+  max-width: 300px;
 }
 
 /* Tablet */
