@@ -305,6 +305,12 @@ body {
   font-size: 0.85em;
   max-width: 300px;
 }
+.starlink-plans__group {
+  display: contents;
+}
+.starlink-plans__group--hidden {
+  display: none;
+}
 
 /* Tablet */
 @media (min-width: 768px) {
