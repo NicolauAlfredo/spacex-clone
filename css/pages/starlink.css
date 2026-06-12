@@ -203,7 +203,7 @@ body {
 }
 
 /* ============================================================
-   SECTION 02 — High Speed, Low Latency
+   SECTION 02 — Plans
    Owner: Felice
    Branch: integration/starlink-page
 ============================================================ */
@@ -211,6 +211,12 @@ body {
 .starlink-section--plans {
   background: black;
   text-align: center;
+}
+.starlink-section--plans .starlink-section__content {
+  background-color: #121212;
+  border-radius: 20px;
+  padding: 20px;
+  width: 80%;
 }
 .starlink-toggle {
   background: #1a1a1a;
@@ -234,6 +240,52 @@ body {
 
 .starlink-toggle__btn--active {
   background: #3a3a3a;
+}
+.starlink-section--plans .starlink-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #f0f0fa;
+
+  margin: 15em auto;
+}
+.starlink-section--plans .starlink-section__title {
+  font-size: 1.1em;
+  margin-right: 5em;
+}
+.starlink-section--plans .starlink-section__label {
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #a0a0a0;
+  text-align: left;
+  margin-top: 1em;
+  line-height: 1.7;
+  text-transform: none;
+  max-width: 200px;
+  margin-right: 4em;
+}
+.starlink-section--plans .starlink-section__list {
+  list-style: disc;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+  color: #a0a0a0;
+  margin-right: 4.8em;
+}
+.starlink-section--plans .starlink-section__subtitle {
+}
+.starlink-section--plans .starlink-section__price-container {
+  margin-right: 11em;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.starlink-section--plans .starlink-section__price {
+  margin-left: 0.5em;
+  font-size: 2.5em;
 }
 
 /* Tablet */
