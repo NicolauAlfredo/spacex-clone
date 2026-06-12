@@ -10,6 +10,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  font-family: "D-DIN", sans-serif;
 }
 
 .hero-section-moon::after {
@@ -51,8 +52,43 @@
 .hero-section-moon__title {
   font-size: 50px;
   margin-bottom: 20px;
+  animation-name: reveal-title;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes reveal-title {
+  from {
+    opacity: 0;
+    transform: translateY(220%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .hero-section-moon__description {
   font-size: 1rem;
+  animation-name: reveal-description;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-duration: 0.75s;
+}
+@keyframes reveal-description {
+  from {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section-moon__title {
+    font-size: 100px;
+  }
 }
