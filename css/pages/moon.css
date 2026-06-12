@@ -1,5 +1,3 @@
-/* SECTION 1 */
-/* The Moon */
 .moon {
   background-color: black;
 }
@@ -12,6 +10,9 @@
   overflow: hidden;
   font-family: "D-DIN", sans-serif;
 }
+
+/* SECTION 1 */
+/* The Moon */
 
 .hero-section-moon::after {
   content: "";
@@ -92,3 +93,31 @@
     font-size: 100px;
   }
 }
+
+/* SECTION 2 */
+/* Why The Moon */
+
+.hero-section-why {
+}
+
+.hero-section-why__img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-section-why__img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  transform: scale(1.2);
+}
+
+
