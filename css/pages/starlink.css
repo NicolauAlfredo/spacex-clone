@@ -197,6 +197,7 @@
 .starlink-section--high-speed{
   position: relative;
   background-color: black;
+  font-family: "D-DIN", sans-serif;
   height: 728px;
 }
 
@@ -207,9 +208,8 @@
   background-size: cover;
   inset: 0;
   max-width: 1200px;
-  height: 100vh;
-  max-height: 100%;
-  opacity: 0.12;
+ height: 100%;
+  opacity: 0.10;
   pointer-events: none;
 }
 
@@ -262,9 +262,32 @@
 }
 
 .starlink-section--high-speed__card--text{
-  color: white;
+  color: rgba(250, 250, 250, 0.7);
+  opacity: 87%;
 }
 
+.starlink-section--high-speed__container--chevron{
+  background-color: transparent;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.starlink-section--high-speed__btn--chevron{
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  padding: 8px;
+}
+
+.starlink-section--high-speed__--chevron{
+  color: rgba(250, 250, 250, 0.56);
+}
 /* Tablet */
 @media (min-width: 768px) {
   .starlink-section--plans {
