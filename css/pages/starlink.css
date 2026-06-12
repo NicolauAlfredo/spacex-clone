@@ -207,20 +207,44 @@ body {
    Owner: Felice
    Branch: integration/starlink-page
 ============================================================ */
-
 /* Mobile */
-.starlink-section--high-speed {
+.starlink-section--plans {
+  background: black;
+  text-align: center;
+}
+.starlink-toggle {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 2px;
+  display: inline-flex;
+  gap: 2px;
+  margin-top: 3.5em;
+}
+
+.starlink-toggle__btn {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.starlink-toggle__btn--active {
+  background: #3a3a3a;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
-  .starlink-section--high-speed {
+  .starlink-section--high-plans {
   }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .starlink-section--high-speed {
+  .starlink-section--high-plans {
   }
 }
 
