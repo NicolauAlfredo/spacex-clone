@@ -306,10 +306,23 @@ body {
   max-width: 300px;
 }
 .starlink-plans__group {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 0.6rem;
+}
+[data-group="go"] {
+  gap: 2.2rem;
 }
 .starlink-plans__group--hidden {
   display: none;
+}
+.starlink-section--plans [data-group="go"] .starlink-section__content {
+  align-items: flex-start;
+}
+.starlink-section--plans__footer {
+  margin: 0 auto;
 }
 
 /* Tablet */
