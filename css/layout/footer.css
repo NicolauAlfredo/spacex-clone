@@ -48,6 +48,20 @@
   white-space: nowrap;
 }
 
+.footer__description{
+ padding: 10px 0px;
+  color: white;
+  display: flex;
+  position: relative;
+  left: 15%;
+}
+
+.footer--starlink{
+  width: 430;
+  font-size: 0.875rem;
+  line-height: 143%;
+  letter-spacing: 0.01063rem;
+}
 /* 
   TABLET 
 */
@@ -81,6 +95,9 @@
 
   .footer__nav {
     gap: 36px;
+  }
+  .footer__description{
+    left: 80%;
   }
 }
 
