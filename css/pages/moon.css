@@ -249,3 +249,34 @@
     margin: 0;
   }
 }
+
+@media (min-width: 1024px) {
+  .hero-section-missions {
+    margin-top: 300px;
+    width: 100vw;
+  }
+
+  .hero-section-missions::after {
+    position: absolute;
+  }
+
+  .hero-section-missions__img {
+    position: absolute;
+    background-position: center bottom;
+    background-size: cover;
+  }
+
+  .hero-section-missions__content {
+    position: relative;
+    left: 50px;
+    top: 11rem;
+    padding: 0;
+    width: 50%;
+  }
+
+  .hero-section-missions__title {
+    line-height: 3rem;
+    font-size: 3rem;
+  }
+}
+
