@@ -3,58 +3,339 @@
    Owner: Felice (Section 01, 02, 03) / Rosario (Section 04–07)
 ============================================================ */
 
-
 /* ============================================================
    SECTION 01 — Best Value in Space Internet
    Owner: Felice
    Branch: integration/starlink-page
 ============================================================ */
+:root {
+  --font: D-DIN, sans-serif;
+  --color-secondary: #c3c4c5;
+}
+body {
+  font-family: var(--font);
+  overflow-x: hidden;
+}
+.starlink-section {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
 
-/* Mobile */
+  
+}
+.starlink-section__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.starlink-section__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.starlink-section__content {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  padding: 0 4% 8% 4%;
+  z-index: 1;
+  color: #f0f0fa;
+  text-align: left;
+  line-height: 1.3;
+}
+
+/* HEADER .CSS */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 60px;
+  margin-top: 1.1em;
+  margin-left: 0.6em;
+}
+
+.header__logo {
+  color: #f0f0fa;
+  font-size: 1.25rem;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  margin-left: 0.5em;
+}
+.header__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.header__btn {
+  width: 35px;
+  height: 35px;
+  margin-right: 0.3em;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(250, 250, 250, 0.562);
+  background: rgba(74, 87, 102, 112);
+
+  cursor: pointer;
+}
+.starlink-section__content {
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  right: 0;
+  padding: 0 4% 8% 4%;
+  z-index: 1;
+  color: #f0f0fa;
+  margin-left: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+.starlink-section__title {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.starlink-section__subtitle {
+  margin-top: 17px;
+  margin-bottom: -10px;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #a0a0a0;
+
+  text-transform: uppercase;
+}
+.starlink-section__subtitle--price {
+  bottom: -3.9em;
+  left: 1.3em;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #a0a0a0;
+
+  text-transform: uppercase;
+}
+.starlink-section__price {
+  font-size: 2.9rem;
+  font-weight: 700;
+  color: #f0f0fa;
+}
+.starlink-section__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: -1.2rem;
+  margin-right: 0.5em;
+}
+
+.btn--primary {
+  width: 98%;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--ghost {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.starlink-section__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(
+      ellipse 100% 80% at 50% 86%,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.65) 32%,
+      rgba(0, 0, 0, 0.25) 58%,
+      transparent 82%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 35%,
+      rgba(0, 0, 0, 0.15) 45%,
+      rgba(0, 0, 0, 0.75) 80%
+    );
+}
 .starlink-section--best-value {
-
 }
 
 /* Tablet */
 @media (min-width: 768px) {
   .starlink-section--best-value {
-
   }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
   .starlink-section--best-value {
-
   }
 }
 
-
 /* ============================================================
-   SECTION 02 — High Speed, Low Latency
+   SECTION 02 — Plans
    Owner: Felice
    Branch: integration/starlink-page
 ============================================================ */
-
 /* Mobile */
-.starlink-section--high-speed {
+.starlink-section--plans {
+  background: black;
+  text-align: center;
+  min-height: unset;
+  height: auto;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.starlink-section--plans .starlink-section__content {
+  position: static;
+  background-color: #121212;
+  border-radius: 13px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto 0.8rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #f0f0fa;
+  padding-bottom: 2rem;
+  margin-top: -1.5em;
+}
+.starlink-toggle {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 2px;
+  display: inline-flex;
+  gap: 2px;
+  margin-top: 3.5em;
+  margin-bottom: 1.5rem;
+}
 
+.starlink-toggle__btn {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.starlink-toggle__btn--active {
+  background: #3a3a3a;
+}
+
+.starlink-section--plans .starlink-section__title {
+  font-size: 1.1em;
+  margin-right: 5em;
+}
+.starlink-section--plans
+  .starlink-section__content:nth-child(4)
+  .starlink-section__title {
+  align-self: flex-start;
+}
+.starlink-section--plans .starlink-section__label {
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #a0a0a0;
+  text-align: left;
+  margin-top: 1em;
+  line-height: 1.7;
+  text-transform: none;
+  max-width: 200px;
+  margin-right: 4em;
+}
+.starlink-section--plans .starlink-section__list {
+  list-style: disc;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+  color: #a0a0a0;
+  margin-right: 4.8em;
+}
+
+.starlink-section--plans .starlink-section__price-container {
+  margin-right: 11em;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 1em;
+}
+.starlink-section--plans .starlink-section__price {
+  margin-left: 0.5em;
+  font-size: 2.2em;
+}
+.starlink-section--plans__footer {
+  color: #a0a0a0;
+  font-size: 0.85em;
+  max-width: 300px;
+}
+.starlink-plans__group {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 0.6rem;
+}
+[data-group="go"] {
+  gap: 2.2rem;
+}
+.starlink-plans__group--hidden {
+  display: none;
+}
+.starlink-section--plans [data-group="go"] .starlink-section__content {
+  align-items: flex-start;
+}
+.starlink-section--plans__footer {
+  margin: 0 auto;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
-  .starlink-section--high-speed {
-
+  .starlink-section--high-plans {
   }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .starlink-section--high-speed {
-
+  .starlink-section--high-plans {
   }
 }
-
 
 /* ============================================================
    SECTION 03 — Reliable & Resilient
@@ -63,24 +344,56 @@
 ============================================================ */
 
 /* Mobile */
-.starlink-section--reliable {
-
+.starlink-section--reliable .starlink-section__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% 60%;
+}
+.starlink-section--reliable .starlink-section__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(
+      ellipse 100% 80% at 50% 86%,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.3) 32%,
+      rgba(0, 0, 0, 0.17) 58%,
+      transparent 82%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 35%,
+      rgba(0, 0, 0, 0.05) 45%,
+      rgba(0, 0, 0, 0.45) 80%
+    );
+}
+.starlink-section--reliable .starlink-section__lable {
+  color: #c3c4c5;
+  line-height: 1.5em;
+  max-width: 310px;
+}
+.starlink-section--reliable .starlink-section__content {
+  display: flex;
+  gap: 0.7em;
+  margin-bottom: -1.3em;
+}
+.starlink-section--reliable .btn--primary {
+  width: 92%;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
   .starlink-section--reliable {
-
   }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
   .starlink-section--reliable {
-
   }
 }
-
 
 /* ============================================================
    GLOBAL AND COMMON CLASSES
@@ -158,23 +471,13 @@
 .starlink-section__link--button{
   padding: 6px;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 700; }
+.starlink-section--coverage {
 }
 
 /* Tablet */
 @media (min-width: 768px) {
-  .starlink-section__text--container{
-    width: 80%;
-    padding: 32px;
-    z-index: 1;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  .starlink-section__link--container{
-    width: 28%;
-  }
-  .starlink-section__inner--text{
-    font-size: 1.2rem;
+  .starlink-section--coverage {
   }
 }
 
@@ -379,8 +682,8 @@
   .starlink-section--high-speed__container--chevron{
     padding: 64px 0px;
   }
+  
 }
-
 
 /* ============================================================
    SECTION 06 
@@ -396,18 +699,23 @@
   object-fit: cover;
   object-position: 15% 50%;
 }
+.starlink-section--plans {
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--plans {
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
   .starlink-section__text--container-available-globally{
-    left: 45%;
+    left: 45%; 
+  }
+  .starlink-section--plans {
   }
 }
-
 
 /* ============================================================
    SECTION 07
@@ -427,9 +735,13 @@
 .starlink-section__image-yard {
   display: none;
 }
+.starlink-section--hardware {
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .starlink-section--hardware {
+  }
 }
 
 /* Desktop */
@@ -447,5 +759,29 @@
     z-index: 0;
     object-fit: cover;
     user-select: none;
+  }
+  .starlink-section--hardware {
+  }
+}
+
+/* ============================================================
+   SECTION 07 — Get Started CTA
+   Owner: Rosario
+   Branch: feature/starlink-cta
+============================================================ */
+
+/* Mobile */
+.starlink-section--cta {
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .starlink-section--cta {
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .starlink-section--cta {
   }
 }

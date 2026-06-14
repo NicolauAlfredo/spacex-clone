@@ -96,9 +96,11 @@
   .footer__nav {
     gap: 36px;
   }
+  /*  starlink footer */
   .footer__description{
-    left: 80%;
+    left: 90%;
   }
+
 }
 
 /* 
