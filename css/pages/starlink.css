@@ -12,9 +12,13 @@
   --font: D-DIN, sans-serif;
   --color-secondary: #c3c4c5;
 }
+.header {
+  position: absolute !important;
+}
 body {
   font-family: var(--font);
-  overflow-x: hidden;
+  
+ 
 }
 .starlink-section {
   width: 100%;
