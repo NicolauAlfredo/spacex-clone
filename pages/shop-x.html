@@ -6,6 +6,7 @@
     <title>Official xAI Shop</title>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/pages/shop-x.css" />
+    <link rel="stylesheet" href="../css/components/product.css" />
     <link rel="icon" href="../xAI-shop.ico" />
   </head>
   <body>
@@ -26,35 +27,13 @@
       <!-- PRODUCTS CARDS -->
       <!-- Owner: Nicolau Alfredo -->
       <!-- Branch: feature/shop-x-products-grid -->
-      <section class="products">
+      <section class="products" aria-labelledby="products-title">
         <div class="products__container">
           <div class="products__header">
-            <h2 class="products__title">All Products</h2>
+            <h2 id="products-title" class="products__title">All Products</h2>
           </div>
 
-          <div class="products__grid">
-            <article class="products__card">
-              <a href="#" class="products__image-link">
-                <img
-                  src="../assets/pages/shopx/xai-collection/products/xai-multi-tumbler-black.webp"
-                  alt="xAI Multi Tumbler"
-                  class="products__image products__image--primary"
-                />
-              </a>
-
-              <div class="products__card-info">
-                <div class="products__card-content">
-                  <h3 class="products__product-title">
-                    <a href="#" class="products__product-link">
-                      xAI Multi Tumbler
-                    </a>
-                  </h3>
-
-                  <span class="products__price">€45,95</span>
-                </div>
-              </div>
-            </article>
-          </div>
+          <div class="products__grid" data-products-grid></div>
         </div>
       </section>
     </main>
@@ -68,5 +47,6 @@
     <!-- JS  -->
     <script type="module" src="../js/features/cart/cartAddProduct.js"></script>
     <script type="module" src="../js/features/cart/cartPage.js"></script>
+    <script type="module" src="../js/features/shop-x/productPage.js"></script>
   </body>
 </html>
