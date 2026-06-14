@@ -1,9 +1,58 @@
 /* 
-   SHOP LAYOUT (GLOBAL PAGE STRUCTURE) 
+   SHOP LAYOUT (GLOBAL PAGE STRUCTURE) { }
 */
 
-.shop {
-  /* MOBILE FIRST */
+.shop-header {
+  background-color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.shop-header__container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding-inline: 2rem;
+  height: 80px;
+}
+
+.shop-header__logo {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.shop-header__logo img {
+  width: 40px;
+  height: 35px;
+}
+
+.shop-header__menu {
+  grid-column: 3;
+  justify-self: end;
+}
+
+.menu__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu__item-search {
+  display: none;
+}
+
+.menu__item-cart {
+  display: none;
+}
+
+.menu__item svg {
+  display: block;
+  color: white;
+  width: 30px;
+  height: 30px;
 }
 
 /* Tablet */
@@ -14,8 +63,6 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .shop {
-  }
 }
 
 /* Large Desktop */
