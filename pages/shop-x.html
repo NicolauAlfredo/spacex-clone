@@ -23,7 +23,7 @@
 
         <nav class="shop-header__menu">
           <ul class="menu__items">
-            <li class="menu__item">
+            <li class="menu__item hidden">
               <button class="menu__item-lang" type="button">
                 <img
                   src="../assets/pages/shopx/languages/italiano.jfif"
@@ -80,19 +80,57 @@
               </ul>
             </li>
 
-            <li class="menu__item">
-              <a href="#">Login</a>
+            <li class="menu__item hidden">
+              <a href="#">
+                <span class="menu__item-login">login</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497"
+                    stroke="currentColor"
+                    stroke-width="1"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+              </a>
             </li>
 
             <li class="menu__item">
               <a href="#">
                 <span class="menu__item-search">Search</span>
 
-                <img
-                  class="menu__item-search-img"
-                  src="../assets/pages/shopx/icons/search.svg"
-                  alt="Cerca nello store"
-                />
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M15.857 15.858 21 21.001"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
               </a>
             </li>
 
@@ -100,11 +138,17 @@
               <a href="#">
                 <span class="menu__item-cart">Cart (0)</span>
 
-                <img
-                  class="menu__item-cart-img"
-                  src="../assets/pages/shopx/icons/cart.svg"
-                  alt="Carrello dello store"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21.5 21.5v-15h-19v15h19ZM8 6V5a4 4 0 1 1 8 0v1"
+                    stroke="currentColor"
+                    stroke-width="1"
+                  />
+                </svg>
               </a>
             </li>
           </ul>
