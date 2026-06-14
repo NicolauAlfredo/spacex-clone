@@ -1,0 +1,138 @@
+/* Products section */
+.products {
+  padding: 2rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main content wrapper */
+.products__container {
+  display: grid;
+  gap: 2.5rem;
+  width: min(100% - 1rem, 1200px);
+  margin-inline: auto;
+}
+
+/* Section heading */
+.products__title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* Products grid (mobile first: 2 columns) */
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.35rem;
+  row-gap: 2.5rem;
+}
+
+/* Individual product card */
+.products__card {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Image container used for the hover effect */
+.products__image-link {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: block;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+/* Shared image styles */
+.products__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+/* Product information */
+.products__card-info {
+  text-align: center;
+}
+
+.products__card-content {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.products__product-title {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.products__product-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.products__price {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* Primary image visible by default */
+.products__image--primary {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Secondary image stacked on top and hidden initially */
+.products__image--secondary {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Swap images on hover */
+.products__card:hover .products__image--primary {
+  opacity: 0;
+}
+
+.products__card:hover .products__image--secondary {
+  opacity: 1;
+}
+
+/*
+  TABLET
+*/
+
+@media (min-width: 768px) {
+  .products {
+    padding: 1.5rem;
+  }
+
+  /* Increase grid capacity on larger screens */
+  .products__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/*
+  DESKTOP
+*/
+
+@media (min-width: 1024px) {
+  .products {
+    padding: 1.5rem;
+  }
+
+  .products__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/*
+  LARGE DESKTOP
+*/
+
+@media (min-width: 1440px) {
+}
