@@ -52,8 +52,7 @@
  padding: 10px 0px;
   color: white;
   display: flex;
-  position: relative;
-  left: 15%;
+  align-self: center;
 }
 
 .footer--starlink{
@@ -96,11 +95,6 @@
   .footer__nav {
     gap: 36px;
   }
-  /*  starlink footer */
-  .footer__description{
-    left: 90%;
-  }
-
 }
 
 /* 
