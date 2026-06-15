@@ -538,6 +538,34 @@ function handleSizeChart() {
 }
 
 /**
+ * Handle quantity controls.
+ *
+ * Prevents quantity values
+ * lower than one.
+ */
+function handleQuantityControls() {
+  const quantityValue = document.querySelector("[data-quantity-value]");
+  const decreaseButton = document.querySelector("[data-quantity-decrease]");
+  const increaseButton = document.querySelector("[data-quantity-increase]");
+
+  if (!quantityValue || !decreaseButton || !increaseButton) return;
+
+  let quantity = 1;
+
+  decreaseButton.addEventListener("click", () => {
+    if (quantity === 1) return;
+
+    quantity -= 1;
+    quantityValue.textContent = quantity;
+  });
+
+  increaseButton.addEventListener("click", () => {
+    quantity += 1;
+    quantityValue.textContent = quantity;
+  });
+}
+
+/**
  * Initialize the product details page.
  */
 function init() {
