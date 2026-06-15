@@ -565,6 +565,81 @@ function handleQuantityControls() {
   });
 }
 
+
+/**
+ * Get related products.
+ *
+ * Excludes the current product
+ * from the results.
+ *
+ * @param {Object} currentProduct
+ * @param {number} limit
+ * @returns {Array}
+ */
+function getRelatedProducts(currentProduct, limit = 4) {
+  return products
+    .filter((product) => product.id !== currentProduct.id)
+    .slice(0, limit);
+}
+
+/**
+ * Create the related products section.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function createRelatedProducts(product) {
+  const relatedProducts = getRelatedProducts(product);
+
+  if (relatedProducts.length === 0) return "";
+
+  return `
+    <section class="product-detail__related" aria-labelledby="related-products-title">
+      <h2 id="related-products-title" class="product-detail__related-title">
+        You may also like
+      </h2>
+
+      <div class="product-detail__related-grid">
+        ${relatedProducts
+      .map(
+        (relatedProduct) => `
+              <article class="product-detail__related-card">
+                <a
+                  href="./product-details.html?product=${relatedProduct.id}"
+                  class="product-detail__related-image-link"
+                >
+                <img 
+                  src="${relatedProduct.primaryImage}" 
+                  alt="${relatedProduct.alt}"
+                  class="product-detail__related-image product-detail__related-image--primary" />
+                
+                <img
+                  src="${relatedProduct.secondaryImage}"
+                  alt="" aria-hidden="true"
+                  class="product-detail__related-image product-detail__related-image--secondary" />
+                </a>
+
+                <h3 class="product-detail__related-name">
+                  <a
+                    href="./product-details.html?product=${relatedProduct.id}"
+                    class="product-detail__related-link"
+                  >
+                    ${relatedProduct.name}
+                  </a>
+                </h3>
+
+                <span class="product-detail__related-price">
+                  ${formatPrice(relatedProduct.price)}
+                </span>
+              </article>
+            `,
+      )
+      .join("")}
+      </div>
+    </section>
+  `;
+}
+
 /**
  * Initialize the product details page.
  */
