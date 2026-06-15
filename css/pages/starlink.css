@@ -478,6 +478,9 @@ body {
   margin-right: 0.5em;
   font-size: 0.9em;
 }
+.starlink-section--plans [data-group="go"] .starlink-section__price-container {
+margin-left: -1em;
+}
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
