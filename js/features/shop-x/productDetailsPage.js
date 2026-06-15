@@ -129,6 +129,161 @@ function renderProductDetails(product) {
 }
 
 /**
+ * Create the thumbnail gallery markup.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function createProductThumbnails(product) {
+  return product.images
+    .map(
+      (image, index) => `
+        <button
+          class="product-detail__thumb-button ${index === 0 ? "product-detail__thumb-button--active" : ""
+        }"
+          type="button"
+          data-product-thumb="${image}"
+          aria-label="Show product image ${index + 1}"
+        >
+          <img
+            src="${image}"
+            alt="${product.alt}"
+            class="product-detail__thumb-image"
+          />
+        </button>
+      `,
+    )
+    .join("");
+}
+
+/**
+ * Create all carousel slides.
+ *
+ * Used for the mobile image gallery.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function createProductSlides(product) {
+  return product.images
+    .map(
+      (image, index) => `
+        <img
+          src="${image}"
+          alt="${product.alt}"
+          class="product-detail__main-image"
+          data-product-slide
+          data-slide-index="${index}"
+        />
+      `,
+    )
+    .join("");
+}
+
+/**
+ * Create navigation dots for the image carousel.
+ *
+ * Dots are only displayed when
+ * the product contains more than one image.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function createProductDots(product) {
+  if (product.images.length <= 1) return "";
+
+  return `
+    <div class="product-detail__dots">
+      ${product.images
+      .map(
+        (_, index) => `
+            <button
+              class="product-detail__dot ${index === 0 ? "product-detail__dot--active" : ""
+          }"
+              type="button"
+              data-product-dot="${index}"
+              aria-label="Show product image ${index + 1}"
+            ></button>
+          `,
+      )
+      .join("")}
+    </div>
+  `;
+}
+
+/**
+ * Handle image gallery interactions.
+ *
+ * Features:
+ * - Thumbnail navigation
+ * - Carousel navigation
+ * - Active state synchronization
+ */
+function handleImageGallery() {
+  const carousel = document.querySelector("[data-product-carousel]");
+  const slides = document.querySelectorAll("[data-product-slide]");
+  const dots = document.querySelectorAll("[data-product-dot]");
+  const thumbButtons = document.querySelectorAll("[data-product-thumb]");
+
+  if (!carousel || slides.length === 0) return;
+
+  function setActiveImage(index) {
+    const slide = slides[index];
+
+    if (!slide) return;
+
+    carousel.scrollTo({
+      left: slide.offsetLeft,
+      behavior: "smooth",
+    });
+
+    dots.forEach((dot) => {
+      dot.classList.toggle(
+        "product-detail__dot--active",
+        Number(dot.dataset.productDot) === index,
+      );
+    });
+
+    thumbButtons.forEach((thumb, thumbIndex) => {
+      thumb.classList.toggle(
+        "product-detail__thumb-button--active",
+        thumbIndex === index,
+      );
+    });
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      setActiveImage(Number(dot.dataset.productDot));
+    });
+  });
+
+  thumbButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      setActiveImage(index);
+    });
+  });
+
+  carousel.addEventListener("scroll", () => {
+    const currentIndex = Math.round(carousel.scrollLeft / carousel.clientWidth);
+
+    dots.forEach((dot) => {
+      dot.classList.toggle(
+        "product-detail__dot--active",
+        Number(dot.dataset.productDot) === currentIndex,
+      );
+    });
+
+    thumbButtons.forEach((thumb, thumbIndex) => {
+      thumb.classList.toggle(
+        "product-detail__thumb-button--active",
+        thumbIndex === currentIndex,
+      );
+    });
+  });
+}
+
+/**
  * Initialize the product details page.
  */
 function init() {
