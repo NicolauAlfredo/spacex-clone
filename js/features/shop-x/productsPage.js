@@ -1,21 +1,11 @@
 // Import product data
 import { xaiProducts } from "../../data/products.js";
 
+// Import formata price util
+import { formatPrice } from "../../utils/formatPrice.js";
+
 // Select the products grid container
 const productsGrid = document.querySelector("[data-products-grid]");
-
-/**
- * Format a number as Euro currency.
- *
- * @param {number} price
- * @returns {string}
- */
-function formatPrice(price) {
-  return new Intl.NumberFormat("it-IT", {
-    style: "currency",
-    currency: "EUR",
-  }).format(price);
-}
 
 /**
  * Create the HTML markup for a single product card.
