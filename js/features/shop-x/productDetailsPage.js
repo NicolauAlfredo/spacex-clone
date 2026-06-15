@@ -323,6 +323,129 @@ function handleZoom() {
 }
 
 /**
+ * Check if the product contains color options.
+ *
+ * @param {Object} product
+ * @returns {boolean}
+ */
+function hasColors(product) {
+  return Array.isArray(product.colors) && product.colors.length > 0;
+}
+
+/**
+ * Check if the product contains size options.
+ *
+ * @param {Object} product
+ * @returns {boolean}
+ */
+function hasSizes(product) {
+  return Array.isArray(product.sizes) && product.sizes.length > 0;
+}
+
+/**
+ * Get the default selected size.
+ *
+ * Falls back to the first available size if
+ * no default size is defined.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function getDefaultSize(product) {
+  if (!hasSizes(product)) return "";
+
+  const defaultSize = product.sizes.find(
+    (size) => size.value === product.defaultSize,
+  );
+
+  return defaultSize?.value || product.sizes[0].value;
+}
+
+/**
+ * Create product color selector.
+ *
+ * Returns an empty string if
+ * the product has no color variants.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function createProductColors(product) {
+  if (!hasColors(product)) return "";
+
+  const selectedColor =
+    product.colors.find((color) => color.value === product.defaultColor) ||
+    product.colors[0];
+
+  return `
+    <div class="product-detail__colors">
+      <p class="product-detail__color-label">
+        Color: <span>${selectedColor.label}</span>
+      </p>
+
+      <div class="product-detail__color-options">
+        ${product.colors
+      .map(
+        (color) => `
+              <button
+                class="product-detail__color-button"
+                type="button"
+                aria-label="Select ${color.label}"
+                title="${color.label}"
+                ${!color.available ? "disabled" : ""}
+              >
+                ${color.label}
+              </button>
+            `,
+      )
+      .join("")}
+      </div>
+    </div>
+  `;
+}
+
+/**
+ * Create product size selector.
+ *
+ * Returns an empty string if
+ * the product has no size variants.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function createProductSizes(product) {
+  if (!hasSizes(product)) return "";
+
+  return `
+    <div class="product-detail__sizes">
+      <label class="product-detail__size-label" for="product-size">
+        Size:
+      </label>
+
+      <select
+        id="product-size"
+        class="product-detail__size-select"
+        name="size"
+      >
+        ${product.sizes
+      .map(
+        (size) => `
+              <option
+                value="${size.value}"
+                ${size.value === getDefaultSize(product) ? "selected" : ""}
+                ${!size.available ? "disabled" : ""}
+              >
+                ${size.label}${!size.available ? " - Sold out" : ""}
+              </option>
+            `,
+      )
+      .join("")}
+      </select>
+    </div>
+  `;
+}
+
+/**
  * Initialize the product details page.
  */
 function init() {
