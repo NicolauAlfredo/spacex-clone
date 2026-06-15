@@ -673,7 +673,20 @@ body {
 
 /* Tablet */
 @media (min-width: 768px) {
-  .starlink-section--reliable {
+  
+    .starlink-section--reliable .starlink-section__lable {
+    
+    max-width: 600px;
+  
+  }
+   .starlink-section--reliable .btn--primary {
+    width: 135px;
+    
+  
+  }
+   .starlink-section--reliable .starlink-section__content {
+   margin-left: 0;
+   padding-bottom: 0.5em;
   }
 }
 
