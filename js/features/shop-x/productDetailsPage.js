@@ -284,6 +284,45 @@ function handleImageGallery() {
 }
 
 /**
+ * Create the zoom button.
+ *
+ * The button toggles fullscreen gallery mode.
+ *
+ * @returns {string}
+ */
+function createZoomButton() {
+  return `
+    <button
+      class="product-detail__zoom-button"
+      type="button"
+      data-zoom-button
+      aria-label="Zoom product image"
+    >
+      <svg aria-hidden="true" focusable="false" width="14" class="icon icon-zoom" viewBox="0 0 14 14">
+        <path d="M9.432 9.432a4.94 4.94 0 1 1-6.985-6.985 4.94 4.94 0 0 1 6.985 6.985Zm0 0L13 13" fill="none" stroke="currentColor" stroke-linecap="square"></path>
+        <path d="M6 3.5V6m0 2.5V6m0 0H3.5h5" fill="none" stroke="currentColor"></path>
+      </svg>
+    </button>
+  `;
+}
+
+/**
+ * Toggle gallery zoom mode.
+ *
+ * Adds or removes the zoomed state class.
+ */
+function handleZoom() {
+  const gallery = document.querySelector("[data-product-gallery]");
+  const zoomButton = document.querySelector("[data-zoom-button]");
+
+  if (!gallery || !zoomButton) return;
+
+  zoomButton.addEventListener("click", () => {
+    gallery.classList.toggle("product-detail__gallery--zoomed");
+  });
+}
+
+/**
  * Initialize the product details page.
  */
 function init() {
