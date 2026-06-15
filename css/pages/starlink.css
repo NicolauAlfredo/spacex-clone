@@ -448,14 +448,13 @@ body {
   width: 100%;
   gap: 0.6rem;
 }
-[data-group="go"] {
-  gap: 2.2rem;
-}
+
 .starlink-plans__group--hidden {
   display: none;
 }
 .starlink-section--plans [data-group="go"] .starlink-section__content {
   align-items: flex-start;
+  margin-bottom: 2.8rem;
 }
 .starlink-section--plans__footer {
   margin: 0 auto;
