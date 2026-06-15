@@ -680,7 +680,43 @@ body {
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .starlink-section--reliable {
+  .starlink-section--reliable .starlink-section__content {
+    bottom: 40%;
+    padding: 0 6%;
+    max-width: 50%;
+    left: 15%;
+    gap: 0.2em;
+  }
+  .starlink-section--reliable .starlink-section__title {
+    font-size: 4rem;
+    padding-bottom: 0.2em;
+  }
+  .starlink-section--reliable .starlink-section__actions {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    margin-top: 3em;
+  }
+  .starlink-section--reliable .starlink-section__lable {
+    font-size: 1.15em;
+    max-width: 570px;
+  }
+  .starlink-section--reliable .btn--primary {
+    width: 135px;
+    padding: 0.6rem;
+    margin-top: 2em;
+  }
+  .starlink-section--reliable .starlink-section__overlay {
+    background: radial-gradient(
+      ellipse 70% 70% at 10% 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      transparent 100%
+    );
+  }
+  .starlink-section--reliable .starlink-section__img {
+    object-position: center 50%;
+    filter: brightness(0.9);
   }
 }
 
