@@ -26,7 +26,7 @@ function formatPrice(price) {
 function createProductCard(product) {
   return `
     <article class="products__card">
-      <a href="#" class="products__image-link">
+      <a href="./product-details.html?product=${product.id}" class="products__image-link">
         <img
           src="${product.primaryImage}"
           alt="${product.alt}"
@@ -44,7 +44,7 @@ function createProductCard(product) {
       <div class="products__card-info">
         <div class="products__card-content">
           <h3 class="products__product-title">
-            <a href="#" class="products__product-link">
+            <a href="./product-details.html?product=${product.id}" class="products__product-link">
               ${product.name}
             </a>
           </h3>
