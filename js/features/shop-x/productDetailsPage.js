@@ -446,6 +446,98 @@ function createProductSizes(product) {
 }
 
 /**
+ * Create the size chart section.
+ *
+ * Only rendered for products
+ * that contain size options.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function createSizeChart(product) {
+  if (!hasSizes(product)) return "";
+
+  return `
+    <div class="product-detail__size-chart" data-size-chart>
+      <button
+        class="product-detail__size-chart-toggle"
+        type="button"
+        data-size-chart-toggle
+        aria-expanded="false"
+      >
+        <span>Size Chart</span>
+        <span data-size-chart-icon>+</span>
+      </button>
+
+      <div class="product-detail__size-chart-content" data-size-chart-content>
+        <table class="product-detail__size-chart-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>XS</th>
+              <th>S</th>
+              <th>M</th>
+              <th>L</th>
+              <th>XL</th>
+              <th>2XL</th>
+              <th>3XL</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>Chest</th>
+              <td>44"</td>
+              <td>46"</td>
+              <td>48"</td>
+              <td>50"</td>
+              <td>52"</td>
+              <td>54"</td>
+              <td>56"</td>
+            </tr>
+
+            <tr>
+              <th>Sleeve Length</th>
+              <td>22.5"</td>
+              <td>23.5"</td>
+              <td>24.5"</td>
+              <td>25.5"</td>
+              <td>26.5"</td>
+              <td>27.5"</td>
+              <td>28.5"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+/**
+ * Handle size chart expand/collapse.
+ *
+ * Updates:
+ * - aria-expanded attribute
+ * - toggle icon
+ */
+function handleSizeChart() {
+  const toggleButton = document.querySelector("[data-size-chart-toggle]");
+  const icon = document.querySelector("[data-size-chart-icon]");
+  const sizeChart = document.querySelector("[data-size-chart]");
+
+  if (!toggleButton || !icon || !sizeChart) return;
+
+  toggleButton.addEventListener("click", () => {
+    const isOpen = sizeChart.classList.toggle(
+      "product-detail__size-chart--open",
+    );
+
+    toggleButton.setAttribute("aria-expanded", String(isOpen));
+    icon.textContent = isOpen ? "−" : "+";
+  });
+}
+
+/**
  * Initialize the product details page.
  */
 function init() {
