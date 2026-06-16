@@ -37,6 +37,66 @@ function findProductById(productId) {
 }
 
 /**
+ * Get the default selected size.
+ *
+ * Falls back to the first available size
+ * when no default size is defined.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function getDefaultSize(product) {
+  if (!hasSizes(product)) return "";
+
+  const defaultSize = product.sizes.find(
+    (size) => size.value === product.defaultSize,
+  );
+
+  return defaultSize?.value || product.sizes[0].value;
+}
+
+/**
+ * Create product size selector.
+ *
+ * Returns an empty string if
+ * the product has no size variants.
+ *
+ * @param {Object} product
+ * @returns {string}
+ */
+function createProductSizes(product) {
+  if (!hasSizes(product)) return "";
+
+  return `
+    <div class="product-detail__sizes">
+      <label class="product-detail__size-label" for="product-size">
+        Size:
+      </label>
+
+      <select
+        id="product-size"
+        class="product-detail__size-select"
+        name="size"
+      >
+        ${product.sizes
+      .map(
+        (size) => `
+              <option
+                value="${size.value}"
+                ${size.value === getDefaultSize(product) ? "selected" : ""}
+                ${!size.available ? "disabled" : ""}
+              >
+                ${size.label}${!size.available ? " - Sold out" : ""}
+              </option>
+            `,
+      )
+      .join("")}
+      </select>
+    </div>
+  `;
+}
+
+/**
  * Render the product details page.
  *
  * If the product does not exist,
@@ -351,25 +411,6 @@ function hasSizes(product) {
  * @param {Object} product
  * @returns {string}
  */
-function getDefaultSize(product) {
-  if (!hasSizes(product)) return "";
-
-  const defaultSize = product.sizes.find(
-    (size) => size.value === product.defaultSize,
-  );
-
-  return defaultSize?.value || product.sizes[0].value;
-}
-
-/**
- * Create product color selector.
- *
- * Returns an empty string if
- * the product has no color variants.
- *
- * @param {Object} product
- * @returns {string}
- */
 function createProductColors(product) {
   if (!hasColors(product)) return "";
 
@@ -380,7 +421,7 @@ function createProductColors(product) {
   return `
     <div class="product-detail__colors">
       <p class="product-detail__color-label">
-        Color: <span>${selectedColor.label}</span>
+        Color: <span data-selected-color-label>${selectedColor.label}</span>
       </p>
 
       <div class="product-detail__color-options">
@@ -388,14 +429,19 @@ function createProductColors(product) {
       .map(
         (color) => `
               <button
-                class="product-detail__color-button"
+                class="product-detail__color-button ${color.value === selectedColor.value
+            ? "product-detail__color-button--active"
+            : ""
+          }"
                 type="button"
-                aria-label="Select ${color.label}"
+                data-product-color="${color.value}"
+                data-product-color-label="${color.label}"
+                data-product-color-image-index="${color.imageIndex ?? 0}"
+                aria-label="${color.label}"
                 title="${color.label}"
+                style="background-color: ${color.color};"
                 ${!color.available ? "disabled" : ""}
-              >
-                ${color.label}
-              </button>
+              ></button>
             `,
       )
       .join("")}
@@ -405,45 +451,85 @@ function createProductColors(product) {
 }
 
 /**
- * Create product size selector.
+ * Handle product color selection.
  *
- * Returns an empty string if
- * the product has no size variants.
- *
- * @param {Object} product
- * @returns {string}
+ * Features:
+ * - Updates the active color button
+ * - Updates the selected color label
+ * - Switches the gallery image based on the selected color
+ * - Synchronizes thumbnails and carousel dots
  */
-function createProductSizes(product) {
-  if (!hasSizes(product)) return "";
+function handleColorSelection() {
+  const carousel = document.querySelector("[data-product-carousel]");
+  const slides = document.querySelectorAll("[data-product-slide]");
+  const dots = document.querySelectorAll("[data-product-dot]");
+  const thumbButtons = document.querySelectorAll("[data-product-thumb]");
+  const colorButtons = document.querySelectorAll("[data-product-color]");
+  const selectedColorLabel = document.querySelector(
+    "[data-selected-color-label]",
+  );
 
-  return `
-    <div class="product-detail__sizes">
-      <label class="product-detail__size-label" for="product-size">
-        Size:
-      </label>
+  if (!carousel || colorButtons.length === 0) return;
 
-      <select
-        id="product-size"
-        class="product-detail__size-select"
-        name="size"
-      >
-        ${product.sizes
-      .map(
-        (size) => `
-              <option
-                value="${size.value}"
-                ${size.value === getDefaultSize(product) ? "selected" : ""}
-                ${!size.available ? "disabled" : ""}
-              >
-                ${size.label}${!size.available ? " - Sold out" : ""}
-              </option>
-            `,
-      )
-      .join("")}
-      </select>
-    </div>
-  `;
+  /**
+   * Set the active gallery image.
+   *
+   * Updates:
+   * - Carousel position
+   * - Active dot
+   * - Active thumbnail
+   *
+   * @param {number} index
+   */
+  function setActiveImage(index) {
+    const slide = slides[index];
+
+    if (!slide) return;
+
+    carousel.scrollTo({
+      left: slide.offsetLeft,
+      behavior: "smooth",
+    });
+
+    dots.forEach((dot) => {
+      dot.classList.toggle(
+        "product-detail__dot--active",
+        Number(dot.dataset.productDot) === index,
+      );
+    });
+
+    thumbButtons.forEach((thumb, thumbIndex) => {
+      thumb.classList.toggle(
+        "product-detail__thumb-button--active",
+        thumbIndex === index,
+      );
+    });
+  }
+
+  colorButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const imageIndex = Number(button.dataset.productColorImageIndex);
+      const colorLabel = button.dataset.productColorLabel;
+
+      // Remove active state from all color buttons
+      colorButtons.forEach((colorButton) => {
+        colorButton.classList.remove("product-detail__color-button--active");
+      });
+
+      // Set active state on selected color
+      button.classList.add("product-detail__color-button--active");
+
+      // Update selected color label
+      if (selectedColorLabel) {
+        selectedColorLabel.textContent = colorLabel;
+      }
+
+      // Show the image associated with the selected color
+      setActiveImage(imageIndex);
+    });
+  });
 }
+
 
 /**
  * Create the size chart section.
@@ -655,6 +741,7 @@ function init() {
   handleZoom();
   handleSizeChart();
   handleQuantityControls();
+  handleColorSelection();
 }
 
 // Start application
