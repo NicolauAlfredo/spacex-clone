@@ -26,6 +26,85 @@ function renderEmptyCart() {
 }
 
 /**
+ * Create cart item markup.
+ *
+ * @param {Object} item
+ * @returns {string}
+ */
+function createCartItem(item) {
+  return `
+    <article class="cart__item">
+      <div class="cart__item-main">
+        <div class="cart__item-image-wrapper">
+          <img
+            src="${item.image}"
+            alt="${item.name}"
+            class="cart__item-image"
+          />
+        </div>
+
+        <div class="cart__item-info">
+          <h2 class="cart__item-title">${item.name}</h2>
+
+          <p class="cart__item-price">
+            ${formatPrice(item.price)}
+          </p>
+
+          ${item.color
+      ? `<p class="cart__item-variant">Color: ${item.color}</p>`
+      : ""
+    }
+
+          ${item.size
+      ? `<p class="cart__item-variant">Size: ${item.size.toUpperCase()}</p>`
+      : ""
+    }
+        </div>
+      </div>
+
+      <div class="cart__item-actions">
+        <div class="cart__quantity">
+          <button
+            class="cart__quantity-button"
+            type="button"
+            data-cart-decrease="${item.id}"
+            aria-label="Decrease quantity"
+          >
+            -
+          </button>
+
+          <span class="cart__quantity-value">
+            ${item.quantity}
+          </span>
+
+          <button
+            class="cart__quantity-button"
+            type="button"
+            data-cart-increase="${item.id}"
+            aria-label="Increase quantity"
+          >
+            +
+          </button>
+        </div>
+
+        <button
+          class="cart__remove-button"
+          type="button"
+          data-cart-remove="${item.id}"
+        >
+          Remove
+        </button>
+      </div>
+
+      <span class="cart__item-total">
+        ${formatPrice(item.price * item.quantity)}
+      </span>
+    </article>
+  `;
+}
+
+
+/**
  * Initialize cart page.
  */
 function init() {
