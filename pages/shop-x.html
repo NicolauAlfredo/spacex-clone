@@ -177,6 +177,7 @@
                     <span>Germany (EUR €)</span>
                   </button>
                 </li>
+                
                 <li class="currency-country__item">
                   <button type="button">
                     <img
@@ -500,6 +501,64 @@
     <!-- Branch:  -->
     <footer class="shopt-footer"></footer>
     <!-- FINE FOOTER -->
+
+    <div class="currency-modal" data-currency-modal aria-hidden="true">
+      <div class="currency-modal__overlay" data-currency-close></div>
+
+      <div
+        class="currency-modal__content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="currency-modal-title"
+      >
+        <div class="currency-modal__header">
+          <h2 id="currency-modal-title">Select your region</h2>
+
+          <button
+            class="currency-modal__close"
+            type="button"
+            aria-label="Close currency selector"
+            data-currency-close
+          >
+            ×
+          </button>
+        </div>
+
+        <ul class="currency-modal__list">
+          <li class="currency-modal__item">
+            <button
+              type="button"
+              data-currency-option
+              data-currency-text="Australia (AUD $)"
+              data-currency-short="AUD $"
+              data-currency-flag="../assets/pages/shopx/languages/australia.jfif"
+            >
+              <img
+                src="../assets/pages/shopx/languages/australia.jfif"
+                alt="Australia"
+              />
+              <span>Australia (AUD $)</span>
+            </button>
+          </li>
+
+          <li class="currency-modal__item">
+            <button
+              type="button"
+              data-currency-option
+              data-currency-text="Italy (EUR €)"
+              data-currency-short="EUR €"
+              data-currency-flag="../assets/pages/shopx/languages/italiano.jfif"
+            >
+              <img
+                src="../assets/pages/shopx/languages/italiano.jfif"
+                alt="Italy"
+              />
+              <span>Italy (EUR €)</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- JS  -->
     <script type="module" src="../js/features/cart/cartAddProduct.js"></script>

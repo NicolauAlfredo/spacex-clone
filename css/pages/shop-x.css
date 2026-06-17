@@ -73,6 +73,43 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .shop-header__menu {
+    color: white;
+  }
+
+  .menu__item.hidden {
+    display: flex;
+  }
+
+  .menu__item a,
+  .menu__item-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .menu__item-search,
+  .menu__item-cart,
+  .menu__item-login {
+    display: inline;
+  }
+
+  .menu__item svg:not(.menu__item-chevron-down) {
+    display: none;
+  }
+
+  .menu__item-lang {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .currency-flag {
+    width: 18px;
+    height: 12px;
+    object-fit: cover;
+  }
 }
 
 /* Large Desktop */
