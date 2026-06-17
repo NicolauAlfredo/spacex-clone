@@ -487,13 +487,10 @@ body {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
- 
-  
   .starlink-section--plans .starlink-section__content {
     align-items: flex-start;
     text-align: left;
     width: 700px;
-  
   }
   .starlink-section--plans .starlink-section__price {
     margin-left: 0;
@@ -515,24 +512,25 @@ body {
   .starlink-section--plans .starlink-section__list {
     padding-left: 3em;
   }
-   .starlink-section--plans [data-group="go"] .starlink-section__label {
+  .starlink-section--plans [data-group="go"] .starlink-section__label {
     max-width: unset !important;
   }
-  
+
   .starlink-section--plans [data-group="go"] .starlink-section--plans__footer {
- padding-bottom: 2em;
- padding-top: 0;
- margin-top: -40px;
-  max-width: unset;
-}
-.starlink-section--plans  .starlink-section--plans__footer {
-max-width: unset;
-}
-   
-  .starlink-section--plans [data-group="go"] .starlink-section__price-container {
+    padding-bottom: 2em;
+    padding-top: 0;
+    margin-top: -40px;
+    max-width: unset;
+  }
+  .starlink-section--plans .starlink-section--plans__footer {
+    max-width: unset;
+  }
+
+  .starlink-section--plans
+    [data-group="go"]
+    .starlink-section__price-container {
     padding-left: 2em;
   }
- 
 }
 
 /* Desktop */
@@ -543,7 +541,7 @@ max-width: unset;
     .starlink-section__list {
     padding-top: 1.2em;
   }
-  
+
   .starlink-section:not(.starlink-section--plans) {
     height: 800px;
   }
