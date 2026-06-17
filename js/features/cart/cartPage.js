@@ -11,6 +11,21 @@ const cartContent = document.querySelector("[data-cart-content]");
 const cart = new Cart();
 
 /**
+ * Render empty cart state.
+ */
+function renderEmptyCart() {
+  cartContent.innerHTML = `
+    <div class="cart__empty">
+      <p class="cart__empty-message">Your cart is empty</p>
+
+      <a href="./shop-x.html" class="cart__continue-link">
+        Continue shopping
+      </a>
+    </div>
+  `;
+}
+
+/**
  * Initialize cart page.
  */
 function init() {
