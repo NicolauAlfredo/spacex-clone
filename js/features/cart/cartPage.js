@@ -136,6 +136,20 @@ function renderCartItems() {
   `;
 }
 
+/**
+ * Render cart page.
+ */
+function renderCart() {
+  if (!cartContent) return;
+
+  if (cart.items.length === 0) {
+    renderEmptyCart();
+    return;
+  }
+
+  renderCartItems();
+  bindCartActions();
+}
 
 /**
  * Initialize cart page.
