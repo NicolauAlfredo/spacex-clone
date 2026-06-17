@@ -55,9 +55,19 @@
   height: 30px;
 }
 
+.menu__item-login {
+  display: none;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
-  .shop {
+  .menu__item.account {
+    display: flex;
+  }
+
+  .menu__item.account a {
+    display: flex;
+    align-items: center;
   }
 }
 
