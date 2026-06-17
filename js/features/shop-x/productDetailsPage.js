@@ -4,6 +4,9 @@ import { xaiProducts } from "../../data/products.js";
 // Import formata price util
 import { formatPrice } from "../../utils/formatPrice.js";
 
+// Import cart model
+import { Cart } from "../../models/Cart.js";
+
 // Select the product details container
 const productDetailsContainer = document.querySelector(
   "[data-product-details]",
@@ -11,6 +14,9 @@ const productDetailsContainer = document.querySelector(
 
 // Merge all product collections into one array
 const products = [...xaiProducts.XCollection, ...xaiProducts.XaiCollection];
+
+// Create a new cart
+const cart = new Cart();
 
 /**
  * Get the product id from the current URL.
@@ -177,7 +183,7 @@ function renderProductDetails(product) {
           </button>
         </div>
 
-        <button class="product-detail__cart-button" type="button">
+        <button class="product-detail__cart-button" type="button" data-add-to-cart>
           Add To Cart
         </button>
       </div>
@@ -727,6 +733,112 @@ function createRelatedProducts(product) {
 }
 
 /**
+ * Create a unique cart item identifier.
+ *
+ * Products with different sizes or colors
+ * are treated as separate cart items.
+ *
+ * @param {string} productId
+ * @param {string} size
+ * @param {string} color
+ * @returns {string}
+ */
+function createCartItemId(productId, size = "", color = "") {
+  return `${productId}-${size}-${color}`.toLowerCase();
+}
+
+/**
+ * Get the currently selected size.
+ *
+ * Returns an empty string if the
+ * product has no size selector.
+ *
+ * @returns {string}
+ */
+function getSelectedSize() {
+  const sizeSelect = document.querySelector("#product-size");
+
+  if (!sizeSelect) return "";
+
+  return sizeSelect.value;
+}
+
+/**
+ * Get the currently selected color.
+ *
+ * Returns an empty string if the
+ * product has no color selector.
+ *
+ * @returns {string}
+ */
+function getSelectedColor() {
+  const activeColorButton = document.querySelector(
+    ".product-detail__color-button--active",
+  );
+
+  if (!activeColorButton) return "";
+
+  return activeColorButton.dataset.productColorLabel || "";
+}
+
+/**
+ * Get the currently selected quantity.
+ *
+ * @returns {number}
+ */
+function getSelectedQuantity() {
+  const quantityValue = document.querySelector("[data-quantity-value]");
+
+  if (!quantityValue) return 1;
+
+  return Number(quantityValue.textContent);
+}
+
+/**
+ * Handle add to cart interactions.
+ *
+ * Features:
+ * - Reads the currently selected size
+ * - Reads the currently selected color
+ * - Reads the selected quantity
+ * - Creates a unique cart item id
+ * - Builds the cart item object
+ * - Persists the item in localStorage through the Cart model
+ *
+ * @param {Object} product
+ */
+function handleAddToCart(product) {
+  const addToCartButton = document.querySelector("[data-add-to-cart]");
+
+  if (!addToCartButton) return;
+
+  addToCartButton.addEventListener("click", () => {
+    const selectedSize = getSelectedSize();
+    const selectedColor = getSelectedColor();
+    const selectedQuantity = getSelectedQuantity();
+
+    const cartItem = {
+      id: createCartItemId(product.id, selectedSize, selectedColor),
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.primaryImage,
+      size: selectedSize,
+      color: selectedColor,
+      quantity: selectedQuantity,
+    };
+
+    cart.addItem(cartItem);
+
+    /**
+      * Redirect user to the cart page
+      * after successfully adding a product.
+    */
+    window.location.href = "./cart.html";
+  });
+}
+
+/**
  * Initialize the product details page.
  */
 function init() {
@@ -742,6 +854,7 @@ function init() {
   handleSizeChart();
   handleQuantityControls();
   handleColorSelection();
+  handleAddToCart(product);
 }
 
 // Start application
