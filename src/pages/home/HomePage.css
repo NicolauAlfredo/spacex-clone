@@ -1,0 +1,782 @@
+/*  
+  HOME PAGE - BASE (MOBILE FIRST)  
+*/
+
+.hero-section {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-section__content {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+
+  padding: 0 4% 8% 4%;
+  z-index: 1;
+  color: #f0f0fa;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.hero-section__date {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.hero-section__title {
+  font-family: "D-DIN-Bold", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: -10px;
+}
+
+.hero-section__description {
+  font-family: "D-DIN", sans-serif;
+  margin-top: 16px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* 
+  SECTION 01
+  Starship's Twelfth Flight Test 
+  Owner: Felice 
+  Branch: feature/home-starship 
+*/
+
+.hero-section--starship::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, black);
+  z-index: 0;
+}
+
+/*
+  TABLET
+*/
+
+@media (min-width: 768px) {
+  .hero-section__title {
+    font-size: 3rem;
+  }
+
+  .hero-section__description {
+    max-width: 500px;
+  }
+}
+
+/*
+  DESKTOP
+*/
+
+@media (min-width: 1024px) {
+  .hero-section--starship .hero-section__content {
+    top: 50%;
+    left: 0;
+    bottom: auto;
+
+    max-width: 60%;
+    padding-left: 5%;
+    padding-right: 0;
+  }
+
+  .hero-section--starship .hero-section__title {
+    font-size: 60px;
+    line-height: 1.05;
+  }
+
+  .hero-section__description {
+    font-size: 18px;
+    max-width: 480px;
+  }
+
+  .hero-section__date {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+/*
+  LARGE DESKTOP
+*/
+
+@media (min-width: 1440px) {
+  .hero-section__content {
+    padding: 0 7% 10% 7%;
+  }
+
+  .hero-section__title {
+    font-size: 3.6rem;
+  }
+}
+
+/* 
+   SECTION 02 - MAKING LIFE MULTIPLANETARY
+   Owner: Felice
+   Branch: feature/home-making-life
+*/
+
+.hero-section--multiplanetary {
+  min-height: 130vh;
+}
+
+.hero-section--multiplanetary .hero-section__video {
+  height: 50%;
+}
+
+.hero-section--multiplanetary .hero-section__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 0 4% 4%;
+}
+
+.hero-section--multiplanetary .hero-section__content {
+  position: static;
+  padding: 0;
+}
+
+.hero-section--multiplanetary .upcoming-launch {
+  position: static;
+  width: 100%;
+}
+
+.hero-section--multiplanetary {
+  background-color: black;
+}
+
+/* 
+  UPCOMING LAUNCH 
+*/
+
+.hero-section--multiplanetary .upcoming-launch {
+  color: var(--color-white);
+}
+
+.hero-section--multiplanetary .upcoming-launch__header {
+  display: flex;
+  align-items: center;
+}
+
+.hero-section--multiplanetary .upcoming-launch__title {
+  font-family: "D-DIN-Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-section--multiplanetary .upcoming-launch__toggle {
+  display: none;
+}
+
+.hero-section--multiplanetary .upcoming-launch__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section--multiplanetary .upcoming-launch__card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.hero-section--multiplanetary .upcoming-launch__image {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-section--multiplanetary .upcoming-launch__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-section--multiplanetary .upcoming-launch__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.hero-section--multiplanetary .upcoming-launch__mission-title {
+  font-family: "D-DIN";
+  font-size: 16px;
+}
+
+.hero-section--multiplanetary .upcoming-launch__countdown {
+  font-family: "D-DIN";
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.hero-section--multiplanetary .upcoming-launch__arrow {
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.hero-section--multiplanetary .upcoming-launch__link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.hero-section--multiplanetary .upcoming-launch__link-text {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+/*
+  TABLET
+*/
+
+@media (min-width: 768px) {
+  .hero-section--multiplanetary .hero-section__title {
+    font-size: 29px;
+    max-width: 100%;
+  }
+
+  .hero-section--multiplanetary .hero-section__description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+/*
+   DESKTOP
+*/
+
+@media (min-width: 1024px) {
+  .hero-section--multiplanetary {
+    height: 100%;
+  }
+
+  .hero-section--multiplanetary .hero-section__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-section--multiplanetary .hero-section__content {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+
+    transform: translateY(-50%);
+
+    padding-left: 5%;
+    padding-right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .hero-section--multiplanetary .hero-section__video {
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1.1);
+  }
+
+  .hero-section--multiplanetary .hero-section__title {
+    font-size: 90px;
+    line-height: 1.05;
+    max-width: 600px;
+  }
+
+  .hero-section--multiplanetary .hero-section__description {
+    font-size: 18px;
+    max-width: 580px;
+    margin-bottom: 30px;
+  }
+
+  .hero-section--multiplanetary .hero-section__date {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* 
+    UPCOMING LAUNCH
+    Visible on mobile and tablet only
+  */
+
+  .hero-section--multiplanetary .upcoming-launch {
+    display: none;
+  }
+}
+
+/*
+  LARGE DESKTOP
+*/
+
+@media (min-width: 1440px) {
+  .hero-section--multiplanetary {
+  }
+}
+
+/* 
+   SECTION 03 - REVOLUTIONIZING SPACE TECHNOLOGY
+   Owner: Federico
+   Branch: feature/home-space
+*/
+
+.hero-section--technology::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    0deg,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
+}
+
+.hero-section--technology {
+  background-color: black;
+}
+
+.hero-section--technology .hero-section__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 67%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-section--technology .hero-section__content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+
+  padding: 0;
+  z-index: 2;
+  color: #f0f0fa;
+}
+
+/*
+  TABLET
+*/
+
+@media (min-width: 768px) {
+  .hero-section--technology .hero-section__content {
+    left: 20px;
+    right: 20px;
+  }
+
+  .hero-section--technology .hero-section__title {
+    font-size: 29px;
+    max-width: 100%;
+  }
+
+  .hero-section--technology .hero-section__description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+/*
+  DESKTOP
+*/
+
+@media (min-width: 1024px) {
+  .hero-section--technology::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--launch-provider::after {
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--technology .hero-section__image {
+    height: 100%;
+  }
+
+  .hero-section--technology .hero-section__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--technology .hero-section__content {
+    top: 13%;
+    left: 55%;
+    right: 100px;
+    bottom: auto;
+
+    width: 50%;
+    max-width: 650px;
+  }
+
+  .hero-section--technology .hero-section__title {
+    max-width: 90%;
+    font-size: 3rem;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  .hero-section--technology .hero-section__description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+  }
+}
+
+/* 
+   SECTION 04 - WORLD'S LEADING LAUNCH SERVICE PROVIDER
+   Owner: Federico
+   Branch: feature/home-launch
+*/
+
+.hero-section--launch-provider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    0deg,
+    black 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.hero-section--launch-provider {
+  background-color: black;
+}
+
+.hero-section--launch-provider .hero-section__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 67%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-section--launch-provider .hero-section__content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+
+  padding: 0;
+  z-index: 2;
+}
+
+/*
+  TABLET
+*/
+
+@media (min-width: 768px) {
+  .hero-section--launch-provider .hero-section__title {
+    font-size: 29px;
+    max-width: 100%;
+  }
+
+  .hero-section--launch-provider .hero-section__description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+/*
+  DESKTOP
+*/
+@media (min-width: 1024px) {
+  .hero-section--technology::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--launch-provider::after {
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--launch-provider .hero-section__video {
+    height: 100%;
+  }
+
+  .hero-section--launch-provider .hero-section__content {
+    top: 13%;
+    left: 100px;
+    right: auto;
+    bottom: auto;
+
+    width: 50%;
+    max-width: 650px;
+  }
+
+  .hero-section--launch-provider .hero-section__title {
+    max-width: 90%;
+    font-size: 3rem;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  .hero-section--launch-provider .hero-section__description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+  }
+}
+
+/* 
+   SECTION 05 - ADVANCING HUMAN SPACEFLIGHT
+   Owner: Fidel
+   Branch: feature/home-advancing
+*/
+
+.hero-section--spaceflight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    0deg,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.hero-section--spaceflight {
+  background-color: var(--color-black);
+}
+
+.hero-section--spaceflight .hero-section__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 67%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-section--spaceflight .hero-section__content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+
+  padding: 0;
+  z-index: 2;
+  color: #f0f0fa;
+}
+
+/*
+  TABLET
+*/
+
+@media (min-width: 768px) {
+  .hero-section--spaceflight .hero-section__title {
+    font-size: 29px;
+    max-width: 100%;
+  }
+
+  .hero-section--spaceflight .hero-section__description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+/*
+  DESKTOP
+*/
+
+@media (min-width: 1024px) {
+  .hero-section--spaceflight::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .hero-section--spaceflight::after {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .hero-section--spaceflight .hero-section__image {
+    height: 100%;
+  }
+
+  .hero-section--spaceflight .hero-section__overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .hero-section--spaceflight .hero-section__content {
+    top: 13%;
+    left: 55%;
+    right: 100px;
+    bottom: auto;
+
+    width: 50%;
+    max-width: 650px;
+  }
+
+  .hero-section--spaceflight .hero-section__title {
+    max-width: 90%;
+    font-size: 3rem;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  .hero-section--spaceflight .hero-section__description {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+  }
+}
+
+/* 
+   SECTION 06 - STARLINK
+   Owner: Rosario
+   Branch: feature/home-starlink-section
+*/
+
+/* MOBILE FIRST */
+
+.hero-section--starlink::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, black);
+  z-index: 0;
+}
+
+.hero-section--starlink .hero-section__title {
+  max-width: 300px;
+}
+
+.hero-section--starlink .hero-section__content {
+  position: absolute;
+  bottom: 0;
+  padding: 0 5% 8% 5%;
+  z-index: 1;
+}
+
+/*
+  TABLET
+*/
+
+@media (min-width: 768px) {
+  .hero-section--starlink .hero-section__title {
+    font-size: 29px;
+    max-width: 100%;
+  }
+
+  .hero-section--starlink .hero-section__description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+/*
+  DESKTOP
+*/
+
+@media (min-width: 1024px) {
+  .hero-section--starlink .hero-section__content {
+    top: 60%;
+    left: 2%;
+    transform: translateY(-50%);
+
+    max-width: 100%;
+    max-height: 600px;
+    padding-left: 5%;
+    padding-right: 0;
+  }
+
+  .hero-section--starlink .hero-section__title {
+    font-size: 48px;
+    line-height: 1.05;
+    max-width: 700px;
+  }
+
+  .hero-section--starlink .hero-section__description {
+    font-size: 18px;
+    max-width: 750px;
+    margin-bottom: 30px;
+  }
+}
+
+/*
+  LARGE DESKTOP
+*/
+
+@media (min-width: 1440px) {
+}
