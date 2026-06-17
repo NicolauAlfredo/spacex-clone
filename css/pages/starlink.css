@@ -855,6 +855,7 @@ body {
 
 .starlink-section__inner--title {
   font-size: 2rem;
+
   font-style: normal;
   line-height: 105%;
   font-weight: 600;
@@ -889,13 +890,44 @@ body {
   cursor: pointer;
   font-weight: 700;
 }
-.starlink-section--coverage {
-}
+
 
 /* Tablet */
 @media (min-width: 768px) {
-  .starlink-section--coverage {
+   .starlink-section{
+    height: 800px;
   }
+
+  .starlink-section__gradient{
+    background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.527) 0%,
+    rgba(0, 0, 0, 0.349) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 100%;
+  }
+
+  .starlink-section__text--container {
+    height: 100%;
+    width: 100%;
+    max-width: 80%;
+    padding: 32px;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .starlink-section__inner--title{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 105%;
+  }
+
+  .starlink-section__link--button{
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
 }
 
 /* Desktop */
