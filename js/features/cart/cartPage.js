@@ -103,6 +103,39 @@ function createCartItem(item) {
   `;
 }
 
+/**
+ * Render cart with products.
+ */
+function renderCartItems() {
+  const cartTotal = cart.getTotal();
+
+  cartContent.innerHTML = `
+    <div class="cart__table-header">
+      <span>Product</span>
+      <span>Quantity</span>
+      <span>Total</span>
+    </div>
+
+    <div class="cart__items">
+      ${cart.items.map((item) => createCartItem(item)).join("")}
+    </div>
+
+    <div class="cart__summary">
+      <p class="cart__summary-total">
+        Total: ${formatPrice(cartTotal)}
+      </p>
+
+      <p class="cart__summary-note">
+        Taxes and shipping calculated at checkout
+      </p>
+
+      <button class="cart__checkout-button" type="button">
+        Checkout
+      </button>
+    </div>
+  `;
+}
+
 
 /**
  * Initialize cart page.
