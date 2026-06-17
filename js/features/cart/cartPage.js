@@ -152,6 +152,36 @@ function renderCart() {
 }
 
 /**
+ * Bind cart item action buttons.
+ */
+function bindCartActions() {
+  const increaseButtons = document.querySelectorAll("[data-cart-increase]");
+  const decreaseButtons = document.querySelectorAll("[data-cart-decrease]");
+  const removeButtons = document.querySelectorAll("[data-cart-remove]");
+
+  increaseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cart.increaseQuantity(button.dataset.cartIncrease);
+      renderCart();
+    });
+  });
+
+  decreaseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cart.decreaseQuantity(button.dataset.cartDecrease);
+      renderCart();
+    });
+  });
+
+  removeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cart.removeItem(button.dataset.cartRemove);
+      renderCart();
+    });
+  });
+}
+
+/**
  * Initialize cart page.
  */
 function init() {
