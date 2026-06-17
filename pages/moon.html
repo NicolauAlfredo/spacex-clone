@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/moon.css" />
+    <link rel="icon" href="../favicon-spacex.ico" />
+  </head>
+  <body class="moon">
+    <!-- HEADER -->
+    <!-- Owner: Nicolau -->
+    <!-- Branch: feature/home-header -->
+    <header class="header">
+      <div class="header__container">
+        <a href="/" class="header__logo">
+          <!-- SVG Logo -->
+          <svg
+            _ngcontent-yny-c29=""
+            xmlns="http://www.w3.org/2000/svg"
+            width="147"
+            height="19"
+            viewBox="0 0 147 19"
+            fill="none"
+          >
+            <g _ngcontent-yny-c29="">
+              <path
+                _ngcontent-yny-c29=""
+                d="M33.4556 7.10059C35.9425 7.10059 37.5024 8.14389 37.5024 9.99707V11.2383C37.5024 13.2081 36.1594 14.0693 33.6704 14.0693H24.7524V18.4062H21.3345V7.10059H33.4556ZM146.805 0.544922V0.561523C141.398 1.00137 120.15 3.63015 105.414 18.4062H99.9458L100.557 17.7988C103.641 14.8268 117.282 2.23051 146.803 0.542969L146.805 0.544922ZM56.2397 18.4043H52.1655L50.3599 15.9287H39.8169L41.6274 14H48.9526L45.4292 9.17285L47.5093 6.62012L56.2397 18.4043ZM72.1841 7.09863C74.0086 7.09865 75.3021 7.72865 75.6343 9.07031H62.8081V16.2803H75.6343C75.2694 17.7734 74.4885 18.4042 72.2827 18.4043H62.5786C60.9037 18.4043 59.3268 17.7248 59.3267 15.9209V9.58203C59.3267 7.778 60.9037 7.09868 62.5786 7.09863H72.1841ZM90.7222 12.834H83.8247V16.2803H95.6489V18.4043H80.3481V10.8975H90.7222V12.834ZM120.998 18.4043H115.584L110.775 14.9082H110.777C111.663 14.2168 112.602 13.5232 113.51 12.9014L120.998 18.4043ZM12.9351 7.09863C14.8252 7.09865 15.9037 8.0272 16.2358 9.07031H3.59424V11.5049H13.3979V11.5029C15.3722 11.6154 16.5677 12.4597 16.5679 14.0488V15.8535C16.5677 17.6083 15.5242 18.4014 13.4331 18.4014H3.43018C1.52352 18.4014 0.428522 17.6897 0.112793 16.2783H13.4849V13.6934H3.54541C1.70432 13.7036 0.459473 12.8582 0.459473 11.3691V9.58203C0.459473 7.87612 1.66924 7.09863 3.77686 7.09863H12.9351ZM24.7524 12H33.0435C34.3863 12 34.5356 11.5512 34.5356 10.7412V10.2979C34.5356 9.50218 34.3371 9.07228 32.8774 9.07227H24.7729L24.7524 12ZM109.604 9.87891C108.627 10.4554 107.562 11.1202 106.646 11.7334L100.298 7.09863H105.705L109.604 9.87891ZM109.607 9.88086L109.604 9.87891L109.607 9.87793V9.88086ZM95.811 9.07031H80.3481V7.09863H95.811V9.07031Z"
+                fill="#F0F0FA"
+              ></path>
+            </g>
+          </svg>
+        </a>
+
+        <button
+          class="header__toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <!-- Hamburger SVG -->
+          <svg
+            _ngcontent-yny-c31=""
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              _ngcontent-yny-c31=""
+              d="M24 19L0 19L1.74849e-07 18L24 18V19Z"
+              fill="#D9D9D9"
+            ></path>
+            <path
+              _ngcontent-yny-c31=""
+              d="M24 12L0 12L1.74849e-07 11L24 11V12Z"
+              fill="#D9D9D9"
+            ></path>
+            <path
+              _ngcontent-yny-c31=""
+              d="M24 5L0 5L1.74849e-07 4L24 4V5Z"
+              fill="#D9D9D9"
+            ></path>
+          </svg>
+        </button>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item header__item--dropdown">
+              <button class="header__link" aria-expanded="false">
+                VEHICLES
+                <span class="header__arrow">
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+              </button>
+
+              <ul class="header__submenu">
+                <li><a href="#">STARSHIP</a></li>
+                <li><a href="#">DRAGON</a></li>
+                <li><a href="#">FALCON 9</a></li>
+                <li><a href="#">FALCON HEAVY</a></li>
+              </ul>
+            </li>
+
+            <li class="header__item header__item--dropdown">
+              <button class="header__link" aria-expanded="false">
+                HUMAN SPACEFLIGHT
+                <span class="header__arrow">
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+              </button>
+
+              <ul class="header__submenu">
+                <li><a href="#">OVERVIEW</a></li>
+                <li><a href="#">SPACE STATION</a></li>
+                <li><a href="#">EARTH ORBIT</a></li>
+                <li><a href="./moon.html">THE MOON</a></li>
+                <li><a href="#">MARS & BEYOND</a></li>
+              </ul>
+            </li>
+
+            <li class="header__item">
+              <a href="./starlink.html" class="header__link">STARLINK</a>
+            </li>
+
+            <li class="header__item">
+              <a href="#" class="header__link">STARSHIELD</a>
+            </li>
+
+            <li class="header__item header__item--dropdown">
+              <button class="header__link" aria-expanded="false">
+                xAI
+                <span class="header__arrow">
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+              </button>
+
+              <ul class="header__submenu">
+                <li><a href="#">GROK</a></li>
+                <li><a href="#">GROKIPEDIA</a></li>
+                <li><a href="#">X</a></li>
+              </ul>
+            </li>
+
+            <li class="header__item">
+              <a href="#" class="header__link">TERAFAB</a>
+            </li>
+
+            <li class="header__item header__item--dropdown">
+              <button class="header__link" aria-expanded="false">
+                COMPANY
+                <span class="header__arrow">
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+              </button>
+
+              <ul class="header__submenu">
+                <li><a href="#">MISSION</a></li>
+                <li><a href="#">CAREERS</a></li>
+                <li><a href="#">UPDATES</a></li>
+                <li><a href="#">CONTENT</a></li>
+              </ul>
+            </li>
+
+            <li class="header__item header__item--dropdown">
+              <button class="header__link" aria-expanded="false">
+                SHOP
+                <span class="header__arrow">
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="#FFFFFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+              </button>
+
+              <ul class="header__submenu">
+                <li><a href="#">SPACEX</a></li>
+                <li><a href="./pages/shop-x.html">xAI</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="upcoming-launch">
+            <div class="upcoming-launch__header">
+              <span class="upcoming-launch__title">UPCOMING LAUNCHES</span>
+
+              <span class="upcoming-launch__toggle">
+                <svg
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="upcoming-launch__icon upcoming-launch__icon--down"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="#FFFFFF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div class="upcoming-launch__cards">
+              <div class="upcoming-launch__card">
+                <div class="upcoming-launch__image">
+                  <img src="./assets/pages/home/images/slc-4-e.jpg" alt="" />
+                </div>
+
+                <div class="upcoming-launch__content">
+                  <span class="upcoming-launch__mission-title"
+                    >Starlink Mission</span
+                  >
+                  <span class="upcoming-launch__countdown"
+                    >June 7, 2026 04:00 - 08:00 Italy Time</span
+                  >
+                </div>
+
+                <span
+                  class="upcoming-launch__arrow upcoming-launch__arrow--right"
+                >
+                  <svg
+                    _ngcontent-jna-c39=""
+                    width="13"
+                    height="12"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      _ngcontent-jna-c39=""
+                      d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
+                      fill="#F0F0FA"
+                      fill-opacity="0.8"
+                    ></path>
+                  </svg>
+                </span>
+              </div>
+
+              <div class="upcoming-launch__card">
+                <div class="upcoming-launch__image">
+                  <img
+                    src="./assets/pages/home/images/crew-12-mobile.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="upcoming-launch__content">
+                  <span class="upcoming-launch__mission-title"
+                    >Starlink Mission</span
+                  >
+                  <span class="upcoming-launch__countdown"
+                    >June 8, 2026 12:07 - 16:07 Italy Time</span
+                  >
+                </div>
+
+                <span
+                  class="upcoming-launch__arrow upcoming-launch__arrow--right"
+                  ><svg
+                    _ngcontent-jna-c39=""
+                    width="13"
+                    height="12"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      _ngcontent-jna-c39=""
+                      d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
+                      fill="#F0F0FA"
+                      fill-opacity="0.8"
+                    ></path></svg
+                ></span>
+              </div>
+
+              <a href="#" class="upcoming-launch__link">
+                <svg
+                  width="9"
+                  height="13"
+                  viewBox="0 0 9 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.875 10.0003H1L1 9.12527H1.875L1.875 10.0003ZM4.9375 10.0003H4.0625L4.0625 9.12527H4.9375L4.9375 10.0003ZM8 10.0003H7.125V9.12527H8V10.0003ZM1.875 6.93777H1L1 6.06277H1.875V6.93777ZM4.9375 6.93777H4.0625V6.06277H4.9375V6.93777ZM8 6.93777L7.125 6.93777V6.06277L8 6.06277V6.93777ZM1.875 3.87527H1L1 3.00027H1.875V3.87527ZM4.9375 3.87527H4.0625V3.00027H4.9375V3.87527ZM8 3.87527L7.125 3.87527V3.00027L8 3.00027V3.87527Z"
+                    fill="#F0F0FA"
+                  />
+                </svg>
+
+                <span class="upcoming-launch__link-text"
+                  >ALL UPCOMING LAUNCHES</span
+                >
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- SECTION 1 -->
+      <!-- The Moon -->
+      <section class="hero-section hero-section-moon">
+        <video
+          class="hero-section-moon__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          src="../assets/pages/moon/videos/moon-video.mp4"
+        ></video>
+
+        <div class="hero-section-moon__overlay">
+          <div class="hero-section-moon__content">
+            <h2 class="hero-section-moon__title">THE MOON</h2>
+
+            <p class="hero-section-moon__description">
+              RETURNING HUMANS TO LUNAR MISSIONS
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <!-- Why The Moon? -->
+      <section class="hero-section hero-section-why">
+        <div class="hero-section-why__img-wrapper">
+          <img
+            class="hero-section-why__img"
+            src="../assets/pages/moon/images/moon_why.jpg"
+            alt="moon image"
+          />
+        </div>
+
+        <div class="hero-section-why__content">
+          <h2 class="hero-section-why__title">WHY THE MOON?</h2>
+          <p class="hero-section-why__description">
+            The Moon is one of Earth's closest habitable neighbors and provides
+            an opportunity to gain valuable experience for missions to Mars and
+            beyond.
+          </p>
+          <table class="hero-section-why__table">
+            <tbody>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">Diameter</td>
+                <td class="hero-section-why__table-value">
+                  3,475 km / 2,159 mi
+                </td>
+              </tr>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">Day Length</td>
+                <td class="hero-section-why__table-value">29.5 Earth days</td>
+              </tr>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">Gravity</td>
+                <td class="hero-section-why__table-value">16.6% of Earth</td>
+              </tr>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">
+                  Avg Distance from Earth
+                </td>
+                <td class="hero-section-why__table-value">
+                  384,400 km / 238,855 mi
+                </td>
+              </tr>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">Age</td>
+                <td class="hero-section-why__table-value">
+                  4.51 billion years
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 3 -->
+      <!-- Moon Missions -->
+      <section class="hero-section hero-section-missions">
+        <picture class="hero-section-missions__img">
+          <source
+            media="(min-width: 1440px)"
+            srcset="../assets/pages/moon/images/starship-moon-desktop.jpg"
+          />
+
+          <img
+            class="hero-section-missions__img"
+            src="../assets/pages/moon/images/starship-moon.jpg"
+            alt="Moon"
+          />
+        </picture>
+        <!-- <img
+          class="hero-section-missions__img"
+          src="../assets/pages/moon/images/starship-moon.jpg"
+          alt="starship moon image"
+        /> -->
+
+        <div class="hero-section-missions__content">
+          <h2 class="hero-section-missions__title">MOON MISSIONS</h2>
+
+          <p class="hero-section-missions__description">
+            Starship cargo flights to the lunar surface for research,
+            development, and exploratory missions start no earlier than 2028, at
+            a rate of $100 million per metric ton. <br /><br />
+            Join a Starship human spaceflight mission now, flying around the
+            Moon or landing on the lunar surface. <br /><br />
+            For additional information on human spaceflight seat or full mission
+            availability, payload masses, pricing details, and timeframes,
+            please contact <br />
+            <a href="#">sales@spacex.com</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <!-- Owner: Rosario -->
+    <!-- Branch: feature/home-footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <a
+          class="footer__social-link"
+          href="https://x.com/SpaceX"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="SpaceX on X"
+        >
+          <svg
+            class="footer__social-icon"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.91326 5.26514L10.4871 1.2002H9.64019L6.53705 4.72973L4.05857 1.2002H1.19995L4.94789 6.53748L1.19995 10.8002H2.04688L5.32388 7.07289L7.94133 10.8002H10.8L6.91305 5.26514H6.91326ZM5.75327 6.5845L5.37353 6.05303L2.35204 1.82404H3.65287L6.09125 5.23697L6.47099 5.76844L9.64059 10.2047H8.33976L5.75327 6.5847V6.5845Z"
+              fill="#F0F0FA"
+            />
+          </svg>
+        </a>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a class="footer__nav-link" href="#">Careers</a>
+          <a class="footer__nav-link" href="#">Updates</a>
+          <a class="footer__nav-link" href="#">Privacy Policy</a>
+          <a class="footer__nav-link" href="#">Suppliers</a>
+        </nav>
+
+        <div class="footer__brand">© 2026 SpaceX</div>
+      </div>
+    </footer>
+    <!-- FINE FOOTER -->
+
+    <!-- GLOBAL JS  -->
+    <script type="module" src="../js/features/home/dropdownMenu.js"></script>
+    <script
+      type="module"
+      src="../js/features/home/upcomingLaunches.js"
+    ></script>
+  </body>
+</html>
