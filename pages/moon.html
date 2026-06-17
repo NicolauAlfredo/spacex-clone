@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SpaceX</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/pages/home.css" />
     <link rel="stylesheet" href="../css/pages/moon.css" />
     <link rel="icon" href="../favicon-spacex.ico" />
   </head>
-  <body>
+  <body class="moon">
     <!-- HEADER -->
     <!-- Owner: Nicolau -->
     <!-- Branch: feature/home-header -->
@@ -344,6 +343,124 @@
         </nav>
       </div>
     </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- SECTION 1 -->
+      <!-- The Moon -->
+      <section class="hero-section hero-section-moon">
+        <video
+          class="hero-section-moon__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          src="../assets/pages/moon/videos/moon-video.mp4"
+        ></video>
+
+        <div class="hero-section-moon__overlay">
+          <div class="hero-section-moon__content">
+            <h2 class="hero-section-moon__title">THE MOON</h2>
+
+            <p class="hero-section-moon__description">
+              RETURNING HUMANS TO LUNAR MISSIONS
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- SECTION 2 -->
+      <!-- Why The Moon? -->
+      <section class="hero-section hero-section-why">
+        <div class="hero-section-why__img-wrapper">
+          <img
+            class="hero-section-why__img"
+            src="../assets/pages/moon/images/moon_why.jpg"
+            alt="moon image"
+          />
+        </div>
+
+        <div class="hero-section-why__content">
+          <h2 class="hero-section-why__title">WHY THE MOON?</h2>
+          <p class="hero-section-why__description">
+            The Moon is one of Earth's closest habitable neighbors and provides
+            an opportunity to gain valuable experience for missions to Mars and
+            beyond.
+          </p>
+          <table class="hero-section-why__table">
+            <tbody>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">Diameter</td>
+                <td class="hero-section-why__table-value">
+                  3,475 km / 2,159 mi
+                </td>
+              </tr>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">Day Length</td>
+                <td class="hero-section-why__table-value">29.5 Earth days</td>
+              </tr>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">Gravity</td>
+                <td class="hero-section-why__table-value">16.6% of Earth</td>
+              </tr>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">
+                  Avg Distance from Earth
+                </td>
+                <td class="hero-section-why__table-value">
+                  384,400 km / 238,855 mi
+                </td>
+              </tr>
+              <tr class="hero-section-why__table-row">
+                <td class="hero-section-why__table-label">Age</td>
+                <td class="hero-section-why__table-value">
+                  4.51 billion years
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 3 -->
+      <!-- Moon Missions -->
+      <section class="hero-section hero-section-missions">
+        <picture class="hero-section-missions__img">
+          <source
+            media="(min-width: 1440px)"
+            srcset="../assets/pages/moon/images/starship-moon-desktop.jpg"
+          />
+
+          <img
+            class="hero-section-missions__img"
+            src="../assets/pages/moon/images/starship-moon.jpg"
+            alt="Moon"
+          />
+        </picture>
+        <!-- <img
+          class="hero-section-missions__img"
+          src="../assets/pages/moon/images/starship-moon.jpg"
+          alt="starship moon image"
+        /> -->
+
+        <div class="hero-section-missions__content">
+          <h2 class="hero-section-missions__title">MOON MISSIONS</h2>
+
+          <p class="hero-section-missions__description">
+            Starship cargo flights to the lunar surface for research,
+            development, and exploratory missions start no earlier than 2028, at
+            a rate of $100 million per metric ton. <br /><br />
+            Join a Starship human spaceflight mission now, flying around the
+            Moon or landing on the lunar surface. <br /><br />
+            For additional information on human spaceflight seat or full mission
+            availability, payload masses, pricing details, and timeframes,
+            please contact <br />
+            <a href="#">sales@spacex.com</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
     <!-- FOOTER -->
     <!-- Owner: Rosario -->
     <!-- Branch: feature/home-footer -->
