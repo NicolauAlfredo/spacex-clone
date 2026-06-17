@@ -1,21 +1,11 @@
 // Import product data
 import { xaiProducts } from "../../data/products.js";
 
+// Import formata price util
+import { formatPrice } from "../../utils/formatPrice.js";
+
 // Select the products grid container
 const productsGrid = document.querySelector("[data-products-grid]");
-
-/**
- * Format a number as Euro currency.
- *
- * @param {number} price
- * @returns {string}
- */
-function formatPrice(price) {
-  return new Intl.NumberFormat("it-IT", {
-    style: "currency",
-    currency: "EUR",
-  }).format(price);
-}
 
 /**
  * Create the HTML markup for a single product card.
@@ -26,7 +16,7 @@ function formatPrice(price) {
 function createProductCard(product) {
   return `
     <article class="products__card">
-      <a href="#" class="products__image-link">
+      <a href="./product-details.html?product=${product.id}" class="products__image-link">
         <img
           src="${product.primaryImage}"
           alt="${product.alt}"
@@ -44,7 +34,7 @@ function createProductCard(product) {
       <div class="products__card-info">
         <div class="products__card-content">
           <h3 class="products__product-title">
-            <a href="#" class="products__product-link">
+            <a href="./product-details.html?product=${product.id}" class="products__product-link">
               ${product.name}
             </a>
           </h3>
