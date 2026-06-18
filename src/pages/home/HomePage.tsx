@@ -1,9 +1,9 @@
 import "./HomePage.css";
 import "./components/Header.css";
 import "./components/Footer.css";
-import "./components/button.css";
 
 import { Header } from "./components/Header";
+import { Button } from "./components/Button/Button";
 
 export function HomePage() {
   return (
@@ -49,15 +49,7 @@ export function HomePage() {
               <p className="hero-section__description"></p>
 
               {/* Button */}
-              <a className="button button--primary" href="#">
-                <span className="button__text">WATCH</span>
-
-                <span className="button__icon">
-                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                    <path d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z" />
-                  </svg>
-                </span>
-              </a>
+              <Button title="WATCH" href="#" />
               {/* Button */}
             </div>
           </div>
@@ -104,15 +96,7 @@ export function HomePage() {
               </p>
 
               {/* Button */}
-              <a className="button button--primary" href="#">
-                <span className="button__text">EXPLORE</span>
-
-                <span className="button__icon">
-                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                    <path d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z" />
-                  </svg>
-                </span>
-              </a>
+              <Button title="EXPLORE" href="#" />
               {/* Button */}
             </div>
 
@@ -266,15 +250,7 @@ export function HomePage() {
               </p>
 
               {/* Button */}
-              <a className="button button--primary" href="#">
-                <span className="button__text">LEARN MORE</span>
-
-                <span className="button__icon">
-                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                    <path d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z" />
-                  </svg>
-                </span>
-              </a>
+              <Button title="LEARN MORE" href="#" />
               {/* Button */}
             </div>
           </div>
@@ -320,15 +296,7 @@ export function HomePage() {
               </p>
 
               {/* Button */}
-              <a className="button button--primary" href="#">
-                <span className="button__text">RESERVE YOUR RIDE</span>
-
-                <span className="button__icon">
-                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                    <path d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z" />
-                  </svg>
-                </span>
-              </a>
+              <Button title="RESERVE YOUR RIDE" href="#" />
               {/* Button */}
             </div>
           </div>
@@ -368,15 +336,7 @@ export function HomePage() {
               </p>
 
               {/* Button */}
-              <a className="button button--primary" href="#">
-                <span className="button__text">JOIN A MISSION</span>
-
-                <span className="button__icon">
-                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                    <path d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z" />
-                  </svg>
-                </span>
-              </a>
+              <Button title="JOIN A MISSION" href="#" />
               {/* Button */}
             </div>
           </div>
@@ -421,15 +381,7 @@ export function HomePage() {
               </p>
 
               {/* Button */}
-              <a className="button button--primary" href="#">
-                <span className="button__text">ORDER NOW</span>
-
-                <span className="button__icon">
-                  <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
-                    <path d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z" />
-                  </svg>
-                </span>
-              </a>
+              <Button title="ORDER NOW" href="#" />
               {/* Button */}
             </div>
           </div>
