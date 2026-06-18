@@ -1,6 +1,6 @@
 import type { ButtonProps } from "./Button.types";
 
-import "./button.css";
+import "./Button.css";
 
 export function Button({ title, href, variant = "primary" }: ButtonProps) {
   return (

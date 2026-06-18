@@ -3,8 +3,8 @@ import "./components/Header.css";
 import "./components/Footer.css";
 
 import { Header } from "./components/Header";
-import { Button } from "./components/button/Button";
 import { Footer } from "../../components/footer/Footer";
+import { Button } from "./components/Button/Button";
 
 export function HomePage() {
   return (

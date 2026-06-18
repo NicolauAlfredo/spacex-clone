@@ -5,10 +5,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 // Export Vite configuration
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   // Enable React support in Vite
   plugins: [react()],
 
-  // Base path required for GitHub Pages project deployment
-  base: "/spacex-clone/",
-});
+  // Use GitHub Pages base path only for production build
+  base: command === "build" ? "/spacex-clone/" : "/",
+}));
