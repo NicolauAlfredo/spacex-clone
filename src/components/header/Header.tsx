@@ -1,121 +1,563 @@
-import { DropdownItem } from "./DropdownItem";
-import { UpcomingLaunch } from "./UpcomingLaunch";
+import { useEffect, useState } from "react";
+import { SpaceXLogo } from "./SpaceXLogo";
+
+import "./Header.css";
+import { Link } from "react-router-dom";
+
+type DropdownKey =
+  | "vehicles"
+  | "human-spaceflight"
+  | "xai"
+  | "company"
+  | "shop";
 
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<DropdownKey | null>(null);
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+  const [submenuPaddingTop, setSubmenuPaddingTop] = useState("0px");
+
+  function isMobile() {
+    return window.innerWidth < 1024;
+  }
+
+  function closeAll() {
+    setOpenDropdown(null);
+  }
+
+  function handleMenuToggle() {
+    setIsMenuOpen((currentValue) => {
+      const nextValue = !currentValue;
+
+      if (!nextValue) {
+        closeAll();
+      }
+
+      return nextValue;
+    });
+  }
+
+  function handleDropdownClick(
+    event: React.MouseEvent<HTMLButtonElement>,
+    dropdownKey: DropdownKey,
+  ) {
+    event.preventDefault();
+
+    if (isMobile()) {
+      setOpenDropdown((currentValue) =>
+        currentValue === dropdownKey ? null : dropdownKey,
+      );
+
+      return;
+    }
+
+    setOpenDropdown((currentValue) =>
+      currentValue === dropdownKey ? null : dropdownKey,
+    );
+  }
+
+  function handleDropdownMouseEnter(
+    event: React.MouseEvent<HTMLLIElement>,
+    dropdownKey: DropdownKey,
+  ) {
+    if (isMobile()) return;
+
+    const itemRect = event.currentTarget.getBoundingClientRect();
+    setSubmenuPaddingTop(`${itemRect.bottom + 4}px`);
+    setOpenDropdown(dropdownKey);
+  }
+
+  function handleDropdownMouseLeave() {
+    if (isMobile()) return;
+
+    closeAll();
+  }
+
+  useEffect(() => {
+    function handleDocumentClick(event: MouseEvent) {
+      const target = event.target as HTMLElement;
+
+      if (!isMobile() && !target.closest(".header__item--dropdown")) {
+        closeAll();
+      }
+    }
+
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        closeAll();
+        setIsMenuOpen(false);
+      }
+    }
+
+    function handleScroll() {
+      setIsHeaderHidden(window.scrollY > 0);
+    }
+
+    document.addEventListener("click", handleDocumentClick);
+    document.addEventListener("keydown", handleEscape);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+      document.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header
+      className={[
+        "header",
+        isMenuOpen ? "menu-open" : "",
+        isHeaderHidden ? "header--hidden" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <div className="header__container">
-        <a href="/" className="header__logo">
-          <svg
-            _ngcontent-yny-c29=""
-            xmlns="http://www.w3.org/2000/svg"
-            width="147"
-            height="19"
-            viewBox="0 0 147 19"
-            fill="none"
-          >
-            <g _ngcontent-yny-c29="">
-              <path
-                _ngcontent-yny-c29=""
-                d="M33.4556 7.10059C35.9425 7.10059 37.5024 8.14389 37.5024 9.99707V11.2383C37.5024 13.2081 36.1594 14.0693 33.6704 14.0693H24.7524V18.4062H21.3345V7.10059H33.4556ZM146.805 0.544922V0.561523C141.398 1.00137 120.15 3.63015 105.414 18.4062H99.9458L100.557 17.7988C103.641 14.8268 117.282 2.23051 146.803 0.542969L146.805 0.544922ZM56.2397 18.4043H52.1655L50.3599 15.9287H39.8169L41.6274 14H48.9526L45.4292 9.17285L47.5093 6.62012L56.2397 18.4043ZM72.1841 7.09863C74.0086 7.09865 75.3021 7.72865 75.6343 9.07031H62.8081V16.2803H75.6343C75.2694 17.7734 74.4885 18.4042 72.2827 18.4043H62.5786C60.9037 18.4043 59.3268 17.7248 59.3267 15.9209V9.58203C59.3267 7.778 60.9037 7.09868 62.5786 7.09863H72.1841ZM90.7222 12.834H83.8247V16.2803H95.6489V18.4043H80.3481V10.8975H90.7222V12.834ZM120.998 18.4043H115.584L110.775 14.9082H110.777C111.663 14.2168 112.602 13.5232 113.51 12.9014L120.998 18.4043ZM12.9351 7.09863C14.8252 7.09865 15.9037 8.0272 16.2358 9.07031H3.59424V11.5049H13.3979V11.5029C15.3722 11.6154 16.5677 12.4597 16.5679 14.0488V15.8535C16.5677 17.6083 15.5242 18.4014 13.4331 18.4014H3.43018C1.52352 18.4014 0.428522 17.6897 0.112793 16.2783H13.4849V13.6934H3.54541C1.70432 13.7036 0.459473 12.8582 0.459473 11.3691V9.58203C0.459473 7.87612 1.66924 7.09863 3.77686 7.09863H12.9351ZM24.7524 12H33.0435C34.3863 12 34.5356 11.5512 34.5356 10.7412V10.2979C34.5356 9.50218 34.3371 9.07228 32.8774 9.07227H24.7729L24.7524 12ZM109.604 9.87891C108.627 10.4554 107.562 11.1202 106.646 11.7334L100.298 7.09863H105.705L109.604 9.87891ZM109.607 9.88086L109.604 9.87891L109.607 9.87793V9.88086ZM95.811 9.07031H80.3481V7.09863H95.811V9.07031Z"
-                fill="#F0F0FA"
-              ></path>
-            </g>
-          </svg>
-        </a>
+        <Link to="/" className="header__logo">
+          <SpaceXLogo />
+        </Link>
 
         <button
           className="header__toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          onClick={handleMenuToggle}
         >
-          <svg
-            _ngcontent-yny-c31=""
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              _ngcontent-yny-c31=""
-              d="M24 19L0 19L1.74849e-07 18L24 18V19Z"
-              fill="#D9D9D9"
-            ></path>
-            <path
-              _ngcontent-yny-c31=""
-              d="M24 12L0 12L1.74849e-07 11L24 11V12Z"
-              fill="#D9D9D9"
-            ></path>
-            <path
-              _ngcontent-yny-c31=""
-              d="M24 5L0 5L1.74849e-07 4L24 4V5Z"
-              fill="#D9D9D9"
-            ></path>
-          </svg>
+          {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
         </button>
 
         <nav className="header__nav">
           <ul className="header__list">
-            <li className="header__item header__item--dropdown">
-              <DropdownItem
-                btnLabel="VEHICLES"
-                items={["STARSHIP", "DRAGON", "FALCON 9", "FALCON HEAVY"]}
-              />
+            <li
+              className={`header__item header__item--dropdown ${
+                openDropdown === "vehicles" ? "is-open" : ""
+              }`}
+              onMouseEnter={(event) =>
+                handleDropdownMouseEnter(event, "vehicles")
+              }
+              onMouseLeave={handleDropdownMouseLeave}
+            >
+              <button
+                className="header__link"
+                aria-expanded={openDropdown === "vehicles"}
+                onClick={(event) => handleDropdownClick(event, "vehicles")}
+              >
+                VEHICLES
+                <span className="header__arrow">
+                  <ChevronDownIcon />
+                </span>
+              </button>
+
+              <ul
+                className="header__submenu"
+                style={{
+                  paddingTop:
+                    openDropdown === "vehicles" && !isMobile()
+                      ? submenuPaddingTop
+                      : undefined,
+                  display:
+                    openDropdown === "vehicles" && isMobile()
+                      ? "block"
+                      : undefined,
+                }}
+              >
+                {["STARSHIP", "DRAGON", "FALCON 9", "FALCON HEAVY"].map(
+                  (item, index) => (
+                    <li
+                      key={item}
+                      style={{
+                        transitionDelay:
+                          openDropdown === "vehicles"
+                            ? `${index * 0.05}s`
+                            : "0s",
+                      }}
+                    >
+                      <Link to="#">{item}</Link>
+                    </li>
+                  ),
+                )}
+              </ul>
             </li>
 
-            <li className="header__item header__item--dropdown">
-              <DropdownItem
-                btnLabel="HUMAN SPACEFLIGHT"
-                items={[
-                  "OVERVIEW",
-                  "SPACE STATION",
-                  "EARTH ORBIT",
-                  "THE MOON",
-                  "MARS & BEYOND",
-                ]}
-              />
+            <li
+              className={`header__item header__item--dropdown ${
+                openDropdown === "human-spaceflight" ? "is-open" : ""
+              }`}
+              onMouseEnter={(event) =>
+                handleDropdownMouseEnter(event, "human-spaceflight")
+              }
+              onMouseLeave={handleDropdownMouseLeave}
+            >
+              <button
+                className="header__link"
+                aria-expanded={openDropdown === "human-spaceflight"}
+                onClick={(event) =>
+                  handleDropdownClick(event, "human-spaceflight")
+                }
+              >
+                HUMAN SPACEFLIGHT
+                <span className="header__arrow">
+                  <ChevronDownIcon />
+                </span>
+              </button>
+
+              <ul
+                className="header__submenu"
+                style={{
+                  paddingTop:
+                    openDropdown === "human-spaceflight" && !isMobile()
+                      ? submenuPaddingTop
+                      : undefined,
+                  display:
+                    openDropdown === "human-spaceflight" && isMobile()
+                      ? "block"
+                      : undefined,
+                }}
+              >
+                {[
+                  { label: "OVERVIEW", href: "#" },
+                  { label: "SPACE STATION", href: "#" },
+                  { label: "EARTH ORBIT", href: "#" },
+                  { label: "THE MOON", href: "/moon" },
+                  { label: "MARS & BEYOND", href: "#" },
+                ].map((item, index) => (
+                  <li
+                    key={item.label}
+                    style={{
+                      transitionDelay:
+                        openDropdown === "human-spaceflight"
+                          ? `${index * 0.05}s`
+                          : "0s",
+                    }}
+                  >
+                    <Link to={item.href}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </li>
 
             <li className="header__item">
-              <DropdownItem btnLabel="STARLINK" items={[]} />
+              <Link to="/starlink" className="header__link">
+                STARLINK
+              </Link>
             </li>
 
             <li className="header__item">
-              <DropdownItem btnLabel="STARSHIELD" items={[]} />
+              <Link to="#" className="header__link">
+                STARSHIELD
+              </Link>
             </li>
 
-            <li className="header__item header__item--dropdown">
-              <DropdownItem
-                btnLabel="xAI"
-                items={["GROK", "GROKIPEDIA", "X"]}
-              />
+            <li
+              className={`header__item header__item--dropdown ${
+                openDropdown === "xai" ? "is-open" : ""
+              }`}
+              onMouseEnter={(event) => handleDropdownMouseEnter(event, "xai")}
+              onMouseLeave={handleDropdownMouseLeave}
+            >
+              <button
+                className="header__link"
+                aria-expanded={openDropdown === "xai"}
+                onClick={(event) => handleDropdownClick(event, "xai")}
+              >
+                xAI
+                <span className="header__arrow">
+                  <ChevronDownIcon />
+                </span>
+              </button>
+
+              <ul
+                className="header__submenu"
+                style={{
+                  paddingTop:
+                    openDropdown === "xai" && !isMobile()
+                      ? submenuPaddingTop
+                      : undefined,
+                  display:
+                    openDropdown === "xai" && isMobile() ? "block" : undefined,
+                }}
+              >
+                {["GROK", "GROKIPEDIA", "X"].map((item, index) => (
+                  <li
+                    key={item}
+                    style={{
+                      transitionDelay:
+                        openDropdown === "xai" ? `${index * 0.05}s` : "0s",
+                    }}
+                  >
+                    <Link to="#">{item}</Link>
+                  </li>
+                ))}
+              </ul>
             </li>
 
             <li className="header__item">
-              <DropdownItem btnLabel="TERAFAB" items={[]} />
+              <Link to="#" className="header__link">
+                TERAFAB
+              </Link>
             </li>
 
-            <li className="header__item header__item--dropdown">
-              <DropdownItem
-                btnLabel="COMPANY"
-                items={[
-                  "MISSION",
-                  "CAREERS",
-                  "UPDATES",
-                  "CONTENT",
-                  "INVESTORS",
-                ]}
-              />
+            <li
+              className={`header__item header__item--dropdown ${
+                openDropdown === "company" ? "is-open" : ""
+              }`}
+              onMouseEnter={(event) =>
+                handleDropdownMouseEnter(event, "company")
+              }
+              onMouseLeave={handleDropdownMouseLeave}
+            >
+              <button
+                className="header__link"
+                aria-expanded={openDropdown === "company"}
+                onClick={(event) => handleDropdownClick(event, "company")}
+              >
+                COMPANY
+                <span className="header__arrow">
+                  <ChevronDownIcon />
+                </span>
+              </button>
+
+              <ul
+                className="header__submenu"
+                style={{
+                  paddingTop:
+                    openDropdown === "company" && !isMobile()
+                      ? submenuPaddingTop
+                      : undefined,
+                  display:
+                    openDropdown === "company" && isMobile()
+                      ? "block"
+                      : undefined,
+                }}
+              >
+                {["MISSION", "CAREERS", "UPDATES", "CONTENT"].map(
+                  (item, index) => (
+                    <li
+                      key={item}
+                      style={{
+                        transitionDelay:
+                          openDropdown === "company"
+                            ? `${index * 0.05}s`
+                            : "0s",
+                      }}
+                    >
+                      <Link to="#">{item}</Link>
+                    </li>
+                  ),
+                )}
+              </ul>
             </li>
 
-            <li className="header__item header__item--dropdown">
-              <DropdownItem btnLabel="SHOP" items={["SPACEX", "xAI"]} />
+            <li
+              className={`header__item header__item--dropdown ${
+                openDropdown === "shop" ? "is-open" : ""
+              }`}
+              onMouseEnter={(event) => handleDropdownMouseEnter(event, "shop")}
+              onMouseLeave={handleDropdownMouseLeave}
+            >
+              <button
+                className="header__link"
+                aria-expanded={openDropdown === "shop"}
+                onClick={(event) => handleDropdownClick(event, "shop")}
+              >
+                SHOP
+                <span className="header__arrow">
+                  <ChevronDownIcon />
+                </span>
+              </button>
+
+              <ul
+                className="header__submenu"
+                style={{
+                  paddingTop:
+                    openDropdown === "shop" && !isMobile()
+                      ? submenuPaddingTop
+                      : undefined,
+                  display:
+                    openDropdown === "shop" && isMobile() ? "block" : undefined,
+                }}
+              >
+                {[
+                  { label: "SPACEX", href: "#" },
+                  { label: "xAI", href: "/shop-x" },
+                ].map((item, index) => (
+                  <li
+                    key={item.label}
+                    style={{
+                      transitionDelay:
+                        openDropdown === "shop" ? `${index * 0.05}s` : "0s",
+                    }}
+                  >
+                    <Link to={item.href}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </li>
           </ul>
-          <UpcomingLaunch />
+
+          <div className="upcoming-launch">
+            <div className="upcoming-launch__header">
+              <span className="upcoming-launch__title">UPCOMING LAUNCHES</span>
+
+              <span className="upcoming-launch__toggle">
+                <svg
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="upcoming-launch__icon upcoming-launch__icon--down"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="#FFFFFF"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div className="upcoming-launch__cards">
+              <div className="upcoming-launch__card">
+                <div className="upcoming-launch__image">
+                  <img src="/assets/pages/home/images/slc-4-e.jpg" alt="" />
+                </div>
+
+                <div className="upcoming-launch__content">
+                  <span className="upcoming-launch__mission-title">
+                    Starlink Mission
+                  </span>
+                  <span className="upcoming-launch__countdown">
+                    June 7, 2026 04:00 - 08:00 Italy Time
+                  </span>
+                </div>
+
+                <span className="upcoming-launch__arrow upcoming-launch__arrow--right">
+                  <ArrowRightIcon />
+                </span>
+              </div>
+
+              <div className="upcoming-launch__card">
+                <div className="upcoming-launch__image">
+                  <img
+                    src="/assets/pages/home/images/crew-12-mobile.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div className="upcoming-launch__content">
+                  <span className="upcoming-launch__mission-title">
+                    Starlink Mission
+                  </span>
+                  <span className="upcoming-launch__countdown">
+                    June 8, 2026 12:07 - 16:07 Italy Time
+                  </span>
+                </div>
+
+                <span className="upcoming-launch__arrow upcoming-launch__arrow--right">
+                  <ArrowRightIcon />
+                </span>
+              </div>
+
+              <Link to="#" className="upcoming-launch__link">
+                <GridIcon />
+                <span className="upcoming-launch__link-text">
+                  ALL UPCOMING LAUNCHES
+                </span>
+              </Link>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
+  );
+}
+
+function HamburgerIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path d="M24 19L0 19L1.74849e-07 18L24 18V19Z" fill="#D9D9D9" />
+      <path d="M24 12L0 12L1.74849e-07 11L24 11V12Z" fill="#D9D9D9" />
+      <path d="M24 5L0 5L1.74849e-07 4L24 4V5Z" fill="#D9D9D9" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 -960 960 960"
+      width="24px"
+      fill="#e8eaed"
+    >
+      <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+    </svg>
+  );
+}
+
+function ChevronDownIcon() {
+  return (
+    <svg
+      width="10"
+      height="6"
+      viewBox="0 0 10 6"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 1L5 5L9 1"
+        stroke="#FFFFFF"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ArrowRightIcon() {
+  return (
+    <svg
+      width="13"
+      height="12"
+      viewBox="0 0 13 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.9893 5.58371L12.2471 5.89914L11.9893 6.21555L8.10059 10.9782L7.3252 10.3454L10.5479 6.39914L1.39941 6.39914L1.39941 5.39914L10.5479 5.39914L7.3252 1.45383L8.10059 0.821014L11.9893 5.58371Z"
+        fill="#F0F0FA"
+        fillOpacity="0.8"
+      />
+    </svg>
+  );
+}
+
+function GridIcon() {
+  return (
+    <svg
+      width="9"
+      height="13"
+      viewBox="0 0 9 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.875 10.0003H1L1 9.12527H1.875L1.875 10.0003ZM4.9375 10.0003H4.0625L4.0625 9.12527H4.9375L4.9375 10.0003ZM8 10.0003H7.125V9.12527H8V10.0003ZM1.875 6.93777H1L1 6.06277H1.875V6.93777ZM4.9375 6.93777H4.0625V6.06277H4.9375V6.93777ZM8 6.93777L7.125 6.93777V6.06277L8 6.06277V6.93777ZM1.875 3.87527H1L1 3.00027H1.875V3.87527ZM4.9375 3.87527H4.0625V3.00027H4.9375V3.87527ZM8 3.87527L7.125 3.87527V3.00027L8 3.00027V3.87527Z"
+        fill="#F0F0FA"
+      />
+    </svg>
   );
 }

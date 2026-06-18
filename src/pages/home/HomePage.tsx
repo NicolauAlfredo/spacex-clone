@@ -3,7 +3,7 @@ import "./components/Header.css";
 import "./components/Footer.css";
 import "./components/button.css";
 
-import { Header } from "./components/Header";
+import { Header } from "../../components/header/Header";
 
 export function HomePage() {
   return (
