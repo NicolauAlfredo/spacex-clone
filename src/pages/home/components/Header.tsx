@@ -3,6 +3,7 @@ import { SpaceXLogo } from "./SpaceXLogo";
 
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { getPublicAssetPath } from "../../../utils/getPublicAssetPath";
 
 type DropdownKey =
   | "vehicles"
@@ -424,7 +425,12 @@ export function Header() {
             <div className="upcoming-launch__cards">
               <div className="upcoming-launch__card">
                 <div className="upcoming-launch__image">
-                  <img src="/assets/pages/home/images/slc-4-e.jpg" alt="" />
+                  <img
+                    src={getPublicAssetPath(
+                      "assets/pages/home/images/slc-4-e.jpg",
+                    )}
+                    alt=""
+                  />
                 </div>
 
                 <div className="upcoming-launch__content">
@@ -444,7 +450,9 @@ export function Header() {
               <div className="upcoming-launch__card">
                 <div className="upcoming-launch__image">
                   <img
-                    src="/assets/pages/home/images/crew-12-mobile.jpg"
+                    src={getPublicAssetPath(
+                      "/assets/pages/home/images/crew-12-mobile.jpg",
+                    )}
                     alt=""
                   />
                 </div>
