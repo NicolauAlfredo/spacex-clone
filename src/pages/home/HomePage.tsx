@@ -5,6 +5,7 @@ import "./components/Footer.css";
 import { Header } from "./components/Header";
 import { Footer } from "../../components/footer/Footer";
 import { Button } from "./components/Button/Button";
+import { getPublicAssetPath } from "../../utils/getPublicAssetPath";
 
 export function HomePage() {
   return (
@@ -23,17 +24,23 @@ export function HomePage() {
             muted
             loop
             playsInline
-            poster="./assets/pages/home/images/revolutionizing-space-tech-mobile.jpg"
+            poster={getPublicAssetPath(
+              "assets/pages/home/images/revolutionizing-space-tech-mobile.jpg",
+            )}
           >
             {/* MOBILE FIRST */}
             <source
-              src="./public/assets/pages/home/videos/Starships-twelfth-flight-test-mobile.mp4"
+              src={getPublicAssetPath(
+                "assets/pages/home/videos/Starships-twelfth-flight-test-mobile.mp4",
+              )}
               media="(max-width: 767px)"
               type="video/mp4"
             />
             {/* DESKTOP */}
             <source
-              src="./assets/pages/home/videos/Starships-twelfth-flight-test.mp4"
+              src={getPublicAssetPath(
+                "assets/pages/home/videos/Starships-twelfth-flight-test.mp4",
+              )}
               media="(min-width: 768px)"
               type="video/mp4"
             />
@@ -68,17 +75,23 @@ export function HomePage() {
             muted
             loop
             playsInline
-            poster="/assets/pages/home/images/mars-mobile.jpg"
+            poster={getPublicAssetPath(
+              "assets/pages/home/images/mars-mobile.jpg",
+            )}
           >
             {/* MOBILE FIRST */}
             <source
-              src="/assets/pages/home/videos/mars-rotation-mobile.mp4"
+              src={getPublicAssetPath(
+                "assets/pages/home/videos/mars-rotation-mobile.mp4",
+              )}
               media="(max-width: 767px)"
               type="video/mp4"
             />
             {/* DESKTOP */}
             <source
-              src="/assets/pages/home/videos/mars-rotation.mp4"
+              src={getPublicAssetPath(
+                "assets/pages/home/videos/mars-rotation.mp4",
+              )}
               media="(min-width: 768px)"
               type="video/mp4"
             />
@@ -131,7 +144,12 @@ export function HomePage() {
               <div className="upcoming-launch__cards">
                 <div className="upcoming-launch__card">
                   <div className="upcoming-launch__image">
-                    <img src="/assets/pages/home/images/slc-4-e.jpg" alt="" />
+                    <img
+                      src={getPublicAssetPath(
+                        "assets/pages/home/images/slc-4-e.jpg",
+                      )}
+                      alt=""
+                    />
                   </div>
 
                   <div className="upcoming-launch__content">
@@ -163,7 +181,9 @@ export function HomePage() {
                 <div className="upcoming-launch__card">
                   <div className="upcoming-launch__image">
                     <img
-                      src="/assets/pages/home/images/crew-12-mobile.jpg"
+                      src={getPublicAssetPath(
+                        "assets/pages/home/images/crew-12-mobile.jpg",
+                      )}
                       alt=""
                     />
                   </div>
@@ -226,14 +246,16 @@ export function HomePage() {
         <section className="hero-section hero-section--technology">
           <picture>
             <source
-              srcSet="
-                    /assets/pages/home/images/revolutionizing-space-tech-desktop.jpg
-                  "
+              srcSet={getPublicAssetPath(
+                "assets/pages/home/images/revolutionizing-space-tech-desktop.jpg",
+              )}
               media="(min-width: 1024px)"
             />
             <img
               className="hero-section__image"
-              src="/assets/pages/home/images/revolutionizing-space-tech-mobile.jpg"
+              src={getPublicAssetPath(
+                "assets/pages/home/images/revolutionizing-space-tech-mobile.jpg",
+              )}
               alt=""
             />
           </picture>
@@ -269,15 +291,21 @@ export function HomePage() {
             muted
             loop
             playsInline
-            poster="/assets/pages/home/images/leading-launch-service-mobile.jpg"
+            poster={getPublicAssetPath(
+              "assets/pages/home/images/leading-launch-service-mobile.jpg",
+            )}
           >
             <source
-              src="/assets/pages/home/videos/leading-launch-service-mobile.mp4"
+              src={getPublicAssetPath(
+                "assets/pages/home/videos/leading-launch-service-mobile.mp4",
+              )}
               media="(max-width: 767px)"
               type="video/mp4"
             />
             <source
-              src="/assets/pages/home/videos/leading-launch-service.mp4"
+              src={getPublicAssetPath(
+                "assets/pages/home/videos/leading-launch-service.mp4",
+              )}
               media="(min-width: 768px)"
               type="video/mp4"
             />
@@ -311,14 +339,16 @@ export function HomePage() {
         <section className="hero-section hero-section--spaceflight">
           <picture>
             <source
-              srcSet="
-                    /assets/pages/home/images/advancing-human-spaceflight-desktop.jpg
-                  "
+              srcSet={getPublicAssetPath(
+                "assets/pages/home/images/advancing-human-spaceflight-desktop.jpg   ",
+              )}
               media="(min-width: 1024px)"
             />
             <img
               className="hero-section__image"
-              src="/assets/pages/home/images/advancing-human-spaceflight-mobile.jpg"
+              src={getPublicAssetPath(
+                "assets/pages/home/images/advancing-human-spaceflight-mobile.jpg",
+              )}
               alt=""
             />
           </picture>
@@ -355,15 +385,21 @@ export function HomePage() {
             muted
             loop
             playsInline
-            poster="/assets/pages/home/images/delivering-highspeed-mobile.jpg"
+            poster={getPublicAssetPath(
+              "assets/pages/home/images/delivering-highspeed-mobile.jpg",
+            )}
           >
             <source
-              src="/assets/pages/home/videos/delivering-high-speed-mobile.mp4"
+              src={getPublicAssetPath(
+                "assets/pages/home/videos/delivering-high-speed-mobile.mp4",
+              )}
               media="(max-width: 767px)"
               type="video/mp4"
             />
             <source
-              src="/assets/pages/home/videos/delivering-high-speed.mp4"
+              src={getPublicAssetPath(
+                "assets/pages/home/videos/delivering-high-speed.mp4",
+              )}
               media="(min-width: 768px)"
               type="video/mp4"
             />
