@@ -451,7 +451,7 @@ export function Header() {
                 <div className="upcoming-launch__image">
                   <img
                     src={getPublicAssetPath(
-                      "/assets/pages/home/images/crew-12-mobile.jpg",
+                      "assets/pages/home/images/crew-12-mobile.jpg",
                     )}
                     alt=""
                   />
