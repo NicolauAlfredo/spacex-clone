@@ -1,3 +1,4 @@
+import { DropdownItem } from "./DropdownItem";
 import { UpcomingLaunch } from "./UpcomingLaunch";
 
 export function Header() {
@@ -57,234 +58,62 @@ export function Header() {
         <nav className="header__nav">
           <ul className="header__list">
             <li className="header__item header__item--dropdown">
-              <button className="header__link" aria-expanded="false">
-                VEHICLES
-                <span className="header__arrow">
-                  <svg
-                    width="10"
-                    height="6"
-                    viewBox="0 0 10 6"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L5 5L9 1"
-                      stroke="#FFFFFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul className="header__submenu">
-                <li>
-                  <a href="#">STARSHIP</a>
-                </li>
-                <li>
-                  <a href="#">DRAGON</a>
-                </li>
-                <li>
-                  <a href="#">FALCON 9</a>
-                </li>
-                <li>
-                  <a href="#">FALCON HEAVY</a>
-                </li>
-              </ul>
+              <DropdownItem
+                btnLabel="VEHICLES"
+                items={["STARSHIP", "DRAGON", "FALCON 9", "FALCON HEAVY"]}
+              />
             </li>
 
             <li className="header__item header__item--dropdown">
-              <button className="header__link" aria-expanded="false">
-                HUMAN SPACEFLIGHT
-                <span className="header__arrow">
-                  <svg
-                    width="10"
-                    height="6"
-                    viewBox="0 0 10 6"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L5 5L9 1"
-                      stroke="#FFFFFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul className="header__submenu">
-                <li>
-                  <a href="#">OVERVIEW</a>
-                </li>
-                <li>
-                  <a href="#">SPACE STATION</a>
-                </li>
-                <li>
-                  <a href="#">EARTH ORBIT</a>
-                </li>
-                <li>
-                  <a href="./pages/moon.html">THE MOON</a>
-                </li>
-                <li>
-                  <a href="#">MARS & BEYOND</a>
-                </li>
-              </ul>
+              <DropdownItem
+                btnLabel="HUMAN SPACEFLIGHT"
+                items={[
+                  "OVERVIEW",
+                  "SPACE STATION",
+                  "EARTH ORBIT",
+                  "THE MOON",
+                  "MARS & BEYOND",
+                ]}
+              />
             </li>
 
             <li className="header__item">
-              <a href="./pages/starlink.html" className="header__link">
-                STARLINK
-              </a>
+              <DropdownItem btnLabel="STARLINK" items={[]} />
             </li>
 
             <li className="header__item">
-              <a href="#" className="header__link">
-                STARSHIELD
-              </a>
+              <DropdownItem btnLabel="STARSHIELD" items={[]} />
             </li>
 
             <li className="header__item header__item--dropdown">
-              <button className="header__link" aria-expanded="false">
-                xAI
-                <span className="header__arrow">
-                  <svg
-                    width="10"
-                    height="6"
-                    viewBox="0 0 10 6"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L5 5L9 1"
-                      stroke="#FFFFFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul className="header__submenu">
-                <li>
-                  <a href="#">GROK</a>
-                </li>
-                <li>
-                  <a href="#">GROKIPEDIA</a>
-                </li>
-                <li>
-                  <a href="#">X</a>
-                </li>
-              </ul>
+              <DropdownItem
+                btnLabel="xAI"
+                items={["GROK", "GROKIPEDIA", "X"]}
+              />
             </li>
 
             <li className="header__item">
-              <a href="#" className="header__link">
-                TERAFAB
-              </a>
+              <DropdownItem btnLabel="TERAFAB" items={[]} />
             </li>
 
             <li className="header__item header__item--dropdown">
-              <button className="header__link" aria-expanded="false">
-                COMPANY
-                <span className="header__arrow">
-                  <svg
-                    width="10"
-                    height="6"
-                    viewBox="0 0 10 6"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L5 5L9 1"
-                      stroke="#FFFFFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul className="header__submenu">
-                <li>
-                  <a href="#">MISSION</a>
-                </li>
-                <li>
-                  <a href="#">CAREERS</a>
-                </li>
-                <li>
-                  <a href="#">UPDATES</a>
-                </li>
-                <li>
-                  <a href="#">CONTENT</a>
-                </li>
-              </ul>
+              <DropdownItem
+                btnLabel="COMPANY"
+                items={[
+                  "MISSION",
+                  "CAREERS",
+                  "UPDATES",
+                  "CONTENT",
+                  "INVESTORS",
+                ]}
+              />
             </li>
 
             <li className="header__item header__item--dropdown">
-              <button className="header__link" aria-expanded="false">
-                SHOP
-                <span className="header__arrow">
-                  <svg
-                    width="10"
-                    height="6"
-                    viewBox="0 0 10 6"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1 1L5 5L9 1"
-                      stroke="#FFFFFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-              </button>
-
-              <ul className="header__submenu">
-                <li>
-                  <a href="#">SPACEX</a>
-                </li>
-                <li>
-                  <a href="./pages/shop-x.html">xAI</a>
-                </li>
-              </ul>
+              <DropdownItem btnLabel="SHOP" items={["SPACEX", "xAI"]} />
             </li>
           </ul>
-
-          <div className="upcoming-launch">
-            <div className="upcoming-launch__header">
-              <span className="upcoming-launch__title">UPCOMING LAUNCHES</span>
-
-              <span className="upcoming-launch__toggle">
-                <svg
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="upcoming-launch__icon upcoming-launch__icon--down"
-                >
-                  <path
-                    d="M1 1L5 5L9 1"
-                    stroke="#FFFFFF"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-            </div>
-
-            <UpcomingLaunch />
-          </div>
+          <UpcomingLaunch />
         </nav>
       </div>
     </header>
