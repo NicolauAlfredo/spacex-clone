@@ -3,9 +3,9 @@ import { MoonPage } from "../pages/moon/MoonPage";
 import { ShopXPage } from "../pages/shop-x/ShopXPage";
 import { StarlinkPage } from "../pages/starlink/StarlinkPage";
 
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     element: <HomePage />,
