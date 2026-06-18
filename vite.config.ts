@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// Import Vite configuration helper
+import { defineConfig } from "vite";
 
-// https://vite.dev/config/
+// Import React plugin for Vite
+import react from "@vitejs/plugin-react";
+
+// Export Vite configuration
 export default defineConfig({
+  // Enable React support in Vite
   plugins: [react()],
-})
+
+  // Base path required for GitHub Pages project deployment
+  base: "/spacex-clone/",
+});
