@@ -1,8 +1,8 @@
-import type { StatsItem } from "../../types/type";
+import type { StatsItem } from "../../types/Type";
 
 type InfoTableProps = {
   stats: StatsItem[];
-  className: string
+  className: string;
 };
 
 export function InfoTable({ stats, className }: InfoTableProps) {

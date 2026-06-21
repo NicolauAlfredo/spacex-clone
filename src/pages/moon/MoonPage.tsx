@@ -1,5 +1,7 @@
 import { Footer } from "../../components/footer/Footer";
 import { Header } from "../home/components/Header";
+import { InfoTable } from "../../components/table/InfoTable";
+import { moonStats } from "./MoonStats";
 
 export function MoonPage() {
   return (
@@ -47,42 +49,7 @@ export function MoonPage() {
               provides an opportunity to gain valuable experience for missions
               to Mars and beyond.
             </p>
-            <table className="hero-section-why__table">
-              <tbody>
-                <tr className="hero-section-why__table-row">
-                  <td className="hero-section-why__table-label">Diameter</td>
-                  <td className="hero-section-why__table-value">
-                    3,475 km / 2,159 mi
-                  </td>
-                </tr>
-                <tr className="hero-section-why__table-row">
-                  <td className="hero-section-why__table-label">Day Length</td>
-                  <td className="hero-section-why__table-value">
-                    29.5 Earth days
-                  </td>
-                </tr>
-                <tr className="hero-section-why__table-row">
-                  <td className="hero-section-why__table-label">Gravity</td>
-                  <td className="hero-section-why__table-value">
-                    16.6% of Earth
-                  </td>
-                </tr>
-                <tr className="hero-section-why__table-row">
-                  <td className="hero-section-why__table-label">
-                    Avg Distance from Earth
-                  </td>
-                  <td className="hero-section-why__table-value">
-                    384,400 km / 238,855 mi
-                  </td>
-                </tr>
-                <tr className="hero-section-why__table-row">
-                  <td className="hero-section-why__table-label">Age</td>
-                  <td className="hero-section-why__table-value">
-                    4.51 billion years
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <InfoTable stats={moonStats} className="hero-section-why" />
           </div>
         </section>
 
