@@ -1,7 +1,4 @@
-type StatsItem = {
-  label: string;
-  value: string;
-};
+import type { StatsItem } from "../../types/type";
 
 export const moonStats: StatsItem[] = [
   { label: "Diameter", value: "3,475 km / 2,159 mi" },
