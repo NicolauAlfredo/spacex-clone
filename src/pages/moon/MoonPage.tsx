@@ -2,6 +2,7 @@ import { Footer } from "../../components/footer/Footer";
 import { Header } from "../home/components/Header";
 import { InfoTable } from "../../components/table/InfoTable";
 import { moonStats } from "./MoonStats";
+import "../../components/table/InfoTable.css";
 
 export function MoonPage() {
   return (
