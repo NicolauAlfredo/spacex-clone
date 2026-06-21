@@ -1,3 +1,6 @@
+// Componente HeroSection per aggiungere hero alla pagina
+import "../heroSection/HeroSection.css";
+
 type HeroSectionProps = {
   className: string;
   title: string;

@@ -1,4 +1,10 @@
-import type { StatsItem } from "../../types/Type";
+// Componente InfoTable per aggiungere tabelle alle sezioni
+import "../table/InfoTable.css";
+
+type StatsItem = {
+  label: string;
+  value: string;
+};
 
 type InfoTableProps = {
   stats: StatsItem[];

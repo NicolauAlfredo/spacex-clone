@@ -3,34 +3,20 @@ import { Header } from "../home/components/Header";
 import { InfoTable } from "../../components/table/InfoTable";
 import { moonStats } from "./MoonStats";
 import "../../components/table/InfoTable.css";
+import { HeroSection } from "../../components/heroSection/HeroSection";
 
 export function MoonPage() {
   return (
     <>
       <Header />
       <main>
-        {/* {<!-- SECTION 1 -->
-      <!-- The Moon -->} */}
-        <section className="hero-section hero-section-moon">
-          <video
-            className="hero-section-moon__video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            src="../assets/pages/moon/videos/moon-video.mp4"
-          ></video>
-
-          <div className="hero-section-moon__overlay">
-            <div className="hero-section-moon__content">
-              <h2 className="hero-section-moon__title">THE MOON</h2>
-
-              <p className="hero-section-moon__description">
-                RETURNING HUMANS TO LUNAR MISSIONS
-              </p>
-            </div>
-          </div>
-        </section>
+        <HeroSection
+          className="moon"
+          title="the moon"
+          subtitle="Returning humans to lunar missions"
+          mediaSrc="../../../assets/pages/moon/moon-video.mp4"
+          mediaType="video"
+        />
 
         {/* {<!-- SECTION 2 -->
       <!-- Why The Moon? -->} */}
