@@ -1,15 +1,13 @@
 import { Footer } from "../../components/footer/Footer";
 import { Header } from "../home/components/Header";
-import { InfoTable } from "../../components/table/InfoTable";
-import { moonStats } from "./MoonStats";
 import { HeroSection } from "../../components/heroSection/HeroSection";
-import { InnerText } from "../../components/innerText/InnerText";
+import { WhySection } from "./components/whySection";
 
 export function MoonPage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="moon">
         <HeroSection
           className="moon"
           title="the moon"
@@ -20,34 +18,7 @@ export function MoonPage() {
 
         {/* {<!-- SECTION 2 -->
       <!-- Why The Moon? -->} */}
-        <section className="hero-section hero-section-why">
-          <div className="hero-section-why__img-wrapper">
-            <img
-              className="hero-section-why__img"
-              src="../../../public/assets/pages/moon/images/moon_why.jpg"
-              alt="moon image"
-            />
-          </div>
-          <div className="hero-section-why__content">
-            {/* <div className="hero-section-why__content">
-            <h2 className="hero-section-why__title">WHY THE MOON?</h2>
-            <p className="hero-section-why__description">
-              The Moon is one of Earth's closest habitable neighbors and
-              provides an opportunity to gain valuable experience for missions
-              to Mars and beyond.
-            </p>
-            <InfoTable stats={moonStats} className="hero-section-why" />
-          </div> */}
-            <InnerText
-              className="hero-section-why"
-              title="Why the moon?"
-              paragraph="The Moon is one of Earth's closest habitable neighbors and
-              provides an opportunity to gain valuable experience for missions
-              to Mars and beyond."
-            />
-            <InfoTable className="hero-section-why" stats={moonStats} />
-          </div>
-        </section>
+        <WhySection />
 
         {/* { <!-- SECTION 3 -->
       <!-- Moon Missions -->} */}

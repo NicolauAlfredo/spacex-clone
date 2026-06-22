@@ -2,7 +2,7 @@ import "./InnerText.css";
 
 type InnerTextProps = {
   title: string;
-  paragraph: string;
+  paragraph: React.ReactNode;
   className: string;
   isBtnPresent?: boolean;
   btnText?: string;
