@@ -75,14 +75,13 @@
 /*
   TABLET
 */
-
+.hero-section--starship .hero-section__title {
+  font-size: 50px;
+}
 @media (min-width: 768px) {
-  .hero-section__title {
-    font-size: 3rem;
-  }
-
-  .hero-section__description {
-    max-width: 500px;
+  .hero-section--starship .hero-section__title {
+    font-size: 45px;
+    max-width: unset;
   }
 }
 
@@ -92,17 +91,16 @@
 
 @media (min-width: 1024px) {
   .hero-section--starship .hero-section__content {
-    top: 50%;
-    left: 0;
-    bottom: auto;
-
-    max-width: 60%;
+    top: auto;
+    bottom: 2%;
+    left: -2%;
+    max-width: 45%;
     padding-left: 5%;
     padding-right: 0;
   }
 
   .hero-section--starship .hero-section__title {
-    font-size: 60px;
+    font-size: 51px;
     line-height: 1.05;
   }
 
