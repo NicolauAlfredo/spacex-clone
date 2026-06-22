@@ -4,14 +4,16 @@ import { InfoTable } from "../../components/table/InfoTable";
 import { moonStats } from "./MoonStats";
 import "../../components/table/InfoTable.css";
 import { HeroSection } from "../../components/heroSection/HeroSection";
+import { InnerText } from "../../components/innerText/InnerText";
 
 export function MoonPage() {
+  const moonClass: string = "moon"
   return (
     <>
       <Header />
       <main>
         <HeroSection
-          className="moon"
+          className={moonClass}
           title="the moon"
           subtitle="Returning humans to lunar missions"
           mediaSrc="../../../assets/pages/moon/moon-video.mp4"
@@ -29,7 +31,7 @@ export function MoonPage() {
             />
           </div>
 
-          <div className="hero-section-why__content">
+          {/* <div className="hero-section-why__content">
             <h2 className="hero-section-why__title">WHY THE MOON?</h2>
             <p className="hero-section-why__description">
               The Moon is one of Earth's closest habitable neighbors and
@@ -37,7 +39,15 @@ export function MoonPage() {
               to Mars and beyond.
             </p>
             <InfoTable stats={moonStats} className="hero-section-why" />
-          </div>
+          </div> */}
+          <InnerText
+            className={moonClass}
+            content="The Moon is one of Earth's closest habitable neighbors and
+              provides an opportunity to gain valuable experience for missions
+              to Mars and beyond."
+            title="Why the moon?"
+          />
+          <InfoTable className={moonClass} stats={moonStats} />
         </section>
 
         {/* { <!-- SECTION 3 -->
