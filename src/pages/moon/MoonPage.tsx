@@ -1,7 +1,8 @@
 import { Footer } from "../../components/footer/Footer";
 import { Header } from "../home/components/Header";
 import { HeroSection } from "../../components/heroSection/HeroSection";
-import { WhySection } from "./components/whySection";
+import { WhySection } from "./components/whySection/WhySection";
+import { MissionsSection } from "./components/missionsSection/MissionsSection";
 
 export function MoonPage() {
   return (
@@ -22,7 +23,7 @@ export function MoonPage() {
 
         {/* { <!-- SECTION 3 -->
       <!-- Moon Missions -->} */}
-        <section className="hero-section hero-section-missions">
+        {/* <section className="hero-section hero-section-missions">
           <picture className="hero-section-missions__img">
             <source
               media="(min-width: 1440px)"
@@ -53,7 +54,8 @@ export function MoonPage() {
               <a href="#">sales@spacex.com</a>
             </p>
           </div>
-        </section>
+        </section> */}
+        <MissionsSection />
       </main>
       <Footer />
     </>

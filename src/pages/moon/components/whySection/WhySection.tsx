@@ -1,6 +1,6 @@
-import { InnerText } from "../../../components/innerText/InnerText";
-import { InfoTable } from "../../../components/table/InfoTable";
-import { moonStats } from "../MoonStats";
+import { InnerText } from "../../../../components/innerText/InnerText";
+import { InfoTable } from "../../../../components/table/InfoTable";
+import { moonStats } from "../../MoonStats";
 import "./WhySection.css";
 
 export function WhySection() {
