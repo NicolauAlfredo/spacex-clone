@@ -2,21 +2,19 @@ import { Footer } from "../../components/footer/Footer";
 import { Header } from "../home/components/Header";
 import { InfoTable } from "../../components/table/InfoTable";
 import { moonStats } from "./MoonStats";
-import "../../components/table/InfoTable.css";
 import { HeroSection } from "../../components/heroSection/HeroSection";
 import { InnerText } from "../../components/innerText/InnerText";
 
 export function MoonPage() {
-  const moonClass: string = "moon"
   return (
     <>
       <Header />
       <main>
         <HeroSection
-          className={moonClass}
+          className="moon"
           title="the moon"
           subtitle="Returning humans to lunar missions"
-          mediaSrc="../../../assets/pages/moon/moon-video.mp4"
+          mediaSrc="../../../public/assets/pages/moon/videos/moon-video.mp4"
           mediaType="video"
         />
 
@@ -26,12 +24,12 @@ export function MoonPage() {
           <div className="hero-section-why__img-wrapper">
             <img
               className="hero-section-why__img"
-              src="../assets/pages/moon/images/moon_why.jpg"
+              src="../../../public/assets/pages/moon/images/moon_why.jpg"
               alt="moon image"
             />
           </div>
-
-          {/* <div className="hero-section-why__content">
+          <div className="hero-section-why__content">
+            {/* <div className="hero-section-why__content">
             <h2 className="hero-section-why__title">WHY THE MOON?</h2>
             <p className="hero-section-why__description">
               The Moon is one of Earth's closest habitable neighbors and
@@ -40,14 +38,15 @@ export function MoonPage() {
             </p>
             <InfoTable stats={moonStats} className="hero-section-why" />
           </div> */}
-          <InnerText
-            className={moonClass}
-            content="The Moon is one of Earth's closest habitable neighbors and
+            <InnerText
+              className="hero-section-why"
+              title="Why the moon?"
+              paragraph="The Moon is one of Earth's closest habitable neighbors and
               provides an opportunity to gain valuable experience for missions
               to Mars and beyond."
-            title="Why the moon?"
-          />
-          <InfoTable className={moonClass} stats={moonStats} />
+            />
+            <InfoTable className="hero-section-why" stats={moonStats} />
+          </div>
         </section>
 
         {/* { <!-- SECTION 3 -->

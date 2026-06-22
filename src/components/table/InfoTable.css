@@ -1,17 +1,17 @@
-.moon__table {
+.hero-section-why__table {
   margin-top: 30px;
   border-collapse: collapse;
   width: 100%;
 }
 
-.moon__table-label {
+.hero-section-why__table-label {
   padding: 20px 0;
   border-bottom: 1px solid white;
   text-transform: uppercase;
   font-size: 0.875rem;
 }
 
-.moon__table-value {
+.hero-section-why__table-value {
   padding: 20px 0;
   border-bottom: 1px solid white;
   text-align: left;

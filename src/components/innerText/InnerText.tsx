@@ -1,27 +1,27 @@
-import "./Paragraph.css";
+import "./InnerText.css";
 
 type InnerTextProps = {
   title: string;
-  content: string;
+  paragraph: string;
   className: string;
   isBtnPresent?: boolean;
-  btnContent?: string;
+  btnText?: string;
 };
 
 export function InnerText({
   title,
-  content,
+  paragraph,
   className,
   isBtnPresent,
-  btnContent,
+  btnText,
 }: InnerTextProps) {
   return (
     <>
-      <h2 className={`${className}-title`}>{title.toUpperCase()}</h2>
-      <p className={`${className}-content`}>{content}</p>
+      <h2 className={`${className}__title`}>{title.toUpperCase()}</h2>
+      <p className={`${className}__paragraph`}>{paragraph}</p>
       {isBtnPresent === true && (
         <a className="button button--primary" href="#">
-          <span className="button__text">{btnContent}</span>
+          <span className="button__text">{btnText}</span>
 
           <span className="button__icon">
             <svg width="13" height="12" viewBox="0 0 13 12" fill="none">
