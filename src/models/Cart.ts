@@ -1,133 +1,123 @@
-// Cart model
-// Responsibility: manage cart state using localStorage.
-
 const CART_STORAGE_KEY = "shopXCart";
 
-export function Cart() {
-    this.items = loadCart();
-}
+export type CartItem = {
+  id: string;
+  productId: string;
+  name: string;
+  price: number;
+  image: string;
+  quantity: number;
+  size?: string;
+  color?: string;
+};
 
-/**
- * Load cart items from localStorage.
- *
- * @returns {Array}
- */
-function loadCart() {
+export class Cart {
+  items: CartItem[];
+
+  constructor() {
+    this.items = this.loadCart();
+  }
+
+  /**
+   * Load cart items from localStorage.
+   */
+  private loadCart(): CartItem[] {
     const storedCart = localStorage.getItem(CART_STORAGE_KEY);
 
     if (!storedCart) return [];
 
     try {
-        return JSON.parse(storedCart);
+      return JSON.parse(storedCart) as CartItem[];
     } catch {
-        return [];
+      return [];
     }
-}
+  }
 
-/**
- * Save cart items to localStorage.
- *
- * @param {Array} items
- */
-function saveCart(items) {
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
-}
+  /**
+   * Save cart items to localStorage.
+   */
+  private saveCart(): void {
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(this.items));
+  }
 
-/**
- * Add a product to the cart.
- *
- * If the same product with the same size and color already exists,
- * only increase the quantity.
- *
- * @param {Object} cartItem
- */
-Cart.prototype.addItem = function (cartItem) {
+  /**
+   * Add product to cart.
+   */
+  addItem(cartItem: CartItem): void {
     const existingItem = this.items.find(
-        (item) =>
-            item.productId === cartItem.productId &&
-            item.size === cartItem.size &&
-            item.color === cartItem.color,
+      (item) =>
+        item.productId === cartItem.productId &&
+        item.size === cartItem.size &&
+        item.color === cartItem.color,
     );
 
     if (existingItem) {
-        existingItem.quantity += cartItem.quantity;
+      existingItem.quantity += cartItem.quantity;
     } else {
-        this.items.push(cartItem);
+      this.items.push(cartItem);
     }
 
-    saveCart(this.items);
-};
+    this.saveCart();
+  }
 
-/**
- * Increase product quantity.
- *
- * @param {string} itemId
- */
-Cart.prototype.increaseQuantity = function (itemId) {
+  /**
+   * Increase quantity.
+   */
+  increaseQuantity(itemId: string): void {
     const item = this.items.find((item) => item.id === itemId);
 
     if (!item) return;
 
     item.quantity += 1;
 
-    saveCart(this.items);
-};
+    this.saveCart();
+  }
 
-/**
- * Decrease product quantity.
- *
- * If quantity reaches 1, it stays at 1.
- *
- * @param {string} itemId
- */
-Cart.prototype.decreaseQuantity = function (itemId) {
+  /**
+   * Decrease quantity.
+   */
+  decreaseQuantity(itemId: string): void {
     const item = this.items.find((item) => item.id === itemId);
 
     if (!item || item.quantity === 1) return;
 
     item.quantity -= 1;
 
-    saveCart(this.items);
-};
+    this.saveCart();
+  }
 
-/**
- * Remove product from cart.
- *
- * @param {string} itemId
- */
-Cart.prototype.removeItem = function (itemId) {
+  /**
+   * Remove item.
+   */
+  removeItem(itemId: string): void {
     this.items = this.items.filter((item) => item.id !== itemId);
 
-    saveCart(this.items);
-};
+    this.saveCart();
+  }
 
-/**
- * Clear all cart items.
- */
-Cart.prototype.clearCart = function () {
+  /**
+   * Clear cart.
+   */
+  clearCart(): void {
     this.items = [];
 
-    saveCart(this.items);
-};
+    this.saveCart();
+  }
 
-/**
- * Get cart total price.
- *
- * @returns {number}
- */
-Cart.prototype.getTotal = function () {
-    return this.items.reduce((total, item) => {
-        return total + item.price * item.quantity;
-    }, 0);
-};
+  /**
+   * Get total value.
+   */
+  getTotal(): number {
+    return this.items.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0,
+    );
+  }
 
-/**
- * Get total cart items quantity.
- *
- * @returns {number}
- */
-Cart.prototype.getTotalQuantity = function () {
-    return this.items.reduce((total, item) => {
-        return total + item.quantity;
-    }, 0);
-};
+  /**
+   * Get total quantity.
+   */
+  getTotalQuantity(): number {
+    return this.items.reduce((total, item) => total + item.quantity, 0);
+  }
+}
