@@ -1,43 +1,98 @@
-// Product model
-// Responsibility: represent a product consistently across cards and detail pages.
+export type ProductColor = {
+  label: string;
+  value: string;
+  color: string;
+  available: boolean;
+  imageIndex?: number;
+};
 
-export function Product({
-  id,
-  name,
-  primaryImage,
-  secondaryImage,
-  alt,
-  price,
+export type ProductSize = {
+  label: string;
+  value: string;
+  available: boolean;
+};
 
-  description = "",
+export type ProductDetail = {
+  label: string;
+  value: string;
+};
 
-  images = [],
+export type ProductProps = {
+  id: string;
+  name: string;
+  primaryImage: string;
+  secondaryImage?: string;
+  alt: string;
+  price: number;
 
-  colors = [],
-  defaultColor = null,
+  description?: string;
 
-  sizes = [],
-  defaultSize = null,
+  images?: string[];
 
-  details = [],
-}) {
-  this.id = id;
-  this.name = name;
-  this.primaryImage = primaryImage;
-  this.secondaryImage = secondaryImage;
-  this.alt = alt;
-  this.price = Number(price);
+  colors?: ProductColor[];
+  defaultColor?: string | null;
 
-  this.description = description;
+  sizes?: ProductSize[];
+  defaultSize?: string | null;
 
-  this.images =
-    images.length > 0 ? images : [primaryImage, secondaryImage].filter(Boolean);
+  details?: ProductDetail[];
+};
 
-  this.colors = colors;
-  this.defaultColor = defaultColor;
+export class Product {
+  id: string;
+  name: string;
+  primaryImage: string;
+  secondaryImage?: string;
+  alt: string;
+  price: number;
 
-  this.sizes = sizes;
-  this.defaultSize = defaultSize;
+  description: string;
 
-  this.details = details;
+  images: string[];
+
+  colors: ProductColor[];
+  defaultColor: string | null;
+
+  sizes: ProductSize[];
+  defaultSize: string | null;
+
+  details: ProductDetail[];
+
+  constructor({
+    id,
+    name,
+    primaryImage,
+    secondaryImage,
+    alt,
+    price,
+    description = "",
+    images = [],
+    colors = [],
+    defaultColor = null,
+    sizes = [],
+    defaultSize = null,
+    details = [],
+  }: ProductProps) {
+    this.id = id;
+    this.name = name;
+    this.primaryImage = primaryImage;
+    this.secondaryImage = secondaryImage;
+    this.alt = alt;
+    this.price = Number(price);
+
+    this.description = description;
+
+    this.images =
+      images.length > 0
+        ? images
+        : ([primaryImage, secondaryImage].filter(Boolean) as string[]);
+
+    this.colors = colors;
+    this.defaultColor = defaultColor;
+
+    this.sizes = sizes;
+    this.defaultSize = defaultSize;
+
+    this.details = details;
+  }
 }
