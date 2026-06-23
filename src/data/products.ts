@@ -1,4 +1,4 @@
-import { Product } from "../models/Product.js";
+import { Product } from "../models/Product";
 
 /**
  * Generate the absolute URL for a product image.
@@ -7,7 +7,7 @@ import { Product } from "../models/Product.js";
  * @param {string} filename - Image file name.
  * @returns {string}
  */
-export const getProductImageURL = (collection, filename) =>
+export const getProductImageURL = (collection: string, filename: string) =>
   new URL(
     `../../assets/pages/shopx/${collection}/products/${filename}`,
     import.meta.url,
@@ -23,7 +23,12 @@ export const getProductImageURL = (collection, filename) =>
  * xAI and Grok merchandise.
  */
 
-export const xaiProducts = {
+export type ProductCollection = {
+  XCollection: Product[];
+  XaiCollection: Product[];
+};
+
+export const xaiProducts: ProductCollection = {
   /**
    * X Collection products.
    */
@@ -43,14 +48,14 @@ export const xaiProducts = {
       price: 31.95,
       description: `The Everything Mug is a premium, 10 oz thermal-insulated travel mug built for everyday use at home, in the office, or on the go. It is crafted from durable powder-coated stainless steel and finished with an engraved X logo for a clean, elevated look. The mug comes with an anti-slip silicone foot and the lid features a splash-resistant X branded slider.`,
       images: [
-        getProductImageURL("x-collection", "x-the-everything-mug-1.webp",),
-        getProductImageURL("x-collection", "x-the-everything-mug-2.webp",),
-        getProductImageURL("x-collection", "x-the-everything-mug-3.webp",),
-        getProductImageURL("x-collection", "x-the-everything-mug-4.webp",),
-        getProductImageURL("x-collection", "x-the-everything-mug-5.webp",),
-        getProductImageURL("x-collection", "x-the-everything-mug-6.webp",),
-        getProductImageURL("x-collection", "x-the-everything-mug-7.webp",),
-        getProductImageURL("x-collection", "x-the-everything-mug-8.webp",),
+        getProductImageURL("x-collection", "x-the-everything-mug-1.webp"),
+        getProductImageURL("x-collection", "x-the-everything-mug-2.webp"),
+        getProductImageURL("x-collection", "x-the-everything-mug-3.webp"),
+        getProductImageURL("x-collection", "x-the-everything-mug-4.webp"),
+        getProductImageURL("x-collection", "x-the-everything-mug-5.webp"),
+        getProductImageURL("x-collection", "x-the-everything-mug-6.webp"),
+        getProductImageURL("x-collection", "x-the-everything-mug-7.webp"),
+        getProductImageURL("x-collection", "x-the-everything-mug-8.webp"),
       ],
       colors: [
         {
@@ -90,10 +95,10 @@ export const xaiProducts = {
         
         The unisex fit leans on classic styling. See Size Chart below for best sizing and fit guidelines.`,
       images: [
-        getProductImageURL("x-collection", "the-core-x-crewneck-1.webp",),
-        getProductImageURL("x-collection", "the-core-x-crewneck-2.webp",),
-        getProductImageURL("x-collection", "the-core-x-crewneck-3.jpg",),
-        getProductImageURL("x-collection", "the-core-x-crewneck-4.webp",),
+        getProductImageURL("x-collection", "the-core-x-crewneck-1.webp"),
+        getProductImageURL("x-collection", "the-core-x-crewneck-2.webp"),
+        getProductImageURL("x-collection", "the-core-x-crewneck-3.jpg"),
+        getProductImageURL("x-collection", "the-core-x-crewneck-4.webp"),
       ],
       sizes: [
         {
@@ -153,8 +158,8 @@ export const xaiProducts = {
         
         Made from thermal knit premium acrylic. One size fits most.`,
       images: [
-        getProductImageURL("x-collection", "x-thermal-beanie-1.webp",),
-        getProductImageURL("x-collection", "x-thermal-beanie-2.webp",),
+        getProductImageURL("x-collection", "x-thermal-beanie-1.webp"),
+        getProductImageURL("x-collection", "x-thermal-beanie-2.webp"),
       ],
     }),
 
@@ -173,21 +178,23 @@ export const xaiProducts = {
       price: 22.95,
       description: `The X Signature Crew Sock Set includes two pairs of soft and durable fiber-blend two-tone socks with an elasticized cuff. Both pairs feature a repeating pattern of the X logo.`,
       images: [
-        getProductImageURL("x-collection", "x-signature-crew-sock-set-1.webp",),
-        getProductImageURL("x-collection", "x-signature-crew-sock-set-2.jpg",),
-        getProductImageURL("x-collection", "x-signature-crew-sock-set-3.webp",),
-        getProductImageURL("x-collection", "x-signature-crew-sock-set-4.webp",),
+        getProductImageURL("x-collection", "x-signature-crew-sock-set-1.webp"),
+        getProductImageURL("x-collection", "x-signature-crew-sock-set-2.jpg"),
+        getProductImageURL("x-collection", "x-signature-crew-sock-set-3.webp"),
+        getProductImageURL("x-collection", "x-signature-crew-sock-set-4.webp"),
       ],
       sizes: [
         {
           label: "S/M",
           value: "sm",
           available: true,
-        }, {
+        },
+        {
           label: "M/L",
           value: "ml",
           available: true,
-        },],
+        },
+      ],
     }),
 
     new Product({
@@ -209,24 +216,18 @@ export const xaiProducts = {
 
       Complete the look with The Core Tee.`,
       images: [
-        getProductImageURL("x-collection", "the-core-trucker-hat-1.jpg",),
-        getProductImageURL("x-collection", "the-core-trucker-hat-2.webp",),
-        getProductImageURL("x-collection", "the-core-trucker-hat-3.webp",),
-        getProductImageURL("x-collection", "the-core-trucker-hat-4.jpg",),
+        getProductImageURL("x-collection", "the-core-trucker-hat-1.jpg"),
+        getProductImageURL("x-collection", "the-core-trucker-hat-2.webp"),
+        getProductImageURL("x-collection", "the-core-trucker-hat-3.webp"),
+        getProductImageURL("x-collection", "the-core-trucker-hat-4.jpg"),
       ],
     }),
 
     new Product({
       id: "the-core-tee",
       name: "The Core Tee",
-      primaryImage: getProductImageURL(
-        "x-collection",
-        "the-core-tee-1.webp",
-      ),
-      secondaryImage: getProductImageURL(
-        "x-collection",
-        "the-core-tee-2.webp",
-      ),
+      primaryImage: getProductImageURL("x-collection", "the-core-tee-1.webp"),
+      secondaryImage: getProductImageURL("x-collection", "the-core-tee-2.webp"),
       alt: "The Core Tee",
       price: 31.95,
       description: `Designed for fit, comfort and style, the Core short sleeve tee is made from 95% cotton and 5% elastane and features an understated 3D silicone X logo on the left chest.
@@ -273,8 +274,8 @@ export const xaiProducts = {
       ],
       defaultSize: "l",
       images: [
-        getProductImageURL("x-collection", "the-core-tee-1.webp",),
-        getProductImageURL("x-collection", "the-core-tee-2.webp",),
+        getProductImageURL("x-collection", "the-core-tee-1.webp"),
+        getProductImageURL("x-collection", "the-core-tee-2.webp"),
       ],
     }),
 
@@ -297,13 +298,13 @@ export const xaiProducts = {
         The unisex fit elevates the classic hoodie with modern design lines. See Size Chart below for best sizing and fit guidelines. Wash inside out for best results. 
       `,
       images: [
-        getProductImageURL("x-collection", "the-core-hoodie-1.webp",),
-        getProductImageURL("x-collection", "the-core-hoodie-2.webp",),
-        getProductImageURL("x-collection", "the-core-hoodie-3.webp",),
-        getProductImageURL("x-collection", "the-core-hoodie-4.webp",),
-        getProductImageURL("x-collection", "the-core-hoodie-5.webp",),
-        getProductImageURL("x-collection", "the-core-hoodie-6.webp",),
-        getProductImageURL("x-collection", "the-core-hoodie-7.webp",),
+        getProductImageURL("x-collection", "the-core-hoodie-1.webp"),
+        getProductImageURL("x-collection", "the-core-hoodie-2.webp"),
+        getProductImageURL("x-collection", "the-core-hoodie-3.webp"),
+        getProductImageURL("x-collection", "the-core-hoodie-4.webp"),
+        getProductImageURL("x-collection", "the-core-hoodie-5.webp"),
+        getProductImageURL("x-collection", "the-core-hoodie-6.webp"),
+        getProductImageURL("x-collection", "the-core-hoodie-7.webp"),
       ],
       sizes: [
         {
@@ -365,10 +366,7 @@ export const xaiProducts = {
     new Product({
       id: "the-retro-tee",
       name: "The Retro Tee",
-      primaryImage: getProductImageURL(
-        "x-collection",
-        "the-retro-tee-1.webp",
-      ),
+      primaryImage: getProductImageURL("x-collection", "the-retro-tee-1.webp"),
       secondaryImage: getProductImageURL(
         "x-collection",
         "the-retro-tee-2.webp",
@@ -381,10 +379,10 @@ export const xaiProducts = {
         The unisex fit leans on classic oversized styling. See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("x-collection", "the-retro-tee-1.webp",),
-        getProductImageURL("x-collection", "the-retro-tee-2.webp",),
-        getProductImageURL("x-collection", "the-retro-tee-3.webp",),
-        getProductImageURL("x-collection", "the-retro-tee-4.webp",),
+        getProductImageURL("x-collection", "the-retro-tee-1.webp"),
+        getProductImageURL("x-collection", "the-retro-tee-2.webp"),
+        getProductImageURL("x-collection", "the-retro-tee-3.webp"),
+        getProductImageURL("x-collection", "the-retro-tee-4.webp"),
       ],
       sizes: [
         {
@@ -445,10 +443,10 @@ export const xaiProducts = {
         The unisex fit leans on classic oversized styling. See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("x-collection", "the-retro-crewneck-1.webp",),
-        getProductImageURL("x-collection", "the-retro-crewneck-2.webp",),
-        getProductImageURL("x-collection", "the-retro-crewneck-3.webp",),
-        getProductImageURL("x-collection", "the-retro-crewneck-4.webp",),
+        getProductImageURL("x-collection", "the-retro-crewneck-1.webp"),
+        getProductImageURL("x-collection", "the-retro-crewneck-2.webp"),
+        getProductImageURL("x-collection", "the-retro-crewneck-3.webp"),
+        getProductImageURL("x-collection", "the-retro-crewneck-4.webp"),
       ],
       sizes: [
         {
@@ -511,10 +509,10 @@ export const xaiProducts = {
       Made from 100% cotton.
      `,
       images: [
-        getProductImageURL("x-collection", "the-core-dad-hat-1.webp",),
-        getProductImageURL("x-collection", "the-core-dad-hat-2.webp",),
-        getProductImageURL("x-collection", "the-core-dad-hat-3.webp",),
-        getProductImageURL("x-collection", "the-core-dad-hat-4.webp",),
+        getProductImageURL("x-collection", "the-core-dad-hat-1.webp"),
+        getProductImageURL("x-collection", "the-core-dad-hat-2.webp"),
+        getProductImageURL("x-collection", "the-core-dad-hat-3.webp"),
+        getProductImageURL("x-collection", "the-core-dad-hat-4.webp"),
       ],
     }),
   ],
@@ -541,12 +539,12 @@ export const xaiProducts = {
     
         This tumbler comes with two interchangeable lids so that it can be used with the included straw or as a water bottle with a handle lid.`,
       images: [
-        getProductImageURL("xai-collection", "xai-multi-tumbler-1.webp",),
-        getProductImageURL("xai-collection", "xai-multi-tumbler-2.webp",),
-        getProductImageURL("xai-collection", "xai-multi-tumbler-3.webp",),
-        getProductImageURL("xai-collection", "xai-multi-tumbler-4.webp",),
-        getProductImageURL("xai-collection", "xai-multi-tumbler-5.webp",),
-        getProductImageURL("xai-collection", "xai-multi-tumbler-6.webp",),
+        getProductImageURL("xai-collection", "xai-multi-tumbler-1.webp"),
+        getProductImageURL("xai-collection", "xai-multi-tumbler-2.webp"),
+        getProductImageURL("xai-collection", "xai-multi-tumbler-3.webp"),
+        getProductImageURL("xai-collection", "xai-multi-tumbler-4.webp"),
+        getProductImageURL("xai-collection", "xai-multi-tumbler-5.webp"),
+        getProductImageURL("xai-collection", "xai-multi-tumbler-6.webp"),
       ],
       colors: [
         {
@@ -584,8 +582,8 @@ export const xaiProducts = {
     
       This tumbler comes with two interchangeable lids so that it can be used with the included straw or as a water bottle with a handle lid.`,
       images: [
-        getProductImageURL("xai-collection", "xai-thermal-beanie-1.webp",),
-        getProductImageURL("xai-collection", "xai-thermal-beanie-2.webp",),
+        getProductImageURL("xai-collection", "xai-thermal-beanie-1.webp"),
+        getProductImageURL("xai-collection", "xai-thermal-beanie-2.webp"),
       ],
     }),
 
@@ -608,9 +606,9 @@ export const xaiProducts = {
         The shirt has an oversized fit. See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("xai-collection", "grok-reflective-tee-1.webp",),
-        getProductImageURL("xai-collection", "grok-reflective-tee-2.jpg",),
-        getProductImageURL("xai-collection", "grok-reflective-tee-3.webp",),
+        getProductImageURL("xai-collection", "grok-reflective-tee-1.webp"),
+        getProductImageURL("xai-collection", "grok-reflective-tee-2.jpg"),
+        getProductImageURL("xai-collection", "grok-reflective-tee-3.webp"),
       ],
       sizes: [
         {
@@ -673,9 +671,18 @@ export const xaiProducts = {
         See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("xai-collection", "kids-grok-to-understand-tee-1.webp",),
-        getProductImageURL("xai-collection", "kids-grok-to-understand-tee-2.webp",),
-        getProductImageURL("xai-collection", "kids-grok-to-understand-tee-3.webp",),
+        getProductImageURL(
+          "xai-collection",
+          "kids-grok-to-understand-tee-1.webp",
+        ),
+        getProductImageURL(
+          "xai-collection",
+          "kids-grok-to-understand-tee-2.webp",
+        ),
+        getProductImageURL(
+          "xai-collection",
+          "kids-grok-to-understand-tee-3.webp",
+        ),
       ],
       sizes: [
         {
@@ -733,9 +740,18 @@ export const xaiProducts = {
         See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("xai-collection", "kids-grok-to-understand-hoodie-1.webp",),
-        getProductImageURL("xai-collection", "kids-grok-to-understand-hoodie-2.webp",),
-        getProductImageURL("xai-collection", "kids-grok-to-understand-hoodie-3.webp",),
+        getProductImageURL(
+          "xai-collection",
+          "kids-grok-to-understand-hoodie-1.webp",
+        ),
+        getProductImageURL(
+          "xai-collection",
+          "kids-grok-to-understand-hoodie-2.webp",
+        ),
+        getProductImageURL(
+          "xai-collection",
+          "kids-grok-to-understand-hoodie-3.webp",
+        ),
       ],
       sizes: [
         {
@@ -787,10 +803,10 @@ export const xaiProducts = {
       price: 45.95,
       description: `The xAI Hydration Vessel is a premium 16 oz water bottle built for everyday use at home, in the office, or on the go. It is crafted from durable powder-coated stainless steel and finished with an engraved xAI logo for a clean, elevated look. The bottle is double wall insulated and also features an anti-slip silicone foot.`,
       images: [
-        getProductImageURL("xai-collection", "xai-hydration-vessel-1.webp",),
-        getProductImageURL("xai-collection", "xai-hydration-vessel-2.webp",),
-        getProductImageURL("xai-collection", "xai-hydration-vessel-3.webp",),
-        getProductImageURL("xai-collection", "xai-hydration-vessel-4.webp",),
+        getProductImageURL("xai-collection", "xai-hydration-vessel-1.webp"),
+        getProductImageURL("xai-collection", "xai-hydration-vessel-2.webp"),
+        getProductImageURL("xai-collection", "xai-hydration-vessel-3.webp"),
+        getProductImageURL("xai-collection", "xai-hydration-vessel-4.webp"),
       ],
       colors: [
         {
@@ -830,9 +846,9 @@ export const xaiProducts = {
         The shirt has a boxy fit. See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("xai-collection", "xai-human-connection-tee-1.webp",),
-        getProductImageURL("xai-collection", "xai-human-connection-tee-2.webp",),
-        getProductImageURL("xai-collection", "xai-human-connection-tee-3.webp",),
+        getProductImageURL("xai-collection", "xai-human-connection-tee-1.webp"),
+        getProductImageURL("xai-collection", "xai-human-connection-tee-2.webp"),
+        getProductImageURL("xai-collection", "xai-human-connection-tee-3.webp"),
       ],
       sizes: [
         {
@@ -893,9 +909,9 @@ export const xaiProducts = {
         The shirt has a boxy fit. See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("xai-collection", "xai-dark-ani-tee-1.webp",),
-        getProductImageURL("xai-collection", "xai-dark-ani-tee-2.webp",),
-        getProductImageURL("xai-collection", "xai-dark-ani-tee-3.webp",),
+        getProductImageURL("xai-collection", "xai-dark-ani-tee-1.webp"),
+        getProductImageURL("xai-collection", "xai-dark-ani-tee-2.webp"),
+        getProductImageURL("xai-collection", "xai-dark-ani-tee-3.webp"),
       ],
       sizes: [
         {
@@ -956,10 +972,22 @@ export const xaiProducts = {
         The shirt has a boxy fit. See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("xai-collection", "understand-the-universe-tee-1.webp",),
-        getProductImageURL("xai-collection", "understand-the-universe-tee-2.webp",),
-        getProductImageURL("xai-collection", "understand-the-universe-tee-3.webp",),
-        getProductImageURL("xai-collection", "understand-the-universe-tee-4.webp",),
+        getProductImageURL(
+          "xai-collection",
+          "understand-the-universe-tee-1.webp",
+        ),
+        getProductImageURL(
+          "xai-collection",
+          "understand-the-universe-tee-2.webp",
+        ),
+        getProductImageURL(
+          "xai-collection",
+          "understand-the-universe-tee-3.webp",
+        ),
+        getProductImageURL(
+          "xai-collection",
+          "understand-the-universe-tee-4.webp",
+        ),
       ],
       sizes: [
         {
@@ -1020,9 +1048,9 @@ export const xaiProducts = {
         The shirt has a boxy fit. See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("xai-collection", "grok-logo-tee-1.webp",),
-        getProductImageURL("xai-collection", "grok-logo-tee-2.webp",),
-        getProductImageURL("xai-collection", "grok-logo-tee-3.webp",),
+        getProductImageURL("xai-collection", "grok-logo-tee-1.webp"),
+        getProductImageURL("xai-collection", "grok-logo-tee-2.webp"),
+        getProductImageURL("xai-collection", "grok-logo-tee-3.webp"),
       ],
       sizes: [
         {
@@ -1067,10 +1095,7 @@ export const xaiProducts = {
     new Product({
       id: "xai-logo-tee",
       name: "xAI Logo Tee",
-      primaryImage: getProductImageURL(
-        "xai-collection",
-        "xai-logo-tee-1.webp",
-      ),
+      primaryImage: getProductImageURL("xai-collection", "xai-logo-tee-1.webp"),
       secondaryImage: getProductImageURL(
         "xai-collection",
         "xai-logo-tee-2.webp",
@@ -1083,9 +1108,9 @@ export const xaiProducts = {
         The shirt has a boxy fit. See Size Chart below for best sizing and fit guidelines.
       `,
       images: [
-        getProductImageURL("xai-collection", "xai-logo-tee-1.webp",),
-        getProductImageURL("xai-collection", "xai-logo-tee-2.webp",),
-        getProductImageURL("xai-collection", "xai-logo-tee-3.webp",),
+        getProductImageURL("xai-collection", "xai-logo-tee-1.webp"),
+        getProductImageURL("xai-collection", "xai-logo-tee-2.webp"),
+        getProductImageURL("xai-collection", "xai-logo-tee-3.webp"),
       ],
       sizes: [
         {
@@ -1146,10 +1171,10 @@ export const xaiProducts = {
         Comes in a single size with an adjustable snap closure so that one size fits most.
       `,
       images: [
-        getProductImageURL("xai-collection", "xai-trucker-hat-1.webp",),
-        getProductImageURL("xai-collection", "xai-trucker-hat-2.webp",),
-        getProductImageURL("xai-collection", "xai-trucker-hat-3.webp",),
-        getProductImageURL("xai-collection", "xai-trucker-hat-4.webp",),
+        getProductImageURL("xai-collection", "xai-trucker-hat-1.webp"),
+        getProductImageURL("xai-collection", "xai-trucker-hat-2.webp"),
+        getProductImageURL("xai-collection", "xai-trucker-hat-3.webp"),
+        getProductImageURL("xai-collection", "xai-trucker-hat-4.webp"),
       ],
     }),
 
@@ -1172,9 +1197,9 @@ export const xaiProducts = {
         The unisex fit elevates the classic hoodie with modern design lines. See Size Chart below for best sizing and fit guidelines. Wash inside out for best results. 
       `,
       images: [
-        getProductImageURL("xai-collection", "the-xai-hoodie-1.webp",),
-        getProductImageURL("xai-collection", "the-xai-hoodie-2.webp",),
-        getProductImageURL("xai-collection", "the-xai-hoodie-3.webp",),
+        getProductImageURL("xai-collection", "the-xai-hoodie-1.webp"),
+        getProductImageURL("xai-collection", "the-xai-hoodie-2.webp"),
+        getProductImageURL("xai-collection", "the-xai-hoodie-3.webp"),
       ],
       sizes: [
         {
@@ -1219,10 +1244,7 @@ export const xaiProducts = {
     new Product({
       id: "xai-dad-hat",
       name: "xAI Dad Hat",
-      primaryImage: getProductImageURL(
-        "xai-collection",
-        "xai-dad-hat-1.webp",
-      ),
+      primaryImage: getProductImageURL("xai-collection", "xai-dad-hat-1.webp"),
       secondaryImage: getProductImageURL(
         "xai-collection",
         "xai-dad-hat-2.webp",
@@ -1235,11 +1257,11 @@ export const xaiProducts = {
         Comes in a single size with an adjustable buckle strap so that one size fits most.
       `,
       images: [
-        getProductImageURL("xai-collection", "xai-dad-hat-1.webp",),
-        getProductImageURL("xai-collection", "xai-dad-hat-2.webp",),
-        getProductImageURL("xai-collection", "xai-dad-hat-3.webp",),
-        getProductImageURL("xai-collection", "xai-dad-hat-4.webp",),
-        getProductImageURL("xai-collection", "xai-dad-hat-5.jpg",),
+        getProductImageURL("xai-collection", "xai-dad-hat-1.webp"),
+        getProductImageURL("xai-collection", "xai-dad-hat-2.webp"),
+        getProductImageURL("xai-collection", "xai-dad-hat-3.webp"),
+        getProductImageURL("xai-collection", "xai-dad-hat-4.webp"),
+        getProductImageURL("xai-collection", "xai-dad-hat-5.jpg"),
       ],
     }),
 
@@ -1262,10 +1284,10 @@ export const xaiProducts = {
         Comes in a single size with an adjustable snap closure so that one size fits most.
       `,
       images: [
-        getProductImageURL("xai-collection", "grok-trucker-hat-1.webp",),
-        getProductImageURL("xai-collection", "grok-trucker-hat-2.webp",),
-        getProductImageURL("xai-collection", "grok-trucker-hat-3.webp",),
-        getProductImageURL("xai-collection", "grok-trucker-hat-4.webp",),
+        getProductImageURL("xai-collection", "grok-trucker-hat-1.webp"),
+        getProductImageURL("xai-collection", "grok-trucker-hat-2.webp"),
+        getProductImageURL("xai-collection", "grok-trucker-hat-3.webp"),
+        getProductImageURL("xai-collection", "grok-trucker-hat-4.webp"),
       ],
     }),
 
@@ -1288,9 +1310,9 @@ export const xaiProducts = {
         Comes in a single size with an adjustable buckle strap so that one size fits most.
       `,
       images: [
-        getProductImageURL("xai-collection", "the-grok-hoodie-1.webp",),
-        getProductImageURL("xai-collection", "the-grok-hoodie-2.webp",),
-        getProductImageURL("xai-collection", "the-grok-hoodie-3.webp",),
+        getProductImageURL("xai-collection", "the-grok-hoodie-1.webp"),
+        getProductImageURL("xai-collection", "the-grok-hoodie-2.webp"),
+        getProductImageURL("xai-collection", "the-grok-hoodie-3.webp"),
       ],
       sizes: [
         {
@@ -1335,10 +1357,7 @@ export const xaiProducts = {
     new Product({
       id: "grok-dad-hat",
       name: "Grok Dad Hat",
-      primaryImage: getProductImageURL(
-        "xai-collection",
-        "grok-dad-hat-1.webp",
-      ),
+      primaryImage: getProductImageURL("xai-collection", "grok-dad-hat-1.webp"),
       secondaryImage: getProductImageURL(
         "xai-collection",
         "grok-dad-hat-2.webp",
@@ -1351,10 +1370,10 @@ export const xaiProducts = {
         Comes in a single size with an adjustable buckle strap so that one size fits most.
       `,
       images: [
-        getProductImageURL("xai-collection", "grok-dad-hat-1.webp",),
-        getProductImageURL("xai-collection", "grok-dad-hat-2.webp",),
-        getProductImageURL("xai-collection", "grok-dad-hat-3.webp",),
-        getProductImageURL("xai-collection", "grok-dad-hat-4.webp",),
+        getProductImageURL("xai-collection", "grok-dad-hat-1.webp"),
+        getProductImageURL("xai-collection", "grok-dad-hat-2.webp"),
+        getProductImageURL("xai-collection", "grok-dad-hat-3.webp"),
+        getProductImageURL("xai-collection", "grok-dad-hat-4.webp"),
       ],
     }),
   ],
