@@ -1,9 +1,27 @@
+/**
+ * Main Header component.
+ *
+ * Responsibilities:
+ * - Manage header state.
+ * - Control mobile menu.
+ * - Control opened dropdown.
+ * - Render the overall header structure.
+ *
+ * This component should NOT contain:
+ * - Navigation data.
+ * - Dropdown markup.
+ * - SVG icons.
+ * - Upcoming Launches implementation.
+ *
+ * Keep this component as clean as possible.
+ */
+
 import { useEffect, useState } from "react";
-import { SpaceXLogo } from "../../pages/home/components/SpaceXLogo";
+import { SpaceXLogo } from "./components/SpaceXLogo";
 
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { getPublicAssetPath } from "../../utils/getPublicAssetPath";
+import { UpcomingLaunches } from "../upcoming-launches/UpcomingLaunches";
 
 type DropdownKey =
   | "vehicles"
@@ -398,87 +416,7 @@ export function Header() {
             </li>
           </ul>
 
-          <div className="upcoming-launch">
-            <div className="upcoming-launch__header">
-              <span className="upcoming-launch__title">UPCOMING LAUNCHES</span>
-
-              <span className="upcoming-launch__toggle">
-                <svg
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="upcoming-launch__icon upcoming-launch__icon--down"
-                >
-                  <path
-                    d="M1 1L5 5L9 1"
-                    stroke="#FFFFFF"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-            </div>
-
-            <div className="upcoming-launch__cards">
-              <div className="upcoming-launch__card">
-                <div className="upcoming-launch__image">
-                  <img
-                    src={getPublicAssetPath(
-                      "assets/pages/home/images/slc-4-e.jpg",
-                    )}
-                    alt=""
-                  />
-                </div>
-
-                <div className="upcoming-launch__content">
-                  <span className="upcoming-launch__mission-title">
-                    Starlink Mission
-                  </span>
-                  <span className="upcoming-launch__countdown">
-                    June 7, 2026 04:00 - 08:00 Italy Time
-                  </span>
-                </div>
-
-                <span className="upcoming-launch__arrow upcoming-launch__arrow--right">
-                  <ArrowRightIcon />
-                </span>
-              </div>
-
-              <div className="upcoming-launch__card">
-                <div className="upcoming-launch__image">
-                  <img
-                    src={getPublicAssetPath(
-                      "assets/pages/home/images/crew-12-mobile.jpg",
-                    )}
-                    alt=""
-                  />
-                </div>
-
-                <div className="upcoming-launch__content">
-                  <span className="upcoming-launch__mission-title">
-                    Starlink Mission
-                  </span>
-                  <span className="upcoming-launch__countdown">
-                    June 8, 2026 12:07 - 16:07 Italy Time
-                  </span>
-                </div>
-
-                <span className="upcoming-launch__arrow upcoming-launch__arrow--right">
-                  <ArrowRightIcon />
-                </span>
-              </div>
-
-              <Link to="#" className="upcoming-launch__link">
-                <GridIcon />
-                <span className="upcoming-launch__link-text">
-                  ALL UPCOMING LAUNCHES
-                </span>
-              </Link>
-            </div>
-          </div>
+          <UpcomingLaunches variant="header" />
         </nav>
       </div>
     </header>
