@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { SpaceXLogo } from "./SpaceXLogo";
+import { SpaceXLogo } from "../../pages/home/components/SpaceXLogo";
 
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { getPublicAssetPath } from "../../../utils/getPublicAssetPath";
+import { getPublicAssetPath } from "../../utils/getPublicAssetPath";
 
 type DropdownKey =
   | "vehicles"
