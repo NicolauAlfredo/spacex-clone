@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .product-page {
   font-family: Arial, Helvetica, sans-serif;
   color: #111;
@@ -260,6 +264,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  padding-bottom: 2rem;
 }
 
 .product-detail__related-grid::-webkit-scrollbar {
