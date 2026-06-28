@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { Product } from "../../../../models/Product";
 
 type ProductGalleryProps = {
@@ -12,16 +11,10 @@ function ProductGallery({
   activeImageIndex,
   onImageChange,
 }: ProductGalleryProps) {
-  const [isZoomed, setIsZoomed] = useState(false);
-
   const activeImage = product.images[activeImageIndex];
 
   return (
-    <div
-      className={`product-detail__gallery ${
-        isZoomed ? "product-detail__gallery--zoomed" : ""
-      }`}
-    >
+    <div className="product-detail__gallery">
       <div className="product-detail__thumbs">
         {product.images.map((image, index) => (
           <button
@@ -51,15 +44,6 @@ function ProductGallery({
           className="product-detail__main-image"
         />
       </div>
-
-      <button
-        className="product-detail__zoom-button"
-        type="button"
-        onClick={() => setIsZoomed((current) => !current)}
-        aria-label="Zoom product image"
-      >
-        Zoom
-      </button>
 
       {product.images.length > 1 && (
         <div className="product-detail__dots">
