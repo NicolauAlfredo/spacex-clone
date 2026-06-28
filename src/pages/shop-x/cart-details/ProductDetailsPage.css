@@ -204,9 +204,11 @@ body {
 /* Size chart */
 
 .product-detail__size-chart {
-  margin: 3rem 1.25rem 4rem;
+  max-width: 100%;
+  margin: 3rem 1rem 4rem;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  overflow: hidden;
 }
 
 .product-detail__size-chart-toggle {
@@ -223,8 +225,10 @@ body {
 
 .product-detail__size-chart-content {
   display: none;
+  max-width: 100%;
   padding-bottom: 2rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .product-detail__size-chart--open .product-detail__size-chart-content {
@@ -232,17 +236,19 @@ body {
 }
 
 .product-detail__size-chart-table {
-  width: 100%;
-  min-width: 360px;
+  width: max-content;
+  min-width: 100%;
   border-collapse: collapse;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
 }
 
 .product-detail__size-chart-table th,
 .product-detail__size-chart-table td {
-  padding: 0.9rem 0.6rem;
+  min-width: 64px;
+  padding: 0.75rem 0.55rem;
   border: 1px solid #ddd;
   text-align: left;
+  white-space: nowrap;
 }
 
 .product-detail__size-chart-table th {
@@ -252,9 +258,9 @@ body {
 /* Related products */
 
 .product-detail__related-title {
-  margin: 0 0 2rem;
+  margin: 2rem 0;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
@@ -342,79 +348,7 @@ body {
 /* Tablet */
 
 @media (min-width: 768px) {
-  .product-detail {
-    padding: 3rem;
-  }
-
-  .product-detail__container {
-    width: min(100%, 1200px);
-  }
-
-  .product-detail__layout {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 3rem;
-    align-items: start;
-  }
-
-  .product-detail__gallery {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 1rem;
-    background-color: transparent;
-  }
-
-  .product-detail__thumbs {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .product-detail__thumb-button {
-    width: 80px;
-    height: 80px;
-    padding: 0;
-    border: 1px solid transparent;
-    background-color: #ddd;
-    cursor: pointer;
-  }
-
-  .product-detail__thumb-button--active {
-    border-color: #111;
-  }
-
-  .product-detail__thumb-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .product-detail__image-wrapper {
-    overflow: hidden;
-  }
-
-  .product-detail__dots {
-    display: none;
-  }
-
-  .product-detail__info {
-    padding: 0;
-  }
-
-  .product-detail__title {
-    font-size: 1.7rem;
-  }
-
-  .product-detail__size-chart {
-    grid-column: 1 / 2;
-    margin: 3rem 0 4rem;
-  }
-
-  .product-detail__related {
-    padding-inline: 0;
-  }
-
-  .product-detail__related-card {
-    flex-basis: 32%;
+  .related-products-title {
   }
 }
 
