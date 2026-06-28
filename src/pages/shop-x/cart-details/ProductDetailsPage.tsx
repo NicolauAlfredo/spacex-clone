@@ -39,10 +39,7 @@ type ProductDetailsContentProps = {
   products: Product[];
 };
 
-function ProductDetailsContent({
-  product,
-  products,
-}: ProductDetailsContentProps) {
+function ProductDetailsContent({ product }: ProductDetailsContentProps) {
   const navigate = useNavigate();
   const { addItem } = useCart();
 
