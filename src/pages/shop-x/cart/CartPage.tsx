@@ -1,36 +1,15 @@
-import { useState } from "react";
-import { Cart } from "../../models/Cart";
-import type { CartItem as CartItemType } from "../../models/Cart";
 import CartEmpty from "./components/CartEmpty/CartEmpty";
 import CartItem from "./components/CartItem/CartItem";
 import CartSummary from "./components/CartSummary/CartSummary";
 import CartTableHeader from "./components/CartTableHeader/CartTableHeader";
-import { ShopHeader } from "../shop-x/shop/components/ShopHeader/ShopHeader";
-import { ShopFooter } from "../shop-x/shop/components/ShopFooter/ShopFooter";
+import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
+import { ShopFooter } from "../shop/components/ShopFooter/ShopFooter";
 import "./CartPage.css";
+import { useCart } from "../../../hooks/useCart";
 
 function CartPage() {
-  const [cart] = useState(() => new Cart());
-  const [items, setItems] = useState<CartItemType[]>(cart.items);
-
-  function refreshCart() {
-    setItems([...cart.items]);
-  }
-
-  function handleIncreaseQuantity(itemId: string) {
-    cart.increaseQuantity(itemId);
-    refreshCart();
-  }
-
-  function handleDecreaseQuantity(itemId: string) {
-    cart.decreaseQuantity(itemId);
-    refreshCart();
-  }
-
-  function handleRemoveItem(itemId: string) {
-    cart.removeItem(itemId);
-    refreshCart();
-  }
+  const { items, total, increaseQuantity, decreaseQuantity, removeItem } =
+    useCart();
 
   return (
     <>
@@ -54,14 +33,14 @@ function CartPage() {
                     <CartItem
                       key={item.id}
                       item={item}
-                      onIncreaseQuantity={handleIncreaseQuantity}
-                      onDecreaseQuantity={handleDecreaseQuantity}
-                      onRemoveItem={handleRemoveItem}
+                      onIncreaseQuantity={increaseQuantity}
+                      onDecreaseQuantity={decreaseQuantity}
+                      onRemoveItem={removeItem}
                     />
                   ))}
                 </div>
 
-                <CartSummary total={cart.getTotal()} />
+                <CartSummary total={total} />
               </>
             )}
           </div>
