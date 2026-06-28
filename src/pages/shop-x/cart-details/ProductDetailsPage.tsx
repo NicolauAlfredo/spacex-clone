@@ -4,6 +4,7 @@ import ProductGallery from "./components/ProductGallery";
 import ProductInfo from "./components/ProductInfo";
 import { xaiProducts } from "../../../data/ShopProductsData";
 import SizeChart from "./components/SizeChart";
+import RelatedProducts from "./components/RelatedProducts";
 
 import {
   findProductById,
@@ -83,13 +84,7 @@ function ProductDetailsPage() {
 
           <SizeChart product={product} />
 
-          {relatedProducts.length > 0 && (
-            <section className="product-detail__related">
-              <h2 className="product-detail__related-title">
-                You may also like
-              </h2>
-            </section>
-          )}
+          <RelatedProducts products={relatedProducts} />
         </div>
       </section>
     </main>
