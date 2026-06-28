@@ -1,3 +1,5 @@
+import "./QuantitySelector.css";
+
 export type QuantitySelectorProps = {
   quantity: number;
   onIncrease: () => void;
