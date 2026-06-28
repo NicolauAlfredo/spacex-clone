@@ -24,7 +24,7 @@ export const router = createHashRouter([
     element: <MoonPage />,
   },
   {
-    path: "/shop-x/:productId",
+    path: "/product/:productId",
     element: <ProductDetailsPage />,
   },
 ]);
