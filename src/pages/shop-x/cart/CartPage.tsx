@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Cart } from "../../models/Cart";
 import type { CartItem as CartItemType } from "../../models/Cart";
-import CartEmpty from "./components/CartEmpty";
-import CartItem from "./components/CartItem";
-import CartSummary from "./components/CartSummary";
-import CartTableHeader from "./components/CartTableHeader";
+import CartEmpty from "./components/CartEmpty/CartEmpty";
+import CartItem from "./components/CartItem/CartItem";
+import CartSummary from "./components/CartSummary/CartSummary";
+import CartTableHeader from "./components/CartTableHeader/CartTableHeader";
 import { ShopHeader } from "../shop-x/shop/components/ShopHeader/ShopHeader";
 import { ShopFooter } from "../shop-x/shop/components/ShopFooter/ShopFooter";
 import "./CartPage.css";

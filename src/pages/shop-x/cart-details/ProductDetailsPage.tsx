@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import ProductGallery from "./components/ProductGallery";
+import ProductGallery from "./components/ProductGallery/ProductGallery";
 import ProductInfo from "./components/ProductInfo";
 import { xaiProducts } from "../../../data/ShopProductsData";
 import SizeChart from "./components/SizeChart";
-import RelatedProducts from "./components/RelatedProducts";
+import RelatedProducts from "./components/RelatedProducts/RelatedProducts";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../../hooks/useCart";
 import type { Product } from "../../../models/Product";
@@ -17,8 +17,8 @@ import {
   getRelatedProducts,
 } from "../../../utils/productUtils";
 import "./ProductDetailsPage.css";
-import NotFound from "./components/NotFound";
-import HorizontalDivider from "./components/HorizontalDivider";
+import NotFound from "./components/NotFound/NotFound";
+import HorizontalDivider from "./components/HorizontalDivider/HorizontalDivider";
 import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
 import { ShopFooter } from "../shop/components/ShopFooter/ShopFooter";
 

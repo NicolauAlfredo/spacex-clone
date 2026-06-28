@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { ProductSize } from "../../../../models/Product";
+import type { ProductSize } from "../../../../../models/Product";
 import "./ProductSizeSelector.css";
 import { useEffect } from "react";
 

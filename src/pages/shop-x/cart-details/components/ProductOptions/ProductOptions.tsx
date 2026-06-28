@@ -1,10 +1,10 @@
-import type { Product } from "../../../../models/Product";
+import type { Product } from "../../../../../models/Product";
 import {
   getDefaultColor,
   getDefaultSize,
-} from "../../../../utils/productUtils";
+} from "../../../../../utils/productUtils";
 import "./ProductOptions.css";
-import ProductSizeSelector from "./ProductSizeSelector";
+import ProductSizeSelector from "../ProductSizeSelector/ProductSizeSelector";
 
 type ProductOptionsProps = {
   product: Product;

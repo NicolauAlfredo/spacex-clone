@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import type { Product } from "../../../../models/Product";
-import { formatPrice } from "../../../../utils/formatPrice";
+import type { Product } from "../../../../../models/Product";
+import { formatPrice } from "../../../../../utils/formatPrice";
 import "./RelatedProducts.css";
 
 type RelatedProductsProps = {

@@ -2,7 +2,7 @@ import type { Product } from "../../../../models/Product";
 import { formatPrice } from "../../../../utils/formatPrice";
 import ProductOptions from "./ProductOptions";
 import QuantitySelector from "./QuantitySelector";
-import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "./AddToCartButton/AddToCartButton";
 import "./ProductInfo.css";
 
 type ProductInfoProps = {
