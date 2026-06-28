@@ -1,3 +1,5 @@
+import "./AddToCartButton.css";
+
 type AddToCartButtonProps = {
   onAddToCart: () => void;
 };
