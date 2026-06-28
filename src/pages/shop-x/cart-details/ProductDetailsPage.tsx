@@ -18,6 +18,7 @@ import {
 } from "../../../utils/productUtils";
 import "./ProductDetailsPage.css";
 import NotFound from "./components/NotFound";
+import HorizontalDivider from "./components/HorizontalDivider";
 
 function ProductDetailsPage() {
   const { productId } = useParams();
@@ -107,9 +108,11 @@ function ProductDetailsContent({ product }: ProductDetailsContentProps) {
               onDecreaseQuantity={handleDecreaseQuantity}
               onAddToCart={handleAddToCart}
             />
+
+            <SizeChart product={product} />
           </div>
 
-          <SizeChart product={product} />
+          <HorizontalDivider className="product-detail__divider-section" />
 
           <RelatedProducts products={relatedProducts} />
         </div>
