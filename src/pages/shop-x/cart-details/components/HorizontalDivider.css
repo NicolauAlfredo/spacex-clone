@@ -1,10 +1,16 @@
-.product-detail__divider-section {
-  width: 100vw;
-  height: 0.5px;
-  background-color: #ddd;
-  margin-bottom: 5rem;
+body {
+  overflow-x: hidden;
+}
 
+.horizontal-divider {
   position: relative;
+
   left: 50%;
   transform: translateX(-50%);
+
+  width: calc(100vw - var(--scrollbar-width, 0px));
+  height: 0.5px;
+
+  background: #ddd;
+  margin-bottom: 3rem;
 }

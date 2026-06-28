@@ -11,7 +11,11 @@ function SizeChart({ product }: SizeChartProps) {
   if (product.sizes.length === 0) return null;
 
   return (
-    <div className="product-detail__size-chart">
+    <div
+      className={`product-detail__size-chart ${
+        isOpen ? "product-detail__size-chart--open" : ""
+      }`}
+    >
       <button
         className="product-detail__size-chart-toggle"
         type="button"

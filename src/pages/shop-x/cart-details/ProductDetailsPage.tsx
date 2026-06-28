@@ -19,6 +19,8 @@ import {
 import "./ProductDetailsPage.css";
 import NotFound from "./components/NotFound";
 import HorizontalDivider from "./components/HorizontalDivider";
+import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
+import { ShopFooter } from "../shop/components/ShopFooter/ShopFooter";
 
 function ProductDetailsPage() {
   const { productId } = useParams();
@@ -87,36 +89,42 @@ function ProductDetailsContent({ product }: ProductDetailsContentProps) {
   }
 
   return (
-    <main className="product-page">
-      <section className="product-detail" aria-labelledby="product-title">
-        <div className="product-detail__container">
-          <div className="product-detail__layout">
-            <ProductGallery
-              product={product}
-              activeImageIndex={activeImageIndex}
-              onImageChange={setActiveImageIndex}
-            />
+    <>
+      <ShopHeader />
 
-            <ProductInfo
-              product={product}
-              selectedColor={selectedColor}
-              selectedSize={selectedSize}
-              quantity={quantity}
-              onColorChange={handleColorChange}
-              onSizeChange={setSelectedSize}
-              onIncreaseQuantity={handleIncreaseQuantity}
-              onDecreaseQuantity={handleDecreaseQuantity}
-              onAddToCart={handleAddToCart}
-            />
+      <main className="product-page">
+        <section className="product-detail" aria-labelledby="product-title">
+          <div className="product-detail__container">
+            <div className="product-detail__layout">
+              <ProductGallery
+                product={product}
+                activeImageIndex={activeImageIndex}
+                onImageChange={setActiveImageIndex}
+              />
 
-            <SizeChart product={product} />
+              <ProductInfo
+                product={product}
+                selectedColor={selectedColor}
+                selectedSize={selectedSize}
+                quantity={quantity}
+                onColorChange={handleColorChange}
+                onSizeChange={setSelectedSize}
+                onIncreaseQuantity={handleIncreaseQuantity}
+                onDecreaseQuantity={handleDecreaseQuantity}
+                onAddToCart={handleAddToCart}
+              />
+
+              <SizeChart product={product} />
+            </div>
+
+            <HorizontalDivider className="product-detail__divider-section" />
+
+            <RelatedProducts products={relatedProducts} />
           </div>
+        </section>
+      </main>
 
-          <HorizontalDivider className="product-detail__divider-section" />
-
-          <RelatedProducts products={relatedProducts} />
-        </div>
-      </section>
-    </main>
+      <ShopFooter />
+    </>
   );
 }

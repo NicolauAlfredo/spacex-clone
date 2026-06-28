@@ -1,3 +1,5 @@
+import "./HorizontalDivider.css";
+
 type HorizontalDividerProps = {
   className?: string;
 };
