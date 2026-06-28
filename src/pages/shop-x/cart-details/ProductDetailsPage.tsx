@@ -6,7 +6,8 @@ import { xaiProducts } from "../../../data/ShopProductsData";
 import SizeChart from "./components/SizeChart";
 import RelatedProducts from "./components/RelatedProducts";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "../../../hooks/useCart";
+import type { Product } from "../../../models/Product";
 
 import {
   findProductById,
@@ -16,6 +17,7 @@ import {
   getRelatedProducts,
 } from "../../../utils/productUtils";
 import "./ProductDetailsPage.css";
+import NotFound from "./components/NotFound";
 
 function ProductDetailsPage() {
   const { productId } = useParams();
@@ -23,26 +25,34 @@ function ProductDetailsPage() {
   const products = getAllProducts(xaiProducts);
   const product = findProductById(products, productId);
 
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
-
   if (!product) {
-    return (
-      <main className="product-page">
-        <section className="product-detail">
-          <div className="product-detail__not-found">
-            <h1>Product not found</h1>
-            <p>The selected product does not exist.</p>
-          </div>
-        </section>
-      </main>
-    );
+    return <NotFound />;
   }
+
+  return <ProductDetailsContent product={product} products={products} />;
+}
+
+export default ProductDetailsPage;
+
+type ProductDetailsContentProps = {
+  product: Product;
+  products: Product[];
+};
+
+function ProductDetailsContent({
+  product,
+  products,
+}: ProductDetailsContentProps) {
+  const navigate = useNavigate();
+  const { addItem } = useCart();
 
   const defaultColor = getDefaultColor(product);
   const defaultSize = getDefaultSize(product);
 
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState(defaultColor?.value ?? "");
   const [selectedSize, setSelectedSize] = useState(defaultSize);
+  const [quantity, setQuantity] = useState(1);
 
   const relatedProducts = getRelatedProducts(products, product.id);
 
@@ -51,8 +61,6 @@ function ProductDetailsPage() {
     setActiveImageIndex(imageIndex);
   }
 
-  const [quantity, setQuantity] = useState(1);
-
   function handleIncreaseQuantity() {
     setQuantity((current) => current + 1);
   }
@@ -60,9 +68,6 @@ function ProductDetailsPage() {
   function handleDecreaseQuantity() {
     setQuantity((current) => Math.max(1, current - 1));
   }
-
-  const navigate = useNavigate();
-  const { addItem } = useCart();
 
   function createCartItemId(productId: string, size = "", color = "") {
     return `${productId}-${size}-${color}`.toLowerCase();
@@ -103,28 +108,15 @@ function ProductDetailsPage() {
               onSizeChange={setSelectedSize}
               onIncreaseQuantity={handleIncreaseQuantity}
               onDecreaseQuantity={handleDecreaseQuantity}
+              onAddToCart={handleAddToCart}
             />
           </div>
 
           <SizeChart product={product} />
 
           <RelatedProducts products={relatedProducts} />
-
-          <ProductInfo
-            product={product}
-            selectedColor={selectedColor}
-            selectedSize={selectedSize}
-            quantity={quantity}
-            onColorChange={handleColorChange}
-            onSizeChange={setSelectedSize}
-            onIncreaseQuantity={handleIncreaseQuantity}
-            onDecreaseQuantity={handleDecreaseQuantity}
-            onAddToCart={handleAddToCart}
-          />
         </div>
       </section>
     </main>
   );
 }
-
-export default ProductDetailsPage;
