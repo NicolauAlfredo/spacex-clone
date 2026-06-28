@@ -3,6 +3,7 @@ import {
   getDefaultColor,
   getDefaultSize,
 } from "../../../../utils/productUtils";
+import "./ProductOptions.css";
 
 type ProductOptionsProps = {
   product: Product;
