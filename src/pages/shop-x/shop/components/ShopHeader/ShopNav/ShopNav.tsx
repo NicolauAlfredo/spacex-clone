@@ -3,8 +3,11 @@ import { LanguageSelector } from "./LanguageSelector/LanguageSelector";
 import { UserIcon } from "./ShopIcons/UserIcon";
 import { SearchIcon } from "./ShopIcons/SearchIcon";
 import { CartIcon } from "./ShopIcons/CartIcon";
+import { useCart } from "../../../../../../hooks/useCart";
 
 export function ShopNav() {
+  const { totalQuantity } = useCart();
+
   return (
     <nav className="shop-header__menu" aria-label="Shop navigation">
       <ul className="menu__items">
@@ -30,9 +33,20 @@ export function ShopNav() {
         </li>
 
         <li className="menu__item">
-          <Link to="/cart">
-            <span className="menu__item-cart">Cart (0)</span>
-            <CartIcon />
+          <Link to="/cart" className="menu__item-cart-link">
+            <span className="menu__item-cart">
+              Cart{totalQuantity > 0 ? ` (${totalQuantity})` : "(0)"}
+            </span>
+
+            <span className="menu__item-cart-icon">
+              <CartIcon />
+
+              <span
+                className={`header__cart-dot ${
+                  totalQuantity > 0 ? "header__cart-dot--visible" : ""
+                }`}
+              />
+            </span>
           </Link>
         </li>
       </ul>
