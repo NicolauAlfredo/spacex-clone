@@ -1,6 +1,7 @@
 import type { Product } from "../../../../models/Product";
 import { formatPrice } from "../../../../utils/formatPrice";
 import ProductOptions from "./ProductOptions";
+import QuantitySelector from "./QuantitySelector";
 
 type ProductInfoProps = {
   product: Product;
@@ -8,6 +9,9 @@ type ProductInfoProps = {
   selectedSize: string;
   onColorChange: (colorValue: string, imageIndex: number) => void;
   onSizeChange: (sizeValue: string) => void;
+  quantity: number;
+  onIncreaseQuantity: () => void;
+  onDecreaseQuantity: () => void;
 };
 
 function ProductInfo({
@@ -16,6 +20,9 @@ function ProductInfo({
   selectedSize,
   onColorChange,
   onSizeChange,
+  quantity,
+  onIncreaseQuantity,
+  onDecreaseQuantity,
 }: ProductInfoProps) {
   return (
     <div className="product-detail__info">
@@ -37,7 +44,11 @@ function ProductInfo({
         onSizeChange={onSizeChange}
       />
 
-      {/* Quantity selector */}
+      <QuantitySelector
+        quantity={quantity}
+        onIncrease={onIncreaseQuantity}
+        onDecrease={onDecreaseQuantity}
+      />
 
       {/* Add to cart */}
     </div>

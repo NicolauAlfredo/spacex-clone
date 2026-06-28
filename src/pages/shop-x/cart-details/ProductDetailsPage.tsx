@@ -46,6 +46,16 @@ function ProductDetailsPage() {
     setActiveImageIndex(imageIndex);
   }
 
+  const [quantity, setQuantity] = useState(1);
+
+  function handleIncreaseQuantity() {
+    setQuantity((current) => current + 1);
+  }
+
+  function handleDecreaseQuantity() {
+    setQuantity((current) => Math.max(1, current - 1));
+  }
+
   return (
     <main className="product-page">
       <section className="product-detail" aria-labelledby="product-title">
@@ -61,8 +71,11 @@ function ProductDetailsPage() {
               product={product}
               selectedColor={selectedColor}
               selectedSize={selectedSize}
+              quantity={quantity}
               onColorChange={handleColorChange}
               onSizeChange={setSelectedSize}
+              onIncreaseQuantity={handleIncreaseQuantity}
+              onDecreaseQuantity={handleDecreaseQuantity}
             />
           </div>
 
