@@ -9,4 +9,5 @@
 
   --color-black: #000000;
   --color-white: #ffffff;
+  --color-text: rgba(255, 255, 255, 0.70);  /* TEXT COLOR SLIGHTLY TRANSPARENT */
 }
