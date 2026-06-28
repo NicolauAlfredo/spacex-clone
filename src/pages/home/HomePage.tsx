@@ -1,11 +1,9 @@
-import "./HomePage.css";
-import "./components/Header.css";
-import "./components/Footer.css";
-
-import { Header } from "./components/Header";
+import { Header } from "../../components/header/Header";
 import { Footer } from "../../components/footer/Footer";
 import { Button } from "./components/Button/Button";
 import { getPublicAssetPath } from "../../utils/getPublicAssetPath";
+
+import "./HomePage.css"
 
 export function HomePage() {
   return (

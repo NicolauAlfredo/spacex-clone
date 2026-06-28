@@ -1,3 +1,9 @@
+/**
+ * Header logo component.
+ *
+ * Only responsible for rendering the SpaceX logo and its link.
+ */
+
 export function SpaceXLogo() {
   return (
     <svg

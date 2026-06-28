@@ -1,0 +1,179 @@
+.upcoming-launch {
+  display: none;
+  position: relative;
+  margin: 1rem 1.6rem;
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.menu-open .header__nav .upcoming-launch--header {
+  display: block;
+  padding: 0;
+}
+
+.upcoming-launch__header {
+  display: flex;
+  align-items: center;
+}
+
+.upcoming-launch__title {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.upcoming-launch__toggle {
+  display: none;
+}
+
+.upcoming-launch__toggle svg {
+  margin-left: auto;
+}
+
+.upcoming-launch__cards {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: none;
+  width: 100%;
+  padding: 12px 0 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.upcoming-launch__card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.upcoming-launch__image {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.upcoming-launch__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.upcoming-launch__content {
+  display: inline-flex;
+  flex-direction: column;
+  width: 150px;
+  gap: 0.5rem;
+}
+
+.upcoming-launch__countdown {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 110%;
+  color: var(--color-white);
+}
+
+.upcoming-launch__arrow {
+  opacity: 1;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.upcoming-launch__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0 0;
+}
+
+.upcoming-launch__link-text {
+  font-size: 12px;
+}
+
+@media (min-width: 1024px) {
+  .header__nav .upcoming-launch--header {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 270px;
+    margin: 0 50px 0 auto;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  .upcoming-launch--header .upcoming-launch__title {
+    border-bottom: none;
+    width: 100%;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    display: block;
+  }
+
+  .upcoming-launch--header .upcoming-launch__toggle {
+    display: flex;
+  }
+
+  .upcoming-launch--header .upcoming-launch__cards {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 12px;
+    padding: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease,
+      visibility 0.6s ease;
+  }
+
+  .upcoming-launch--header:hover .upcoming-launch__cards {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .upcoming-launch--header .upcoming-launch__arrow {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .upcoming-launch--header
+    .upcoming-launch__card:hover
+    .upcoming-launch__arrow {
+    opacity: 1;
+  }
+
+  .upcoming-launch--header .upcoming-launch__link {
+    justify-content: flex-end;
+    padding: 20px;
+  }
+}
