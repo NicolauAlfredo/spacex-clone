@@ -1,11 +1,22 @@
 import type { Product } from "../../../../models/Product";
 import { formatPrice } from "../../../../utils/formatPrice";
+import ProductOptions from "./ProductOptions";
 
 type ProductInfoProps = {
   product: Product;
+  selectedColor: string;
+  selectedSize: string;
+  onColorChange: (colorValue: string, imageIndex: number) => void;
+  onSizeChange: (sizeValue: string) => void;
 };
 
-function ProductInfo({ product }: ProductInfoProps) {
+function ProductInfo({
+  product,
+  selectedColor,
+  selectedSize,
+  onColorChange,
+  onSizeChange,
+}: ProductInfoProps) {
   return (
     <div className="product-detail__info">
       <h1 id="product-title" className="product-detail__title">
@@ -18,9 +29,13 @@ function ProductInfo({ product }: ProductInfoProps) {
 
       <p className="product-detail__description">{product.description}</p>
 
-      {/* Product colors */}
-
-      {/* Product sizes */}
+      <ProductOptions
+        product={product}
+        selectedColor={selectedColor}
+        selectedSize={selectedSize}
+        onColorChange={onColorChange}
+        onSizeChange={onSizeChange}
+      />
 
       {/* Quantity selector */}
 
