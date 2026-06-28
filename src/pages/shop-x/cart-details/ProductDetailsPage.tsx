@@ -54,7 +54,7 @@ function ProductDetailsContent({
   const [selectedSize, setSelectedSize] = useState(defaultSize);
   const [quantity, setQuantity] = useState(1);
 
-  const relatedProducts = getRelatedProducts(products, product.id);
+  const relatedProducts = getRelatedProducts(xaiProducts, product);
 
   function handleColorChange(colorValue: string, imageIndex: number) {
     setSelectedColor(colorValue);

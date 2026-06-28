@@ -22,7 +22,7 @@ function RelatedProducts({ products }: RelatedProductsProps) {
         {products.map((product) => (
           <article key={product.id} className="product-detail__related-card">
             <Link
-              to={`/shop-x/${product.id}`}
+              to={`/product/${product.id}`}
               className="product-detail__related-image-link"
             >
               <img
@@ -43,7 +43,7 @@ function RelatedProducts({ products }: RelatedProductsProps) {
 
             <h3 className="product-detail__related-name">
               <Link
-                to={`/shop-x/${product.id}`}
+                to={`/product/${product.id}`}
                 className="product-detail__related-link"
               >
                 {product.name}

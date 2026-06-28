@@ -1,4 +1,5 @@
 import type { Product } from "../models/Product";
+import type { ProductCollection } from "../data/ShopProductsData";
 
 export function getAllProducts(products: {
   XCollection: Product[];
@@ -43,12 +44,51 @@ export function getDefaultColor(product: Product) {
   );
 }
 
+export function getProductCollectionName(
+  collections: ProductCollection,
+  productId: string,
+): keyof ProductCollection | null {
+  const collectionNames = Object.keys(collections) as Array<
+    keyof ProductCollection
+  >;
+
+  return (
+    collectionNames.find((collectionName) =>
+      collections[collectionName].some((product) => product.id === productId),
+    ) ?? null
+  );
+}
+
+export function shuffleProducts(products: Product[]): Product[] {
+  return [...products].sort(() => Math.random() - 0.5);
+}
+
 export function getRelatedProducts(
-  products: Product[],
-  currentProductId: string,
+  collections: ProductCollection,
+  currentProduct: Product,
   limit = 4,
 ): Product[] {
-  return products
-    .filter((product) => product.id !== currentProductId)
-    .slice(0, limit);
+  const collectionName = getProductCollectionName(
+    collections,
+    currentProduct.id,
+  );
+
+  const sameCollectionProducts = collectionName
+    ? collections[collectionName].filter(
+        (product) => product.id !== currentProduct.id,
+      )
+    : [];
+
+  const otherProducts = getAllProducts(collections).filter(
+    (product) =>
+      product.id !== currentProduct.id &&
+      !sameCollectionProducts.some(
+        (sameCollectionProduct) => sameCollectionProduct.id === product.id,
+      ),
+  );
+
+  return [
+    ...shuffleProducts(sameCollectionProducts),
+    ...shuffleProducts(otherProducts),
+  ].slice(0, limit);
 }
