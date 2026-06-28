@@ -6,6 +6,7 @@ import {
   getRelatedProducts,
 } from "../../../utils/productUtils";
 import "./product-details.css";
+import ProductGallery from "./components/ProductGallery";
 
 function ProductDetailsPage() {
   const { productId } = useParams();
@@ -33,7 +34,7 @@ function ProductDetailsPage() {
       <section className="product-detail" aria-labelledby="product-title">
         <div className="product-detail__container">
           <div className="product-detail__layout">
-            <div className="product-detail__gallery">Product gallery here</div>
+            <ProductGallery product={product} />
 
             <div className="product-detail__info">
               <h1 id="product-title" className="product-detail__title">
