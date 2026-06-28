@@ -1,6 +1,6 @@
 import { HomePage } from "../pages/home/HomePage";
 import { MoonPage } from "../pages/moon/MoonPage";
-import { ShopXPage } from "../pages/shop-x/ShopXPage";
+import { ShopXPage } from "../pages/shop-x/shop/ShopXPage";
 import { StarlinkPage } from "../pages/starlink/StarlinkPage";
 
 import { createHashRouter } from "react-router-dom";
