@@ -4,6 +4,7 @@ import {
   getDefaultSize,
 } from "../../../../utils/productUtils";
 import "./ProductOptions.css";
+import ProductSizeSelector from "./ProductSizeSelector";
 
 type ProductOptionsProps = {
   product: Product;
@@ -64,7 +65,7 @@ function ProductOptions({
 
           <select
             id="product-size"
-            className="product-detail__size-select"
+            className="product-detail__size-select product-detail__size-select--desktop"
             name="size"
             value={selectedSize || getDefaultSize(product)}
             onChange={(event) => onSizeChange(event.target.value)}
@@ -80,6 +81,12 @@ function ProductOptions({
               </option>
             ))}
           </select>
+
+          <ProductSizeSelector
+            sizes={product.sizes}
+            selectedSize={selectedSize || getDefaultSize(product)}
+            onSizeChange={onSizeChange}
+          />
         </div>
       )}
     </>
