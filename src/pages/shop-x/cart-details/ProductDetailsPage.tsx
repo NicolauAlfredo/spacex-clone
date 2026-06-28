@@ -5,6 +5,8 @@ import ProductInfo from "./components/ProductInfo";
 import { xaiProducts } from "../../../data/ShopProductsData";
 import SizeChart from "./components/SizeChart";
 import RelatedProducts from "./components/RelatedProducts";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../../hooks/useCart";
 
 import {
   findProductById,
@@ -59,6 +61,28 @@ function ProductDetailsPage() {
     setQuantity((current) => Math.max(1, current - 1));
   }
 
+  const navigate = useNavigate();
+  const { addItem } = useCart();
+
+  function createCartItemId(productId: string, size = "", color = "") {
+    return `${productId}-${size}-${color}`.toLowerCase();
+  }
+
+  function handleAddToCart() {
+    addItem({
+      id: createCartItemId(product.id, selectedSize, selectedColor),
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.primaryImage,
+      size: selectedSize,
+      color: selectedColor,
+      quantity,
+    });
+
+    navigate("/cart");
+  }
+
   return (
     <main className="product-page">
       <section className="product-detail" aria-labelledby="product-title">
@@ -85,6 +109,18 @@ function ProductDetailsPage() {
           <SizeChart product={product} />
 
           <RelatedProducts products={relatedProducts} />
+
+          <ProductInfo
+            product={product}
+            selectedColor={selectedColor}
+            selectedSize={selectedSize}
+            quantity={quantity}
+            onColorChange={handleColorChange}
+            onSizeChange={setSelectedSize}
+            onIncreaseQuantity={handleIncreaseQuantity}
+            onDecreaseQuantity={handleDecreaseQuantity}
+            onAddToCart={handleAddToCart}
+          />
         </div>
       </section>
     </main>
