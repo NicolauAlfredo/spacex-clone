@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductGallery from "./components/ProductGallery/ProductGallery";
-import ProductInfo from "./components/ProductInfo";
+import ProductInfo from "./components/ProductInfo/ProductInfo";
 import { xaiProducts } from "../../../data/ShopProductsData";
 import SizeChart from "./components/SizeChart";
 import RelatedProducts from "./components/RelatedProducts/RelatedProducts";
