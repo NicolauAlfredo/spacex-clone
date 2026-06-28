@@ -1,4 +1,5 @@
 import type { Product } from "../../../../models/Product";
+import "./ProductGallery.css";
 
 type ProductGalleryProps = {
   product: Product;
