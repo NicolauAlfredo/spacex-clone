@@ -1,5 +1,5 @@
-import type { CartItem as CartItemType } from "../../../../models/Cart";
-import { formatPrice } from "../../../../utils/formatPrice";
+import type { CartItem as CartItemType } from "../../../../../models/Cart";
+import { formatPrice } from "../../../../../utils/formatPrice";
 import "./CartItem.css";
 
 type CartItemProps = {
