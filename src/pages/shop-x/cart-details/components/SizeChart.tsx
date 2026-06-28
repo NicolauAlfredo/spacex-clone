@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Product } from "../../../../models/Product";
-
+import "./SizeChart.css"
 type SizeChartProps = {
   product: Product;
 };
