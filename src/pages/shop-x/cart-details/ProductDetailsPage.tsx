@@ -1,19 +1,24 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+import ProductGallery from "./components/ProductGallery";
+import ProductInfo from "./components/ProductInfo";
 import { xaiProducts } from "../../../data/ShopProductsData";
 import {
   findProductById,
   getAllProducts,
+  getDefaultColor,
+  getDefaultSize,
   getRelatedProducts,
 } from "../../../utils/productUtils";
 import "./product-details.css";
-import ProductGallery from "./components/ProductGallery";
-import ProductInfo from "./components/ProductInfo";
 
 function ProductDetailsPage() {
   const { productId } = useParams();
 
   const products = getAllProducts(xaiProducts);
   const product = findProductById(products, productId);
+
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   if (!product) {
     return (
@@ -28,16 +33,37 @@ function ProductDetailsPage() {
     );
   }
 
+  const defaultColor = getDefaultColor(product);
+  const defaultSize = getDefaultSize(product);
+
+  const [selectedColor, setSelectedColor] = useState(defaultColor?.value ?? "");
+  const [selectedSize, setSelectedSize] = useState(defaultSize);
+
   const relatedProducts = getRelatedProducts(products, product.id);
+
+  function handleColorChange(colorValue: string, imageIndex: number) {
+    setSelectedColor(colorValue);
+    setActiveImageIndex(imageIndex);
+  }
 
   return (
     <main className="product-page">
       <section className="product-detail" aria-labelledby="product-title">
         <div className="product-detail__container">
           <div className="product-detail__layout">
-            <ProductGallery product={product} />
+            <ProductGallery
+              product={product}
+              activeImageIndex={activeImageIndex}
+              onImageChange={setActiveImageIndex}
+            />
 
-            <ProductInfo product={product} />
+            <ProductInfo
+              product={product}
+              selectedColor={selectedColor}
+              selectedSize={selectedSize}
+              onColorChange={handleColorChange}
+              onSizeChange={setSelectedSize}
+            />
           </div>
 
           {relatedProducts.length > 0 && (

@@ -3,10 +3,15 @@ import type { Product } from "../../../../models/Product";
 
 type ProductGalleryProps = {
   product: Product;
+  activeImageIndex: number;
+  onImageChange: (imageIndex: number) => void;
 };
 
-function ProductGallery({ product }: ProductGalleryProps) {
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+function ProductGallery({
+  product,
+  activeImageIndex,
+  onImageChange,
+}: ProductGalleryProps) {
   const [isZoomed, setIsZoomed] = useState(false);
 
   const activeImage = product.images[activeImageIndex];
@@ -27,7 +32,7 @@ function ProductGallery({ product }: ProductGalleryProps) {
                 : ""
             }`}
             type="button"
-            onClick={() => setActiveImageIndex(index)}
+            onClick={() => onImageChange(index)}
             aria-label={`Show product image ${index + 1}`}
           >
             <img
@@ -53,25 +58,7 @@ function ProductGallery({ product }: ProductGalleryProps) {
         onClick={() => setIsZoomed((current) => !current)}
         aria-label="Zoom product image"
       >
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          width="14"
-          className="icon icon-zoom"
-          viewBox="0 0 14 14"
-        >
-          <path
-            d="M9.432 9.432a4.94 4.94 0 1 1-6.985-6.985 4.94 4.94 0 0 1 6.985 6.985Zm0 0L13 13"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="square"
-          />
-          <path
-            d="M6 3.5V6m0 2.5V6m0 0H3.5h5"
-            fill="none"
-            stroke="currentColor"
-          />
-        </svg>
+        Zoom
       </button>
 
       {product.images.length > 1 && (
@@ -83,7 +70,7 @@ function ProductGallery({ product }: ProductGalleryProps) {
                 index === activeImageIndex ? "product-detail__dot--active" : ""
               }`}
               type="button"
-              onClick={() => setActiveImageIndex(index)}
+              onClick={() => onImageChange(index)}
               aria-label={`Show product image ${index + 1}`}
             />
           ))}
