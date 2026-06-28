@@ -7,6 +7,7 @@ import {
 } from "../../../utils/productUtils";
 import "./product-details.css";
 import ProductGallery from "./components/ProductGallery";
+import ProductInfo from "./components/ProductInfo";
 
 function ProductDetailsPage() {
   const { productId } = useParams();
@@ -36,19 +37,7 @@ function ProductDetailsPage() {
           <div className="product-detail__layout">
             <ProductGallery product={product} />
 
-            <div className="product-detail__info">
-              <h1 id="product-title" className="product-detail__title">
-                {product.name}
-              </h1>
-
-              <p className="product-detail__price">{product.price}</p>
-
-              <div className="product-detail__divider" />
-
-              <p className="product-detail__description">
-                {product.description}
-              </p>
-            </div>
+            <ProductInfo product={product} />
           </div>
 
           {relatedProducts.length > 0 && (
