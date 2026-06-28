@@ -1,0 +1,66 @@
+.btn--primary {
+  width: 98%;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--ghost {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.starlink-toggle {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 2px;
+  display: inline-flex;
+  gap: 2px;
+  margin-top: 3.5em;
+  margin-bottom: 1.5rem;
+}
+
+.starlink-toggle__btn {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.starlink-toggle__btn--active {
+  background: #3a3a3a;
+}
+
+@media (min-width: 1024px) {
+  .btn--ghost {
+    background: rgba(52, 58, 69, 0.45);
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.6rem 2rem;
+    border-radius: 0.2rem;
+  }
+
+  .btn--primary {
+    width: auto;
+    padding: 0.6rem 2rem;
+  }
+
+  .starlink-toggle {
+    margin-top: 1em;
+  }
+}

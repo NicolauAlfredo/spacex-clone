@@ -1,7 +1,9 @@
+import { Header } from './header/header'
+import './StarlinkPage.css'
 export function StarlinkPage() {
   return (
     <>
-      <h1>StarlinkPage</h1>
+      <Header />
     </>
   );
 }

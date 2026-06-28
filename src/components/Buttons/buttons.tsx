@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { StarlinkPlansHome, StarlinkPlansGo } from './buttons.plans';
+import './buttons.css'
 
 export const Buttons = () => {
   const [active, setActive] = useState <'personal' | 'business'>('personal');

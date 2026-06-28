@@ -1,17 +1,17 @@
 import { useRef } from 'react';
 import { StarlinkCarouselCard } from './buttons.carousel.card'
 
-export const StarlinkCarousel = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+export const StarlinkCarousel = () => {    
+  const scrollRef = useRef<HTMLDivElement>(null); // Crea un ref agganciato al div del carosello, inizialmente null
 
-  const handleChevronClick = (direction: 'prev' | 'next') => {
-    if (!scrollRef.current) return;
-    
-    const scrollAmount = 300;
-    const isNext = direction === 'next';
+  const handleChevronClick = (direction: 'prev' | 'next') => { //Funzione che gestisce il click sulle frecce
+    if (!scrollRef.current) return; // Qui sesce se  il ref non è agganciato al codice 
+     
+    const scrollAmount = 300; //Definisce di quanti pixel scorrere ad ogni click
+    const isNext = direction === 'next'; //Se il click è sulla freccia sinistra o destra
     
     scrollRef.current.scrollBy({
-      left: isNext ? scrollAmount : -scrollAmount,
+      left: isNext ? scrollAmount : -scrollAmount, //+300px verso destra o -300px verso sinistra
       behavior: 'smooth',
     });
   };
