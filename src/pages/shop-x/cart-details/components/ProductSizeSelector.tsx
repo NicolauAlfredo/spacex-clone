@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ProductSize } from "../../../../models/Product";
 import "./ProductSizeSelector.css";
+import { useEffect } from "react";
 
 type ProductSizeSelectorProps = {
   sizes: ProductSize[];
@@ -15,6 +16,14 @@ function ProductSizeSelector({
 }: ProductSizeSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isRendered, setIsRendered] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const selectedSizeLabel =
     sizes.find((size) => size.value === selectedSize)?.label ?? sizes[0]?.label;
