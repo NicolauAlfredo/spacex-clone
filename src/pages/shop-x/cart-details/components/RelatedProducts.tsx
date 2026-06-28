@@ -22,7 +22,6 @@ function RelatedProducts({ products }: RelatedProductsProps) {
         >
           You may also like
         </h2>
-
         <div className="product-detail__related-grid">
           {products.map((product) => (
             <article key={product.id} className="product-detail__related-card">

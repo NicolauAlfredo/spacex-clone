@@ -32,14 +32,13 @@ function ProductDetailsPage() {
     return <NotFound />;
   }
 
-  return <ProductDetailsContent product={product} products={products} />;
+  return <ProductDetailsContent product={product} />;
 }
 
 export default ProductDetailsPage;
 
 type ProductDetailsContentProps = {
   product: Product;
-  products: Product[];
 };
 
 function ProductDetailsContent({ product }: ProductDetailsContentProps) {

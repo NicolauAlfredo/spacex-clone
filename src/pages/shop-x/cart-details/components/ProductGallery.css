@@ -1,7 +1,7 @@
 /* Gallery */
 
 .product-detail__gallery {
-  position: relative;
+  width: 100%;
 }
 
 .product-detail__thumbs {
@@ -22,11 +22,11 @@
 }
 
 .product-detail__main-image {
-  flex: 0 0 100%;
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
-  object-fit: contain;
-  scroll-snap-align: center;
+  object-fit: cover;
 }
 
 .product-detail__dots {
