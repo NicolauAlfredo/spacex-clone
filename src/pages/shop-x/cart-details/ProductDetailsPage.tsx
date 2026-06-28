@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import ProductGallery from "./components/ProductGallery";
 import ProductInfo from "./components/ProductInfo";
 import { xaiProducts } from "../../../data/ShopProductsData";
+import SizeChart from "./components/SizeChart";
+
 import {
   findProductById,
   getAllProducts,
@@ -10,7 +12,7 @@ import {
   getDefaultSize,
   getRelatedProducts,
 } from "../../../utils/productUtils";
-import "./product-details.css";
+import "./ProductDetailsPage.css";
 
 function ProductDetailsPage() {
   const { productId } = useParams();
@@ -78,6 +80,8 @@ function ProductDetailsPage() {
               onDecreaseQuantity={handleDecreaseQuantity}
             />
           </div>
+
+          <SizeChart product={product} />
 
           {relatedProducts.length > 0 && (
             <section className="product-detail__related">
