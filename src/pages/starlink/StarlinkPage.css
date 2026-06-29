@@ -579,10 +579,11 @@ div.starlink-toggle {
       rgba(0, 0, 0, 0.45) 80%
     );
 }
-.starlink-section--reliable .starlink-section__lable {
+.starlink-section--reliable .starlink-section__label {
   color: #c3c4c5;
   line-height: 1.5em;
-  max-width: 310px;
+  max-width: 590px;
+  font-size: 1.2em;
 }
 .starlink-section--reliable .starlink-section__content {
   display: flex;
