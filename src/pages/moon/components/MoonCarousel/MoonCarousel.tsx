@@ -1,18 +1,23 @@
 import { useState } from "react";
-import { MoonCarouselSlides } from "../../../../data/MoonCarouselData";
 import "./MoonCarousel.css"
+import type { CarouselCollection } from "../../../../types/moonCarousel.type";
 
-export default function MoonCarousel() {
+interface CarouselProps {
+    collection: CarouselCollection;
+}
+
+
+export default function Carousel({ collection }: CarouselProps) {
     const [activeIndex, setActiveIndex] = useState(0)
 
-    const activeSlide = MoonCarouselSlides[activeIndex];
+    const activeSlide = collection.slides[activeIndex];
 
     function handleNext() {
-        setActiveIndex((currentIndex) => currentIndex === MoonCarouselSlides.length - 1 ? 0 : currentIndex + 1);
+        setActiveIndex((currentIndex) => currentIndex === collection.slides.length - 1 ? 0 : currentIndex + 1);
     }
 
     function handlePrevious() {
-        setActiveIndex((currentIndex) => currentIndex === 0 ? MoonCarouselSlides.length - 1 : currentIndex - 1);
+        setActiveIndex((currentIndex) => currentIndex === 0 ? collection.slides.length - 1 : currentIndex - 1);
     }
 
     function handleSelectSlide(index: number) {
@@ -32,15 +37,20 @@ export default function MoonCarousel() {
 
             </article>
 
-            <button className="moon-carousel__button moon-carousel__button--previous" type="button" onClick={handlePrevious} > &lt; </button> 
-            <button className="moon-carousel__button moon-carousel__button--next" type="button" onClick={handleNext} > &gt;  </button> 
+            <button className="moon-carousel__button moon-carousel__button--previous" type="button" onClick={handlePrevious} > &lt; </button>
+            <button className="moon-carousel__button moon-carousel__button--next" type="button" onClick={handleNext} > &gt;  </button>
 
             <div className="moon-carousel__dots">
-                {MoonCarouselSlides.map((slide, index) =>
-                (
-                    <button className={`moon-carousel__dot ${index === activeIndex ? "moon-carousel__dot--active" : "" }`} key={slide.id} type="button" onClick={() => handleSelectSlide(index)}></button>
-                )
-            )}
+                {collection.slides.map((slide, index) => (
+                    <button 
+                    key={slide.id}
+                    className={`moon-carousel__dot ${
+                        index === activeIndex 
+                        ? "moon-carousel__dot--active" 
+                        : ""}`}
+                    type="button" 
+                    onClick={() => handleSelectSlide(index)} />
+                ))}
             </div>
         </section>
     )

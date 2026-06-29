@@ -4,10 +4,19 @@ export type ContentPosition =
 | "center-left"
 | "bottom-left"
 
-export interface MoonCarouselSlide {
+
+export type CarouselVariant = "default" | "compact"
+export interface CarouselSlide {
     id: number;
     title: string;
     description: string;
     image: string;
     contentPosition: ContentPosition
+} 
+
+export interface CarouselCollection {
+    id: string;
+    variant: CarouselVariant;
+    slides: CarouselSlide[];
+   
 } 
