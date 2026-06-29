@@ -1,4 +1,3 @@
-
 :root {
   --font: D-DIN, sans-serif;
   --color-secondary: #c3c4c5;
@@ -7,10 +6,7 @@ body {
   font-family: var(--font);
 }
 
-
-
 /* starlink section 1 best value */
-
 
 .mo_class {
   font-size: 1.4em;
@@ -112,7 +108,6 @@ body {
   .starlink-section--best-value .starlink-section__content {
     padding-bottom: 0.5em;
     padding-left: 0.5em;
-    
   }
   .starlink-section--best-value .starlink-section__title br {
     display: none;
@@ -120,7 +115,6 @@ body {
   .starlink-section--best-value .starlink-section__subtitle {
     padding-bottom: 0.5em;
   }
-  
 }
 
 /* Desktop */
@@ -159,7 +153,6 @@ body {
     width: auto;
     padding: 0.6rem 2rem;
   }
- 
 }
 
 /* SECTION 02 - Plans */
@@ -292,6 +285,9 @@ body {
 .starlink-section--plans [data-group="go"] .starlink-section__price-container {
   margin-left: -1em;
 }
+.starlink-section--plans .starlink-section__price-container {
+  gap: 0.5em;
+}
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -302,11 +298,10 @@ body {
   }
   .starlink-section--plans .starlink-section__price {
     margin-left: 0;
-    
   }
-.starlink-section--plans .starlink-section__price-container {
-  gap: 0.7em;
-}
+  .starlink-section--plans .starlink-section__price-container {
+    gap: 0.7em;
+  }
   .starlink-section--plans .starlink-section__title,
   .starlink-section--plans .starlink-section__label,
   .starlink-section--plans .starlink-section__list,
@@ -343,13 +338,13 @@ body {
     padding-left: 2em;
   }
 }
- .starlink-section--plans [data-group="go"] .starlink-plans__cards {
-    gap: 0.1em;
-  }
+.starlink-section--plans [data-group="go"] .starlink-plans__cards {
+  gap: 0.1em;
+}
 
 /* Desktop */
 @media (min-width: 1024px) {
-   .starlink-plans__cards {
+  .starlink-plans__cards {
     flex-direction: row;
   }
   .starlink-section--plans
@@ -531,7 +526,6 @@ body {
   width: 100%;
 }
 .starlink-plans__cards > div {
-  
   padding: 36px 36px;
 }
 
@@ -542,12 +536,12 @@ body {
     max-width: 1550px;
     margin: 0 auto;
   }
- .starlink-section [data-group="go"] .starlink-section__subtitle {
-  margin-right: -1em;
-}
-.starlink-section [data-group="go"] .starlink-section__price{
-  margin-left: 0.5em;
-}
+  .starlink-section [data-group="go"] .starlink-section__subtitle {
+    margin-right: -1em;
+  }
+  .starlink-section [data-group="go"] .starlink-section__price {
+    margin-left: 0.5em;
+  }
 }
 
 div.starlink-toggle {

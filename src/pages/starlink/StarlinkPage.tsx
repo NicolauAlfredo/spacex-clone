@@ -1,6 +1,7 @@
 import { Header } from './header/header'
 import { StarlinkResidentialButton } from '../../components/Buttons/buttons'
 import { StarlinkButton } from '../../components/Buttons/buttons'
+import { SectionContent } from '../../components/content/Content'
 import './StarlinkPage.css'
 export function StarlinkPage() {
   return (
@@ -40,6 +41,7 @@ export function StarlinkPage() {
   <StarlinkResidentialButton />
 </section>
 {/* SECTION 03 - Reliable & Resilient */}
+{/* SECTION 03 - Reliable & Resilient */}
 <section className="starlink-section starlink-section--reliable">
   <picture>
     <source
@@ -54,13 +56,15 @@ export function StarlinkPage() {
   </picture>
   <div className="starlink-section__overlay"></div>
   <div className="starlink-section__content">
-    <h2 className="starlink-section__title">
-      Reliable & resilient
-    </h2>
-    <p className="starlink-section__label">Extreme weather conditions can cause significant disruptions to traditional internet networks. Starlink is engineered to melt snow and withstand sleet, heavy rain, and harsh winds—keeping you connected with reliable, high-speed service when you need it most.</p>
+    <SectionContent
+      title="Reliable & resilient"
+      description="Extreme weather conditions can cause significant disruptions to traditional internet networks. Starlink is engineered to melt snow and withstand sleet, heavy rain, and harsh winds—keeping you connected with reliable, high-speed service when you need it most."
+      classNameTitle="starlink-section__title"
+      classNameText="starlink-section__label"
+    />
     <StarlinkButton label="Learn More" variant="primary" href="#"/>
   </div>
-  </section>
+</section>
     </>
   );
 }
