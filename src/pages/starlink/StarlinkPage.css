@@ -112,10 +112,15 @@ body {
   .starlink-section--best-value .starlink-section__content {
     padding-bottom: 0.5em;
     padding-left: 0.5em;
+    
   }
   .starlink-section--best-value .starlink-section__title br {
     display: none;
   }
+  .starlink-section--best-value .starlink-section__subtitle {
+    padding-bottom: 0.5em;
+  }
+  
 }
 
 /* Desktop */
@@ -154,6 +159,7 @@ body {
     width: auto;
     padding: 0.6rem 2rem;
   }
+ 
 }
 
 /* SECTION 02 - Plans */
@@ -296,8 +302,11 @@ body {
   }
   .starlink-section--plans .starlink-section__price {
     margin-left: 0;
+    
   }
-
+.starlink-section--plans .starlink-section__price-container {
+  gap: 0.7em;
+}
   .starlink-section--plans .starlink-section__title,
   .starlink-section--plans .starlink-section__label,
   .starlink-section--plans .starlink-section__list,
