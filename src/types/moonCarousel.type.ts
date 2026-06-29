@@ -2,7 +2,7 @@ export type ContentPosition =
 | "top-left"
 | "top-center"
 | "center-left"
-| "buttom-left"
+| "bottom-left"
 
 export interface MoonCarouselSlide {
     id: number;
