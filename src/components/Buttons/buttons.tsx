@@ -24,30 +24,50 @@ type ButtonProps = {
   variant?: 'primary' | 'ghost',
   href?: string
 }
- export const StarlinkButton = ({label, variant, href}: ButtonProps) => {
-  return (
-    href ? <a href={href} className="starlink-section__link--button">{label}</a> :
-    <button className={`btn btn--${variant}`}>{label}</button>
-  )
-    
-  
- } // general starlink buttons
+export const StarlinkButton = ({ label, variant = 'primary', href }: ButtonProps) => {
+  return href ? (
+    <a href={href} className={`btn btn--${variant}`}>
+      {label}
+    </a>
+  ) : (
+    <button className={`btn btn--${variant}`}>
+      {label}
+    </button>
+  );
+}; // general starlink buttons
 
 
  export const StarlinkResidentialButton = () => {
-  const [residential, setResidential] = useState<'home' |'go'>('home');
-   const handleClick = (tab: 'home' | 'go') => {
-    setResidential(tab);
-  };
+  const [residential, setResidential] = useState<'home' | 'go'>('home');
+
   return (
-    <div> 
-    <div className="starlink-toggle">
-      <button className= {residential ==='home' ? "starlink-toggle__btn starlink-toggle__btn--active" : "starlink-toggle__btn"} onClick={() => handleClick('home')}>At Home</button>
-      <button className= {residential ==='go' ? "starlink-toggle__btn starlink-toggle__btn--active" : "starlink-toggle__btn"} onClick={() => handleClick('go')}>On the Go</button>
-    </div>
- {residential === 'home' &&  <StarlinkPlansHome />}
- {residential === 'go' &&  <StarlinkPlansGo />}
- </div>
-  )
-  
- } // Plans - home & go btns 
+    <>
+      <div className="starlink-toggle">
+        <button
+          className={
+            residential === 'home'
+              ? 'starlink-toggle__btn starlink-toggle__btn--active'
+              : 'starlink-toggle__btn'
+          }
+          onClick={() => setResidential('home')}
+        >
+          At Home
+        </button>
+
+        <button
+          className={
+            residential === 'go'
+              ? 'starlink-toggle__btn starlink-toggle__btn--active'
+              : 'starlink-toggle__btn'
+          }
+          onClick={() => setResidential('go')}
+        >
+          On the Go
+        </button>
+      </div>
+
+      {residential === 'home' && <StarlinkPlansHome />}
+      {residential === 'go' && <StarlinkPlansGo />}
+    </>
+  );
+}; // Plans - home & go btns 

@@ -21,15 +21,14 @@
   text-decoration: none;
   border: none;
   outline: none;
-}
-
-.header__logo {
   color: #f0f0fa;
   font-size: 1.25rem;
   letter-spacing: 0.25em;
   font-weight: 600;
   margin-left: 0.5em;
 }
+
+
 .header__actions {
   display: flex;
   flex-direction: row;
