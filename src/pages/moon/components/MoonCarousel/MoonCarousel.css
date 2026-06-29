@@ -29,24 +29,24 @@
 
 .moon-carousel__content--top-left {
     top: 18%;
-    left: 24%;
+    left: 5%;
 }
 
 .moon-carousel__content--top-center {
     top: 14%;
-    left: 50%;
+    left: 5%;
     transform: translateX(-50%);
 }
 
 .moon-carousel__content--center-left {
     top: 50%;
-    left: 24%;
+    left: 5%;
     transform: translateY(-50%);
 }
 
 .moon-carousel__content--bottom-left {
     bottom: 16%;
-    left: 24%;
+    left: 5%;
 }
 
 .moon-carousel__title {
@@ -68,7 +68,7 @@
 .moon-carousel__button {
     position: absolute;
     z-index: 3;
-    top: 95%;
+    top: 90%;
     transform: translateY(-50%);
     border: none;
     background: transparent;
@@ -78,11 +78,17 @@
 }
 
 .moon-carousel__button--previous {
-left: 2rem;
+    left: 2rem;
+    transform: rotate(90deg);
+    width: 2rem;
+    height: 2rem;
 }
 
 .moon-carousel__button--next {
     right: 2rem;
+    transform: rotate(-90deg);
+    width: 2rem;
+    height: 2rem;
 }
 
 .moon-carousel__dots {
@@ -96,8 +102,8 @@ left: 2rem;
 }
 
 .moon-carousel__dot {
-    width: 0.45rem;
-    height: 0.45rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
     border: none;
     background-color: #777;
@@ -108,9 +114,7 @@ left: 2rem;
     background-color: white;
 }
 
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) {}
 
 @media (min-width: 1024px) {
     .moon-carousel {

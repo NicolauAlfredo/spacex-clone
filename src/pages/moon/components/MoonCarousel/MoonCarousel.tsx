@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./MoonCarousel.css"
 import type { CarouselCollection } from "../../../../types/moonCarousel.type";
+import { CarouselArrowLeft } from "./icons/CarouselArrowLeft";
+import { CarouselArrowRight } from "./icons/CarouselArrowRight";
 
 interface CarouselProps {
     collection: CarouselCollection;
@@ -37,19 +39,27 @@ export default function Carousel({ collection }: CarouselProps) {
 
             </article>
 
-            <button className="moon-carousel__button moon-carousel__button--previous" type="button" onClick={handlePrevious} > &lt; </button>
-            <button className="moon-carousel__button moon-carousel__button--next" type="button" onClick={handleNext} > &gt;  </button>
+            <button
+                className="moon-carousel__button moon-carousel__button--previous"
+                type="button"
+                onClick={handlePrevious} > <CarouselArrowLeft />
+            </button>
+
+            <button
+                className="moon-carousel__button moon-carousel__button--next"
+                type="button"
+                onClick={handleNext} > <CarouselArrowRight />
+            </button>
 
             <div className="moon-carousel__dots">
                 {collection.slides.map((slide, index) => (
-                    <button 
-                    key={slide.id}
-                    className={`moon-carousel__dot ${
-                        index === activeIndex 
-                        ? "moon-carousel__dot--active" 
-                        : ""}`}
-                    type="button" 
-                    onClick={() => handleSelectSlide(index)} />
+                    <button
+                        key={slide.id}
+                        className={`moon-carousel__dot ${index === activeIndex
+                            ? "moon-carousel__dot--active"
+                            : ""}`}
+                        type="button"
+                        onClick={() => handleSelectSlide(index)} />
                 ))}
             </div>
         </section>
