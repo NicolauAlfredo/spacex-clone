@@ -334,6 +334,9 @@ body {
     padding-left: 2em;
   }
 }
+ .starlink-section--plans [data-group="go"] .starlink-plans__cards {
+    gap: 0.1em;
+  }
 
 /* Desktop */
 @media (min-width: 1024px) {
