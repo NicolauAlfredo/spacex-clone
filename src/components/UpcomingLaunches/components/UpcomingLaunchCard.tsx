@@ -1,5 +1,5 @@
 import type { UpcomingLaunchCardProps } from "../../../types/upcomingLaunches.types";
-import { ArrowRightIcon } from "../../header/components/icons/ArrowRightIcon";
+import { ArrowRightIcon } from "../../Header/components/icons/ArrowRightIcon";
 
 export function UpcomingLaunchCard({ launch }: UpcomingLaunchCardProps) {
   return (
