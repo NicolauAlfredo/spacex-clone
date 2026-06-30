@@ -1,7 +1,17 @@
+import { Footer } from "../../components/footer/Footer";
+import { Header } from "../home/components/Header";
+import { WhySection } from "./components/moonWhySection/WhySection";
+import { MoonHeroSection } from "./components/moonHeroSection/MoonHeroSection";
+import { MissionsSection } from "./components/moonMissionsSection/MissionsSection";
+
 export function MoonPage() {
   return (
     <>
-      <h1>Moon</h1>
+      <Header />
+      <MoonHeroSection />
+      <WhySection />
+      <MissionsSection />
+      <Footer />
     </>
   );
 }
