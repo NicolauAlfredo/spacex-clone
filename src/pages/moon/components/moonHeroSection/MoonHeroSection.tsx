@@ -32,7 +32,7 @@ export function MoonHeroSection() {
             {title.toUpperCase()}
           </h2>
 
-          <p className={`hero-section-${variant}__subtitle`}>
+          <p className={`hero-section-${variant}__description`}>
             {subtitle.toUpperCase()}
           </p>
         </div>
