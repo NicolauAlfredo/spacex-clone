@@ -1,0 +1,10 @@
+.horizontal-divider {
+  width: 100vw;
+  max-width: 100vw;
+  height: 1px;
+  background-color: #ddd;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
