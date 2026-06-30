@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { LanguageSelector } from "./LanguageSelector/LanguageSelector";
-import { UserIcon } from "./ShopIcons/UserIcon";
-import { SearchIcon } from "./ShopIcons/SearchIcon";
-import { CartIcon } from "./ShopIcons/CartIcon";
+import { LanguageSelector } from "./languageSelector/LanguageSelector";
+import { UserIcon } from "./shopIcons/UserIcon";
+import { SearchIcon } from "./shopIcons/SearchIcon";
+import { CartIcon } from "./shopIcons/CartIcon";
 import { useCart } from "../../../../../../hooks/useCart";
 
 export function ShopNav() {

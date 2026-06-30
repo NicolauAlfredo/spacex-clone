@@ -1,5 +1,5 @@
-import { xaiProducts } from "../../../../../data/ShopProductsData";
-import { ShopProductCard } from "./ShopProductCard/ShopProductCard";
+import { xaiProducts } from "../../../../../data/ShopProducts.data";
+import { ShopProductCard } from "./shopProductCard/ShopProductCard";
 import "./ShopProducts.css";
 
 const products = [...xaiProducts.XCollection, ...xaiProducts.XaiCollection];

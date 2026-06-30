@@ -1,5 +1,5 @@
 import type { Product } from "../models/Product";
-import type { ProductCollection } from "../data/ShopProductsData";
+import type { ProductCollection } from "../data/ShopProducts.data";
 
 export function getAllProducts(products: {
   XCollection: Product[];

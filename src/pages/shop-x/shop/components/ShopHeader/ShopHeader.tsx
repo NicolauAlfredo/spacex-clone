@@ -1,5 +1,5 @@
 import { ShopLogo } from "./ShopLogo";
-import { ShopNav } from "./ShopNav/ShopNav";
+import { ShopNav } from "./shopNav/ShopNav";
 import "./ShopHeader.css";
 
 export function ShopHeader() {

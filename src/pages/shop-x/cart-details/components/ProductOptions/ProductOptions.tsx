@@ -4,7 +4,7 @@ import {
   getDefaultSize,
 } from "../../../../../utils/productUtils";
 import "./ProductOptions.css";
-import ProductSizeSelector from "../ProductSizeSelector/ProductSizeSelector";
+import ProductSizeSelector from "../productSizeSelector/ProductSizeSelector";
 
 type ProductOptionsProps = {
   product: Product;

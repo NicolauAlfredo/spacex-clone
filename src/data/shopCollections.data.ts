@@ -1,5 +1,5 @@
 import { getPublicAssetPath } from "../utils/getPublicAssetPath";
-import type { ShopCollection } from "../pages/shop-x/shop/components/ShopCollections/shopCollectionTypes";
+import type { ShopCollection } from "../types/shopCollection.types";
 
 export const shopCollections: ShopCollection[] = [
   {

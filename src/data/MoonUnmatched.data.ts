@@ -1,4 +1,4 @@
-import type { MoonUnmatchedData } from "../types/moonUnmatched.type";
+import type { MoonUnmatchedData } from "../types/moonUnmatched.types";
 import { getPublicAssetPath } from "../utils/getPublicAssetPath";
 
 export const getMoonImageURL = (

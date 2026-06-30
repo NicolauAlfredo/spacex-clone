@@ -1,9 +1,9 @@
-import CartEmpty from "./components/CartEmpty/CartEmpty";
-import CartItem from "./components/CartItem/CartItem";
-import CartSummary from "./components/CartSummary/CartSummary";
-import CartTableHeader from "./components/CartTableHeader/CartTableHeader";
-import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
-import { ShopFooter } from "../shop/components/ShopFooter/ShopFooter";
+import CartEmpty from "./components/cartEmpty/CartEmpty";
+import CartItem from "./components/cartItem/CartItem";
+import CartSummary from "./components/cartSummary/CartSummary";
+import CartTableHeader from "./components/cartTableHeader/CartTableHeader";
+import { ShopHeader } from "../shop/components/shopHeader/ShopHeader";
+import { ShopFooter } from "../shop/components/shopFooter/ShopFooter";
 import "./CartPage.css";
 import { useCart } from "../../../hooks/useCart";
 

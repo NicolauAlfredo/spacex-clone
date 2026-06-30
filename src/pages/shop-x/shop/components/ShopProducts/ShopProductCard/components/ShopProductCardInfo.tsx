@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { Product } from "../../../../../../../data/ShopProductsData";
+import type { Product } from "../../../../../../../data/ShopProducts.data";
 import { formatPrice } from "../../../../../../../utils/formatPrice";
 
 type ShopProductCardInfoProps = {
