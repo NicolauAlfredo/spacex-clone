@@ -1,7 +1,6 @@
-import { InnerText } from "./components/moonInnerText/InnerText";
-import { InfoTable } from "./components/infoTable/InfoTable";
 import { moonWhySection } from "../../../../data/moonWhySection.data";
-
+import { InfoTable } from "./components/infoTable/InfoTable";
+import { InnerText } from "./components/moonInnerText/InnerText";
 import "./WhySection.css";
 
 export function WhySection() {

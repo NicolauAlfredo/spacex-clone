@@ -1,6 +1,5 @@
-import { InnerText } from "../moonWhySection/components/moonInnerText/InnerText";
 import { moonMissions } from "../../../../data/moonMissions.data";
-
+import { InnerText } from "../moonWhySection/components/moonInnerText/InnerText";
 import "./MissionsSection.css";
 
 export function MissionsSection() {

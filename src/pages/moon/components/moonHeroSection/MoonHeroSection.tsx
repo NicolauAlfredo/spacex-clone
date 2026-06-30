@@ -1,5 +1,4 @@
-import { moonHero } from "../../../../data/moonHero.data.ts";
-
+import { moonHero } from "../../../../data/moonHero.data";
 import "./MoonHeroSection.css";
 
 export function MoonHeroSection() {

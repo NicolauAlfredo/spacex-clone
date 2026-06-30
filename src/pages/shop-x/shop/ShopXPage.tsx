@@ -1,6 +1,6 @@
+import { ShopCollections } from "./components/shopCollections/ShopCollections";
 import { ShopFooter } from "./components/shopFooter/ShopFooter";
 import { ShopHeader } from "./components/shopHeader/ShopHeader";
-import { ShopCollections } from "./components/shopCollections/ShopCollections";
 import { ShopProducts } from "./components/shopProducts/ShopProducts";
 
 export function ShopXPage() {

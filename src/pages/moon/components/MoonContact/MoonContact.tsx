@@ -1,22 +1,21 @@
-import { moonContactData } from "../../../../data/MoonContact.data"
-import "./MoonContact.css"
+import { moonContactData } from "../../../../data/MoonContact.data";
+import "./MoonContact.css";
 
 export function MoonContact() {
-    return (
-        <section className="moon-contact">
-            <div className="moon-contact__divider" />
+  return (
+    <section className="moon-contact">
+      <div className="moon-contact__divider" />
 
-            <p className="moon-contact__message">
-                {moonContactData.message}
-            </p>
+      <p className="moon-contact__message">{moonContactData.message}</p>
 
-            <a className="moon-contact__email" href={`mailto:${moonContactData.email}`}>
-                {moonContactData.email}
-            </a>
+      <a
+        className="moon-contact__email"
+        href={`mailto:${moonContactData.email}`}
+      >
+        {moonContactData.email}
+      </a>
 
-            <button>
-                {moonContactData.buttonText}
-            </button>
-        </section>
-    )
+      <button>{moonContactData.buttonText}</button>
+    </section>
+  );
 }

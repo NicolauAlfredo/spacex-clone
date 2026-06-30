@@ -1,14 +1,4 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import ProductGallery from "./components/productGallery/ProductGallery";
-import ProductInfo from "./components/productInfo/ProductInfo";
-import { xaiProducts } from "../../../data/ShopProducts.data";
-import SizeChart from "./components/SizeChart";
-import RelatedProducts from "./components/relatedProducts/RelatedProducts";
-import { useNavigate } from "react-router-dom";
-import { useCart } from "../../../hooks/useCart";
-import type { Product } from "../../../models/Product";
-
+import { useNavigate, useParams } from "react-router-dom";
 import {
   findProductById,
   getAllProducts,
@@ -16,11 +6,19 @@ import {
   getDefaultSize,
   getRelatedProducts,
 } from "../../../utils/productUtils";
-import "./ProductDetailsPage.css";
 import NotFound from "./components/notFound/NotFound";
-import HorizontalDivider from "./components/horizontalDivider/HorizontalDivider";
+import type { Product } from "../../../models/Product";
+import { useCart } from "../../../hooks/useCart";
+import { useState } from "react";
+import { xaiProducts } from "../../../data/ShopProducts.data";
 import { ShopHeader } from "../shop/components/shopHeader/ShopHeader";
+import ProductGallery from "./components/productGallery/ProductGallery";
+import ProductInfo from "./components/productInfo/ProductInfo";
+import SizeChart from "./components/SizeChart";
+import HorizontalDivider from "./components/horizontalDivider/HorizontalDivider";
+import RelatedProducts from "./components/relatedProducts/RelatedProducts";
 import { ShopFooter } from "../shop/components/shopFooter/ShopFooter";
+import "./ProductDetailsPage.css";
 
 function ProductDetailsPage() {
   const { productId } = useParams();

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import "./MoonCarousel.css";
 import type { CarouselCollection } from "../../../../types/moonCarousel.types";
 import { CarouselArrowLeft } from "./icons/CarouselArrowLeft";
 import { CarouselArrowRight } from "./icons/CarouselArrowRight";
-
 interface CarouselProps {
   collection: CarouselCollection;
 }
+
+import "./MoonCarousel.css";
 
 export default function Carousel({ collection }: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
