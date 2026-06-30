@@ -6,8 +6,11 @@ import "./MissionsSection.css";
 export function MissionsSection() {
   return (
     <section className="moon hero-section hero-section-missions">
-      <picture className="hero-section-missions__img">
-        <source media="(min-width: 1440px)" src={moonMissions.desktopImage} />
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcSet={moonMissions.desktopImage}
+        />
 
         <img
           className="hero-section-missions__img"

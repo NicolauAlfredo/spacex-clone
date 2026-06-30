@@ -10,7 +10,22 @@ export function InnerText({
     <>
       <h2 className={`${className}__title`}>{title.toUpperCase()}</h2>
 
-      <p className={`${className}__description`}>{paragraph}</p>
+      {Array.isArray(paragraph) ? (
+        paragraph.map((item) => (
+          <p key={item.text} className={`${className}__description`}>
+            {item.text}
+
+            {item.highlight && (
+              <>
+                {" "}
+                <strong>{item.highlight}</strong>
+              </>
+            )}
+          </p>
+        ))
+      ) : (
+        <p className={`${className}__description`}>{paragraph}</p>
+      )}
 
       {buttonText && (
         <a className="button button--primary" href="#">

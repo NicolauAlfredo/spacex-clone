@@ -1,8 +1,11 @@
-import type { ReactNode } from "react";
+export type ParagraphItem = {
+  text: string;
+  highlight?: string;
+};
 
 export type InnerTextProps = {
   title: string;
-  paragraph: ReactNode;
+  paragraph: string | ParagraphItem[];
   className: string;
   buttonText?: string;
 };
