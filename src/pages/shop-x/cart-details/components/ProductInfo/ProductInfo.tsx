@@ -1,8 +1,8 @@
 import type { Product } from "../../../../../models/Product";
 import { formatPrice } from "../../../../../utils/formatPrice";
-import AddToCartButton from "../addToCartButton/AddToCartButton";
-import ProductOptions from "../productOptions/ProductOptions";
-import QuantitySelector from "../quantitySelector/QuantitySelector";
+import AddToCartButton from "../AddToCartButton/AddToCartButton";
+import ProductOptions from "../ProductOptions/ProductOptions";
+import QuantitySelector from "../QuantitySelector/QuantitySelector";
 import "./ProductInfo.css";
 
 type ProductInfoProps = {

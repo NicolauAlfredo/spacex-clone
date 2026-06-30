@@ -6,18 +6,18 @@ import {
   getDefaultSize,
   getRelatedProducts,
 } from "../../../utils/productUtils";
-import NotFound from "./components/notFound/NotFound";
+import NotFound from "./components/NotFound/NotFound";
 import type { Product } from "../../../models/Product";
 import { useCart } from "../../../hooks/useCart";
 import { useState } from "react";
 import { xaiProducts } from "../../../data/ShopProducts.data";
-import { ShopHeader } from "../shop/components/shopHeader/ShopHeader";
-import ProductGallery from "./components/productGallery/ProductGallery";
-import ProductInfo from "./components/productInfo/ProductInfo";
+import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
+import ProductGallery from "./components/ProductGallery/ProductGallery";
+import ProductInfo from "./components/ProductInfo/ProductInfo";
 import SizeChart from "./components/SizeChart";
-import HorizontalDivider from "./components/horizontalDivider/HorizontalDivider";
-import RelatedProducts from "./components/relatedProducts/RelatedProducts";
-import { ShopFooter } from "../shop/components/shopFooter/ShopFooter";
+import HorizontalDivider from "./components/HorizontalDivider/HorizontalDivider";
+import RelatedProducts from "./components/RelatedProducts/RelatedProducts";
+import { ShopFooter } from "../shop/components/ShopFooter/ShopFooter";
 import "./ProductDetailsPage.css";
 
 function ProductDetailsPage() {
