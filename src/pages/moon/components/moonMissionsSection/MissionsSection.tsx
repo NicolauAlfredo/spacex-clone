@@ -1,4 +1,4 @@
-import { InnerText } from "../monnWhySection/components/moonInnerText/InnerText";
+import { InnerText } from "../moonWhySection/components/moonInnerText/InnerText";
 import { moonMissions } from "../../../../data/moonMissions.data";
 
 import "./MissionsSection.css";
