@@ -1,7 +1,5 @@
 import type { InnerTextProps } from "../../../../../../types/innerText.types";
 
-import "./InnerText.css";
-
 export function InnerText({
   title,
   paragraph,
@@ -12,7 +10,7 @@ export function InnerText({
     <>
       <h2 className={`${className}__title`}>{title.toUpperCase()}</h2>
 
-      <p className={`${className}__paragraph`}>{paragraph}</p>
+      <p className={`${className}__description`}>{paragraph}</p>
 
       {buttonText && (
         <a className="button button--primary" href="#">
