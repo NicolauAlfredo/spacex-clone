@@ -1,4 +1,4 @@
-import { LanguageSelector } from "../ShopHeader/shopNav/languageSelector/LanguageSelector";
+import { LanguageSelector } from "../ShopHeader/ShopNav/LanguageSelector/LanguageSelector";
 import "./ShopFooter.css";
 
 export function ShopFooter() {

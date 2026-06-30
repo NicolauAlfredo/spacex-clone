@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../../../../../../hooks/useCart";
-import { LanguageSelector } from "./languageSelector/LanguageSelector";
-import { UserIcon } from "./shopIcons/UserIcon";
-import { SearchIcon } from "./shopIcons/SearchIcon";
-import { CartIcon } from "./shopIcons/CartIcon";
+import { LanguageSelector } from "./LanguageSelector/LanguageSelector";
+import { UserIcon } from "./ShopIcons/UserIcon";
+import { SearchIcon } from "./ShopIcons/SearchIcon";
+import { CartIcon } from "./ShopIcons/CartIcon";
 
 export function ShopNav() {
   const { totalQuantity } = useCart();
