@@ -1,4 +1,4 @@
-import { moonWhySection } from "../../../../data/moonWhySection.data";
+import { moonWhySection } from "../../../../content/moonWhySection.content";
 import { InfoTable } from "./components/InfoTable/InfoTable";
 import { InnerText } from "./components/MoonInnerText/InnerText";
 import "./WhySection.css";

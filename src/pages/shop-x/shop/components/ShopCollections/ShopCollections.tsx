@@ -1,4 +1,4 @@
-import { shopCollections } from "../../../../../data/shopCollections.data";
+import { shopCollections } from "../../../../../content/shopCollections.content";
 import { ShopCollectionCard } from "./components/ShopCollectionCard";
 import "./ShopCollections.css";
 
