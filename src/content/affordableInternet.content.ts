@@ -9,7 +9,7 @@ export const content: AffordableInternetContent = {
   description: "No upfront hardware cost in select areas.",
   priceLabel: "STARTING AT",
   price: 55,
-  starlinkBackground: {
+  background: {
     desktop: getStarlinkImageURL("v4_night_sky_desktop.webp"),
     mobile: getStarlinkImageURL("v4_night_sky_mobile.webp"),
     alt: "Fast, affordable internet",

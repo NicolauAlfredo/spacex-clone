@@ -5,5 +5,5 @@ export type AffordableInternetContent = {
   description: string;
   priceLabel: string;
   price: number;
-  starlinkBackground: Background;
+  background: Background;
 };

@@ -15,13 +15,13 @@ export function AffordableInternet() {
 
       <picture>
         <source
-          srcSet={content.starlinkBackground.desktop}
+          srcSet={content.background.desktop}
           media="(min-width: 1024px)"
         />
 
         <img
-          src={content.starlinkBackground.mobile}
-          alt={content.starlinkBackground.alt}
+          src={content.background.mobile}
+          alt={content.background.alt}
           className="affordable-internet__image"
         />
       </picture>
