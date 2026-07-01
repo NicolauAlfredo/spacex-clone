@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { UpcomingLaunchCard } from "./components/UpcomingLaunchCard";
-import { upcomingLaunches } from "../../data/upcomingLaunches.data";
+import { upcomingLaunches } from "../../content/upcomingLaunches.content";
 import { GridIcon } from "../Header/components/Icons/GridIcon";
 import type { UpcomingLaunchesProps } from "../../types/upcomingLaunches.types";
 

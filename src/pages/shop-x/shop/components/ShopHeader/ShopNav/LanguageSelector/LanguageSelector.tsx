@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { languageOptions } from "../../../../../../../data/languageOptions.data";
+import { languageOptions } from "../../../../../../../content/languageOptions.content";
 import type { LanguageOption } from "../../../../../../../types/language.types";
 import { ChevronDownIcon } from "../ShopIcons/ChevronDownIcon";
 

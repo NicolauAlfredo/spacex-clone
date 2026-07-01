@@ -1,4 +1,4 @@
-import { moonMissions } from "../../../../data/moonMissions.data";
+import { moonMissions } from "../../../../content/moonMissions.content";
 import { InnerText } from "../MoonWhySection/components/MoonInnerText/InnerText";
 import "./MissionsSection.css";
 
