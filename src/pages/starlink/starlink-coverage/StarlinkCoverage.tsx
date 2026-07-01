@@ -2,7 +2,7 @@
 import CarIce from "../../../../public/assets/pages/starlink/images/car_on_ice.webp";
 import { StarlinkButton } from "../../../components/Buttons/buttons";
 import { SectionContent } from "../../../components/content/Content";
-import "../starlink-coverage/starlinkCoverage.css"
+import "../starlink-coverage/StarlinkCoverage.css"
 
 
 type StarlinkCoverageProps = {

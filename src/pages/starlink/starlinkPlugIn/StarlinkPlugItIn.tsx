@@ -2,7 +2,7 @@ import SunRoof from "../../../../public/assets/pages/starlink/images/roof_sunny.
 import Yard from "../../../../public/assets/pages/starlink/images/residential_yard.webp";
 import { StarlinkButton } from "../../../components/Buttons/buttons";
 import { SectionContent } from "../../../components/content/Content";
-import "./starlinkPlugItIn.css"
+import "./StarlinkPlugItIn.css"
 
 
 type StarlinkPlugItInProps = {
