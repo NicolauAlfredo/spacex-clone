@@ -1,0 +1,35 @@
+body {
+  overflow-x: hidden;
+}
+
+.product-page {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+.product-detail {
+  padding: 0;
+}
+
+.product-detail__container { 
+  margin-inline: auto;
+}
+
+.product-detail__layout {
+  display: grid;
+}
+
+@media (min-width: 1024px) {
+  .product-detail {
+    padding: 4rem 3rem 5rem;
+  }
+
+  .product-detail__container {
+    width: min(100%, 1280px);
+  }
+
+  .product-detail__layout {
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.55fr);
+    gap: 4rem;
+  }
+}

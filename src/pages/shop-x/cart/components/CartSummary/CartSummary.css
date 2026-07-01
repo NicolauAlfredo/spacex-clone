@@ -1,0 +1,23 @@
+.cart__summary {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.cart__summary-total {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cart__summary-note {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .cart__summary {
+    justify-items: end;
+    text-align: right;
+  }
+}

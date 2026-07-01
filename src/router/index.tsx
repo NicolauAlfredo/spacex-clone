@@ -1,6 +1,8 @@
 import { HomePage } from "../pages/home/HomePage";
 import { MoonPage } from "../pages/moon/MoonPage";
-import { ShopXPage } from "../pages/shop-x/ShopXPage";
+import ProductDetailsPage from "../pages/shop-x/cart-details/ProductDetailsPage";
+import CartPage from "../pages/shop-x/cart/CartPage";
+import { ShopXPage } from "../pages/shop-x/shop/ShopXPage";
 import { StarlinkPage } from "../pages/starlink/StarlinkPage";
 
 import { createHashRouter } from "react-router-dom";
@@ -21,5 +23,13 @@ export const router = createHashRouter([
   {
     path: "/moon",
     element: <MoonPage />,
+  },
+  {
+    path: "/cart",
+    element: <CartPage />,
+  },
+  {
+    path: "/product/:productId",
+    element: <ProductDetailsPage />,
   },
 ]);

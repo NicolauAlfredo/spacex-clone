@@ -1,0 +1,35 @@
+.cart-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+}
+
+.cart {
+  width: 100%;
+  padding: 2rem 1.25rem;
+}
+
+.cart__container {
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.cart__title {
+  margin: 0 0 2.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cart__items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .cart {
+    padding: 4rem 3rem 6rem;
+  }
+}
