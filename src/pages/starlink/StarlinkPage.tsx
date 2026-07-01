@@ -1,4 +1,4 @@
-import { Header } from './header/header'
+import { Header } from './header/StarlinkHeader'
 import StarlinkCoverage from './starlink-coverage/StarlinkCoverage';
 import StarlinkGlobal from './starlink-global/StarlinkGlobal';
 import StarlinkPlugItIn from './starlinkPlugIn/StarlinkPlugItIn';
