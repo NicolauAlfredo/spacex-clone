@@ -1,0 +1,82 @@
+.moon-unmatched {
+    position: relative;
+    min-height: 42rem;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+.moon-unmatched__content {
+    position: absolute;
+    z-index: 2;
+    top: 4rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    max-width: none;
+}
+
+.moon-unmatched__title {
+    margin: 0 0 1.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.moon-unmatched__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.moon-unmatched__description p {
+    margin: 0;
+    max-height: 30rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.moon-unmatched__image {
+    width: 100%;
+    height: 42rem;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .moon-unmatched {
+        min-height: 100vh;
+    }
+
+    .moon-unmatched__image {
+        height: 100svh;
+        object-position: center;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    .moon-unmatched__content {
+        top: 8%;
+        left: 5%;
+        max-width: 36rem;
+    }
+
+    .moon-unmatched__description {
+        gap: 1.75rem;
+    }
+
+    .moon-unmatched__description p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .moon-unmatched__image {
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
