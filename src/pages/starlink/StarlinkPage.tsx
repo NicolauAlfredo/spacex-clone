@@ -1,4 +1,4 @@
-import { Header } from './header/header'
+import { Header } from './header/StarlinkHeader'
 import { StarlinkResidentialButton } from '../../components/Buttons/buttons'
 import { StarlinkButton } from '../../components/Buttons/buttons'
 import { SectionContent } from '../../components/content/Content'
