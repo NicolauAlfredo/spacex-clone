@@ -1146,21 +1146,15 @@ body {
   object-fit: cover;
   object-position: 15% 50%;
 }
-.starlink-section--plans {
-}
 
 /* Tablet */
 @media (min-width: 768px) {
-  .starlink-section--plans {
-  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
   .starlink-section__text--container-available-globally {
     left: 45%;
-  }
-  .starlink-section--plans {
   }
 }
 
@@ -1182,13 +1176,9 @@ body {
 .starlink-section__image-yard {
   display: none;
 }
-.starlink-section--hardware {
-}
 
 /* Tablet */
 @media (min-width: 768px) {
-  .starlink-section--hardware {
-  }
 }
 
 /* Desktop */
@@ -1206,8 +1196,6 @@ body {
     z-index: 0;
     object-fit: cover;
     user-select: none;
-  }
-  .starlink-section--hardware {
   }
 }
 
