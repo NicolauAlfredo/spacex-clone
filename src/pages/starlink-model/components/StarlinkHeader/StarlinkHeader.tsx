@@ -6,9 +6,10 @@ import { HeaderToggle } from "../StarlinkLink/StarlinkHeaderToggle/StarlinkToggl
 import { StarlinkLogo } from "../StarlinkLogo/StarlinkLogo";
 import { NavLinks } from "./components/NavLinks/NavLinks";
 import { IconMenu } from "../StarlinkLink/StarlinkMenu/MenuIcon";
-
+import { StarlinkCallMenu } from "../StarlinkLink/StarlinkCallMenu/StarlinkCallMenu";
 
 import "./StarlinkHeader.css";
+
 
 
 export const StarlinkHeader = () => {
@@ -20,6 +21,7 @@ export const StarlinkHeader = () => {
      <StarlinkLogo />
      <NavLinks />
      <HeaderToggle />
+     <StarlinkCallMenu />
      <IconMenu />
       </div>
     </header>
