@@ -1,0 +1,23 @@
+.header__btn {
+  margin-right: 0.3em;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(250, 250, 250, 0.562);
+  background: #414550;
+
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .header__btn[aria-label="Call"] {
+    display: none;
+  }
+  .header__btn[aria-label="Menu"] {
+    width: 50px;
+    height: 35px;
+  }
+}
