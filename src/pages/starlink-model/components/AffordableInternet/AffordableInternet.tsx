@@ -13,18 +13,7 @@ export function AffordableInternet() {
         <span>/mo</span>
       </p>
 
-      <picture>
-        <source
-          srcSet={content.background.desktop}
-          media="(min-width: 1024px)"
-        />
-
-        <img
-          src={content.background.mobile}
-          alt={content.background.alt}
-          className="affordable-internet__image"
-        />
-      </picture>
+     
     </div>
   );
 }

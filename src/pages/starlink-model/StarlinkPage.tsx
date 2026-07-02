@@ -12,9 +12,10 @@ import "./StarlinkPage.css";
 
 export function StarlinkPage() {
   return (
-    <>
-      <StarlinkHeader />
+    <><div>
+       <StarlinkHeader />
       <AffordableInternet />
+      </div>
       <Plans />
       <ReliableResilient />
       <InternetForTravel />
