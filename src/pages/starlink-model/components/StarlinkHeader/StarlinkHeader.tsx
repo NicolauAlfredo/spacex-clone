@@ -1,13 +1,21 @@
-import { StarlinkLogo } from "./components/Logo/StarlinkLogo";
-import { StarlinkHamburgerMenu } from "./components/StarlinkHamburgerMenu";
+
+
+
+import { StarlinkLogo } from "../StarlinkLogo/StarlinkLogo";
 import "./StarlinkHeader.css";
 
-export function StarlinkHeader() {
+
+export const StarlinkHeader = () => {
+  
+     
   return (
-    <div>
-      <StarlinkLogo />
-      <StarlinkHamburgerMenu />
-      <h1>Header - Felice</h1>
-    </div>
+   <header className="header">
+      <div className="header__container">
+     <StarlinkLogo />
+     
+ 
+
+      </div>
+    </header>
   );
-}
+};

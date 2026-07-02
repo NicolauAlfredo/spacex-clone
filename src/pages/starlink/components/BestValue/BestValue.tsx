@@ -1,3 +1,5 @@
+import  "src/pages/starlink/components/BestValue/BestValue.css"
+
 export function BestValue() {
   return (
     <section className="starlink-section starlink-section--best-value">
