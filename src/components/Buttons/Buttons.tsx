@@ -3,24 +3,7 @@ import { StarlinkPlansHome, StarlinkPlansGo } from "./buttons.plans";
 
 
 
-type ButtonProps = {
-  label: string;
-  variant?: "primary" | "ghost";
-  href?: string;
-};
-export const StarlinkButton = ({
-  label,
-  variant = "primary",
-  href,
-}: ButtonProps) => {
-  return href ? (
-    <a href={href} className={`btn btn--${variant}`}>
-      {label}
-    </a>
-  ) : (
-    <button className={`btn btn--${variant}`}>{label}</button>
-  );
-}; // general starlink buttons
+ 
 
 export const StarlinkResidentialButton = () => {
   const [residential, setResidential] = useState<"home" | "go">("home");

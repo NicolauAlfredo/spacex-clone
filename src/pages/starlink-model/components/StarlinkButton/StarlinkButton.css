@@ -1,0 +1,43 @@
+.btn--primary {
+  width: 98%;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--ghost {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .starlink-section--best-value .btn--primary {
+    width: 135px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn--ghost {
+    background: rgba(52, 58, 69, 0.45);
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.6rem 2rem;
+    border-radius: 0.2rem;
+  }
+
+  .starlink-section--best-value .btn--primary {
+    width: auto;
+    padding: 0.6rem 2rem;
+  }
+}
