@@ -20,6 +20,7 @@ export const StarlinkHeader = () => {
       <div className="header__container">
      <StarlinkLogo />
      <NavLinks />
+     
      <HeaderToggle />
      <StarlinkCallMenu />
      <IconMenu />
