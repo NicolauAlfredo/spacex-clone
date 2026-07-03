@@ -11,6 +11,7 @@ import { StarlinkBackground } from "./components/StarlinkBackground/StarlinkBack
 import { starlinkBackgrounds } from "../../content/starlinkbackground.content";
 
 import "./StarlinkPage.css";
+import { StarlinkOverlay } from "./components/StarlinkBackground/StarlinkBackgroundOverlay/StarlinkOverlay";
 
 export function StarlinkPage() {
   return (
@@ -19,6 +20,7 @@ export function StarlinkPage() {
         <StarlinkBackground 
   background={starlinkBackgrounds.find(bg => bg.id === 'night-sky')!} 
 />
+        <StarlinkOverlay variant="best-value" />
         <StarlinkHeader />
         <AffordableInternet />
       </div>
