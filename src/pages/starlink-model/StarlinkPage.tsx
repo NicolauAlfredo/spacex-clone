@@ -14,11 +14,11 @@ import "./StarlinkPage.css";
 
 export function StarlinkPage() {
   return (
-    <> 
-    <div className="starlink-section starlink-section--best-value">
-        <StarlinkBackground 
-  background={starlinkBackgrounds.find(bg => bg.id === 'night-sky')!} 
-/>
+    <>
+      <div className="starlink-section starlink-section--best-value">
+        <StarlinkBackground
+          background={starlinkBackgrounds.find((bg) => bg.id === "night-sky")!}
+        />
         <StarlinkHeader />
         <AffordableInternet />
       </div>
