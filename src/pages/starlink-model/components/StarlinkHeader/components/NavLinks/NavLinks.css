@@ -8,7 +8,7 @@
 @media (min-width: 1024px) {
      .header__call {
     display: flex;
-    color: var(--color-secondary);
+    color:#bbbec3;
     font-size: 0.9em;
     white-space: nowrap;
   }
@@ -17,7 +17,7 @@
     font-size: 0.9em;
     text-decoration: underline;
     font-weight: 700;
-    color: var(--color-secondary);
+    color: #bbbec3;
   }
    .header__nav {
     display: flex;
