@@ -7,8 +7,10 @@ import { HighSpeedInternet } from "./components/HighSpeedInternet/HighSpeedInter
 import { AvailableGlobally } from "./components/AvailableGlobally/AvailableGlobally";
 import { PlugItInPoint } from "./components/PlugItInPoint/PlugItInPoint";
 import { StarlinkFooter } from "./components/StarlinkFooter/StarlinkFooter";
+import { Coverage } from "./components/Coverage/StarlinkCoverage";
 
 import "./StarlinkPage.css";
+
 
 export function StarlinkPage() {
   return (
@@ -18,6 +20,7 @@ export function StarlinkPage() {
       <Plans />
       <ReliableResilient />
       <InternetForTravel />
+      <Coverage />
       <HighSpeedInternet />
       <AvailableGlobally />
       <PlugItInPoint />
