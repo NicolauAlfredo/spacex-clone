@@ -7,11 +7,11 @@ import { HighSpeedInternet } from "./components/HighSpeedInternet/HighSpeedInter
 import { AvailableGlobally } from "./components/AvailableGlobally/AvailableGlobally";
 import { PlugItInPoint } from "./components/PlugItInPoint/PlugItInPoint";
 import { StarlinkFooter } from "./components/StarlinkFooter/StarlinkFooter";
-import { StarlinkBackground } from "./components/StarlinkBackground/StarlinkBackground";
+import { StarlinkBackground } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackground";
 import { starlinkBackgrounds } from "../../content/starlinkbackground.content";
 
 import "./StarlinkPage.css";
-import { StarlinkOverlay } from "./components/StarlinkBackground/StarlinkBackgroundOverlay/StarlinkOverlay";
+import { StarlinkOverlay } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackgroundOverlay/StarlinkOverlay";
 
 export function StarlinkPage() {
   return (
