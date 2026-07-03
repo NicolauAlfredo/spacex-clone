@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { StarlinkPlansGroup } from "../Plans/Plans";
 import { StarlinkPlansHome, StarlinkPlansGo } from "./buttons.plans";
 
 
