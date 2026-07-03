@@ -7,13 +7,18 @@ import { HighSpeedInternet } from "./components/HighSpeedInternet/HighSpeedInter
 import { AvailableGlobally } from "./components/AvailableGlobally/AvailableGlobally";
 import { PlugItInPoint } from "./components/PlugItInPoint/PlugItInPoint";
 import { StarlinkFooter } from "./components/StarlinkFooter/StarlinkFooter";
+import { StarlinkBackground } from "./components/StarlinkBackground/StarlinkBackground";
+import { starlinkBackgrounds } from "../../content/starlinkbackground.content";
 
 import "./StarlinkPage.css";
 
 export function StarlinkPage() {
   return (
     <>
-      <div>
+      <div className="starlink-section starlink-section--best-value">
+        <StarlinkBackground
+          background={starlinkBackgrounds.find((bg) => bg.id === "night-sky")!}
+        />
         <StarlinkHeader />
         <AffordableInternet />
       </div>
