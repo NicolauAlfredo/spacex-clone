@@ -1,5 +1,5 @@
 import { StarlinkButton } from "../../../../components/Buttons/Buttons";
-import { content } from "../../../../content/starlinkCoverage.content";
+import { content } from "../../../../content/InternetForTravel.content";
 import "./InternetForTravel.css";
 
 export function InternetForTravel() {

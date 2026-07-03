@@ -1,5 +1,5 @@
-import { starlinkHeaderToggles } from '../../../../../content/starlinkheadertoggle.content';
-import './StarlinkToggleHeader.css';
+import { starlinkHeaderToggles } from "../../../../../../content/starlinkheadertoggle.content";
+import "./StarlinkToggleHeader.css";
 
 export const HeaderToggle = () => {
   return (
@@ -7,7 +7,7 @@ export const HeaderToggle = () => {
       {starlinkHeaderToggles.map((toggle, index) => (
         <a
           key={toggle.label}
-          className={`header__toggles-btn${index === 0 ? ' header__toggles-btn--active' : ''}`}
+          className={`header__toggles-btn${index === 0 ? " header__toggles-btn--active" : ""}`}
           href={toggle.link}
         >
           {toggle.label}
