@@ -13,13 +13,18 @@
 
   cursor: pointer;
 }
+.header__btn[aria-label="Call"] {
+  margin-left: 5.5em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__btn[aria-label="Call"] {
+    margin-left: auto;
+    margin-right: 1em;
+  }
+}
 
 @media (min-width: 1024px) {
   .header__btn[aria-label="Call"] {
     display: none;
-  }
-  .header__btn[aria-label="Menu"] {
-    width: 50px;
-    height: 35px;
   }
 }
