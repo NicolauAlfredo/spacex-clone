@@ -1,38 +1,7 @@
 import { useState } from "react";
 import { StarlinkPlansHome, StarlinkPlansGo } from "./buttons.plans";
 
-export const Buttons = () => {
-  const [active, setActive] = useState<"personal" | "business">("personal");
 
-  const handleClick = (tab: "personal" | "business") => {
-    setActive(tab);
-  };
-
-  return (
-    <div className="header__toggles">
-      <button
-        className={
-          active === "personal"
-            ? "header__toggles-btn header__toggles-btn--active"
-            : "header__toggles-btn"
-        }
-        onClick={() => handleClick("personal")}
-      >
-        Personal
-      </button>
-      <button
-        className={
-          active === "business"
-            ? "header__toggles-btn header__toggles-btn--active"
-            : "header__toggles-btn"
-        }
-        onClick={() => handleClick("business")}
-      >
-        Business
-      </button>
-    </div>
-  );
-}; // header btn personal business
 
 type ButtonProps = {
   label: string;

@@ -1,6 +1,7 @@
 
 
 
+import { HeaderToggle } from "../StarlinkLink/StarlinkHeaderToggle/StarlinkToggleHeader";
 import { StarlinkLogo } from "../StarlinkLogo/StarlinkLogo";
 import { NavLinks } from "./components/NavLinks/NavLinks";
 
@@ -15,6 +16,7 @@ export const StarlinkHeader = () => {
       <div className="header__container">
      <StarlinkLogo />
      <NavLinks />
+     <HeaderToggle />
 
 
       </div>
