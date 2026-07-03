@@ -1,5 +1,6 @@
 import { affordableInternetContent as content } from "../../../../content/affordableInternet.content";
 import { formatPrice } from "../../../../utils/formatPrice";
+import { StarlinkButton } from "../StarlinkButton/StarlinkButton";
 import "./AffordableInternet.css";
 
 export function AffordableInternet() {
@@ -11,6 +12,10 @@ export function AffordableInternet() {
         {formatPrice(content.price, "en-US", "USD")}
         <span className="starlink-section__subtitle--price">/mo</span>
       </p>
+      <div className="starlink-section__actions">
+  <StarlinkButton label="Get Started" variant="primary" onClick={() => console.log('go to checkout')} />
+  <StarlinkButton label="View Pricing" href="/pricing" variant="ghost" />
+</div>
     </div>
   );
 }
