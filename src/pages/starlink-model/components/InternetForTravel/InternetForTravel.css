@@ -152,6 +152,10 @@
     object-position: center center;
   }
 
+  .starlink-section__link--container{
+    margin-top: 20px;
+  }
+
   .btn--primary{
     padding: 30px;
     line-height: 1.75;
