@@ -25,7 +25,7 @@ export function InternetForTravel() {
               {content.description}
             </p>
             <div className="starlink-section__link--container">
-              <StarlinkButton href="#" label="Learn More" variant="primary" />
+              <StarlinkButton  label="Learn More" variant="primary" />
             </div>
           </div>
         </div>
