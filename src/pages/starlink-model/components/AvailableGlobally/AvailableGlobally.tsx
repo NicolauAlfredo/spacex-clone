@@ -1,5 +1,5 @@
 import "./AvailableGlobally.css";
-import { StarlinkButton } from "../../../../components/Buttons/Buttons";
+import { StarlinkButton } from "../StarlinkButton/StarlinkButton";
 import { content } from "../../../../content/availableGlobally.content";
 
 export function AvailableGlobally() {

@@ -1,4 +1,4 @@
-import { StarlinkButton } from "../../../../components/Buttons/Buttons";
+import { StarlinkButton } from "../StarlinkButton/StarlinkButton";
 import { content } from "../../../../content/InternetForTravel";
 import "./InternetForTravel.css";
 

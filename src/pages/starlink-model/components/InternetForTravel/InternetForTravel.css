@@ -63,22 +63,6 @@
   object-position: 85% center;
 }
 
-.starlink-section__link--container {
-  margin-top: 8px;
-  background-color: white;
-  border-radius: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 36px;
-}
-
-.btn--primary {
-  padding: 6px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
 /* Tablet */
 @media (min-width: 768px) {
    .starlink-section{
@@ -156,8 +140,4 @@
     margin-top: 20px;
   }
 
-  .btn--primary{
-    padding: 30px;
-    line-height: 1.75;
-  }
 }
