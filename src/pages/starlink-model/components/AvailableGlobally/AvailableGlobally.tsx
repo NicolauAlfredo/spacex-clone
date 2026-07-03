@@ -25,7 +25,7 @@ export function AvailableGlobally() {
                   {content.description}
                 </p>
                 <div className="starlink-section__link--container">
-                  <StarlinkButton href="#" label="Check Availability" variant="primary" />
+                  <StarlinkButton label="Check Availability" variant="primary" />
                 </div>
               </div>
             </div>
