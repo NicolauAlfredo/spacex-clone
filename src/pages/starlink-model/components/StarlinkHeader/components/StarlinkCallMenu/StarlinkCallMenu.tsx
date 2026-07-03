@@ -1,5 +1,4 @@
-import { starlinkCallNumber } from "../../../../../content/starlinkcallnumber.content";
-
+import { starlinkCallNumber } from "../../../../../../content/starlinkcallnumber.content";
 
 import "./StarlinkCallMenu.css";
 

@@ -13,6 +13,8 @@ export function formatPrice(
 ): string {
   return new Intl.NumberFormat(locale, {
     style: "currency",
+    minimumFractionDigits: 0,   
+    maximumFractionDigits: 0, 
     currency,
   }).format(value);
 }
