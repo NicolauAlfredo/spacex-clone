@@ -57,7 +57,7 @@
 
 .starlink-section--plans .starlink-section__title {
   font-size: 1.1em;
-  margin-right: 5em;
+ 
 }
 .starlink-section--plans
   .starlink-section__content:nth-child(4)
@@ -69,7 +69,7 @@
   font-weight: 700;
   color: #a0a0a0;
   text-align: left;
-  margin-top: 1em;
+  margin-bottom: 1em;
   line-height: 1.7;
   text-transform: none;
   max-width: 200px;
@@ -80,22 +80,28 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.8em;
   margin-top: 1em;
   color: #a0a0a0;
   margin-right: 4.8em;
 }
 
 .starlink-section--plans .starlink-section__price-container {
-  margin-right: 11em;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-top: 1em;
+ 
+  
 }
 .starlink-section--plans .starlink-section__price {
-  margin-left: 0.5em;
-  font-size: 2.2em;
+  
+  font-size: 5.5em !important;
+}
+.starlink-section--plans .starlink-section__subtitle {
+  font-size: 0.7em;
+  margin-left: -1em;
+}
+.starlink-section--plans .mo_class {
+  font-size: 3em;
 }
 .starlink-section--plans__footer {
   color: #a0a0a0;
@@ -109,9 +115,8 @@
   gap: 0.6rem;
 }
 
-.starlink-plans__group--hidden {
-  display: none;
-}
+
+
 .starlink-section--plans [data-group="go"] .starlink-section__content {
   align-items: flex-start;
   margin-bottom: 2.8rem;
@@ -124,9 +129,10 @@
   margin-right: 0.5em;
   font-size: 0.9em;
 }
-.starlink-section--plans [data-group="go"] .starlink-section__price-container {
-  margin-left: -1em;
+.starlink-section--plans [data-group="go"] .starlink-section__subtitle {
+  padding-right: 1em;
 }
+
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -189,9 +195,7 @@
     height: 800px;
   }
 
-  .starlink-plans__group--hidden {
-    display: none !important;
-  }
+  
 
   section.starlink-section--plans {
     height: auto !important;
@@ -206,7 +210,7 @@
   .starlink-plans__cards {
     display: flex;
     flex-direction: row;
-    gap: 0.3rem;
+    gap: 1em;
     width: 100%;
   }
   .starlink-section--plans .starlink-plans__cards .starlink-section__content {

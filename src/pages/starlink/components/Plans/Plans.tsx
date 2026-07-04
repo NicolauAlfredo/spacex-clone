@@ -1,4 +1,4 @@
-import { StarlinkResidentialButton } from "../../../../components/Buttons/Buttons";
+import { StarlinkResidentialButton } from "../../../starlink-model/components/Plans/components/StarlinkPlansButtons/StarlinkPlansButtons";
 
 export function Plans() {
   return (

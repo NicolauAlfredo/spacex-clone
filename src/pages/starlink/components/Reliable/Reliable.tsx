@@ -1,4 +1,4 @@
-import { StarlinkButton } from "../../../../components/Buttons/Buttons";
+import { StarlinkButton } from "../../../starlink-model/components/Plans/components/StarlinkPlansButtons/StarlinkPlansButtons";
 import { SectionContent } from "../../../../components/content/Content";
 
 export function Reliable() {
