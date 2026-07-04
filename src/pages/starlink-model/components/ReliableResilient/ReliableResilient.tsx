@@ -3,6 +3,7 @@
 import { reliableContent } from '../../../../content/reliablecontent.content';
 import { StarlinkButton } from '../StarlinkButton/StarlinkButton';
 import './ReliableResilient.css';
+import "./ReliableResilientBackground/ReliableBackground.css";
 
 export function ReliableResilient() {
   return (
