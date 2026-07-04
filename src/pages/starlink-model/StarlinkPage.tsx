@@ -1,6 +1,6 @@
 import { StarlinkHeader } from "./components/StarlinkHeader/StarlinkHeader";
 import { AffordableInternet } from "./components/AffordableInternet/AffordableInternet";
-import { Plans } from "./components/Plans/Plans";
+import { StarlinkResidentialButton } from "./components/Plans/components/StarlinkPlansButtons/StarlinkPlansButtons";
 import { ReliableResilient } from "./components/ReliableResilient/ReliableResilient";
 import { InternetForTravel } from "./components/InternetForTravel/InternetForTravel";
 import { HighSpeedInternet } from "./components/HighSpeedInternet/HighSpeedInternet";
@@ -24,7 +24,11 @@ export function StarlinkPage() {
         <StarlinkHeader />
         <AffordableInternet />
       </div>
-      <Plans />
+
+      <section className="starlink-section starlink-section--plans">
+        <StarlinkResidentialButton />
+      </section>
+
       <ReliableResilient />
       <InternetForTravel />
       <HighSpeedInternet />

@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { StarlinkPlansHome, StarlinkPlansGo } from "./buttons.plans";
-
-
-
- 
+import { StarlinkPlansGroup } from "../../Plans";
+import { starlinkPlansHome, starlinkPlansGo } from "../../../../../../content/starlinkplans.content";
+import "./StarlinkPlansButtons.css";
 
 export const StarlinkResidentialButton = () => {
   const [residential, setResidential] = useState<"home" | "go">("home");
@@ -34,8 +32,12 @@ export const StarlinkResidentialButton = () => {
         </button>
       </div>
 
-      {residential === "home" && <StarlinkPlansHome />}
-      {residential === "go" && <StarlinkPlansGo />}
+      {residential === "home" && (
+        <StarlinkPlansGroup group="home" content={starlinkPlansHome} />
+      )}
+      {residential === "go" && (
+        <StarlinkPlansGroup group="go" content={starlinkPlansGo} />
+      )}
     </>
   );
-}; // Plans - home & go btns
+};
