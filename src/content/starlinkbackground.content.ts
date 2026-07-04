@@ -9,8 +9,8 @@ export const starlinkBackgrounds: StarlinkBackground[] = [
   },
   {
     id: 'lightning-sky',
-    mobile: '/assets/pages/starlink/backgrounds/v4_lightning_sky_mobile.webp' ,
-    desktop: '/assets/pages/starlink/backgrounds/v4_lightning_sky_desktop.webp',
+    mobile: '/assets/pages/starlink/backgrounds/v4_lightning_mobile.webp' ,
+    desktop: '/assets/pages/starlink/backgrounds/v4_lightning_desktop.webp',
     alt: 'Starlink lightning sky background',
   },
   
