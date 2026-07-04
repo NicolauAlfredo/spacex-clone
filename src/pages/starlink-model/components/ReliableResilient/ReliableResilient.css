@@ -1,0 +1,63 @@
+.starlink-section--reliable .starlink-section__lable {
+  color: #c3c4c5;
+  line-height: 1.5em;
+  max-width: 310px;
+}
+
+.starlink-section--reliable .starlink-section__content {
+  display: flex;
+  gap: 0.7em;
+  margin-bottom: -1.3em;
+}
+
+.starlink-section--reliable .btn--primary {
+  width: 92%;
+  m
+  
+  
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .starlink-section--reliable .starlink-section__lable {
+    max-width: 600px;
+  }
+  .starlink-section--reliable .btn--primary {
+    width: 135px;
+  }
+  .starlink-section--reliable .starlink-section__content {
+    margin-left: 0;
+    padding-bottom: 0.5em;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .starlink-section--reliable .starlink-section__content {
+    bottom: 40%;
+    padding: 0 6%;
+    max-width: 50%;
+    left: 15%;
+    gap: 0.2em;
+  }
+  .starlink-section--reliable .starlink-section__title {
+    font-size: 4rem;
+    padding-bottom: 0.2em;
+  }
+  .starlink-section--reliable .starlink-section__actions {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    margin-top: 3em;
+  }
+  .starlink-section--reliable .starlink-section__lable {
+    font-size: 1.15em;
+    max-width: 570px;
+  }
+  .starlink-section--reliable .btn--primary {
+    width: 135px;
+    padding: 0.6rem;
+   
+    
+  }
+}
