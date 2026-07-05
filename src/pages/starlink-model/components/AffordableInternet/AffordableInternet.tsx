@@ -12,7 +12,7 @@ export function AffordableInternet() {
         {formatPrice(content.price, "en-US", "USD")}
         <span className="starlink-section__subtitle--price">/mo</span>
       </p>
-      <div className="starlink-section__actions">
+      <div className="starlink-section__actions" id="hero-actions">
   <StarlinkButton label="Get Started" variant="primary" onClick={() => console.log('go to checkout')} />
   <StarlinkButton label="View Pricing" href="/pricing" variant="ghost" />
 </div>
