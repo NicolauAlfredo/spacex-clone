@@ -35,3 +35,27 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 767px) {
+  .sticky-bar {
+    width: 92%;
+    min-height: 3.5em;
+    padding: 0.6rem 1rem;
+    margin-top: 0.5em;
+    height: 4.5em;
+    background: #404040;
+    margin-top: 1em;
+  }
+
+  .sticky-bar .btn--primary {
+    padding: 0.7rem 2rem;
+    margin-right: 0;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+
+  .sticky-bar .starlink-logo,
+  .sticky-bar .header__logo {
+   margin-left: -1em;
+  }
+}
