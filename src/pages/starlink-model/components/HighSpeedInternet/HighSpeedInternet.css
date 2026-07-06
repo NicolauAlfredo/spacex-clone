@@ -1,0 +1,141 @@
+/* Mobile */
+.starlink-section--high-speed {
+  position: relative;
+  background-color: black;
+  font-family: "D-DIN", sans-serif;
+  height: 728px;
+}
+
+.starlink-section--high-speed--background {
+  position: absolute;
+  background-image: url(/assets/pages/starlink/backgrounds/illustration_10.webp);
+  background-position: center center;
+  background-size: cover;
+  inset: 0;
+  max-width: 1200px;
+  height: 100%;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.starlink-section--high-speed__title {
+  color: white;
+  text-align: center;
+  padding: 32px 0px;
+  font-size: 2.3rem;
+  margin: 0px 32px;
+}
+
+.starlink-section--high-speed__carousel--scroll {
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+  padding: 0 0px 24px;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.starlink-section--high-speed__carousel {
+  display: flex;
+  gap: 16px;
+}
+
+.starlink-section--high-speed__card {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  height: 436px;
+  justify-content: center;
+  align-items: center;
+}
+
+.starlink-section--high-speed__card--image {
+  height: 300px;
+  width: 300px;
+  border-radius: 7%;
+  overflow: hidden;
+}
+
+.starlink-section--high-speed__card--container--text {
+  line-height: 150%;
+}
+
+.starlink-section--high-speed__card--text {
+  color: rgba(250, 250, 250, 0.7);
+  opacity: 87%;
+}
+
+.starlink-section--high-speed__container--chevron {
+  background-color: transparent;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.starlink-section--high-speed__btn--chevron {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  padding: 8px;
+}
+
+.starlink-section--high-speed__--chevron {
+  color: rgba(250, 250, 250, 0.56);
+}
+/* Tablet */
+@media (min-width: 768px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .starlink-section--high-speed {
+    height: 100%;
+  }
+  .starlink-section--high-speed__carousel--scroll {
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px 48px;
+    overflow-x: scroll !important;
+    overflow-y: hidden;
+  }
+
+  .starlink-section--high-speed--background {
+    left: 20%;
+    opacity: 6%;
+  }
+
+  .starlink-section--high-speed__title {
+    font-size: 4rem;
+  }
+  .starlink-section--high-speed__card {
+    height: 570px;
+    width: 580px;
+  }
+  .starlink-section--high-speed__card--image {
+    width: 550px;
+    height: 450px;
+    object-fit: cover;
+  }
+  .starlink-section--high-speed__card--container--text {
+    width: 550px;
+    align-self: center;
+  }
+  .starlink-section--high-speed__card--text {
+    opacity: 1;
+    color: white;
+    line-height: 150%;
+    font-size: 1rem;
+  }
+  .starlink-section--high-speed__container--chevron {
+    padding: 64px 0px;
+  }
+}
