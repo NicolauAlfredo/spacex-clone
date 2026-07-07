@@ -21,3 +21,10 @@
     height: 35px;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__btn[aria-label="Menu"] {
+    width: 35px !important;
+    
+   
+  }
+}
