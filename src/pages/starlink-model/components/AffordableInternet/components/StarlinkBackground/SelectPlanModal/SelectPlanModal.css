@@ -1,0 +1,169 @@
+.select-plan-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 399;
+}
+
+.select-plan-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1000px;
+  min-height: 500px;
+  background: #000000;
+  border-radius: 1.5rem;
+  z-index: 400;
+  padding: 3rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.select-plan-modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.select-plan-modal__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.select-plan-modal__options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.select-plan-modal__option {
+  flex: 1;
+  text-align: left;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.select-plan-modal__option--active {
+  border-color: #ffffff;
+}
+
+.select-plan-modal__option-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.select-plan-modal__option-desc {
+  font-size: 0.8rem;
+  color: white;
+}
+
+.select-plan-modal__subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.select-plan-modal__input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.9rem 1rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.select-plan-modal__input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.select-plan-modal__submit {
+  display: block;
+  margin-left: auto;
+  margin-top: 13em;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.select-plan-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 399;
+}
+
+@media (max-width: 767px) {
+  .select-plan-modal__options {
+    flex-direction: column;
+  }
+  .select-plan-modal {
+    width: 100%;
+    padding: 2rem;
+  }
+  .select-plan-modal__submit--roam {
+    margin-top: 2rem;
+  }
+  .select-plan-modal--roam {
+    height: 100%;
+  }
+
+  .select-plan-modal__subtitle {
+    font-size: 1.1rem;
+  }
+  .select-plan-modal__option-title {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .select-plan-modal__title {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  .select-plan-modal__close {
+    margin-top: 1.5rem;
+    padding-right: 0.4em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .select-plan-modal {
+    width: 85%;
+  }
+  .select-plan-modal__options {
+    flex-direction: column;
+  }
+  .select-plan-modal__title {
+    font-size: 1.1rem;
+    margin-top: -1em;
+  }
+  .select-plan-modal__subtitle {
+    font-size: 1.1rem;
+  }
+  .select-plan-modal__option-title {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .select-plan-modal__option-desc {
+    font-size: 0.9em;
+  }
+}
