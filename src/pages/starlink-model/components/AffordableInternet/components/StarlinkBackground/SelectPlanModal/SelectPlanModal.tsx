@@ -33,6 +33,9 @@ export function SelectPlanModal({ isOpen, onClose }: Props) {
 
     applyHeaderState();
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (isOpen) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
     window.addEventListener('resize', applyHeaderState);
 
     return () => {

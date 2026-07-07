@@ -15,7 +15,7 @@
   min-height: 500px;
   background: #000000;
   border-radius: 1.5rem;
-  z-index: 400;
+  z-index: 999;
   padding: 3rem;
   color: #ffffff;
   display: flex;
