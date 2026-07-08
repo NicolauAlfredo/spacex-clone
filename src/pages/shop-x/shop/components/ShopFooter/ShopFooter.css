@@ -85,20 +85,19 @@
     min-height: 16.25rem;
     place-content: center;
     gap: 5rem;
-    padding: 4rem 1.5rem;
+    padding: 4rem 2.5rem;
   }
 
   .shop-footer__menu-list {
     justify-content: center;
-    gap: 0.6rem;
+    gap: 1rem;
   }
 
   .shop-footer__menu-item a {
-    font-size: 0.688rem;
+    font-size: 1rem;
   }
 
   .shop-footer__info {
-    flex-direction: row;
     gap: 2rem;
   }
 
