@@ -1,6 +1,6 @@
 .shop-footer {
   background-color: #000;
-  color: #c9c9c9;
+  color: #ffffffa6;
   border-top: 1px solid #222;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -107,4 +107,30 @@
 }
 
 @media (min-width: 1024px) {
+  .shop-footer__container {
+    min-height: auto;
+    display: grid;
+    justify-content: start;
+    place-content: initial;
+    gap: 4rem;
+    padding: 3.8rem 1.5rem;
+  }
+
+  .shop-footer__menu-list {
+    gap: 1.4rem;
+  }
+
+  .shop-footer__menu-item a {
+    font-size: 0.938rem;
+  }
+
+  .shop-footer__info {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .shop-footer__copyright {
+    padding: 0;
+  }
 }
