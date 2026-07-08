@@ -6,7 +6,7 @@ export type QuantitySelectorProps = {
   onDecrease: () => void;
 };
 
-function QuantitySelector({
+export function QuantitySelector({
   quantity,
   onIncrease,
   onDecrease,

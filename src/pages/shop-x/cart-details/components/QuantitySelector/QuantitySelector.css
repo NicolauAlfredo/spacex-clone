@@ -5,6 +5,7 @@
   grid-template-columns: 40px 1fr 40px;
   align-items: center;
   border: 1px solid #ddd;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .product-detail__quantity-button {
@@ -18,5 +19,5 @@
 
 .product-detail__quantity-value {
   text-align: center;
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
