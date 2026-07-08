@@ -137,15 +137,15 @@
 
 @media (min-width: 1024px) {
   .collection {
-    min-height: 350px;
+    min-height: 21.875rem;
   }
 
   .collection__content {
-    padding: 0;
+    padding: 2.5rem 3rem;
   }
 
   .content__title {
-    font-size: 3rem;
+    font-size: 1.313rem;
   }
 
   .collection:hover .collection__img img {
