@@ -30,4 +30,9 @@
     justify-items: end;
     text-align: right;
   }
+
+  .cart__checkout-button {
+    width: 6rem;
+    height: 2.5rem;
+  }
 }

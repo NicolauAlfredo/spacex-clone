@@ -1381,4 +1381,3 @@ export const xaiProducts: ProductCollection = {
   ],
 };
 export { Product };
-

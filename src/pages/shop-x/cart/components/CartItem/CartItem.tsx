@@ -53,6 +53,10 @@ function CartItem({
               Remove
             </button>
           </div>
+
+          <span className="cart__item-total">
+            {formatPrice(item.price * item.quantity)}
+          </span>
         </div>
       </div>
     </article>
