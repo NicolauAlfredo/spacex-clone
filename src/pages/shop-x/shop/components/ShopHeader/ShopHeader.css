@@ -41,7 +41,7 @@ body {
 .menu__items {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1rem;
 }
 
 .menu__item.hidden {
