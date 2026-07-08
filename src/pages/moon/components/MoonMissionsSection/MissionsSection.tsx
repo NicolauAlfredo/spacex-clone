@@ -7,7 +7,7 @@ export function MissionsSection() {
     <section className="moon hero-section hero-section-missions">
       <picture>
         <source
-          media="(min-width: 1024px)"
+          media="(min-width: 1440px)"
           srcSet={moonMissions.desktopImage}
         />
 
