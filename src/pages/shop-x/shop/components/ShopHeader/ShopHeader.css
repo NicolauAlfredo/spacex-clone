@@ -1,6 +1,17 @@
+body {
+  padding-top: 4rem;
+}
+
 .shop-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   background-color: #000;
   color: #fff;
+
+  z-index: 1000;
 }
 
 .shop-header__container {
