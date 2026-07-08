@@ -167,8 +167,12 @@ body {
 }
 
 @media (min-width: 768px) {
+  body {
+    padding-top: 4.3rem;
+  }
+
   .shop-header__container {
-    height: 96px;
+    height: 4.3rem;
   }
 
   .menu__item.account {

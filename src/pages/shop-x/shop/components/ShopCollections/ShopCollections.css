@@ -27,10 +27,6 @@
   transition: transform 6s ease;
 }
 
-.collection:hover .collection__img img {
-  transform: scale(1.08);
-}
-
 .collection__content {
   position: relative;
   z-index: 2;
@@ -117,15 +113,24 @@
 */
 
 @media (min-width: 768px) {
+  .collections__container {
+    height: 14rem;
+  }
+
   .collection__content {
-    padding: 5rem 4rem;
+    padding: 2.5rem 2rem;
   }
 
   .content__title {
-    font-size: 2.3rem;
+    font-size: 1.3rem;
+  }
+
+  .content__button {
+    min-width: 6.8rem;
+    font-size: 1rem;
+    height: 3rem;
   }
 }
-
 /*
   DESKTOP
 */
@@ -136,10 +141,14 @@
   }
 
   .collection__content {
-    padding: 0xp;
+    padding: 0;
   }
 
   .content__title {
     font-size: 3rem;
+  }
+
+  .collection:hover .collection__img img {
+    transform: scale(1.08);
   }
 }
