@@ -1,5 +1,5 @@
-import type { StarlinkBackground as StarlinkBackgroundType } from '../../../../types/starlinkbackground.types';
-import './StarlinkBackground.css';
+import type { StarlinkBackground as StarlinkBackgroundType } from "../../../../../../types/starlinkbackground.types";
+import "./StarlinkBackground.css";
 
 type Props = {
   background: StarlinkBackgroundType;
