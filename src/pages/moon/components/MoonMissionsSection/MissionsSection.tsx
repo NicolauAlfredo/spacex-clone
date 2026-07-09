@@ -1,5 +1,5 @@
 import { moonMissions } from "../../../../content/moonMissions.content";
-import { InnerText } from "../../../../components/InnerText/InnerText";
+import { InnerText } from "../../../../components/Section/components/InnerText/InnerText";
 import "./MissionsSection.css";
 
 export function MissionsSection() {

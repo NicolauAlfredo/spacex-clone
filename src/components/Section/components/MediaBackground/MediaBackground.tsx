@@ -1,14 +1,14 @@
-export type PictureProps = {
+export type MediaBackgroundProps = {
   mediaType: "video" | "image";
-  desktopImageSrc: string;
-  mobileImageSrc: string;
-  alt: string;
-  desktopVideoSrc: string;
-  mobileVideoSrc: string;
+  desktopImageSrc?: string;
+  mobileImageSrc?: string;
+  alt?: string;
+  desktopVideoSrc?: string;
+  mobileVideoSrc?: string;
   className: string;
 };
 
-export function Picture({
+export function MediaBackground({
   mediaType,
   desktopImageSrc,
   mobileImageSrc,
@@ -16,7 +16,7 @@ export function Picture({
   desktopVideoSrc,
   mobileVideoSrc,
   className,
-}: PictureProps) {
+}: MediaBackgroundProps) {
   return (
     <>
       {mediaType === "image" && (

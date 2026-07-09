@@ -1,5 +1,5 @@
-import type { InnerTextProps } from "../../types/innerText.types";
-import { Button } from "../../pages/home/components/Button/Button";
+import type { InnerTextProps } from "../../../../types/innerText.types";
+import { Button } from "../../../../pages/home/components/Button/Button";
 
 export function InnerText({
   title,
