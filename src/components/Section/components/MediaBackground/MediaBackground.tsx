@@ -5,7 +5,6 @@ export type MediaBackgroundProps = {
   alt?: string;
   desktopVideoSrc?: string;
   mobileVideoSrc?: string;
-  className: string;
 };
 
 export function MediaBackground({
@@ -15,12 +14,11 @@ export function MediaBackground({
   alt,
   desktopVideoSrc,
   mobileVideoSrc,
-  className,
 }: MediaBackgroundProps) {
   return (
     <>
       {mediaType === "image" && (
-        <picture className={className}>
+        <picture className="hero-section__image">
           <source media="(min-width: 1440px)" srcSet={desktopImageSrc} />
 
           <img className="section-picture" srcSet={mobileImageSrc} alt={alt} />
@@ -28,7 +26,7 @@ export function MediaBackground({
       )}
 
       {mediaType === "video" && (
-        <video className={className} autoPlay muted loop playsInline>
+        <video className="hero-section__video" autoPlay muted loop playsInline>
           <source
             src={desktopVideoSrc}
             media="(max-width: 767px)"

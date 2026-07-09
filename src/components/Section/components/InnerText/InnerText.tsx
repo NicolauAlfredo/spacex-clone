@@ -9,26 +9,30 @@ export function InnerText({
 }: InnerTextProps) {
   return (
     <>
-      <h2 className={`${className}__title`}>{title.toUpperCase()}</h2>
+      <div className="hero-section__overlay">
+        <div className="hero-section__content">
+          <h2 className={`${className}__title`}>{title.toUpperCase()}</h2>
 
-      {Array.isArray(paragraph) ? (
-        paragraph.map((item) => (
-          <p key={item.text} className={`${className}__description`}>
-            {item.text}
+          {Array.isArray(paragraph) ? (
+            paragraph.map((item) => (
+              <p key={item.text} className={`${className}__description`}>
+                {item.text}
 
-            {item.highlight && (
-              <>
-                {" "}
-                <strong>{item.highlight}</strong>
-              </>
-            )}
-          </p>
-        ))
-      ) : (
-        <p className={`${className}__description`}>{paragraph}</p>
-      )}
+                {item.highlight && (
+                  <strong>
+                    {' '}
+                    {item.highlight}
+                  </strong>
+                )}
+              </p>
+            ))
+          ) : (
+            <p className={`${className}__description`}>{paragraph}</p>
+          )}
 
-      {buttonText && <Button href="#" title={buttonText} />}
+          {buttonText && <Button href="#" title={buttonText} />}
+        </div>
+      </div>
     </>
   );
 }

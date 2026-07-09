@@ -12,7 +12,7 @@ type SectionProps = {
 
 export function Section({ sectionClassName, ...props }: SectionProps) {
   return (
-    <section className="">
+    <section className={`hero-section hero-section--${sectionClassName}`}>
       <MediaBackground {...props} />
       <InnerText {...props} />
     </section>
