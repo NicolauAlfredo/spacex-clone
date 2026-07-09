@@ -8,6 +8,7 @@ export const StarlinkCallMenu = () => {
       className="header__btn"
       aria-label="Call"
       href={`tel:${starlinkCallNumber.phoneNumber}`}
+      
     >
       <svg
         focusable="false"
@@ -25,6 +26,7 @@ export const StarlinkCallMenu = () => {
           strokeLinejoin="round"
         />
       </svg>
+      
     </a>
   );
 };
