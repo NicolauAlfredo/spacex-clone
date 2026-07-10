@@ -14,7 +14,7 @@ export function WhySection() {
         />
       </div>
 
-      <div className="hero-section-why__content">
+      <div className="hero-section-why__container">
         <InnerText
           className="hero-section-why"
           title={moonWhySection.title}

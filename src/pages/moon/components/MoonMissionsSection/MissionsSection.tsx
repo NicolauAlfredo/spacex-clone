@@ -18,7 +18,7 @@ export function MissionsSection() {
         />
       </picture>
 
-      <div className="hero-section-missions__content">
+      <div className="hero-section-missions__container">
         <InnerText
           className="hero-section-missions"
           title={moonMissions.title}

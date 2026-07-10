@@ -9,8 +9,8 @@ export function InnerText({
 }: InnerTextProps) {
   return (
     <>
-      <div className="hero-section__overlay">
-        <div className="hero-section__content">
+      <div className= {`${className}__overlay`}>
+        <div className={`${className}__content`}>
           <h2 className={`${className}__title`}>{title.toUpperCase()}</h2>
 
           {Array.isArray(paragraph) ? (
