@@ -1,5 +1,5 @@
 import { Section } from "../../../../../components/Section/Section";
-import "./StarshipSection.css"
+import "./StarshipSection.css";
 
 export function StarshipSection() {
   return (
