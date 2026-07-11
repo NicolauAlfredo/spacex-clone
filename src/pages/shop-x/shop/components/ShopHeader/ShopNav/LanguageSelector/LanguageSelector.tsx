@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { languageOptions } from "../../../../../../../content/languageOptions.content";
+import type { LanguageOption } from "../../../../../../../types/language.types";
 import { ChevronDownIcon } from "../ShopIcons/ChevronDownIcon";
-import { languageOptions, type LanguageOption } from "./languages";
 
 type LanguageSelectorProps = {
   showFullLabel?: boolean;

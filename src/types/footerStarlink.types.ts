@@ -1,0 +1,1 @@
+export type FooterNavLinks = { label: string,  link: string }[]

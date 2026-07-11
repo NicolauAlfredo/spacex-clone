@@ -1,11 +1,11 @@
+import { useCart } from "../../../hooks/useCart";
+import { ShopFooter } from "../shop/components/ShopFooter/ShopFooter";
+import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
+import "./CartPage.css";
 import CartEmpty from "./components/CartEmpty/CartEmpty";
 import CartItem from "./components/CartItem/CartItem";
 import CartSummary from "./components/CartSummary/CartSummary";
 import CartTableHeader from "./components/CartTableHeader/CartTableHeader";
-import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
-import { ShopFooter } from "../shop/components/ShopFooter/ShopFooter";
-import "./CartPage.css";
-import { useCart } from "../../../hooks/useCart";
 
 function CartPage() {
   const { items, total, increaseQuantity, decreaseQuantity, removeItem } =

@@ -1,0 +1,10 @@
+.header__logo {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #f0f0fa;
+  font-size: 1.25rem;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  margin-left: 1em;
+}

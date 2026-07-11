@@ -1,5 +1,5 @@
+import { shopCollections } from "../../../../../content/shopCollections.content";
 import { ShopCollectionCard } from "./components/ShopCollectionCard";
-import { shopCollections } from "../../../../../data/shopCollectionsData";
 import "./ShopCollections.css";
 
 export function ShopCollections() {

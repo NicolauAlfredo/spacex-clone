@@ -3,7 +3,6 @@ import {
   getDefaultColor,
   getDefaultSize,
 } from "../../../../../utils/productUtils";
-import "./ProductOptions.css";
 import ProductSizeSelector from "../ProductSizeSelector/ProductSizeSelector";
 
 type ProductOptionsProps = {

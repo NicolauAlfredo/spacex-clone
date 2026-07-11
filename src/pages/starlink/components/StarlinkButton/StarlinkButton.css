@@ -1,0 +1,54 @@
+.btn--primary {
+  width: 98%;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+  border: none;
+  background: #ffffff;
+  color: #000000;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn--ghost {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.starlink-section--reliable .starlink-section__actions {
+  margin-left: -1em;
+  padding-top: 1em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .starlink-section--best-value .btn--primary {
+    width: 135px;
+  }
+  .starlink-section--reliable .starlink-section__actions {
+    padding-bottom: 1em;
+    padding-left: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn--ghost {
+    background: rgba(52, 58, 69, 0.45);
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.6rem 2rem;
+    border-radius: 0.2rem;
+  }
+
+  .starlink-section--best-value .btn--primary {
+    width: auto;
+    padding: 0.6rem 2rem;
+  }
+  .starlink-section--reliable .starlink-section__actions {
+    padding-left: 1em;
+  }
+}

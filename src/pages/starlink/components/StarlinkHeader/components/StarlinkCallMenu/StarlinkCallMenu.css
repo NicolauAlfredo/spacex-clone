@@ -1,0 +1,43 @@
+.header__btn {
+  width: 35px !important;
+  height: 35px;
+  margin-right: 0.3em;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(250, 250, 250, 0.562);
+  background: #4c5867;
+
+  cursor: pointer;
+}
+.header__btn[aria-label="Call"] {
+  margin-left: 5.5em;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__btn[aria-label="Call"] {
+    margin-left: auto;
+    margin-right: 1em;
+    background: #455261;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__btn[aria-label="Call"] {
+    display: none;
+  }
+  .header__call {
+    font-weight: 600;
+    color: #a3a6ad;
+    font-size: 0.8em;
+  }
+  .header__call span {
+    font-size: 1em;
+    color: #bec0c5;
+  }
+  .header__btn {
+    width: 50px !important;
+  }
+}
