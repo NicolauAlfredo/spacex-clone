@@ -18,13 +18,18 @@ export const heroContent: HomeSectionContent[] = [
         "videos",
         "Starships-twelfth-flight-test-mobile.mp4",
       ),
-      alt: "STARSHIP'S TWELFTH FLIGHT TEST",
+      posterSrc: getPageMediaURL(
+        "home",
+        "images",
+        "revolutionizing-space-tech-mobile.jpg",
+      ),
     },
     button: {
       title: "WATCH",
       href: "/starlink",
     },
     position: "center-left",
+    modifier: "starship",
   },
 
   {
@@ -40,13 +45,14 @@ export const heroContent: HomeSectionContent[] = [
         "videos",
         "Starships-twelfth-flight-test-mobile.mp4",
       ),
-      alt: "MAKING LIFE MULTIPLANETARY",
+      posterSrc: getPageMediaURL("home", "images", "mars-mobile.jpg"),
     },
     button: {
       title: "EXPLORE",
       href: "/starlink",
     },
     position: "center-left",
+    modifier: "multiplanetary",
   },
 
   {
@@ -73,6 +79,7 @@ export const heroContent: HomeSectionContent[] = [
       href: "/starlink",
     },
     position: "top-right",
+    modifier: "technology",
   },
 
   {
@@ -92,13 +99,18 @@ export const heroContent: HomeSectionContent[] = [
         "videos",
         "leading-launch-service-mobile.mp4",
       ),
-      alt: "REVOLUTIONIZING SPACE TECHNOLOGY",
+      posterSrc: getPageMediaURL(
+        "home",
+        "images",
+        "leading-launch-service-mobile.jpg",
+      ),
     },
     button: {
       title: "RESERVE YOUR RIDE",
       href: "/starlink",
     },
     position: "top-left",
+    modifier: "launch-provider",
   },
 
   {
@@ -125,6 +137,7 @@ export const heroContent: HomeSectionContent[] = [
       href: "/starlink",
     },
     position: "top-right",
+    modifier: "spaceflight",
   },
 
   {
@@ -144,12 +157,17 @@ export const heroContent: HomeSectionContent[] = [
         "videos",
         "delivering-high-speed-mobile.mp4",
       ),
-      alt: "Delivering high-speed internet from space",
+      posterSrc: getPageMediaURL(
+        "home",
+        "images",
+        "delivering-highspeed-mobile.jpg",
+      ),
     },
     button: {
       title: "ORDER NOW",
       href: "/starlink",
     },
     position: "center-left",
+    modifier: "starlink",
   },
 ];
