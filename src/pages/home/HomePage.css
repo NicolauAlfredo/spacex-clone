@@ -72,6 +72,10 @@
   z-index: 0;
 }
 
+.hero-section--starship .button--primary {
+  margin-top: 20px;
+}
+
 /*
   TABLET
 */
@@ -126,6 +130,10 @@
 
   .hero-section__title {
     font-size: 3.6rem;
+  }
+
+  .hero-section--starship .button--primary {
+    margin-top: 30px;
   }
 }
 
