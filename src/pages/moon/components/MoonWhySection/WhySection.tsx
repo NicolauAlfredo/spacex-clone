@@ -1,6 +1,6 @@
 import { moonWhySection } from "../../../../content/moonWhySection.content";
 import { InfoTable } from "./components/InfoTable/InfoTable";
-import { InnerText } from "./components/MoonInnerText/InnerText";
+import { InnerText } from "../../../../components/Section/components/InnerText/InnerText";
 import "./WhySection.css";
 
 export function WhySection() {
@@ -14,7 +14,7 @@ export function WhySection() {
         />
       </div>
 
-      <div className="hero-section-why__content">
+      <div className="hero-section-why__container">
         <InnerText
           className="hero-section-why"
           title={moonWhySection.title}
