@@ -1,7 +1,8 @@
 .starlink-section--reliable .starlink-section__lable {
-  color: #c3c4c5;
+  color: #b7b7b8;
   line-height: 1.5em;
   max-width: 310px;
+  font-weight: 700;
 }
 
 .starlink-section--reliable .starlink-section__content {
@@ -13,9 +14,7 @@
 .starlink-section--reliable .btn--primary {
   width: 92%;
   margin-top: -1.9em;
-  
 }
-
 
 /* Tablet */
 @media (min-width: 768px) {
@@ -27,7 +26,7 @@
     margin-top: -1.9em;
   }
   .starlink-section--reliable .starlink-section__content {
-    align-items: flex-start; 
+    align-items: flex-start;
     margin-left: 0;
     padding-bottom: 0.5em;
   }
@@ -59,7 +58,5 @@
   .starlink-section--reliable .btn--primary {
     width: 135px;
     padding: 0.6rem;
-   
-    
   }
 }

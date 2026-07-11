@@ -1,6 +1,7 @@
 import "./AvailableGlobally.css";
 import { StarlinkButton } from "../StarlinkButton/StarlinkButton";
 import { content } from "../../../../content/availableGlobally.content";
+import { FadeInSection } from "../FadeInSection/FadeInSection";
 
 export function AvailableGlobally() {
   return (
@@ -19,16 +20,17 @@ export function AvailableGlobally() {
               />
             </picture>
             <div className="starlink-section__gradient">
-              <div className="starlink-section__text--container starlink-section__text--container-available-globally">
-                <h1 className="starlink-section__inner--title">{content.title}</h1>
-                <p className="starlink-section__inner--text">
+              <FadeInSection className="starlink-section__text--container starlink-section__text--container-available-globally ">
+                <h1 className="starlink-section__inner--title fade-in-child">{content.title}</h1>
+                <p className="starlink-section__inner--text fade-in-child">
                   {content.description}
                 </p>
-                <div className="starlink-section__link--container">
+                <div className="starlink-section__link--container fade-in-child">
                   <StarlinkButton label="Check Availability" variant="primary" />
                 </div>
+                </FadeInSection>
               </div>
-            </div>
+          
           </section>
         </>
   );
