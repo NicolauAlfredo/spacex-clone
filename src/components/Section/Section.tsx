@@ -1,9 +1,7 @@
 import type { InnerTextProps } from "../../types/innerText.types";
 import { InnerText } from "./components/InnerText/InnerText";
-import {
-  MediaBackground,
-  type MediaBackgroundProps,
-} from "./components/MediaBackground/MediaBackground";
+import { MediaBackground } from "./components/MediaBackground/MediaBackground";
+import type { MediaBackground } from "./components/MediaBackground/MediaBackground";
 
 type SectionProps = {
   sectionClassName: string;

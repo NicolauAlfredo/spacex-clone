@@ -9,7 +9,7 @@ export function InnerText({
 }: InnerTextProps) {
   return (
     <>
-      <div className= {`${className}__overlay`}>
+      <div className={`${className}__overlay`}>
         <div className={`${className}__content`}>
           <h2 className={`${className}__title`}>{title.toUpperCase()}</h2>
 
@@ -18,12 +18,7 @@ export function InnerText({
               <p key={item.text} className={`${className}__description`}>
                 {item.text}
 
-                {item.highlight && (
-                  <strong>
-                    {' '}
-                    {item.highlight}
-                  </strong>
-                )}
+                {item.highlight && <strong> {item.highlight}</strong>}
               </p>
             ))
           ) : (
