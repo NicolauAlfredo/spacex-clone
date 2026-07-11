@@ -7,15 +7,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.5rem;
-  background: linear-gradient(to right, #6e7480 60%, #48494c 100%);
-  backdrop-filter: blur(10px);
+  padding: 0 1.7rem;
+  background: transparent;
+  backdrop-filter: blur(50px);
   animation: slideDown 0.3s ease;
   width: 61%;
   margin: 0 auto;
   border-radius: 0.6rem;
   margin-top: 1em;
-  height: 4.3em;
+  height: 4.5em;
 }
 
 .sticky-bar .btn--primary {
@@ -43,7 +43,7 @@
     padding: 0.6rem 1rem;
     margin-top: 0.5em;
     height: 4.5em;
-    background: #404040;
+
     margin-top: 1em;
   }
 
@@ -54,6 +54,27 @@
     font-size: 0.8rem;
   }
 
+  .sticky-bar .starlink-logo,
+  .sticky-bar .header__logo {
+    margin-left: -1em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sticky-bar {
+    width: 95%;
+    min-height: 3.5em;
+    padding: 0.6rem 1rem;
+    margin-top: 0.5em;
+    height: 4.5em;
+
+    margin-top: 1em;
+  }
+  .sticky-bar .btn--primary {
+    padding: 0.7rem 2rem;
+    margin-right: 0;
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
   .sticky-bar .starlink-logo,
   .sticky-bar .header__logo {
     margin-left: -1em;

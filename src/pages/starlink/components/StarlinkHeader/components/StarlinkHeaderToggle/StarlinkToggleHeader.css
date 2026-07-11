@@ -1,5 +1,6 @@
 .header__toggles {
   display: none;
+  
 }
 .header__toggles-btn--active {
   display: none;
@@ -33,7 +34,7 @@
   .header__toggles-btn {
     display: flex;
     border: none;
-    color: #ffffff;
+    color: #f4f4f4 !important;
     padding: 0.4rem 1rem;
     font-size: 0.9rem;
     font-weight: 600;
