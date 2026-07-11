@@ -23,9 +23,7 @@ export function PlugItInPoint() {
             <div className="starlink-section__gradient">
               <FadeInSection className="starlink-section__text--container">
                 <h1 className="starlink-section__inner--title fade-in-child">{content.title}</h1>
-                <p className="starlink-section__inner--text fade-in-child">q
-                  {content.description}
-                </p>
+                <p className="starlink-section__inner--text fade-in-child">{content.description}</p>
                 <div className="starlink-section__link--container fade-in-child">
                   <StarlinkButton label="Learn More" variant="primary" />
                 </div>

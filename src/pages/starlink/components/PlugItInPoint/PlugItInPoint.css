@@ -98,6 +98,10 @@
     font-weight: 700;
     line-height: 105%;
   }
+  
+  .starlink-section__link--container{
+    width: 135px;
+  }
 }
 
 /* Desktop */
