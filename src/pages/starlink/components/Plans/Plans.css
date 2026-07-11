@@ -1,4 +1,7 @@
 .starlink-section--plans {
+  position: relative;
+  overflow: clip;
+  isolation: isolate;
   background: black;
   text-align: center;
   min-height: unset;
@@ -7,21 +10,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.starlink-section--plans::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image: url("../../../../../../public/assets/pages/starlink/backgrounds/illustration_07.webp");
-  background-size: 63% auto;
-
-  background-position: center;
-
-  background-repeat: no-repeat;
-
-  opacity: 0.12;
-  z-index: 0;
 }
 
 .starlink-section--plans .starlink-section__content {
@@ -39,9 +27,11 @@
   padding-bottom: 2rem;
   margin-top: -1.5em;
 }
+
 .starlink-section--plans [data-group="home"] .starlink-section__content {
   margin-bottom: 1.5rem;
 }
+
 .starlink-toggle {
   background: #1a1a1a;
   border-radius: 10px;
@@ -71,11 +61,13 @@
   font-size: 1.1em;
   padding-right: 4.6em;
 }
+
 .starlink-section--plans
   .starlink-section__content:nth-child(4)
   .starlink-section__title {
   align-self: flex-start;
 }
+
 .starlink-section--plans .starlink-section__label {
   font-size: 0.85em;
   font-weight: 700;
@@ -88,6 +80,7 @@
   margin-right: 4em;
   padding-left: 0.5em;
 }
+
 .starlink-section--plans .starlink-section__list {
   list-style: disc;
   text-align: left;
@@ -108,29 +101,62 @@
   padding-left: 0.5em;
   font-size: 0.75em;
 }
+
 .starlink-section--plans .starlink-section__price {
   font-size: 5.5em !important;
 }
+
 .starlink-section--plans .starlink-section__subtitle {
   font-size: 1em;
   margin-left: -1em;
   color: #a0a0a0;
 }
+
 .starlink-section--plans .mo_class {
   font-size: 3em;
 }
+
 .starlink-section--plans__footer {
   color: #727272;
   font-size: 0.9em;
   max-width: 300px;
   font-weight: 600;
 }
+
 .starlink-plans__group {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 0.6rem;
 }
+
+.starlink-plans__background {
+  position: sticky;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("../../../../../../public/assets/pages/starlink/backgrounds/illustration_07.webp");
+
+  background-size: 180% auto;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  opacity: 0.12;
+  z-index: 0;
+  z-index: -1;
+}
+
+.starlink-plans__cards,
+.starlink-section--plans__footer {
+  position: relative;
+  z-index: 1;
+}
+
 .starlink-section--plans .starlink-section__content .starlink-section__title {
   background: none;
   -webkit-text-fill-color: white;
@@ -141,13 +167,16 @@
   align-items: flex-start;
   margin-bottom: 2.8rem;
 }
+
 .starlink-section--plans__footer {
   margin: 0 auto;
 }
+
 .starlink-section--plans [data-group="go"] .starlink-section__label {
   margin-right: 0.5em;
   font-size: 0.85em;
 }
+
 .starlink-section--plans [data-group="go"] .starlink-section__title {
   padding-left: 0.5em;
 }
@@ -162,32 +191,39 @@
   border-radius: 7px !important;
   padding: 0 !important;
 }
+
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
   .starlink-section--plans::before {
     background-size: 135% auto;
   }
+
   .starlink-section--plans .starlink-section__content {
     align-items: flex-start;
     text-align: left;
     width: 700px;
   }
+
   .starlink-section--plans .starlink-section__price {
     margin-left: 0;
   }
+
   .starlink-section--plans .starlink-section__content .starlink-section__title {
     font-size: 1.2em;
     padding-left: 0.5em;
   }
+
   .starlink-section--plans .starlink-section__content .starlink-section__label {
     font-size: 0.9em;
     padding-left: 0.6em;
     margin-top: 0.9em;
   }
+
   .starlink-section--plans .starlink-section__content .starlink-section__list {
     margin-top: -0.3em;
     padding-bottom: 1em;
   }
+
   .starlink-section--plans
     .starlink-section__content
     .starlink-section__subtitle {
@@ -196,6 +232,7 @@
     color: #a0a0a0;
     font-weight: 600;
   }
+
   .starlink-section--plans .starlink-section__title,
   .starlink-section--plans .starlink-section__label,
   .starlink-section--plans .starlink-section__list,
@@ -205,10 +242,12 @@
     margin-left: 0;
     padding-left: 1em;
   }
+
   .starlink-section--plans .starlink-section__price-container {
     font-size: 0.75em;
     padding-top: 0.5em;
   }
+
   .starlink-section--plans .starlink-section__label {
     max-width: unset;
   }
@@ -216,6 +255,7 @@
   .starlink-section--plans .starlink-section__list {
     padding-left: 3em;
   }
+
   .starlink-section--plans [data-group="go"] .starlink-section__label {
     max-width: unset !important;
   }
@@ -226,11 +266,13 @@
     margin-top: -40px;
     max-width: unset;
   }
+
   .starlink-section--plans
     [data-group="go"]
     .starlink-section__price-container {
     padding-left: 0.9em !important;
   }
+
   .starlink-section--plans .starlink-section--plans__footer {
     max-width: unset;
   }
@@ -240,6 +282,7 @@
     .starlink-section__price-container {
     padding-left: 2em;
   }
+
   .starlink-section--plans [data-group="home"] .starlink-plans__cards {
     display: flex;
     flex-direction: column;
@@ -264,7 +307,7 @@
     height: 800px;
   }
 
-  section.starlink-section--plans {
+  .section.starlink-section--plans {
     height: auto !important;
     min-height: 0 !important;
     padding: 4rem 6%;
@@ -295,12 +338,14 @@
     align-self: flex-start;
     margin-left: 0.4em;
   }
+
   .starlink-section--plans .starlink-section__list {
     align-self: flex-start;
     margin-left: 3.3em;
     margin-top: -2.5em;
   }
-  section.starlink-section--plans
+
+  .section.starlink-section--plans
     .starlink-section__content
     .starlink-section__label {
     max-width: unset;
@@ -308,19 +353,23 @@
     margin-left: 0.7em;
     font-size: 0.85em;
   }
-  section.starlink-section--plans
+
+  .section.starlink-section--plans
     .starlink-section__content
     .starlink-section__price {
     font-size: 3.3em;
   }
+
   .starlink-section--plans .starlink-plans__cards {
     max-width: 1550px;
     margin: 0 auto;
   }
+
   .starlink-section--plans .starlink-section--plans__footer {
     max-width: unset;
     padding-bottom: 4em;
   }
+
   .starlink-section--plans
     [data-group="home"]
     .starlink-section__price-container {
@@ -329,17 +378,21 @@
     margin-left: -1em;
     margin-bottom: -3em;
   }
+
   .starlink-section--plans [data-group="home"] .starlink-section__price {
     margin-left: 0.6em;
     font-size: 8em !important;
     color: #d4d4d4;
   }
+
   .starlink-section--plans [data-group="home"] .starlink-section__title {
     padding-left: 0.5em;
   }
+
   .starlink-section--plans [data-group="home"] .starlink-section__label {
     margin-left: 1.1em !important;
   }
+
   .starlink-section--plans [data-group="home"] .starlink-section__list {
     margin-left: 4em;
     margin-top: -3em;
@@ -351,21 +404,22 @@
     min-height: 80px;
   }
 
-  section.starlink-section--plans
+  .section.starlink-section--plans
     [data-group="go"]
     .starlink-section__content
     .starlink-section__title,
-  section.starlink-section--plans
+  .section.starlink-section--plans
     [data-group="go"]
     .starlink-section__content
     .starlink-section__label,
-  section.starlink-section--plans
+  .section.starlink-section--plans
     [data-group="go"]
     .starlink-section__content
     .starlink-section__price-container {
     margin-right: 0 !important;
     max-width: 100% !important;
   }
+
   .starlink-section--plans [data-group="go"] .starlink-plans__cards {
     max-width: 1550px;
     margin: 0 auto;
@@ -379,37 +433,44 @@
   .starlink-section--plans [data-group="go"] .starlink-plans__cards {
     gap: 1em;
   }
+
   .starlink-section--plans
     [data-group="go"]
     .starlink-section__content
     .starlink-section__label {
     font-size: 0.9em;
   }
+
   .starlink-section--plans [data-group="go"] .starlink-section--plans__footer {
     max-width: unset;
     padding: 4.5em;
   }
+
   .starlink-section--plans
     [data-group="go"]
     .starlink-section__content
     .starlink-section__title {
     font-size: 1.5em;
   }
+
   .starlink-toggle {
     margin-top: 1em;
   }
+
   .starlink-section--plans
     [data-group="go"]
     .starlink-plans__cards
     .starlink-section__content {
     justify-content: space-between;
   }
+
   .starlink-section--plans
     [data-group="go"]
     .starlink-plans__cards
     .starlink-section__label {
     min-height: 80px;
   }
+
   .starlink-section--plans [data-group="go"] .starlink-section__price {
     margin-left: 0.15em;
     font-size: 3.3em;
@@ -418,6 +479,7 @@
   .starlink-section--plans [data-group="go"] .starlink-section__subtitle {
     margin-left: -2em;
   }
+
   .starlink-section--plans
     [data-group="go"]
     .starlink-plans__cards
@@ -432,14 +494,17 @@
     margin-top: auto;
     transform: translateY(-20px);
   }
+
   .starlink-section--plans
     [data-group="go"]
     .starlink-section__price-container {
     font-size: 0.9em;
   }
+
   .starlink-section--plans .starlink-section__subtitle {
     font-weight: 600;
   }
+
   .starlink-section--plans [data-group="go"] .starlink-section__subtitle {
     font-size: 0.8em;
   }
@@ -447,10 +512,12 @@
   .starlink-section--plans [data-group="go"] .starlink-section__title {
     padding-left: 0.2em;
   }
+
   .starlink-section--plans .starlink-section__content {
     padding-left: 0.5em !important;
   }
 }
+
 @media (max-width: 767px) {
   .starlink-section--plans::before {
     background-size: 180% auto !important;
