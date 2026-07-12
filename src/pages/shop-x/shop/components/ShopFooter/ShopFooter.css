@@ -109,7 +109,7 @@
 
 @media (min-width: 1024px) {
   .shop-footer__container {
-    min-height: auto;
+    height: 1rem;
     display: grid;
     justify-content: start;
     place-content: initial;

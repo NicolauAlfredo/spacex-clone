@@ -55,6 +55,7 @@
 }
 
 .cart__item-image {
+  margin-top: 1rem;
   width: 4.5rem;
   height: 4.5rem;
 }
@@ -110,5 +111,17 @@
 
   .cart__remove-button {
     font-size: 0.813rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cart__item-container {
+    min-width: 62.5rem;
+  }
+
+  .cart__item-image {
+    margin-top: 1rem;
+    width: 9rem;
+    height: 7.5rem;
   }
 }

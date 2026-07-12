@@ -31,15 +31,29 @@
 
 @media (min-width: 768px) {
   .cart {
-    padding: 3rem 3rem 1rem; 
+    padding: 3rem 3rem 1rem;
   }
 
   .cart__container {
     padding: 0;
-    margin: 0; 
+    margin: 0;
   }
 
   .cart__title {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cart-page {
+    justify-content: center;
+  }
+
+  .cart__container {
+    padding: 2.4rem 0 0 0;
+  }
+
+  .cart__title {
+    font-size: 1.688rem;
   }
 }
