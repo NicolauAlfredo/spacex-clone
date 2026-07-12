@@ -18,7 +18,7 @@ body {
   right: 0;
   padding: 0 4% 8% 4%;
   z-index: 1;
-  color: #f0f0fa;
+  color: #f7f7f8;
   margin-left: 1rem;
   display: flex;
   flex-direction: column;
@@ -29,6 +29,7 @@ body {
 .starlink-section__title {
   font-size: 2rem;
   line-height: 1.1;
+  max-width: 300px;
 }
 
 .starlink-section__label {
@@ -74,6 +75,9 @@ body {
   .starlink-section--best-value .starlink-section__title br {
     display: none;
   }
+  .starlink-section--best-value .starlink-section__title {
+    max-width: unset;
+  }
 }
 
 /* Desktop */
@@ -82,7 +86,7 @@ body {
     bottom: 34%;
     padding: 0 6%;
     max-width: 40%;
-    left: 15%;
+    left: 13%;
     gap: 0.2em;
   }
 
@@ -92,6 +96,7 @@ body {
 
   .starlink-section--best-value .starlink-section__title {
     font-size: 4rem;
+    max-width: unset;
   }
 
   .starlink-section--best-value .starlink-section__actions {

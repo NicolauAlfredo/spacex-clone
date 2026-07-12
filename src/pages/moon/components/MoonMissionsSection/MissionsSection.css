@@ -5,17 +5,17 @@
 
 .hero-section-missions {
   background-color: black;
-  height: 100vh;
+  height: 100%;
 }
 
 .hero-section-missions__img {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0;
+  margin: 200px 0;
 }
 
-.hero-section-missions__content {
+.hero-section-missions__container {
   padding: 40px 20px;
   z-index: 2;
   color: #f0f0fa;
@@ -53,12 +53,13 @@
     width: 100%;
     height: auto;
     margin: 0;
+    transform: scale(1.23);
   }
 
-  .hero-section-missions__content {
+  .hero-section-missions__container {
     position: absolute;
-    top: 14%;
-    left: 5%;
+    top: 0;
+    left: 100px;
     width: 50%;
     padding: 0;
     z-index: 2;
@@ -71,12 +72,16 @@
 
   .hero-section-missions__description {
     font-size: 0.9rem;
-    max-width: 75%;
+    max-width: 535px;
   }
 }
 
 @media (min-width: 1440px) {
-  .hero-section-missions__content {
+  .hero-section-missions__container {
     max-width: 535px;
+  }
+
+  .hero-section-missions__img {
+    transform: none;
   }
 }
