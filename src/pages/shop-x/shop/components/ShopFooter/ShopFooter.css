@@ -82,15 +82,16 @@
 
 @media (min-width: 768px) {
   .shop-footer__container {
-    min-height: 16.25rem;
+    min-height: 13.25rem;
     place-content: center;
-    gap: 5rem;
-    padding: 4rem 2.5rem;
+    gap: 3.5rem;
+    padding: 0 2.5rem;
   }
 
   .shop-footer__menu-list {
     justify-content: center;
     gap: 1rem;
+    padding: 1.4rem 0 0 0;
   }
 
   .shop-footer__menu-item a {

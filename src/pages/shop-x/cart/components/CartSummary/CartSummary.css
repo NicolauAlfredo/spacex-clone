@@ -31,10 +31,20 @@
   .cart__summary {
     justify-items: end;
     text-align: right;
+    padding: 1.5rem 0;
   }
 
   .cart__checkout-button {
-    width: 6rem;
-    height: 2.5rem;
+    width: 7rem;
+    height: 3rem;
+    font-size: 0.9rem; 
+  }
+
+  .cart__summary-total {
+    font-size: 1.063rem;
+  }
+
+  .cart__summary-note {
+    font-size: 0.875rem;
   }
 }
