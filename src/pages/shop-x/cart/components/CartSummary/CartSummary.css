@@ -5,16 +5,18 @@
 
   border-top: 1px solid #ddd;
   padding-top: 2rem;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .cart__summary-total {
   margin: 0;
   font-size: 0.813rem;
+  color: #1c1c1c;
 }
 
 .cart__summary-note {
   margin: 0;
-  color: #555;
+  color: #1c1c1ca6;
   font-size: 0.75rem;
 }
 

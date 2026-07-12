@@ -1,7 +1,7 @@
 .cart__item {
   display: flex;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .cart__item-container {
@@ -44,13 +44,14 @@
 
 .cart__item-actions .product-detail__quantity {
   width: 7.6rem;
-  height: 2.5rem;
+  height: 2.3rem;
 }
 
 .cart__item-actions {
   display: flex;
   width: 100%;
   gap: 1rem;
+  align-items: center;
 }
 
 .cart__item-image {
@@ -59,8 +60,14 @@
 }
 
 .cart__remove-button {
-  text-decoration: underline;
-  font-size: 0.688rem;
+  font-size: 0.6875rem;
+  color: inherit;
+  background: none;
+  border: none;
+  height: 1rem;
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+  padding: 0;
 }
 
 .cart__item-total {
