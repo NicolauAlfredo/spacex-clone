@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { getPublicAssetPath } from "../../../../../utils/getPublicAssetPath";
+import { getPageAssetURL } from "../../../../../utils/getAssetURL";
 
 export function ShopLogo() {
   return (
@@ -9,7 +9,7 @@ export function ShopLogo() {
       aria-label="Go to Shop homepage"
     >
       <img
-        src={getPublicAssetPath("assets/pages/shopx/logo/xai-header-logo.webp")}
+        src={getPageAssetURL("shopx", "logo", "xai-header-logo.webp")}
         alt="Shop xAI"
         className="shop-logo__image"
       />

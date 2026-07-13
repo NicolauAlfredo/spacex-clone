@@ -1,7 +1,7 @@
-import { starlinkNavLinks } from '../../../../../../content/starlinknavlinks.content';
-import { starlinkCallNumber } from '../../../../../../content/starlinkcallnumber.content';
+import { starlinkNavLinks } from "../../../../../../content/starlink/starlinknavlinks.content";
+import { starlinkCallNumber } from "../../../../../../content/starlink/starlinkcallnumber.content";
 
-import './NavLinks.css';
+import "./NavLinks.css";
 
 export const NavLinks = () => {
   return (
@@ -14,7 +14,10 @@ export const NavLinks = () => {
         ))}
       </nav>
 
-      <a className="header__call" href={`tel:${starlinkCallNumber.phoneNumber}`}>
+      <a
+        className="header__call"
+        href={`tel:${starlinkCallNumber.phoneNumber}`}
+      >
         Call <span>{starlinkCallNumber.label}</span>
       </a>
     </>

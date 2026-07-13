@@ -1,6 +1,6 @@
-import { moonWhySection } from "../../../../content/moonWhySection.content";
+import { moonWhySection } from "../../../../content/moon/moonWhySection.content";
 import { InfoTable } from "./components/InfoTable/InfoTable";
-import { InnerText } from "../../../../components/Section/components/InnerText/InnerText";
+import { InnerText } from "../MoonMissionsSection/components/InnerText/InnerText";
 import "./WhySection.css";
 
 export function WhySection() {

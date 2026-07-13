@@ -1,5 +1,5 @@
-import type { HomeSectionContent } from "../../../../types/homePage/home.types";
-import { Button } from "../Button/Button"
+import type { HomeSectionContent } from "../../../../types/home/home.types";
+import { Button } from "../Button/Button";
 import { MediaBackground } from "../MediaBackground/MediaBackground";
 
 type Props = {

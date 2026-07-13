@@ -1,4 +1,4 @@
-import { xaiProducts } from "../../../../../content/ShopProducts.content";
+import { xaiProducts } from "../../../../../content/shop-x/shopProducts.content";
 import { ShopProductCard } from "./ShopProductCard/ShopProductCard";
 import "./ShopProducts.css";
 

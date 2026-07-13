@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { CarouselCollection } from "../../../../types/moonCarousel.types";
+import type { CarouselCollection } from "../../../../types/moon/moonCarousel.types";
 import { CarouselArrowLeft } from "./Icons/CarouselArrowLeft";
 import { CarouselArrowRight } from "./Icons/CarouselArrowRight";
 interface CarouselProps {

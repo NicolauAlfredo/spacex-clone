@@ -1,4 +1,4 @@
-import { starlinkCallNumber } from "../../../../../../content/starlinkcallnumber.content";
+import { starlinkCallNumber } from "../../../../../../content/starlink/starlinkcallnumber.content";
 
 import "./StarlinkCallMenu.css";
 
@@ -8,7 +8,6 @@ export const StarlinkCallMenu = () => {
       className="header__btn"
       aria-label="Call"
       href={`tel:${starlinkCallNumber.phoneNumber}`}
-      
     >
       <svg
         focusable="false"
@@ -26,7 +25,6 @@ export const StarlinkCallMenu = () => {
           strokeLinejoin="round"
         />
       </svg>
-      
     </a>
   );
 };

@@ -8,7 +8,7 @@ import { AvailableGlobally } from "./components/AvailableGlobally/AvailableGloba
 import { PlugItInPoint } from "./components/PlugItInPoint/PlugItInPoint";
 import { StarlinkFooter } from "./components/StarlinkFooter/StarlinkFooter";
 import { StarlinkBackground } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackground";
-import { starlinkBackgrounds } from "../../content/starlinkbackground.content";
+import { starlinkBackgrounds } from "../../content/starlink/starlinkbackground.content";
 
 import "./StarlinkPage.css";
 import { StarlinkOverlay } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackgroundOverlay/StarlinkOverlay";

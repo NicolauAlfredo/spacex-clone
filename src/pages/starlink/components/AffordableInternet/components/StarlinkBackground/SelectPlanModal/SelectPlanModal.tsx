@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import { planOptions } from '../../../../../../../content/selectPlanModal.content';
-import type { PlanOption } from '../../../../../../../types/selectPlanModal.types';
-import './SelectPlanModal.css';
+import { useEffect, useState } from "react";
+import { planOptions } from "../../../../../../../content/starlink/selectPlanModal.content";
+import type { PlanOption } from "../../../../../../../types/starlink/selectPlanModal.types";
+import "./SelectPlanModal.css";
 
 type Props = {
   isOpen: boolean;
@@ -9,40 +9,41 @@ type Props = {
 };
 
 export function SelectPlanModal({ isOpen, onClose }: Props) {
-  const [selectedPlan, setSelectedPlan] = useState<PlanOption['id']>('residential');
-  const [address, setAddress] = useState('');
+  const [selectedPlan, setSelectedPlan] =
+    useState<PlanOption["id"]>("residential");
+  const [address, setAddress] = useState("");
 
   useEffect(() => {
-    const header = document.querySelector<HTMLElement>('.header');
+    const header = document.querySelector<HTMLElement>(".header");
     if (!header) return;
 
     function applyHeaderState() {
       if (!isOpen) {
-        header!.style.filter = '';
-        header!.style.display = '';
+        header!.style.filter = "";
+        header!.style.display = "";
         return;
       }
       if (window.innerWidth <= 767) {
-        header!.style.display = 'none';
-        header!.style.filter = '';
+        header!.style.display = "none";
+        header!.style.filter = "";
       } else {
-        header!.style.display = '';
-        header!.style.filter = 'blur(8px)';
+        header!.style.display = "";
+        header!.style.filter = "blur(8px)";
       }
     }
 
     applyHeaderState();
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    document.body.style.overflow = isOpen ? "hidden" : "";
     if (isOpen) {
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      window.scrollTo({ top: 0, behavior: "instant" });
     }
-    window.addEventListener('resize', applyHeaderState);
+    window.addEventListener("resize", applyHeaderState);
 
     return () => {
-      document.body.style.overflow = '';
-      header.style.filter = '';
-      header.style.display = '';
-      window.removeEventListener('resize', applyHeaderState);
+      document.body.style.overflow = "";
+      header.style.filter = "";
+      header.style.display = "";
+      window.removeEventListener("resize", applyHeaderState);
     };
   }, [isOpen]);
 
@@ -51,8 +52,14 @@ export function SelectPlanModal({ isOpen, onClose }: Props) {
   return (
     <>
       <div className="select-plan-overlay" onClick={onClose} />
-      <div className={`select-plan-modal${selectedPlan === 'roam' ? ' select-plan-modal--roam' : ''}`}>
-        <button className="select-plan-modal__close" aria-label="Close" onClick={onClose}>
+      <div
+        className={`select-plan-modal${selectedPlan === "roam" ? " select-plan-modal--roam" : ""}`}
+      >
+        <button
+          className="select-plan-modal__close"
+          aria-label="Close"
+          onClick={onClose}
+        >
           ✕
         </button>
 
@@ -63,19 +70,27 @@ export function SelectPlanModal({ isOpen, onClose }: Props) {
             <button
               key={plan.id}
               className={`select-plan-modal__option${
-                selectedPlan === plan.id ? ' select-plan-modal__option--active' : ''
+                selectedPlan === plan.id
+                  ? " select-plan-modal__option--active"
+                  : ""
               }`}
               onClick={() => setSelectedPlan(plan.id)}
             >
-              <span className="select-plan-modal__option-title">{plan.title}</span>
-              <span className="select-plan-modal__option-desc">{plan.description}</span>
+              <span className="select-plan-modal__option-title">
+                {plan.title}
+              </span>
+              <span className="select-plan-modal__option-desc">
+                {plan.description}
+              </span>
             </button>
           ))}
         </div>
 
-        {selectedPlan === 'residential' && (
+        {selectedPlan === "residential" && (
           <>
-            <h3 className="select-plan-modal__subtitle">Where will you use Starlink?</h3>
+            <h3 className="select-plan-modal__subtitle">
+              Where will you use Starlink?
+            </h3>
 
             <input
               type="text"
@@ -89,7 +104,7 @@ export function SelectPlanModal({ isOpen, onClose }: Props) {
 
         <button
           className={`select-plan-modal__submit${
-            selectedPlan === 'roam' ? ' select-plan-modal__submit--roam' : ''
+            selectedPlan === "roam" ? " select-plan-modal__submit--roam" : ""
           }`}
         >
           View Plans

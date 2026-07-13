@@ -1,4 +1,4 @@
-import { starlinkLogo } from "../../../../content/starlinklogo.content";
+import { starlinkLogo } from "../../../../content/starlink/starlinklogo.content";
 import "./StarlinkLogo.css";
 
 export const StarlinkLogo = () => {

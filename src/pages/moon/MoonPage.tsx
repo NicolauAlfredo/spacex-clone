@@ -1,6 +1,6 @@
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
-import { moonCarouselCollections } from "../../content/MoonCarousel.content";
+import { moonCarouselCollections } from "../../content/moon/moonCarousel.content";
 import Carousel from "./components/MoonCarousel/MoonCarousel";
 import { MoonContact } from "./components/MoonContact/MoonContact";
 import { MoonHeroSection } from "./components/MoonHeroSection/MoonHeroSection";

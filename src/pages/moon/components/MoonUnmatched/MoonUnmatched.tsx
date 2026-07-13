@@ -1,4 +1,4 @@
-import { moonUnmatchedData } from "../../../../content/MoonUnmatched.content";
+import { moonUnmatchedData } from "../../../../content/moon/moonUnmatched.content";
 import "./MoonUnmatched.css";
 
 export function MoonUnmatched() {

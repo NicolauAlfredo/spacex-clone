@@ -1,4 +1,4 @@
-import { starlinkHeaderToggles } from "../../../../../../content/starlinkheadertoggle.content";
+import { starlinkHeaderToggles } from "../../../../../../content/starlink/starlinkheadertoggle.content";
 import "./StarlinkToggleHeader.css";
 
 export const HeaderToggle = () => {

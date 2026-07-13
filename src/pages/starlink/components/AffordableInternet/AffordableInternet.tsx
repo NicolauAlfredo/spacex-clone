@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { affordableInternetContent as content } from "../../../../content/affordableInternet.content";
+import { affordableInternetContent as content } from "../../../../content/starlink/affordableInternet.content";
 import { formatPrice } from "../../../../utils/formatPrice";
 import { StarlinkButton } from "../StarlinkButton/StarlinkButton";
 import "./AffordableInternet.css";
@@ -16,10 +16,17 @@ export function AffordableInternet() {
         <span className="starlink-section__subtitle--price">/mo</span>
       </p>
       <div className="starlink-section__actions" id="hero-actions">
-  <StarlinkButton label="Get Started" variant="primary" onClick={() => setIsModalOpen(true)} />
-  <StarlinkButton label="View Pricing" href="/pricing" variant="ghost" />
-</div>
-<SelectPlanModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        <StarlinkButton
+          label="Get Started"
+          variant="primary"
+          onClick={() => setIsModalOpen(true)}
+        />
+        <StarlinkButton label="View Pricing" href="/pricing" variant="ghost" />
+      </div>
+      <SelectPlanModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }

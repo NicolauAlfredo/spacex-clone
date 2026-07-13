@@ -1,8 +1,7 @@
-import type { MediaBackgroundProps } from "../../../../types/homePage/mediaBackground.types";
+import type { MediaBackgroundProps } from "../../../../types/home/mediaBackground.types";
 
 export function MediaBackground(props: MediaBackgroundProps) {
   if (props.mediaType === "video") {
-
     return (
       <video
         className="hero-section__video"
@@ -30,7 +29,11 @@ export function MediaBackground(props: MediaBackgroundProps) {
   return (
     <picture>
       <source srcSet={props.desktopImageSrc} media="(min-width: 1024px)" />
-      <img className="hero-section__image" src={props.mobileImageSrc} alt={props.alt} />
+      <img
+        className="hero-section__image"
+        src={props.mobileImageSrc}
+        alt={props.alt}
+      />
     </picture>
   );
 }

@@ -10,7 +10,7 @@ import NotFound from "./components/NotFound/NotFound";
 import type { Product } from "../../../models/Product";
 import { useCart } from "../../../hooks/useCart";
 import { useState } from "react";
-import { xaiProducts } from "../../../content/ShopProducts.content";
+import { xaiProducts } from "../../../content/shop-x/shopProducts.content";
 import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
 import ProductGallery from "./components/ProductGallery/ProductGallery";
 import ProductInfo from "./components/ProductInfo/ProductInfo";

@@ -1,8 +1,8 @@
 import "./Plans.css";
 
-import { SectionContent } from "../../../../components/content/Content";
+import { SectionContent } from "../content/Content";
 import { formatPrice } from "../../../../utils/formatPrice";
-import type { StarlinkPlanGroup } from "../../../../types/starlinkplans.types";
+import type { StarlinkPlanGroup } from "../../../../types/starlink/starlinkplans.types";
 
 type Props = {
   group: "home" | "go";
@@ -13,7 +13,7 @@ export function StarlinkPlansGroup({ group, content }: Props) {
   return (
     <div className="starlink-plans__group" data-group={group}>
       <div className="starlink-plans__background" />
-      
+
       <div className="starlink-plans__cards">
         {content.plans.map((plan) => (
           <div className="starlink-section__content" key={plan.title}>

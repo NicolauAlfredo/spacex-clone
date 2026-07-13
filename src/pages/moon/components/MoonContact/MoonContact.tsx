@@ -1,4 +1,4 @@
-import { moonContactData } from "../../../../content/MoonContact.content";
+import { moonContactData } from "../../../../content/moon/moonContact.content";
 import "./MoonContact.css";
 
 export function MoonContact() {

@@ -1,5 +1,4 @@
-import { starlinkFooter } from "../../../../../content/starlinkFooter.content";
-
+import { starlinkFooter } from "../../../../../content/starlink/starlinkFooter.content";
 
 export const FooterNavItems = () => {
   return (
