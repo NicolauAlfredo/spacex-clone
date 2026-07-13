@@ -1,29 +1,29 @@
-.header__nav {
+.starlink-header__nav {
   display: none;
 }
-.header__call {
+.starlink-header__call {
   display: none;
 }
 
 @media (min-width: 1024px) {
-     .header__call {
+  .starlink-header__call {
     display: flex;
-    color:#bbbec3;
+    color: #bbbec3;
     font-size: 0.9em;
     white-space: nowrap;
   }
-  .header__call span {
+  .starlink-header__call span {
     margin-left: 0.2em;
     font-size: 0.9em;
     text-decoration: underline;
     font-weight: 700;
     color: #bbbec3;
   }
-   .header__nav {
+  .starlink-header__nav {
     display: flex;
     gap: 1.5rem;
   }
-  .header__nav-link {
+  .starlink-header__nav-link {
     color: #ffffff;
     text-decoration: none;
     font-size: 0.875rem;

@@ -92,6 +92,14 @@ export function Header() {
     closeAll();
   }
 
+useEffect(() => {
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    document.documentElement.classList.toggle("is-touch", isTouchDevice);
+    document.documentElement.classList.toggle("is-no-touch", !isTouchDevice);
+  }, []);
+  
   useEffect(() => {
     function handleDocumentClick(event: MouseEvent) {
       const target = event.target as HTMLElement;
