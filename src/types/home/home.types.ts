@@ -1,4 +1,4 @@
-import type { ButtonProps } from "../button.types";
+import type { ButtonProps } from "./homeButton.types";
 import type { MediaBackgroundProps } from "./mediaBackground.types";
 
 export type ContentPosition =
