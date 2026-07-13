@@ -1,14 +1,11 @@
-import type { MoonWhySection } from "../types/moonWhy.types";
-import { getPublicAssetPath } from "../utils/getPublicAssetPath";
-
-export const getMoonImageURL = (filename: string): string =>
-  getPublicAssetPath(`assets/pages/moon/images/${filename}`);
+import type { MoonWhySection } from "../../types/moon/moonWhy.types";
+import { getPageAssetURL } from "../../utils/getAssetURL";
 
 export const moonWhySection: MoonWhySection = {
   title: "Why the moon?",
   paragraph:
     "The Moon is one of Earth's closest habitable neighbors and provides an opportunity to gain valuable experience for missions to Mars and beyond.",
-  image: getMoonImageURL("moon_why.jpg"),
+  image: getPageAssetURL("moon", "images", "moon_why.jpg"),
   imageAlt: "Moon surface",
   stats: [
     { label: "Diameter", value: "3,475 km / 2,159 mi" },

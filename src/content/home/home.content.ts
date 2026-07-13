@@ -1,5 +1,5 @@
-import type { HomeSectionContent } from "../../types/homePage/home.types";
-import { getPageMediaURL } from "../../utils/getPageMediaURL";
+import type { HomeSectionContent } from "../../types/home/home.types";
+import { getPageAssetURL } from "../../utils/getAssetURL";
 
 export const heroContent: HomeSectionContent[] = [
   {
@@ -8,17 +8,17 @@ export const heroContent: HomeSectionContent[] = [
     title: "STARSHIP'S TWELFTH FLIGHT TEST",
     background: {
       mediaType: "video",
-      desktopVideoSrc: getPageMediaURL(
+      desktopVideoSrc: getPageAssetURL(
         "home",
         "videos",
         "Starships-twelfth-flight-test.mp4",
       ),
-      mobileVideoSrc: getPageMediaURL(
+      mobileVideoSrc: getPageAssetURL(
         "home",
         "videos",
         "Starships-twelfth-flight-test-mobile.mp4",
       ),
-      posterSrc: getPageMediaURL(
+      posterSrc: getPageAssetURL(
         "home",
         "images",
         "revolutionizing-space-tech-mobile.jpg",
@@ -39,13 +39,13 @@ export const heroContent: HomeSectionContent[] = [
       "SpaceX was founded under the belief that a future where humanity is out exploring the stars is fundamentally more exciting than one where we are not.",
     background: {
       mediaType: "video",
-      desktopVideoSrc: getPageMediaURL("home", "videos", "mars-rotation.mp4"),
-      mobileVideoSrc: getPageMediaURL(
+      desktopVideoSrc: getPageAssetURL("home", "videos", "mars-rotation.mp4"),
+      mobileVideoSrc: getPageAssetURL(
         "home",
         "videos",
         "Starships-twelfth-flight-test-mobile.mp4",
       ),
-      posterSrc: getPageMediaURL("home", "images", "mars-mobile.jpg"),
+      posterSrc: getPageAssetURL("home", "images", "mars-mobile.jpg"),
     },
     button: {
       title: "EXPLORE",
@@ -62,12 +62,12 @@ export const heroContent: HomeSectionContent[] = [
       "SpaceX’s Starship spacecraft and Super Heavy rocket is a fully reusable transportation system designed to carry both crew and cargo to Earth orbit, the Moon, Mars, and beyond.",
     background: {
       mediaType: "image",
-      desktopImageSrc: getPageMediaURL(
+      desktopImageSrc: getPageAssetURL(
         "home",
         "images",
         "revolutionizing-space-tech-desktop.jpg",
       ),
-      mobileImageSrc: getPageMediaURL(
+      mobileImageSrc: getPageAssetURL(
         "home",
         "images",
         "revolutionizing-space-tech-mobile.jpg",
@@ -89,17 +89,17 @@ export const heroContent: HomeSectionContent[] = [
       "SpaceX leads the world in launches with its reliable, reusable rockets and is developing the fully and rapidly reusable rockets necessary to transform humanity’s ability to access space into something as routine as air travel.",
     background: {
       mediaType: "video",
-      desktopVideoSrc: getPageMediaURL(
+      desktopVideoSrc: getPageAssetURL(
         "home",
         "videos",
         "leading-launch-service.mp4",
       ),
-      mobileVideoSrc: getPageMediaURL(
+      mobileVideoSrc: getPageAssetURL(
         "home",
         "videos",
         "leading-launch-service-mobile.mp4",
       ),
-      posterSrc: getPageMediaURL(
+      posterSrc: getPageAssetURL(
         "home",
         "images",
         "leading-launch-service-mobile.jpg",
@@ -120,12 +120,12 @@ export const heroContent: HomeSectionContent[] = [
       "Since returning human spaceflight capabilities to the United States in 2020, SpaceX is helping build a new era where not just hundreds of people, but thousands and ultimately millions will be able to explore space.",
     background: {
       mediaType: "image",
-      desktopImageSrc: getPageMediaURL(
+      desktopImageSrc: getPageAssetURL(
         "home",
         "images",
         "advancing-human-spaceflight-desktop.jpg",
       ),
-      mobileImageSrc: getPageMediaURL(
+      mobileImageSrc: getPageAssetURL(
         "home",
         "images",
         "advancing-human-spaceflight-mobile.jpg",
@@ -147,17 +147,17 @@ export const heroContent: HomeSectionContent[] = [
       "Starlink is the world’s most advanced satellite constellation in low-Earth orbit, delivering reliable broadband internet capable of supporting streaming, online gaming, video calls, and more.",
     background: {
       mediaType: "video",
-      desktopVideoSrc: getPageMediaURL(
+      desktopVideoSrc: getPageAssetURL(
         "home",
         "videos",
         "delivering-high-speed.mp4",
       ),
-      mobileVideoSrc: getPageMediaURL(
+      mobileVideoSrc: getPageAssetURL(
         "home",
         "videos",
         "delivering-high-speed-mobile.mp4",
       ),
-      posterSrc: getPageMediaURL(
+      posterSrc: getPageAssetURL(
         "home",
         "images",
         "delivering-highspeed-mobile.jpg",

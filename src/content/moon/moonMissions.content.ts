@@ -1,12 +1,9 @@
-import { getPublicAssetPath } from "../utils/getPublicAssetPath";
-
-export const getMoonImageURL = (filename: string): string =>
-  getPublicAssetPath(`assets/pages/moon/images/${filename}`);
+import { getPageAssetURL } from "../../utils/getAssetURL";
 
 export const moonMissions = {
   title: "Moon Missions",
-  desktopImage: getMoonImageURL("starship-moon-desktop.jpg"),
-  mobileImage: getMoonImageURL("starship-moon.jpg"),
+  desktopImage: getPageAssetURL("moon", "images", "starship-moon-desktop.jpg"),
+  mobileImage: getPageAssetURL("moon", "images", "starship-moon.jpg"),
   imageAlt: "Moon",
 
   paragraphs: [
