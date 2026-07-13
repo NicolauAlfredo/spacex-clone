@@ -8,7 +8,7 @@
 
 .starlink-section--high-speed--background {
   position: absolute;
-  background-image: url(/assets/pages/starlink/backgrounds/illustration_10.webp);
+  background-image: url("/assets/pages/starlink/backgrounds/illustration_10.webp");
   background-position: center center;
   background-size: cover;
   inset: 0;
