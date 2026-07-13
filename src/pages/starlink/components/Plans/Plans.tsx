@@ -12,7 +12,7 @@ type Props = {
 export function StarlinkPlansGroup({ group, content }: Props) {
   return (
     <div className="starlink-plans__group" data-group={group}>
-      <div className="starlink-plans__background" />
+   
       
       <div className="starlink-plans__cards">
         {content.plans.map((plan) => (
