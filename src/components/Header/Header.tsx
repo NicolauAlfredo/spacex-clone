@@ -21,7 +21,7 @@ import { SpaceXLogo } from "./components/SpaceXLogo";
 
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { UpcomingLaunches } from "../UpcomingLaunches/UpcomingLaunches";
+import { UpcomingLaunches } from "../../pages/home/components/UpcomingLaunches/UpcomingLaunches";
 
 type DropdownKey =
   | "vehicles"
