@@ -181,7 +181,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("../../../../../../public/assets/pages/starlink/backgrounds/illustration_07.webp");
+    background-image: url("/assets/pages/starlink/backgrounds/illustration_07.webp");
     background-repeat: no-repeat;
     background-position: center 10%;
     background-size: 130% auto;
@@ -298,7 +298,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("../../../../../../public/assets/pages/starlink/backgrounds/illustration_07.webp");
+    background-image: url("/assets/pages/starlink/backgrounds/illustration_07.webp");
     background-repeat: no-repeat;
     background-position: center 95%;
     background-size: 65% auto;
