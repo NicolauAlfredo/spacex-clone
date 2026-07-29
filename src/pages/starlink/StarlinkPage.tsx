@@ -12,10 +12,11 @@ import { starlinkBackgrounds } from "../../content/starlink/starlinkbackground.c
 
 import { StarlinkOverlay } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackgroundOverlay/StarlinkOverlay";
 import { StickyBar } from "./components/StarlinkStickyBar/StarlinkStickyBar";
+import "./StarlinkPage.css";
 
 export function StarlinkPage() {
   return (
-    <>
+    <main className="starlink-page">
       <StickyBar />
       <div className="starlink-section starlink-section--best-value">
         <StarlinkBackground
@@ -45,6 +46,6 @@ export function StarlinkPage() {
       <AvailableGlobally />
       <PlugItInPoint />
       <StarlinkFooter />
-    </>
+    </main>
   );
 }

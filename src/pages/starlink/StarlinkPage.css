@@ -1,0 +1,219 @@
+.starlink-page {
+  width: 100%;
+  overflow-x: clip;
+  background: #000;
+}
+
+@media (min-width: 768px) {
+  .starlink-page .starlink-section:not(.starlink-section--plans) {
+    height: clamp(600px, 100svh, 800px);
+    min-height: 0;
+  }
+
+  .starlink-page .starlink-section--plans {
+    height: auto;
+    min-height: 0;
+    padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .starlink-page .starlink-section--plans::before {
+    inset: 0;
+  }
+
+  .starlink-page .starlink-plans__group {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .starlink-page .starlink-plans__cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+    gap: 1.25rem;
+    margin: 0;
+  }
+
+  .starlink-page .starlink-section--plans .starlink-section__content {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 21rem;
+    margin: 0 !important;
+    padding: 1.75rem !important;
+    transform: none !important;
+  }
+
+  .starlink-page .starlink-section--plans .starlink-section__title,
+  .starlink-page .starlink-section--plans [data-group="go"] .starlink-section__title {
+    padding: 0;
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+  }
+
+  .starlink-page .starlink-section--plans .starlink-section__label,
+  .starlink-page .starlink-section--plans .starlink-plans__cards .starlink-section__label {
+    min-height: 0;
+    margin: 0 !important;
+    font-size: 0.9rem;
+  }
+
+  .starlink-page .starlink-section--plans .starlink-section__list,
+  .starlink-page .starlink-section--plans [data-group="home"] .starlink-section__list {
+    margin: 1rem 0 0 1.5rem;
+    align-self: auto;
+  }
+
+  .starlink-page .starlink-section--plans .starlink-section__price-container,
+  .starlink-page .starlink-section--plans [data-group="home"] .starlink-section__price-container {
+    margin: auto 0 0 !important;
+    padding: 1.5rem 0 0;
+    align-self: auto;
+    transform: none;
+  }
+
+  .starlink-page .starlink-section--plans .starlink-section__price,
+  .starlink-page .starlink-section--plans [data-group="home"] .starlink-section__price,
+  .starlink-page .starlink-section--plans [data-group="go"] .starlink-section__price {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .starlink-page .starlink-section--plans__footer,
+  .starlink-page .starlink-section--plans [data-group="go"] .starlink-section--plans__footer {
+    max-width: 60rem;
+    margin: 1.5rem auto 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .starlink-page .starlink-section__text--container {
+    width: min(58%, 42rem);
+    max-width: none;
+    height: 100%;
+    padding: clamp(2rem, 5vw, 5rem);
+  }
+
+  .starlink-page .starlink-section__inner--title,
+  .starlink-page .starlink-section--reliable .starlink-section__title {
+    font-size: clamp(2.75rem, 4.5vw, 3.4rem);
+  }
+
+  .starlink-page .starlink-section__inner--text,
+  .starlink-page .starlink-section--reliable .starlink-section__lable {
+    max-width: 34rem;
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+  }
+
+  .starlink-page .starlink-section--high-speed {
+    height: auto;
+    min-height: 0;
+    padding: clamp(3rem, 6vw, 5rem) 0;
+  }
+
+  .starlink-page .starlink-section--high-speed__title {
+    padding: 0 1.5rem clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+  }
+
+  .starlink-page .starlink-section--high-speed__carousel--scroll {
+    max-width: 100%;
+    padding: 0 clamp(1.5rem, 4vw, 4rem);
+  }
+
+  .starlink-page .starlink-section--high-speed__card {
+    width: min(70vw, 32rem);
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .starlink-page .starlink-section--high-speed__card--image,
+  .starlink-page .starlink-section--high-speed__card--container--text {
+    width: 100%;
+  }
+
+  .starlink-page .starlink-section--high-speed__card--image {
+    height: auto;
+    aspect-ratio: 1.22 / 1;
+    object-fit: cover;
+  }
+
+  .starlink-page .starlink-section--high-speed__container--chevron {
+    margin-top: 1.5rem;
+    padding: 0;
+  }
+
+  .starlink-page .sticky-bar {
+    width: min(92%, 74rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1179px) {
+  .starlink-page .starlink-section--best-value .starlink-section__content {
+    left: 0;
+    bottom: 0;
+    max-width: 34rem;
+    padding: clamp(2rem, 6vw, 4rem);
+  }
+
+  .starlink-page .starlink-section--reliable .starlink-section__content {
+    max-width: 38rem;
+    padding: clamp(2rem, 6vw, 4rem);
+  }
+
+  .starlink-page .starlink-section__text--container {
+    justify-content: flex-end;
+  }
+
+  .starlink-page .starlink-section__text--container-available-globally {
+    left: 0;
+  }
+}
+
+@media (min-width: 1180px) {
+  .starlink-page .starlink-section--best-value .starlink-section__content {
+    left: clamp(5rem, 16vw, 18rem);
+    bottom: 14%;
+    max-width: 30rem;
+    padding: 0;
+  }
+
+  .starlink-page .starlink-section--best-value .starlink-section__title {
+    font-size: clamp(3rem, 4vw, 3.5rem);
+  }
+
+  .starlink-page .starlink-section--reliable .starlink-section__content {
+    left: clamp(5rem, 16vw, 18rem);
+    bottom: 22%;
+    max-width: 36rem;
+    padding: 0;
+  }
+
+  .starlink-page .starlink-section__text--container {
+    left: clamp(5rem, 16vw, 18rem);
+    width: min(38%, 34rem);
+    padding: 0;
+    justify-content: center;
+  }
+
+  .starlink-page .starlink-section__text--container-available-globally {
+    left: 48%;
+  }
+
+  .starlink-page .starlink-plans__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .starlink-page .starlink-section--plans .starlink-section__content {
+    min-height: 18rem;
+  }
+
+  .starlink-page .starlink-section--high-speed__carousel {
+    gap: 1.5rem;
+  }
+
+  .starlink-page .starlink-section--high-speed__card {
+    width: calc((100vw - 11rem) / 3);
+    max-width: 34rem;
+  }
+}
