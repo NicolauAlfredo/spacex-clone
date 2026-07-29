@@ -50,6 +50,7 @@
 }
 
 .menu__item a,
+.menu__item button,
 .menu__item-lang {
   display: flex;
   align-items: center;

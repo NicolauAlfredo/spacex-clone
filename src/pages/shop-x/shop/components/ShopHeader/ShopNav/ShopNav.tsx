@@ -16,20 +16,20 @@ export function ShopNav() {
         </li>
 
         <li className="menu__item hidden account">
-          <Link to="#" aria-label="Sign in">
+          <button type="button" aria-label="Sign in" disabled>
             <span className="menu__item-login">login</span>
             <UserIcon />
-          </Link>
+          </button>
         </li>
 
         <li className="menu__item">
-          <Link to="#" aria-label="Search products">
+          <button type="button" aria-label="Search products" disabled>
             <span className="menu__item-search">Search</span>
 
             <span>
               <SearchIcon />
             </span>
-          </Link>
+          </button>
         </li>
 
         <li className="menu__item">
