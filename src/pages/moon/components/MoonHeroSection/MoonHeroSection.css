@@ -73,6 +73,18 @@
   animation-duration: 0.75s;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section-moon .hero-section-moon__content {
+    top: 28%;
+    right: auto;
+    width: min(90%, 42rem);
+  }
+
+  .hero-section-moon__title {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+  }
+}
+
 @keyframes reveal-description {
   from {
     opacity: 0;
