@@ -36,6 +36,13 @@
   margin-left: auto;
 }
 
+.upcoming-launch__header-countdown {
+  display: none;
+  white-space: nowrap;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.75rem;
+}
+
 .upcoming-launch__cards {
   position: static;
   display: flex;
@@ -133,6 +140,25 @@
 
   .upcoming-launch--header .upcoming-launch__toggle {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 5.5rem;
+  }
+
+  .upcoming-launch--header .upcoming-launch__header-countdown {
+    display: inline;
+  }
+
+  .upcoming-launch--header .upcoming-launch__toggle svg {
+    display: none;
+  }
+
+  .upcoming-launch--header:hover .upcoming-launch__header-countdown {
+    display: none;
+  }
+
+  .upcoming-launch--header:hover .upcoming-launch__toggle svg {
+    display: block;
   }
 
   .upcoming-launch--header .upcoming-launch__cards {

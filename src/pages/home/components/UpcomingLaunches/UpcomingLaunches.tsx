@@ -4,18 +4,24 @@ import { UpcomingLaunchCard } from "./components/UpcomingLaunchCard";
 import { upcomingLaunches } from "../../../../content/home/upcomingLaunches.content";
 import { GridIcon } from "../../../../components/Header/components/Icons/GridIcon";
 import type { UpcomingLaunchesProps } from "../../../../types/home/upcomingLaunches.types";
+import { useLaunchCountdown } from "./useLaunchCountdown";
 
 import "./UpcomingLaunches.css";
 
 export function UpcomingLaunches({
   variant = "section",
 }: UpcomingLaunchesProps) {
+  const countdown = useLaunchCountdown();
+
   return (
     <section className={`upcoming-launch upcoming-launch--${variant}`}>
       <div className="upcoming-launch__header">
         <span className="upcoming-launch__title">UPCOMING LAUNCHES</span>
 
         <span className="upcoming-launch__toggle">
+          <span className="upcoming-launch__header-countdown">
+            {countdown}
+          </span>
           <svg
             width="10"
             height="6"
@@ -37,7 +43,13 @@ export function UpcomingLaunches({
 
       <div className="upcoming-launch__cards">
         {upcomingLaunches.map((launch) => (
-          <UpcomingLaunchCard key={launch.id} launch={launch} />
+          <UpcomingLaunchCard
+            key={launch.id}
+            launch={launch}
+            countdown={
+              launch.id === "starlink-mission-1" ? countdown : undefined
+            }
+          />
         ))}
 
         <Link to="#" className="upcoming-launch__link">
