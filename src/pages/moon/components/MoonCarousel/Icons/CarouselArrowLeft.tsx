@@ -5,10 +5,10 @@ export function CarouselArrowLeft() {
         <path
           d="M1 1L5 5L9 1"
           stroke="#FFFFFF"
-          stroke-opacity="1"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeOpacity="1"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>
       </svg>
     </div>

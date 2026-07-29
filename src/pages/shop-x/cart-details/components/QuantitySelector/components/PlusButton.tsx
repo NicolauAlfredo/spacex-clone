@@ -9,7 +9,7 @@ export function PlusButton() {
       className="icon icon-plus"
       viewBox="0 0 12 12"
     >
-      <path d="M6 0v12M0 6h12" stroke="currentColor" stroke-width="1"></path>
+      <path d="M6 0v12M0 6h12" stroke="currentColor" strokeWidth="1"></path>
     </svg>
   );
 }
