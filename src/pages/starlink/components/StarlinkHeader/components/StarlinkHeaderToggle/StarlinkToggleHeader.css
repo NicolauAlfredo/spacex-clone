@@ -10,7 +10,7 @@
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1180px) {
   .header__toggles {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 0.4rem;

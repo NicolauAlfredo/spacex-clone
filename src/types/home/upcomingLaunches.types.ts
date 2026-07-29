@@ -1,7 +1,7 @@
 export type UpcomingLaunch = {
   id: string;
   missionTitle: string;
-  countdown: string;
+  countdown?: string;
   imageSrc: string;
   imageAlt: string;
 };
@@ -14,4 +14,5 @@ export type UpcomingLaunchesProps = {
 
 export type UpcomingLaunchCardProps = {
   launch: UpcomingLaunch;
+  countdown?: string;
 };

@@ -94,11 +94,11 @@
   color: rgba(250, 250, 250, 0.56);
 }
 /* Tablet */
-@media (min-width: 768px) {
+@media (min-width: 821px) {
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 821px) {
   .starlink-section--high-speed {
     height: 100%;
   }

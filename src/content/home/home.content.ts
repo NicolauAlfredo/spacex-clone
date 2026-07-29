@@ -43,7 +43,7 @@ export const heroContent: HomeSectionContent[] = [
       mobileVideoSrc: getPageAssetURL(
         "home",
         "videos",
-        "Starships-twelfth-flight-test-mobile.mp4",
+        "mars-rotation-mobile.mp4",
       ),
       posterSrc: getPageAssetURL("home", "images", "mars-mobile.jpg"),
     },

@@ -2,6 +2,23 @@
   HOME PAGE - BASE (MOBILE FIRST)  
 */
 
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #000;
+}
+
+.home > .hero-section {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.home > .hero-section + .hero-section,
+.home + .footer {
+  margin-top: -3px;
+}
+
 .hero-section {
   width: 100%;
   height: 100%;
@@ -169,12 +186,35 @@
 }
 
 .hero-section--multiplanetary .upcoming-launch {
+  display: block;
   position: static;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-section--multiplanetary {
   background-color: black;
+}
+
+@media (max-width: 1023px) {
+  .hero-section--multiplanetary {
+    min-height: 0;
+  }
+
+  .hero-section--multiplanetary .hero-section__video {
+    top: 0;
+    bottom: auto;
+    height: clamp(28rem, 75svh, 42rem);
+  }
+
+  .hero-section--multiplanetary .hero-section__overlay {
+    position: relative;
+    inset: auto;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: calc(clamp(28rem, 75svh, 42rem) + 2rem) 4% 4rem;
+  }
 }
 
 /* 

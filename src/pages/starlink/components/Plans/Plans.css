@@ -167,12 +167,12 @@
 }
 
 /* Tablet */
-@media (min-width: 820px) and (max-width: 1180px) and (pointer: coarse) and (hover: none) {
+@media (min-width: 821px) and (max-width: 1180px) and (pointer: coarse) and (hover: none) {
   .starlink-section--plans {
     margin-bottom: -8em;
   }
 }
-@media (min-width: 768px) and (max-width: 1367px) {
+@media (min-width: 821px) and (max-width: 1367px) {
   .starlink-section--plans {
     position: relative;
   }
@@ -544,7 +544,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 820px) {
   .starlink-plans__group::before {
     content: "";
     position: sticky;

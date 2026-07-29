@@ -5,7 +5,6 @@ export const upcomingLaunches: UpcomingLaunch[] = [
   {
     id: "starlink-mission-1",
     missionTitle: "Starlink Mission",
-    countdown: "June 7, 2026 04:00 - 08:00 Italy Time",
     imageSrc: getPageAssetURL("home", "images", "slc-4-e.jpg"),
     imageAlt: "SpaceX launch site",
   },

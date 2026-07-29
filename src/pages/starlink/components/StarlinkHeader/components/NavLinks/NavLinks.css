@@ -1,11 +1,11 @@
-.header__nav {
+.starlink-header__nav {
   display: none;
 }
 .header__call {
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1180px) {
      .header__call {
     display: flex;
     color:#bbbec3;
@@ -19,11 +19,11 @@
     font-weight: 700;
     color: #bbbec3;
   }
-   .header__nav {
+   .starlink-header__nav {
     display: flex;
     gap: 1.5rem;
   }
-  .header__nav-link {
+  .starlink-header__nav-link {
     color: #ffffff;
     text-decoration: none;
     font-size: 0.875rem;

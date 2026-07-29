@@ -1,6 +1,7 @@
 import type { HomeSectionContent } from "../../../../types/home/home.types";
 import { Button } from "../Button/Button";
 import { MediaBackground } from "../MediaBackground/MediaBackground";
+import { UpcomingLaunches } from "../UpcomingLaunches/UpcomingLaunches";
 
 type Props = {
   content: HomeSectionContent;
@@ -36,6 +37,10 @@ export function HomeSection({ content, isPrimary = false }: Props) {
 
           {content.button && <Button {...content.button} />}
         </div>
+
+        {content.id === "multiplanetary" && (
+          <UpcomingLaunches variant="section" />
+        )}
       </div>
     </section>
   );
