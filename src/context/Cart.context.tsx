@@ -1,21 +1,9 @@
-import { createContext, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import type { CartItem } from "../models/Cart";
+import { CartContext } from "./CartContext";
 
 const CART_STORAGE_KEY = "shopXCart";
-
-type CartContextValue = {
-  items: CartItem[];
-  total: number;
-  totalQuantity: number;
-  addItem: (cartItem: CartItem) => void;
-  increaseQuantity: (itemId: string) => void;
-  decreaseQuantity: (itemId: string) => void;
-  removeItem: (itemId: string) => void;
-  clearCart: () => void;
-};
-
-export const CartContext = createContext<CartContextValue | null>(null);
 
 type CartProviderProps = {
   children: ReactNode;
