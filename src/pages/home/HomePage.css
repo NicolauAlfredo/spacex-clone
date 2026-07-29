@@ -197,6 +197,26 @@
   background-color: black;
 }
 
+@media (max-width: 1023px) {
+  .hero-section--multiplanetary {
+    min-height: 0;
+  }
+
+  .hero-section--multiplanetary .hero-section__video {
+    top: 0;
+    bottom: auto;
+    height: clamp(28rem, 75svh, 42rem);
+  }
+
+  .hero-section--multiplanetary .hero-section__overlay {
+    position: relative;
+    inset: auto;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: calc(clamp(28rem, 75svh, 42rem) + 2rem) 4% 4rem;
+  }
+}
+
 /* 
   UPCOMING LAUNCH 
 */
