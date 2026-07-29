@@ -1,0 +1,15 @@
+.route-not-found {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: #fff;
+  background: #000;
+  text-align: center;
+  font-family: "D-DIN", sans-serif;
+}
+
+.route-not-found a {
+  text-decoration: underline;
+}

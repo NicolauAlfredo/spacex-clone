@@ -1,4 +1,4 @@
-import type { ButtonProps } from "../../../../types/button.types";
+import type { ButtonProps } from "../../../../types/home/homeButton.types";
 import "./Button.css";
 
 export function Button({ title, href, variant = "primary" }: ButtonProps) {

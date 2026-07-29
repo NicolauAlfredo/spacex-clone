@@ -1,5 +1,5 @@
-import { moonMissions } from "../../../../content/moonMissions.content";
-import { InnerText } from "../MoonWhySection/components/MoonInnerText/InnerText";
+import { moonMissions } from "../../../../content/moon/moonMissions.content";
+import { InnerText } from "./components/InnerText/InnerText";
 import "./MissionsSection.css";
 
 export function MissionsSection() {
@@ -7,7 +7,7 @@ export function MissionsSection() {
     <section className="moon hero-section hero-section-missions">
       <picture>
         <source
-          media="(min-width: 1024px)"
+          media="(min-width: 1440px)"
           srcSet={moonMissions.desktopImage}
         />
 
@@ -18,7 +18,7 @@ export function MissionsSection() {
         />
       </picture>
 
-      <div className="hero-section-missions__content">
+      <div className="hero-section-missions__container">
         <InnerText
           className="hero-section-missions"
           title={moonMissions.title}

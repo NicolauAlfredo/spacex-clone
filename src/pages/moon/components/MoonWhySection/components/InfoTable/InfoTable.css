@@ -1,6 +1,6 @@
 .hero-section-why__table {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   border-collapse: collapse;
 }
 
@@ -10,12 +10,25 @@
 
 .hero-section-why__table-label,
 .hero-section-why__table-value {
-  padding: 1.25rem 0;
+  padding: 0.9rem 0;
+  font-size: 0.7rem;
 }
 
 .hero-section-why__table-label {
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 0.65rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-section-why__table {
+    margin-top: 2rem;
+  }
+
+  .hero-section-why__table-label,
+  .hero-section-why__table-value {
+    padding: 1.25rem 0;
+    font-size: 0.875rem;
+  }
 }
 
 .hero-section-why__table-value {

@@ -4,11 +4,13 @@ import "./ShopHeader.css";
 
 export function ShopHeader() {
   return (
-    <header className="shop-header">
-      <div className="shop-header__container">
-        <ShopLogo />
-        <ShopNav />
-      </div>
-    </header>
+    <div className="teste">
+      <header className="shop-header">
+        <div className="shop-header__container">
+          <ShopLogo />
+          <ShopNav />
+        </div>
+      </header>
+    </div>
   );
 }

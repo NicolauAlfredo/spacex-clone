@@ -27,16 +27,16 @@ export function Footer() {
         </a>
 
         <nav className="footer__nav" aria-label="Footer navigation">
-          <a className="footer__nav-link" href="#">
+          <a className="footer__nav-link" href="https://www.spacex.com/careers">
             Careers
           </a>
-          <a className="footer__nav-link" href="#">
+          <a className="footer__nav-link" href="https://www.spacex.com/updates">
             Updates
           </a>
-          <a className="footer__nav-link" href="#">
+          <a className="footer__nav-link" href="https://www.spacex.com/assets/media/privacy_policy_spacex.pdf">
             Privacy Policy
           </a>
-          <a className="footer__nav-link" href="#">
+          <a className="footer__nav-link" href="https://www.spacex.com/supplier">
             Suppliers
           </a>
         </nav>

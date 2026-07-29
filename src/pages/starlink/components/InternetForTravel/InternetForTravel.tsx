@@ -1,5 +1,5 @@
 import { StarlinkButton } from "../StarlinkButton/StarlinkButton";
-import { content } from "../../../../content/InternetForTravel";
+import { content } from "../../../../content/starlink/InternetForTravel";
 import { FadeInSection } from "../FadeInSection/FadeInSection";
 import "./InternetForTravel.css";
 
@@ -21,16 +21,17 @@ export function InternetForTravel() {
         </picture>
         <div className="starlink-section__gradient">
           <FadeInSection className="starlink-section__text--container">
-            <h1 className="starlink-section__inner--title fade-in-child">{content.title}</h1>
+            <h2 className="starlink-section__inner--title fade-in-child">
+              {content.title}
+            </h2>
             <p className="starlink-section__inner--text fade-in-child">
               {content.description}
             </p>
             <div className="starlink-section__link--container fade-in-child">
-              <StarlinkButton  label="Learn More" variant="primary" />
+              <StarlinkButton label="Learn More" variant="primary" />
             </div>
-            </FadeInSection>
-          </div>
-        
+          </FadeInSection>
+        </div>
       </section>
     </>
   );

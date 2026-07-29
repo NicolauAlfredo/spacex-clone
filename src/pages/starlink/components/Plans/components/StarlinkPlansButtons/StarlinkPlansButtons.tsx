@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { StarlinkPlansGroup } from "../../Plans";
-import { starlinkPlansHome, starlinkPlansGo } from "../../../../../../content/starlinkplans.content";
+import {
+  starlinkPlansHome,
+  starlinkPlansGo,
+} from "../../../../../../content/starlink/starlinkplans.content";
 import "./StarlinkPlansButtons.css";
 
 export const StarlinkResidentialButton = () => {

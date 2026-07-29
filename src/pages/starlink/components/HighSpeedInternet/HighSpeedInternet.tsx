@@ -1,6 +1,6 @@
 import "./HighSpeedInternet.css";
 import { useRef } from 'react';
-import { StarlinkCarouselCard } from '../../../../components/Buttons/buttons.carousel.card'
+import { StarlinkCarouselCard } from '../Buttons/buttons.carousel.card'
 
 export const HighSpeedInternet = () => {    
   const scrollRef = useRef<HTMLDivElement>(null); // Crea un ref agganciato al div del carosello, inizialmente null
@@ -25,31 +25,31 @@ export const HighSpeedInternet = () => {
       <div className="starlink-section--high-speed__carousel--scroll" ref={scrollRef}>
         <div className="starlink-section--high-speed__carousel">
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/montana_dusk_sky.webp"
+            src="/assets/pages/starlink/backgrounds/montana_dusk_sky.webp"
             alt="Montana dusk Sky"
             title="Home internet in rural and remote areas."
             text="Starlink Residential provides high-speed, reliable connectivity even in the most remote areas beyond cell service reach."
           />
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/mini_backpacker_on_mountain.webp"
+            src="/assets/pages/starlink/backgrounds/mini_backpacker_on_mountain.webp"
             alt="Backpacker on mountain"
             title="Connect on the go."
             text="Use Starlink Roam for traveling, RVing, camping, boating, and more. Easily navigate, stream, and stay connected without dead zones or slow speeds."
           />
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/residential_2.webp"
+            src="/assets/pages/starlink/backgrounds/residential_2.webp"
             alt="House"
             title="Speeds up to 400+ Mbps."
             text="Enjoy the freedom of seamless 4K streaming on multiple devices at once, working from home, online gaming, social media browsing, and more."
           />
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/winter.webp"
+            src="/assets/pages/starlink/backgrounds/winter.webp"
             alt="Winter"
             title="Reliable and resilient connectivity."
             text="Stay online through extreme weather, power outages, and natural disasters when traditional coverage fails."
           />
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/mini_stickerless_ground.webp"
+            src="/assets/pages/starlink/backgrounds/mini_stickerless_ground.webp"
             alt="Mini stickerless ground"
             title="Ultra portable."
             text="Starlink Mini's compact and lightweight design lets you connect on the go—deploying reliable connectivity in minutes when you need it."
@@ -59,18 +59,22 @@ export const HighSpeedInternet = () => {
 
       <div className="starlink-section--high-speed__container--chevron">
         <button
+          type="button"
+          aria-label="Previous slide"
           className="starlink-section--high-speed__btn--chevron starlink-section--high-speed__chevron--prev"
           onClick={() => handleChevronClick('prev')}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M5 15L12 8L19 15" transform="rotate(270 12 12)" stroke="currentColor" strokeWidth="1.5" />
           </svg>
         </button>
         <button
+          type="button"
+          aria-label="Next slide"
           className="starlink-section--high-speed__btn--chevron starlink-section--high-speed__chevron--next"
           onClick={() => handleChevronClick('next')}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M5 15L12 8L19 15" transform="rotate(90 12 12)" stroke="currentColor" strokeWidth="1.5" />
           </svg>
         </button>

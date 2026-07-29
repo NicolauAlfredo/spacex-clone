@@ -1,12 +1,10 @@
+import type { StarlinkPlanGroup } from "../../../../types/starlink/starlinkplans.types";
+import { formatPrice } from "../../../../utils/formatPrice";
+import { SectionContent } from "../content/Content";
 import "./Plans.css";
 
-
-import { SectionContent } from "../../../../components/content/Content";
-import { formatPrice } from '../../../../utils/formatPrice';
-import type { StarlinkPlanGroup } from '../../../../types/starlinkplans.types';
-
 type Props = {
-  group: 'home' | 'go';
+  group: "home" | "go";
   content: StarlinkPlanGroup;
 };
 
@@ -33,7 +31,7 @@ export function StarlinkPlansGroup({ group, content }: Props) {
               <p className="starlink-section__subtitle">{plan.priceLabel}</p>
               <p className="starlink-section__subtitle--price">
                 <span className="starlink-section__price">
-                  {formatPrice(plan.price, 'en-US', 'USD')}
+                  {formatPrice(plan.price, "en-US", "USD")}
                 </span>
                 <span className="mo_class">/mo</span>
               </p>

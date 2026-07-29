@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { languageOptions } from "../../../../../../../content/languageOptions.content";
-import type { LanguageOption } from "../../../../../../../types/language.types";
+import { languageOptions } from "../../../../../../../content/shop-x/shopLanguageOptions.content";
+import type { LanguageOption } from "../../../../../../../types/shop-x/shopLanguage.types";
 import { ChevronDownIcon } from "../ShopIcons/ChevronDownIcon";
 
 type LanguageSelectorProps = {

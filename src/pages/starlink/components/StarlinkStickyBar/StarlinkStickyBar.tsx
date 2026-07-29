@@ -28,7 +28,7 @@ export function StickyBar() {
   return (
     <div className="sticky-bar">
       <StarlinkLogo />
-      <StarlinkButton label="Get Started" href="/order" variant="primary" />
+      <StarlinkButton label="Get Started" href="https://www.starlink.com/residential" variant="primary" />
     </div>
   );
 }

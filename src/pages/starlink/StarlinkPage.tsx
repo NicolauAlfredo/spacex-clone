@@ -8,16 +8,15 @@ import { AvailableGlobally } from "./components/AvailableGlobally/AvailableGloba
 import { PlugItInPoint } from "./components/PlugItInPoint/PlugItInPoint";
 import { StarlinkFooter } from "./components/StarlinkFooter/StarlinkFooter";
 import { StarlinkBackground } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackground";
-import { starlinkBackgrounds } from "../../content/starlinkbackground.content";
+import { starlinkBackgrounds } from "../../content/starlink/starlinkbackground.content";
 
-import "./StarlinkPage.css";
 import { StarlinkOverlay } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackgroundOverlay/StarlinkOverlay";
 import { StickyBar } from "./components/StarlinkStickyBar/StarlinkStickyBar";
 
 export function StarlinkPage() {
   return (
     <>
-        <StickyBar />
+      <StickyBar />
       <div className="starlink-section starlink-section--best-value">
         <StarlinkBackground
           background={starlinkBackgrounds.find((bg) => bg.id === "night-sky")!}
@@ -33,7 +32,9 @@ export function StarlinkPage() {
 
       <div className="starlink-section starlink-section--reliable">
         <StarlinkBackground
-          background={starlinkBackgrounds.find((bg) => bg.id === "lightning-sky")!}
+          background={
+            starlinkBackgrounds.find((bg) => bg.id === "lightning-sky")!
+          }
         />
         <StarlinkOverlay variant="reliable" />
         <ReliableResilient />

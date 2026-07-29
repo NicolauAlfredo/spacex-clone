@@ -1,17 +1,23 @@
 import { useState } from "react";
-import type { CarouselCollection } from "../../../../types/moonCarousel.types";
+import type { CarouselCollection } from "../../../../types/moon/moonCarousel.types";
 import { CarouselArrowLeft } from "./Icons/CarouselArrowLeft";
 import { CarouselArrowRight } from "./Icons/CarouselArrowRight";
+import "./MoonCarousel.css";
+
 interface CarouselProps {
   collection: CarouselCollection;
 }
-
-import "./MoonCarousel.css";
 
 export default function Carousel({ collection }: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const activeSlide = collection.slides[activeIndex];
+  const desktopImage = activeSlide.desktopImage || activeSlide.image;
+  const mobileImage = activeSlide.mobileImage || activeSlide.image;
+  const altText = activeSlide.alt || activeSlide.title;
+  const modifierClass =
+    activeSlide.modifierClass ||
+    activeSlide.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
   function handleNext() {
     setActiveIndex((currentIndex) =>
@@ -30,20 +36,25 @@ export default function Carousel({ collection }: CarouselProps) {
   }
 
   return (
-    <section className="moon-carousel">
-      <img
-        className="moon-carousel__image"
-        src={activeSlide.image}
-        alt={activeSlide.title}
-      />
-
-      <div className="moon-carousel__overlay" />
+    <section
+      className={`moon-carousel moon-carousel--${collection.id} moon-carousel__slide--${modifierClass}`}
+    >
+      <div className="moon-carousel__image-container">
+        <picture className="moon-carousel__picture">
+          <source media="(min-width: 768px)" srcSet={desktopImage} />
+          <img
+            className="moon-carousel__image"
+            src={mobileImage}
+            alt={altText}
+          />
+        </picture>
+        <div className="moon-carousel__overlay" />
+      </div>
 
       <article
         className={`moon-carousel__content moon-carousel__content--${activeSlide.contentPosition}`}
       >
         <h2 className="moon-carousel__title">{activeSlide.title}</h2>
-
         <p className="moon-carousel__description">{activeSlide.description}</p>
       </article>
 
@@ -51,6 +62,7 @@ export default function Carousel({ collection }: CarouselProps) {
         className="moon-carousel__button moon-carousel__button--previous"
         type="button"
         onClick={handlePrevious}
+        aria-label="Previous slide"
       >
         <CarouselArrowLeft />
       </button>
@@ -59,6 +71,7 @@ export default function Carousel({ collection }: CarouselProps) {
         className="moon-carousel__button moon-carousel__button--next"
         type="button"
         onClick={handleNext}
+        aria-label="Next slide"
       >
         <CarouselArrowRight />
       </button>
@@ -72,6 +85,7 @@ export default function Carousel({ collection }: CarouselProps) {
             }`}
             type="button"
             onClick={() => handleSelectSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>

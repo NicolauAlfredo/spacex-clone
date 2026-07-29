@@ -1,4 +1,4 @@
-import { moonHero } from "../../../../content/moonHero.content";
+import { moonHero } from "../../../../content/moon/moonHero.content";
 import "./MoonHeroSection.css";
 
 export function MoonHeroSection() {
@@ -27,9 +27,9 @@ export function MoonHeroSection() {
 
       <div className={`hero-section-${variant}__overlay`}>
         <div className={`hero-section-${variant}__content`}>
-          <h2 className={`hero-section-${variant}__title`}>
+          <h1 className={`hero-section-${variant}__title`}>
             {title.toUpperCase()}
-          </h2>
+          </h1>
 
           <p className={`hero-section-${variant}__description`}>
             {subtitle.toUpperCase()}

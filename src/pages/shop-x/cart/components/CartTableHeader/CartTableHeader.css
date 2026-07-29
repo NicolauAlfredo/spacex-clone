@@ -12,8 +12,11 @@
     font-size: 0.85rem;
   }
 
-  .cart__table-header span:nth-child(2),
   .cart__table-header span:nth-child(3) {
     text-align: right;
+  }
+
+  .cart__table-header span:nth-child(2) {
+    text-align: center;
   }
 }

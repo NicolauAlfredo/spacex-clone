@@ -1,10 +1,22 @@
+.teste {
+  padding-top: 4rem;
+}
+
 .shop-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   background-color: #000;
-  color: #fff;
+  color: #ffffffa6;
+
+  z-index: 1000;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .shop-header__container {
-  height: 80px;
+  height: 4rem;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -18,8 +30,8 @@
 }
 
 .shop-header__logo img {
-  width: 140px;
-  height: auto;
+  width: 2.2rem;
+  height: 1.9rem;
 }
 
 .shop-header__menu {
@@ -30,7 +42,7 @@
 .menu__items {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1rem;
 }
 
 .menu__item.hidden {
@@ -38,6 +50,7 @@
 }
 
 .menu__item a,
+.menu__item button,
 .menu__item-lang {
   display: flex;
   align-items: center;
@@ -54,8 +67,8 @@
 
 .menu__item svg {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 1.4rem;
+  height: 1.4rem;
   color: currentColor;
 }
 
@@ -156,8 +169,12 @@
 }
 
 @media (min-width: 768px) {
+  .teste {
+    padding-top: 4.3rem;
+  }
+
   .shop-header__container {
-    height: 96px;
+    height: 4.3rem;
   }
 
   .menu__item.account {
@@ -165,25 +182,25 @@
   }
 
   .menu__item svg {
-    width: 34px;
-    height: 34px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
+  .teste {
+    padding-top: 4.3rem;
+  }
+
   .shop-header__container {
     grid-template-columns: auto 1fr;
-    height: 96px;
+    height: 4.3rem;
     padding-inline: 4rem;
   }
 
   .shop-header__logo {
     grid-column: 1;
     justify-self: start;
-  }
-
-  .shop-header__logo img {
-    width: 44px;
   }
 
   .shop-header__menu {
@@ -202,6 +219,12 @@
     display: inline;
   }
 
+  .menu__item-login,
+  .menu__item-search,
+  .menu__item-cart {
+    font-size: 0.8rem;
+  }
+
   .menu__item svg:not(.menu__item-chevron-down) {
     display: none;
   }
@@ -217,5 +240,16 @@
 
   .header__cart-text {
     display: inline;
+  }
+
+  /* Menu Languages */
+  .shop-header__menu .currency-flag {
+    width: 1.25rem;
+    height: 0.938rem;
+  }
+
+  .shop-header__menu .currency-money {
+    display: inline;
+    font-size: 0.688rem;
   }
 }

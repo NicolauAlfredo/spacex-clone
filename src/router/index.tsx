@@ -4,6 +4,7 @@ import ProductDetailsPage from "../pages/shop-x/cart-details/ProductDetailsPage"
 import CartPage from "../pages/shop-x/cart/CartPage";
 import { ShopXPage } from "../pages/shop-x/shop/ShopXPage";
 import { StarlinkPage } from "../pages/starlink/StarlinkPage";
+import { NotFoundPage } from "../pages/not-found/NotFoundPage";
 
 import { createHashRouter } from "react-router-dom";
 
@@ -31,5 +32,9 @@ export const router = createHashRouter([
   {
     path: "/product/:productId",
     element: <ProductDetailsPage />,
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ]);

@@ -45,7 +45,7 @@
 }
 
 .hero-section-moon__title {
-  font-size: 50px;
+  font-size: 2rem;
   margin-bottom: 20px;
   animation-name: reveal-title;
   animation-duration: 0.75s;
@@ -65,12 +65,37 @@
 }
 
 .hero-section-moon__description {
-  font-size: 1rem;
+  font-size: 0.65rem;
   animation-name: reveal-description;
   animation-timing-function: ease-in-out;
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
   animation-duration: 0.75s;
+}
+
+.hero-section-moon::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  bottom: 1.75rem;
+  left: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-right: 0.18rem solid #fff;
+  border-bottom: 0.18rem solid #fff;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section-moon .hero-section-moon__content {
+    top: 28%;
+    right: auto;
+    width: min(90%, 42rem);
+  }
+
+  .hero-section-moon__title {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+  }
 }
 
 @keyframes reveal-description {
@@ -87,6 +112,6 @@
 
 @media (min-width: 1024px) {
   .hero-section-moon__title {
-    font-size: 100px;
+    font-size: clamp(4rem, 5.25vw, 6.25rem);
   }
 }

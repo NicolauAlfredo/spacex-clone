@@ -1,4 +1,4 @@
-import type { ShopCollection } from "../../../../../../types/shopCollection.types";
+import type { ShopCollection } from "../../../../../../types/shop-x/shopCollection.types";
 import { ShopCollectionButton } from "./ShopCollectionButton";
 
 type ShopCollectionCardProps = {

@@ -1,4 +1,4 @@
-import type { InfoTableProps } from "../../../../../../types/infoTable.types";
+import type { InfoTableProps } from "../../../../../../types/moon/moonInfoTable.types";
 import "./InfoTable.css";
 
 export function InfoTable({ stats, className }: InfoTableProps) {

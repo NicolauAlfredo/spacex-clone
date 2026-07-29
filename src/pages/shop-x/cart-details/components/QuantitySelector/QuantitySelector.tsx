@@ -1,3 +1,5 @@
+import { MinusButton } from "./components/MinusButton";
+import { PlusButton } from "./components/PlusButton";
 import "./QuantitySelector.css";
 
 export type QuantitySelectorProps = {
@@ -6,7 +8,7 @@ export type QuantitySelectorProps = {
   onDecrease: () => void;
 };
 
-function QuantitySelector({
+export function QuantitySelector({
   quantity,
   onIncrease,
   onDecrease,
@@ -19,7 +21,7 @@ function QuantitySelector({
         onClick={onDecrease}
         aria-label="Decrease quantity"
       >
-        -
+        <MinusButton />
       </button>
 
       <span className="product-detail__quantity-value">{quantity}</span>
@@ -30,7 +32,7 @@ function QuantitySelector({
         onClick={onIncrease}
         aria-label="Increase quantity"
       >
-        +
+        <PlusButton />
       </button>
     </div>
   );

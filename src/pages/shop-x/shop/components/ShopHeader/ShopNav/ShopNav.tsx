@@ -16,24 +16,28 @@ export function ShopNav() {
         </li>
 
         <li className="menu__item hidden account">
-          <Link to="#">
+          <button type="button" aria-label="Sign in" disabled>
             <span className="menu__item-login">login</span>
             <UserIcon />
-          </Link>
+          </button>
         </li>
 
         <li className="menu__item">
-          <Link to="#">
+          <button type="button" aria-label="Search products" disabled>
             <span className="menu__item-search">Search</span>
 
             <span>
               <SearchIcon />
             </span>
-          </Link>
+          </button>
         </li>
 
         <li className="menu__item">
-          <Link to="/cart" className="menu__item-cart-link">
+          <Link
+            to="/cart"
+            className="menu__item-cart-link"
+            aria-label={`Cart, ${totalQuantity} ${totalQuantity === 1 ? "item" : "items"}`}
+          >
             <span className="menu__item-cart">
               Cart{totalQuantity > 0 ? ` (${totalQuantity})` : "(0)"}
             </span>

@@ -23,7 +23,7 @@ export function StarlinkFooter() {
         </nav> */}
         <div className="footer__brand footer--starlink__brand">Starlink © 2026</div>
         </div>
-        <p className="footer__description">Starlink is a division of SpaceX. Visit us at <a href="../index.html" className="footer__link">spacex.com</a></p>
+        <p className="footer__description">Starlink is a division of SpaceX. Visit us at <a href="https://www.spacex.com" className="footer__link">spacex.com</a></p>
 
     </footer>
   );
