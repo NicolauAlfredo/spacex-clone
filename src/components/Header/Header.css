@@ -76,6 +76,8 @@
   width: 100%;
   background-color: var(--color-black);
   display: none;
+  max-height: calc(100dvh - 72px);
+  overflow-y: auto;
 }
 
 .menu-open {
@@ -188,6 +190,8 @@
   /* Nav */
 
   .header__nav {
+    max-height: none;
+    overflow-y: visible;
     position: static;
     display: flex;
     align-items: center;

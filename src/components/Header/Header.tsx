@@ -123,6 +123,17 @@ export function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isMenuOpen || !isMobile()) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMenuOpen]);
+
   return (
     <header
       className={[
