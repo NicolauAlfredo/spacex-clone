@@ -4,9 +4,10 @@ import { MediaBackground } from "../MediaBackground/MediaBackground";
 
 type Props = {
   content: HomeSectionContent;
+  isPrimary?: boolean;
 };
 
-export function HomeSection({ content }: Props) {
+export function HomeSection({ content, isPrimary = false }: Props) {
   const titleId = `${content.id}-title`;
 
   return (
@@ -23,9 +24,11 @@ export function HomeSection({ content }: Props) {
             <span className="hero-section__date">{content.date}</span>
           )}
 
-          <h2 id={titleId} className="hero-section__title">
-            {content.title}
-          </h2>
+          {isPrimary ? (
+            <h1 id={titleId} className="hero-section__title">{content.title}</h1>
+          ) : (
+            <h2 id={titleId} className="hero-section__title">{content.title}</h2>
+          )}
 
           {content.description && (
             <p className="hero-section__description">{content.description}</p>

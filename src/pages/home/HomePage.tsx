@@ -10,7 +10,7 @@ export function HomePage() {
       <Header />
 
       <main className="home">
-        <HomeSection content={heroContent[0]} />
+        <HomeSection content={heroContent[0]} isPrimary />
         <HomeSection content={heroContent[1]} />
         <HomeSection content={heroContent[2]} />
         <HomeSection content={heroContent[3]} />

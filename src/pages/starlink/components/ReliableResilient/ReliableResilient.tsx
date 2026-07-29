@@ -7,9 +7,9 @@ import "./ReliableResilientBackground/ReliableBackground.css";
 export function ReliableResilient() {
   return (
     <FadeInSection className="starlink-section__content">
-      <h1 className="starlink-section__title fade-in-child">
+      <h2 className="starlink-section__title fade-in-child">
         {reliableContent.title}
-      </h1>
+      </h2>
       <p className="starlink-section__lable fade-in-child">
         {reliableContent.description}
       </p>

@@ -9,7 +9,7 @@ export function SectionContent({
 }: ContentProps) {
   return (
     <>
-      <h1 className={`section__title ${classNameTitle}`}>{title}</h1>
+      <h2 className={`section__title ${classNameTitle}`}>{title}</h2>
       <p className={`section_description ${classNameText}`}>{description}</p>
     </>
   );
