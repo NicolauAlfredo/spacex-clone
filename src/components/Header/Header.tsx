@@ -37,7 +37,7 @@ export function Header() {
   const [submenuPaddingTop, setSubmenuPaddingTop] = useState("0px");
 
   function isMobile() {
-    return window.innerWidth < 1024;
+    return window.innerWidth < 1180;
   }
 
   function closeAll() {
