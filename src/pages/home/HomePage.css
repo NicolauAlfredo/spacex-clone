@@ -169,8 +169,11 @@
 }
 
 .hero-section--multiplanetary .upcoming-launch {
+  display: block;
   position: static;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-section--multiplanetary {
