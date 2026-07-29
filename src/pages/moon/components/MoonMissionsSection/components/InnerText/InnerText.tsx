@@ -25,7 +25,7 @@ export function InnerText({
             <p className={`${className}__description`}>{paragraph}</p>
           )}
 
-          {buttonText && <Button href="#" title={buttonText} />}
+          {buttonText && <Button href="mailto:sales@spacex.com" title={buttonText} />}
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import type { StarlinkMenuLink } from "../../types/starlink/starlinkMenu.types";
 
 export const starlinkMenuLinks: StarlinkMenuLink[] = [
-  { label: "Sign In", href: "/sign-in" },
+  { label: "Sign In", href: "https://www.starlink.com/account/home" },
   {
     label: "Help Center",
     href: "https://starlink.com/api/auth/auth/login?returnUrl=https%3A%2F%2Fstarlink.com%2Faccount%2Fhome",

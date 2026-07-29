@@ -8,22 +8,22 @@ export function ShopFooter() {
         <nav className="shop-footer__menu" aria-label="Shop footer navigation">
           <ul className="shop-footer__menu-list">
             <li className="shop-footer__menu-item">
-              <a href="#">FAQs</a>
+              <span>FAQs</span>
             </li>
             <li className="shop-footer__menu-item">
-              <a href="#">Search</a>
+              <span>Search</span>
             </li>
             <li className="shop-footer__menu-item">
-              <a href="#">Accessibility Statement</a>
+              <span>Accessibility Statement</span>
             </li>
             <li className="shop-footer__menu-item">
-              <a href="#">Privacy Policy</a>
+              <span>Privacy Policy</span>
             </li>
             <li className="shop-footer__menu-item">
-              <a href="#">Terms and Conditions</a>
+              <span>Terms and Conditions</span>
             </li>
             <li className="shop-footer__menu-item">
-              <a href="#">Cookie Consent</a>
+              <span>Cookie Consent</span>
             </li>
           </ul>
         </nav>

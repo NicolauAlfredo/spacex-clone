@@ -193,7 +193,7 @@ export function Header() {
                             : "0s",
                       }}
                     >
-                      <Link to="#">{item}</Link>
+                      <a href={`https://www.spacex.com/vehicles/${["starship", "dragon", "falcon-9", "falcon-heavy"][index]}`}>{item}</a>
                     </li>
                   ),
                 )}
@@ -236,11 +236,11 @@ export function Header() {
                 }}
               >
                 {[
-                  { label: "OVERVIEW", href: "#" },
-                  { label: "SPACE STATION", href: "#" },
-                  { label: "EARTH ORBIT", href: "#" },
+                  { label: "OVERVIEW", href: "https://www.spacex.com/humanspaceflight/overview" },
+                  { label: "SPACE STATION", href: "https://www.spacex.com/humanspaceflight/iss" },
+                  { label: "EARTH ORBIT", href: "https://www.spacex.com/humanspaceflight/earth" },
                   { label: "THE MOON", href: "/moon" },
-                  { label: "MARS & BEYOND", href: "#" },
+                  { label: "MARS & BEYOND", href: "https://www.spacex.com/humanspaceflight/mars" },
                 ].map((item, index) => (
                   <li
                     key={item.label}
@@ -264,7 +264,7 @@ export function Header() {
             </li>
 
             <li className="header__item">
-              <Link to="#" className="header__link">
+              <Link to="https://www.spacex.com/starshield" className="header__link">
                 STARSHIELD
               </Link>
             </li>
@@ -306,14 +306,14 @@ export function Header() {
                         openDropdown === "xai" ? `${index * 0.05}s` : "0s",
                     }}
                   >
-                    <Link to="#">{item}</Link>
+                    <Link to={["https://x.ai", "https://grokipedia.com", "https://x.com"][index]}>{item}</Link>
                   </li>
                 ))}
               </ul>
             </li>
 
             <li className="header__item">
-              <Link to="#" className="header__link">
+              <Link to="https://terafab.ai" className="header__link">
                 TERAFAB
               </Link>
             </li>
@@ -362,7 +362,7 @@ export function Header() {
                             : "0s",
                       }}
                     >
-                      <Link to="#">{item}</Link>
+                      <Link to={`https://www.spacex.com/${item.toLowerCase()}`}>{item}</Link>
                     </li>
                   ),
                 )}
@@ -399,7 +399,7 @@ export function Header() {
                 }}
               >
                 {[
-                  { label: "SPACEX", href: "#" },
+                  { label: "SPACEX", href: "https://shop.spacex.com" },
                   { label: "xAI", href: "/shop-x" },
                 ].map((item, index) => (
                   <li

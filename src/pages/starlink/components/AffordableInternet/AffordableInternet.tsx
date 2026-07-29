@@ -21,7 +21,7 @@ export function AffordableInternet() {
           variant="primary"
           onClick={() => setIsModalOpen(true)}
         />
-        <StarlinkButton label="View Pricing" href="/pricing" variant="ghost" />
+        <StarlinkButton label="View Pricing" href="https://www.starlink.com/service-plans" variant="ghost" />
       </div>
       <SelectPlanModal
         isOpen={isModalOpen}

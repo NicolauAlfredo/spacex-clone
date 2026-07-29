@@ -16,7 +16,7 @@ export function ReliableResilient() {
       <div className="starlink-section__actions fade-in-child">
         <StarlinkButton
           label="Learn More"
-          href="/learn-more"
+          href="https://www.starlink.com/technology"
           variant="primary"
         />
       </div>
