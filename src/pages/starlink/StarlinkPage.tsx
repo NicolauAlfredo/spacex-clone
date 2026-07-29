@@ -10,7 +10,6 @@ import { StarlinkFooter } from "./components/StarlinkFooter/StarlinkFooter";
 import { StarlinkBackground } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackground";
 import { starlinkBackgrounds } from "../../content/starlink/starlinkbackground.content";
 
-import "./StarlinkPage.css";
 import { StarlinkOverlay } from "./components/AffordableInternet/components/StarlinkBackground/StarlinkBackgroundOverlay/StarlinkOverlay";
 import { StickyBar } from "./components/StarlinkStickyBar/StarlinkStickyBar";
 
