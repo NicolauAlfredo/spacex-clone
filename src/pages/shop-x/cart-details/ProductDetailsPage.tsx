@@ -114,7 +114,13 @@ function ProductDetailsContent({ product }: ProductDetailsContentProps) {
               <SizeChart product={product} />
             </div>
 
-            <HorizontalDivider className="product-detail__divider-section" />
+            <HorizontalDivider
+              className={`product-detail__divider-section${
+                product.sizes.length === 0
+                  ? " product-detail__divider-section--without-size-chart"
+                  : ""
+              }`}
+            />
 
             <RelatedProducts products={relatedProducts} />
           </div>

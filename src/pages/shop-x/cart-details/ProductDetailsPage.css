@@ -7,12 +7,16 @@
   padding: 0;
 }
 
-.product-detail__container { 
+.product-detail__container {
   margin-inline: auto;
 }
 
 .product-detail__layout {
   display: grid;
+}
+
+.product-detail__divider-section--without-size-chart {
+  margin-top: 4rem;
 }
 
 @media (min-width: 1024px) {
