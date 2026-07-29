@@ -59,18 +59,22 @@ export const HighSpeedInternet = () => {
 
       <div className="starlink-section--high-speed__container--chevron">
         <button
+          type="button"
+          aria-label="Previous slide"
           className="starlink-section--high-speed__btn--chevron starlink-section--high-speed__chevron--prev"
           onClick={() => handleChevronClick('prev')}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M5 15L12 8L19 15" transform="rotate(270 12 12)" stroke="currentColor" strokeWidth="1.5" />
           </svg>
         </button>
         <button
+          type="button"
+          aria-label="Next slide"
           className="starlink-section--high-speed__btn--chevron starlink-section--high-speed__chevron--next"
           onClick={() => handleChevronClick('next')}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none">
             <path d="M5 15L12 8L19 15" transform="rotate(90 12 12)" stroke="currentColor" strokeWidth="1.5" />
           </svg>
         </button>
