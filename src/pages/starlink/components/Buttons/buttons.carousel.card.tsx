@@ -17,6 +17,8 @@ export const StarlinkCarouselCard = ({
         <img
           src={src}
           alt={alt}
+          loading="lazy"
+          decoding="async"
           className="starlink-section--high-speed__card--image"
         />
       </div>

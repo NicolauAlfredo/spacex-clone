@@ -9,6 +9,7 @@ export function MediaBackground(props: MediaBackgroundProps) {
         muted
         loop
         playsInline
+        preload="metadata"
         poster={props.posterSrc}
       >
         <source
@@ -33,6 +34,8 @@ export function MediaBackground(props: MediaBackgroundProps) {
         className="hero-section__image"
         src={props.mobileImageSrc}
         alt={props.alt}
+        loading="lazy"
+        decoding="async"
       />
     </picture>
   );

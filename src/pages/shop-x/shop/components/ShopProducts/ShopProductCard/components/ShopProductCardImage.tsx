@@ -11,6 +11,8 @@ export function ShopProductCardImage({ product }: ShopProductCardImageProps) {
       <img
         src={product.primaryImage}
         alt={product.alt}
+        loading="lazy"
+        decoding="async"
         className="products__image products__image--primary"
       />
 
@@ -19,6 +21,8 @@ export function ShopProductCardImage({ product }: ShopProductCardImageProps) {
           src={product.secondaryImage}
           alt=""
           aria-hidden="true"
+          loading="lazy"
+          decoding="async"
           className="products__image products__image--secondary"
         />
       )}
