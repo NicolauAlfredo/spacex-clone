@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { StarlinkCarouselCard } from "./buttons.carousel.card";
+import { getPageAssetURL } from "../../../../utils/getAssetURL";
 
 export const StarlinkCarousel = () => {
   const scrollRef = useRef<HTMLDivElement>(null); // Crea un ref agganciato al div del carosello, inizialmente null
@@ -30,31 +31,31 @@ export const StarlinkCarousel = () => {
       >
         <div className="starlink-section--high-speed__carousel">
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/montana_dusk_sky.webp"
+            src={getPageAssetURL("starlink", "backgrounds", "montana_dusk_sky.webp")}
             alt="Montana dusk Sky"
             title="Home internet in rural and remote areas."
             text="Starlink Residential provides high-speed, reliable connectivity even in the most remote areas beyond cell service reach."
           />
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/mini_backpacker_on_mountain.webp"
+            src={getPageAssetURL("starlink", "backgrounds", "mini_backpacker_on_mountain.webp")}
             alt="Backpacker on mountain"
             title="Connect on the go."
             text="Use Starlink Roam for traveling, RVing, camping, boating, and more. Easily navigate, stream, and stay connected without dead zones or slow speeds."
           />
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/residential_2.webp"
+            src={getPageAssetURL("starlink", "backgrounds", "residential_2.webp")}
             alt="House"
             title="Speeds up to 400+ Mbps."
             text="Enjoy the freedom of seamless 4K streaming on multiple devices at once, working from home, online gaming, social media browsing, and more."
           />
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/winter.webp"
+            src={getPageAssetURL("starlink", "backgrounds", "winter.webp")}
             alt="Winter"
             title="Reliable and resilient connectivity."
             text="Stay online through extreme weather, power outages, and natural disasters when traditional coverage fails."
           />
           <StarlinkCarouselCard
-            src="../assets/pages/starlink/images/mini_stickerless_ground.webp"
+            src={getPageAssetURL("starlink", "backgrounds", "mini_stickerless_ground.webp")}
             alt="Mini stickerless ground"
             title="Ultra portable."
             text="Starlink Mini's compact and lightweight design lets you connect on the go—deploying reliable connectivity in minutes when you need it."

@@ -6,9 +6,9 @@ import "./NavLinks.css";
 export const NavLinks = () => {
   return (
     <>
-      <nav className="header__nav">
+      <nav className="starlink-header__nav">
         {starlinkNavLinks.map((link) => (
-          <a key={link.label} className="header__nav-link" href={link.link}>
+          <a key={link.label} className="starlink-header__nav-link" href={link.link}>
             {link.label}
           </a>
         ))}

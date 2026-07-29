@@ -1,10 +1,10 @@
-.header {
+.starlink-header {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
 }
-.header__container {
+.starlink-header__container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,11 +28,11 @@
   
 }
 
-.header__nav-link {
+.starlink-header__nav-link {
   color: #e4e4e5;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1180px) {
   .header__actions {
     gap: 2em;
   }
@@ -67,19 +67,19 @@
     margin-left: auto;
     margin-right: -2rem;
   }
-  .header__logo {
+  .starlink-header__logo {
     margin-left: -2rem;
   }
-  .header__container {
+  .starlink-header__container {
     margin-left: 2.5em;
   }
-  .header::before {
+  .starlink-header::before {
     display: none;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-.header__logo {
+@media (min-width: 768px) and (max-width: 1179px) {
+.starlink-header__logo {
   margin-left: 1.5em;
   font-size: 1.1em;
 }

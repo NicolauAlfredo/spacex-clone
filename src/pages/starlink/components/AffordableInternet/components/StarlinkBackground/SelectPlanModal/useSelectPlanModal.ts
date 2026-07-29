@@ -12,7 +12,7 @@ export function useSelectPlanModal({
   modalRef,
 }: UseSelectPlanModalOptions) {
   useEffect(() => {
-    const header = document.querySelector<HTMLElement>(".header");
+    const header = document.querySelector<HTMLElement>(".starlink-header");
     const previouslyFocused = document.activeElement as HTMLElement | null;
 
     function applyHeaderState() {

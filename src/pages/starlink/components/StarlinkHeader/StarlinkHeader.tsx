@@ -8,8 +8,8 @@ import "./StarlinkHeader.css";
 
 export const StarlinkHeader = () => {
   return (
-    <header className="header">
-      <div className="header__container">
+    <header className="starlink-header">
+      <div className="starlink-header__container">
         <StarlinkLogo />
         <NavLinks />
 

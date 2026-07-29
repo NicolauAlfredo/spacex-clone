@@ -12,7 +12,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1180px) {
   .header__btn[aria-label="Call"] {
     display: none;
   }
@@ -21,7 +21,7 @@
     height: 35px;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1179px) {
   .header__btn[aria-label="Menu"] {
     width: 35px !important;
     background: #455261;
