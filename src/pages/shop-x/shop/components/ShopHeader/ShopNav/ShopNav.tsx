@@ -16,14 +16,14 @@ export function ShopNav() {
         </li>
 
         <li className="menu__item hidden account">
-          <Link to="#">
+          <Link to="#" aria-label="Sign in">
             <span className="menu__item-login">login</span>
             <UserIcon />
           </Link>
         </li>
 
         <li className="menu__item">
-          <Link to="#">
+          <Link to="#" aria-label="Search products">
             <span className="menu__item-search">Search</span>
 
             <span>
@@ -33,7 +33,11 @@ export function ShopNav() {
         </li>
 
         <li className="menu__item">
-          <Link to="/cart" className="menu__item-cart-link">
+          <Link
+            to="/cart"
+            className="menu__item-cart-link"
+            aria-label={`Cart, ${totalQuantity} ${totalQuantity === 1 ? "item" : "items"}`}
+          >
             <span className="menu__item-cart">
               Cart{totalQuantity > 0 ? ` (${totalQuantity})` : "(0)"}
             </span>
