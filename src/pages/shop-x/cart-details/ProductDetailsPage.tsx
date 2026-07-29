@@ -14,7 +14,7 @@ import { xaiProducts } from "../../../content/shop-x/shopProducts.content";
 import { ShopHeader } from "../shop/components/ShopHeader/ShopHeader";
 import ProductGallery from "./components/ProductGallery/ProductGallery";
 import ProductInfo from "./components/ProductInfo/ProductInfo";
-import SizeChart from "./components/SizeChart";
+import SizeChart from "./components/SizeChart/SizeChart";
 import HorizontalDivider from "./components/HorizontalDivider/HorizontalDivider";
 import RelatedProducts from "./components/RelatedProducts/RelatedProducts";
 import { ShopFooter } from "../shop/components/ShopFooter/ShopFooter";
