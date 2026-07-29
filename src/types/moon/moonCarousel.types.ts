@@ -11,6 +11,10 @@ export interface CarouselSlide {
     title: string;
     description: string;
     image: string;
+    desktopImage?: string;
+    mobileImage?: string;
+    alt?: string;
+    modifierClass?: string;
     contentPosition: ContentPosition
 } 
 
@@ -19,4 +23,4 @@ export interface CarouselCollection {
     variant: CarouselVariant;
     slides: CarouselSlide[];
    
-} 
+} 

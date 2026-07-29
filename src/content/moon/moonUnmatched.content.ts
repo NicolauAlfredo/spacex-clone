@@ -9,4 +9,6 @@ export const moonUnmatchedData: MoonUnmatchedData = {
     "Starship can carry more people and much larger payloads than the Apollo Lunar Module used when humans last explored the Moon. Just one of Starship's dual airlocks has more than double the interior volume of the entire Apollo lander.",
   ],
   image: getPageAssetURL("moon", "images", "hls-capability-desktop.png"),
+  desktopImage: getPageAssetURL("moon", "images", "hls-capability-desktop.png"),
+  mobileImage: getPageAssetURL("moon", "images", "hls-capability-mobile.png"),
 };
