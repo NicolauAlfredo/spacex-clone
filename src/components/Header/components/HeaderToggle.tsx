@@ -1,9 +1,21 @@
-/**
- * Mobile menu toggle.
- *
- * Responsibilities:
- * - Render hamburger/close icon.
- * - Notify parent when clicked.
- *
- * No state should be managed here.
- */
+import { CloseIcon } from "./Icons/CloseIcon";
+import { HamburgerIcon } from "./Icons/HamburgerIcon";
+
+type HeaderToggleProps = {
+  isOpen: boolean;
+  onToggle: () => void;
+};
+
+export function HeaderToggle({ isOpen, onToggle }: HeaderToggleProps) {
+  return (
+    <button
+      className="header__toggle"
+      aria-label={isOpen ? "Close menu" : "Open menu"}
+      aria-expanded={isOpen}
+      aria-controls="header-navigation"
+      onClick={onToggle}
+    >
+      {isOpen ? <CloseIcon /> : <HamburgerIcon />}
+    </button>
+  );
+}
