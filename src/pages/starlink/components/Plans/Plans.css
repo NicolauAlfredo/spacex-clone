@@ -193,7 +193,7 @@
   .starlink-section--plans .starlink-section__content {
     align-items: flex-start;
     text-align: left;
-    width: 700px;
+    width: min(100%, 700px);
   }
 
   .starlink-section--plans .starlink-section__price {
@@ -308,7 +308,7 @@
   }
   .starlink-section--plans {
     padding-top: 4em;
-    margin-bottom: -18em;
+    margin-bottom: 0;
   }
   .starlink-section--plans [data-group="home"] .starlink-plans__cards {
     flex-direction: row;
@@ -393,7 +393,7 @@
 
   .starlink-section--plans [data-group="home"] .starlink-section__price {
     margin-left: 0.6em;
-    font-size: 8em !important;
+    font-size: clamp(3.5rem, 7vw, 7rem);
     color: #d4d4d4;
   }
 
@@ -414,7 +414,7 @@
     [data-group="home"]
     .starlink-section__content:nth-child(2)
     .starlink-section__label {
-    margin-left: -6em !important;
+    margin-left: 0;
   }
   .starlink-section--plans [data-group="home"] .starlink-section__list {
     margin-left: 4em;
