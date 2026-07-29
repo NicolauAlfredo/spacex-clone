@@ -24,7 +24,7 @@
   background: #3a3a3a;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 821px) {
   .starlink-toggle {
     margin-top: 1em;
   }

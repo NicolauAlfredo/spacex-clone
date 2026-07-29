@@ -71,7 +71,7 @@
   TABLET 
 */
 
-@media (min-width: 768px) {
+@media (min-width: 821px) {
   .footer__container {
   }
 }
@@ -80,7 +80,7 @@
   DESKTOP 
 */
 
-@media (min-width: 1024px) {
+@media (min-width: 821px) {
   .footer {
     padding: 10px;
   }

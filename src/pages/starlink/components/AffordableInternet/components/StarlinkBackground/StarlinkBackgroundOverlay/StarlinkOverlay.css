@@ -38,7 +38,7 @@
     );
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 821px) {
   .starlink-section__overlay--best-value {
     background: radial-gradient(
       ellipse 70% 70% at 10% 50%,

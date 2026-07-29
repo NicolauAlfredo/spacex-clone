@@ -17,7 +17,7 @@
 }
 
 /* Tablet */
-@media (min-width: 768px) {
+@media (min-width: 821px) {
   .starlink-section--reliable .starlink-section__lable {
     max-width: 600px;
   }
@@ -33,7 +33,7 @@
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 821px) {
   .starlink-section--reliable .starlink-section__content {
     bottom: 40%;
     padding: 0 6%;

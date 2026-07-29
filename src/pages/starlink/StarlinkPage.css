@@ -4,7 +4,7 @@
   background: #000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 821px) {
   .starlink-page .starlink-section:not(.starlink-section--plans) {
     height: clamp(600px, 100svh, 800px);
     min-height: 0;
@@ -148,7 +148,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1179px) {
+@media (min-width: 821px) and (max-width: 1179px) {
   .starlink-page .starlink-section--best-value .starlink-section__content {
     left: 0;
     bottom: 0;
@@ -170,7 +170,7 @@
   }
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 821px) {
   .starlink-page .starlink-section--best-value .starlink-section__content {
     left: clamp(5rem, 16vw, 18rem);
     bottom: 14%;

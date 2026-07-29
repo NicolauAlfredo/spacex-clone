@@ -24,7 +24,7 @@
 }
 
 /* DEKSTOP */
-@media (min-width: 1024px) {
+@media (min-width: 821px) {
   .section__title {
     font-size: 4rem;
   }

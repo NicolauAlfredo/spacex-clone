@@ -63,7 +63,7 @@ body {
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 821px) and (max-width: 1023px) {
   .starlink-section--best-value .starlink-section__actions {
     gap: 2em;
     flex-direction: row !important;
@@ -81,7 +81,7 @@ body {
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 821px) {
   .starlink-section--best-value .starlink-section__content {
     bottom: 34%;
     padding: 0 6%;
