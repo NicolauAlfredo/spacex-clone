@@ -172,7 +172,7 @@
     margin-bottom: -8em;
   }
 }
-@media (min-width: 821px) and (max-width: 1367px) {
+@media (min-width: 820px) and (max-width: 1367px) {
   .starlink-section--plans {
     position: relative;
   }
@@ -184,7 +184,7 @@
     background-image: url("/assets/pages/starlink/backgrounds/illustration_07.webp");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100% auto;
+    background-size: 140% auto;
     opacity: 0.12;
     pointer-events: none;
     z-index: -1;
@@ -291,7 +291,7 @@
     background-image: url("/assets/pages/starlink/backgrounds/illustration_07.webp");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100% auto;
+    background-size: 60% auto;
     opacity: 0.12;
     pointer-events: none;
     z-index: -1;
@@ -531,7 +531,7 @@
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 819px) {
   .starlink-plans__group::before {
     content: "";
     position: sticky;
@@ -540,7 +540,7 @@
     height: 100vh;
 
     background: url("/assets/pages/starlink/backgrounds/illustration_07.webp")
-      center / 120% auto no-repeat;
+      center / 180% auto no-repeat;
     opacity: 0.12;
     pointer-events: none;
   }
