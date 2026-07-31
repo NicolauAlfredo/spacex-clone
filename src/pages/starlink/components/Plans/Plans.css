@@ -190,12 +190,6 @@
     z-index: -1;
   }
 
-  .starlink-section--plans .starlink-section__content {
-    align-items: flex-start;
-    text-align: left;
-    width: min(100%, 700px);
-  }
-
   .starlink-section--plans .starlink-section__price {
     margin-left: 0;
   }
@@ -302,10 +296,7 @@
     pointer-events: none;
     z-index: -1;
   }
-  .starlink-section--plans {
-    padding-top: 4em;
-    margin-bottom: 0;
-  }
+
   .starlink-section--plans [data-group="home"] .starlink-plans__cards {
     flex-direction: row;
   }
@@ -549,7 +540,7 @@
     height: 100vh;
 
     background: url("/assets/pages/starlink/backgrounds/illustration_07.webp")
-      center / 180% auto no-repeat;
+      center / 120% auto no-repeat;
     opacity: 0.12;
     pointer-events: none;
   }
@@ -558,5 +549,27 @@
     position: relative;
     z-index: 1;
     margin-top: -100vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .starlink-section--plans .starlink-section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .starlink-section__label {
+    padding: 0;
+    margin-left: -0.4rem;
+  }
+
+  .section_description {
+    padding: 0;
+  }
+
+  .starlink-section__list {
+    margin-left: 3rem;
+    padding: 0;
   }
 }
