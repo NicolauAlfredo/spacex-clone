@@ -103,7 +103,7 @@
 }
 
 .starlink-section--plans .starlink-section__price {
-  font-size: 5.5em !important;
+  font-size: 7em !important;
 }
 
 .starlink-section--plans .starlink-section__subtitle {
@@ -183,8 +183,8 @@
     inset: 0;
     background-image: url("/assets/pages/starlink/backgrounds/illustration_07.webp");
     background-repeat: no-repeat;
-    background-position: center 10%;
-    background-size: 130% auto;
+    background-position: center center;
+    background-size: 100% auto;
     opacity: 0.12;
     pointer-events: none;
     z-index: -1;
@@ -207,7 +207,7 @@
 
   .starlink-section--plans .starlink-section__content .starlink-section__label {
     font-size: 0.9em;
-    padding-left: 0.6em;
+    padding: 0;
     margin-top: 0.9em;
   }
 
@@ -242,10 +242,6 @@
 
   .starlink-section--plans .starlink-section__label {
     max-width: unset;
-  }
-
-  .starlink-section--plans .starlink-section__list {
-    padding-left: 3em;
   }
 
   .starlink-section--plans [data-group="go"] .starlink-section__label {
@@ -300,8 +296,8 @@
     inset: 0;
     background-image: url("/assets/pages/starlink/backgrounds/illustration_07.webp");
     background-repeat: no-repeat;
-    background-position: center 95%;
-    background-size: 65% auto;
+    background-position: center center;
+    background-size: 100% auto;
     opacity: 0.12;
     pointer-events: none;
     z-index: -1;
